@@ -1,5 +1,5 @@
 var LECONS = window.LECONS = [];
-window.VERSION_CONTENU = "202611182254";
+window.VERSION_CONTENU = "202611182306";
 
 /* ---- fr-conj-futur-simple.js ---- */
 // À VÉRIFIER : (1) au futur, le cahier semble écrire « je chanterais » et « je nettoierais » (avec s, photos 0051-0052) : ce serait du conditionnel ; on a écrit « je chanterai », « je nettoierai ». (2) La règle sur -eter / -eler annonce « sauf les exceptions » sans les écrire (0052) : elles ne sont pas inventées ici ; le module renvoie à la leçon du présent sur -eter / -eler et ne les fait pas travailler. (3) « jeter : jetterai » → « je jetterai » ; « savoi » → « savoir ».
@@ -748,7 +748,7 @@ LECONS.push({
       { t: "qcm", q: "Dans « Les pêcheurs <b>partent</b> en mer et <b>remplissent</b> la pirogue », les deux verbes sont…", choix: ["du 3e groupe puis du 2e groupe", "tous les deux du 2e groupe", "du 1er groupe puis du 3e groupe", "tous les deux du 3e groupe"], r: "du 3e groupe puis du 2e groupe", expl: "partir → en partant (3e groupe) ; remplir → en remplissant (2e groupe)." },
       { t: "saisie", q: "Trouve l'intrus (le seul verbe qui n'est pas du 1er groupe) : jouer, aller, chanter, sauter.", r: "aller", expl: "aller finit par -er mais n'est pas du 1er groupe." },
       { t: "saisie", q: "Trouve l'intrus (le seul verbe qui n'est pas du 2e groupe) : finir, bondir, sortir, grandir.", r: "sortir", expl: "en sortant (sans -iss-) : sortir est du 3e groupe." },
-      { t: "dictee", texte: "Le verbe est le noyau de la phrase et il se compose d'un radical et d'une terminaison.", expl: "Retiens bien : radical + terminaison." }
+      { t: "dictee", texte: "Le verbe à l'infinitif se compose d'un radical et d'une terminaison.", expl: "Retiens bien : radical + terminaison." }
     ]
   ]
 });
@@ -932,6 +932,60 @@ LECONS.push({
 });
 
 
+/* ---- fr-gram-complement-du-nom.js ---- */
+// Leçon recopiée deux fois au cahier (0011-0012 et 0056-0057, photo 0057 floue) : les deux versions concordent.
+// Corrections : « compliment » → « complément » ; « en corse » → « en Corse ».
+LECONS.push({
+  id: "fr-gram-complement-du-nom",
+  cahier: "francais",
+  matiere: "Grammaire",
+  titre: "Le complément du nom",
+  date: "2026-11-17",
+  photos: ["DJI_20261118201756_0011_D.jpg", "DJI_20261118201804_0012_D.jpg", "DJI_20261118220703_0056_D.jpg", "DJI_20261118220707_0057_D.jpg"],
+  retiens:
+    "<p>→ Le <b>complément du nom</b> donne un renseignement sur le nom.</p>" +
+    "<p>Ex : Un ami <b>de ma classe</b> est parti en vacances en Corse.<br>Le nom « ami » est complété par le groupe nominal « ma classe », introduit par la préposition <b>de</b>.<br>« de ma classe » est complément du nom « ami ».</p>" +
+    "<p>→ Le complément du nom peut être un <b>verbe à l'infinitif</b>.<br>Ex : Toute sa famille a plaisir <b>à voyager</b>.<br>Le nom « plaisir » est complété par l'infinitif du verbe « voyager ». « à voyager » est complément du nom « plaisir ».</p>",
+  astuce: "Le complément du nom est accroché au nom par un petit mot (<b>de</b>, <b>à</b>…) : un ami <b>de</b> ma classe, une machine <b>à</b> coudre. Pose la question : quel ami ? → l'ami de ma classe.",
+  regle: "Le complément du nom donne un renseignement sur un nom. Il est relié au nom par une préposition (de, à…) et peut être un groupe nominal ou un verbe à l'infinitif.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Le complément du nom donne un renseignement sur…", choix: ["un nom", "un verbe", "une phrase entière"], r: "un nom", expl: "Comme son nom l'indique, il complète un nom." },
+      { t: "qcm", q: "« Un ami de ma classe est parti. » Quel est le complément du nom ?", choix: ["de ma classe", "Un ami", "est parti"], r: "de ma classe", expl: "Quel ami ? l'ami de ma classe." },
+      { t: "qcm", q: "Dans « Un ami de ma classe », quel nom est complété ?", choix: ["ami", "classe", "ma"], r: "ami", expl: "« de ma classe » renseigne sur le nom « ami »." },
+      { t: "qcm", q: "Dans « un ami de ma classe », quel petit mot relie le complément au nom ?", choix: ["de", "ma", "un"], r: "de", expl: "« de » est une préposition : elle relie le complément au nom." },
+      { t: "vf", q: "Le complément du nom peut être un verbe à l'infinitif.", r: true, expl: "Ex : Toute sa famille a plaisir à voyager." },
+      { t: "vf", q: "Dans « Toute sa famille a plaisir à voyager », « à voyager » complète le nom « famille ».", r: false, expl: "« à voyager » complète le nom « plaisir »." }
+    ],
+    [
+      { t: "saisie", q: "Écris le complément du nom : « La maison de mon oncle est grande. »", r: "de mon oncle", expl: "Quelle maison ? la maison de mon oncle." },
+      { t: "saisie", q: "Écris le complément du nom : « Awa porte une robe en coton. »", r: "en coton", expl: "Quelle robe ? une robe en coton." },
+      { t: "saisie", q: "Écris le complément du nom : « Maman a acheté une machine à coudre. »", r: "à coudre", expl: "Quelle machine ? une machine à coudre : le complément est un infinitif." },
+      { t: "saisie", q: "Écris le nom complété : « Le car de Thiès arrive. »", r: "car", expl: "« de Thiès » renseigne sur le nom « car »." },
+      { t: "relier", q: "Relie chaque nom à son complément.", paires: [["une salle", "de classe"], ["une brosse", "à dents"], ["un jus", "de bissap"], ["une envie", "de dormir"]], expl: "Chaque complément donne un renseignement sur le nom." },
+      { t: "classer", q: "Le complément du nom en gras est-il un groupe nominal ou un verbe à l'infinitif ?", cases: ["groupe nominal", "verbe à l'infinitif"], items: [["le livre <b>de mon frère</b>", "groupe nominal"], ["la joie <b>de vivre</b>", "verbe à l'infinitif"], ["le marché <b>de Sandaga</b>", "groupe nominal"], ["une salle <b>à manger</b>", "verbe à l'infinitif"], ["la voix <b>du chanteur</b>", "groupe nominal"], ["le désir <b>de réussir</b>", "verbe à l'infinitif"]], expl: "Après la préposition, on trouve un nom (groupe nominal) ou un verbe à l'infinitif." },
+      { t: "trous", q: "Complète avec un complément du nom (aide : de pêche, à repasser, de Dakar).", texte: "le port [de Dakar] — un fer [à repasser] — une pirogue [de pêche]", expl: "Chaque complément précise le nom." },
+      { t: "qcm", q: "Dans « le plaisir de lire », « de lire » est…", choix: ["un complément du nom", "un COD", "un sujet"], r: "un complément du nom", expl: "« de lire » renseigne sur le nom « plaisir »." }
+    ],
+    [
+      { t: "qcm", q: "Dans « Le frère de Moussa joue », quel est le sujet du verbe ?", choix: ["Le frère de Moussa", "Moussa", "joue"], r: "Le frère de Moussa", expl: "Qui est-ce qui joue ? le frère de Moussa. « de Moussa » est complément du nom « frère »." },
+      { t: "vf", q: "Dans « Awa parle de son voyage », « de son voyage » est un complément du nom.", r: false, expl: "« de son voyage » complète le verbe « parle » : c'est un COI, pas un complément du nom." },
+      { t: "qcm", q: "Dans quelle phrase y a-t-il un complément du nom ?", choix: ["J'aime le jus de mangue.", "Je pense à ma mère.", "Je viens de Thiès.", "Il parle de football."], r: "J'aime le jus de mangue.", expl: "« de mangue » renseigne sur le nom « jus ». Dans les autres phrases, le groupe complète le verbe." },
+      { t: "saisie", q: "Ajoute le complément du nom « de ma classe » au nom « ami » : « Un ami est parti en vacances. »", r: "Un ami de ma classe est parti en vacances.", large: true, expl: "Le complément du nom se place juste après le nom qu'il complète." },
+      { t: "relier", q: "Relie chaque complément du nom au nom qu'il complète.", paires: [["de pluie", "une goutte"], ["à voyager", "plaisir"], ["de laine", "un bonnet"], ["d'écrire", "le temps"]], expl: "Le complément du nom suit le nom qu'il renseigne." },
+      { t: "qcm", q: "Combien de compléments du nom dans « la cour de l'école du village » ?", choix: ["un", "deux", "trois"], r: "deux", expl: "« de l'école » complète « cour » et « du village » complète « école »." }
+    ],
+    [
+      { t: "dictee", texte: "Le frère de Fatou a rapporté un sac de mangues du marché.", expl: "« de Fatou » complète « frère » ; « de mangues » complète « sac »." },
+      { t: "dictee", texte: "Toute sa famille a plaisir à voyager pendant les vacances.", expl: "« à voyager » est complément du nom « plaisir »." },
+      { t: "trous", q: "Trouve les compléments du nom : « La pirogue du pêcheur a un moteur à essence. »", texte: "complément de « pirogue » : [du pêcheur] — complément de « moteur » : [à essence]", expl: "Quelle pirogue ? Quel moteur ?" },
+      { t: "qcm", q: "Analyse « à voyager » dans « Sa famille a plaisir à voyager ».", choix: ["infinitif, complément du nom plaisir", "infinitif, sujet du verbe avoir", "groupe nominal, COD du verbe avoir"], r: "infinitif, complément du nom plaisir", expl: "Le nom « plaisir » est complété par l'infinitif « voyager »." },
+      { t: "classer", q: "Le groupe en gras complète-t-il un nom ou un verbe ?", cases: ["complète un nom", "complète un verbe"], items: [["un verre <b>d'eau</b>", "complète un nom"], ["Il boit <b>de l'eau</b>.", "complète un verbe"], ["la fête <b>de Tabaski</b>", "complète un nom"], ["Il rêve <b>de Tabaski</b>.", "complète un verbe"], ["un panier <b>de fruits</b>", "complète un nom"], ["Elle se souvient <b>de son école</b>.", "complète un verbe"]], expl: "Le complément du nom suit un nom ; le COI ou le COD complète un verbe." }
+    ]
+  ]
+});
+
+
 /* ---- fr-gram-complements-circonstanciels.js ---- */
 // À VÉRIFIER : dans cette leçon, le cahier abrège « CCM » pour le complément de MANIÈRE ; dans la leçon du 10 novembre, « CCM » désigne le complément de MOYEN. Le module écrit « CC de manière » en entier pour éviter la confusion.
 // Corrections : « chambre : CCL » → « dans sa chambre : CCL » ; « A force du travailler : CC Cause d'aller tomber » → « à force de travailler : CC de cause de tomber » ; « Avec précaution : G N » → nature non reprise (c'est un groupe introduit par une préposition).
@@ -1035,7 +1089,7 @@ LECONS.push({
       { t: "qcm", q: "Analyse « ses élèves » dans « Le professeur enseigne la géographie à ses élèves ».", choix: ["groupe nominal, COS ou CA du verbe enseigner", "groupe nominal, COD du verbe enseigner", "nom commun, sujet du verbe enseigner"], r: "groupe nominal, COS ou CA du verbe enseigner", expl: "C'est l'analyse du cahier." },
       { t: "qcm", q: "Dans quelle phrase y a-t-il un COD <b>et</b> un COS ?", choix: ["Ibrahima vend des arachides aux passants.", "Ibrahima vend des arachides.", "Ibrahima marche vers le marché.", "Ibrahima parle à son ami."], r: "Ibrahima vend des arachides aux passants.", expl: "vend quoi ? des arachides (COD) ; à qui ? aux passants (COS)." },
       { t: "vf", q: "Dans « Le maître écrit au tableau », « au tableau » est un COS.", r: false, expl: "« au tableau » répond à la question où ? : c'est un lieu, pas un COS." },
-      { t: "saisie", q: "Ajoute le COS « à sa sœur » à la phrase : « Aïssatou raconte une histoire. »", r: "Aïssatou raconte une histoire à sa sœur.", large: true, expl: "Le COS se place en général après le COD." },
+      { t: "saisie", q: "Ajoute le COS « à sa cousine » à la phrase : « Aïssatou raconte une histoire. »", r: "Aïssatou raconte une histoire à sa cousine.", large: true, expl: "Le COS se place en général après le COD." },
       { t: "ordre", q: "Remets les mots dans l'ordre.", r: "Le vendeur rend la monnaie au client.", expl: "rend quoi ? la monnaie (COD) ; à qui ? au client (COS)." },
       { t: "trous", q: "Écris COD ou COS sous chaque groupe en gras.", texte: "Grand-mère offre <b>un pagne</b> ([COD]) <b>à Khady</b> ([COS]).", expl: "offre quoi ? (COD) ; à qui ? (COS)." }
     ],
@@ -1141,7 +1195,7 @@ LECONS.push({
       { t: "qcm", q: "Quel est le genre du nom « pirogue » ?", choix: ["masculin", "féminin"], r: "féminin", expl: "On dit « une pirogue » : le nom est féminin." },
       { t: "qcm", q: "Quel est le nombre du nom « mangues » dans « des mangues » ?", choix: ["singulier", "pluriel"], r: "pluriel", expl: "Il y en a plusieurs : le nom est au pluriel." },
       { t: "qcm", q: "Dans « Ricky aboie », Ricky est…", choix: ["un nom commun de personne", "un nom propre d'animal", "un nom commun d'animal"], r: "un nom propre d'animal", expl: "Ricky est le nom d'un chien en particulier : c'est un nom propre d'animal." },
-      { t: "saisie", q: "Écris ce nom propre avec sa majuscule : saint-louis", r: "Saint-Louis", expl: "Les noms de villes sont des noms propres : majuscules." },
+      { t: "saisie", q: "Écris ce nom propre avec sa majuscule : saint-louis", r: "Saint-Louis", casse: true, expl: "Les noms de villes sont des noms propres : majuscules." },
       { t: "vf", q: "« Dakar » est un nom propre de lieu.", r: true, expl: "Dakar est une ville en particulier." },
       { t: "trous", q: "Trouve un nom propre pour chaque nom commun (aide : Sénégal, Awa, Ziguinchor).", texte: "une fille : [Awa] — un pays : [Sénégal] — une ville : [Ziguinchor]", expl: "Le nom propre désigne une fille, un pays, une ville en particulier." },
       { t: "relier", q: "Relie chaque nom à son genre et son nombre.", paires: [["le lion", "masculin singulier"], ["la maison", "féminin singulier"], ["les couteaux", "masculin pluriel"], ["les chèvres", "féminin pluriel"]], expl: "Un nom commun a un genre et un nombre." },
@@ -1151,7 +1205,7 @@ LECONS.push({
       { t: "qcm", q: "Dans « Awa lave le seau », quelle est la fonction du nom « seau » ?", choix: ["sujet du verbe", "complément du verbe", "nom propre"], r: "complément du verbe", expl: "« seau » complète le verbe « lave » : Awa lave quoi ? le seau." },
       { t: "qcm", q: "Dans « La maison de Fatou est neuve », quelle est la fonction du nom « Fatou » ?", choix: ["sujet du verbe", "complément du nom", "complément du verbe"], r: "complément du nom", expl: "« de Fatou » complète le nom « maison »." },
       { t: "vf", q: "« Nom propre » est une fonction du nom.", r: false, expl: "Nom propre est une sorte de nom. Les fonctions sont : sujet, complément du nom, complément du verbe." },
-      { t: "saisie", q: "Corrige la phrase en mettant les majuscules aux noms propres : « moussa habite à kaolack. »", r: "Moussa habite à Kaolack.", large: true, expl: "Moussa et Kaolack sont des noms propres." },
+      { t: "saisie", q: "Corrige la phrase en mettant les majuscules aux noms propres : « moussa habite à kaolack. »", r: "Moussa habite à Kaolack.", large: true, casse: true, expl: "Moussa et Kaolack sont des noms propres." },
       { t: "classer", q: "Range ces noms selon leur genre.", cases: ["masculin", "féminin"], items: [["champ", "masculin"], ["charrette", "féminin"], ["mouton", "masculin"], ["calebasse", "féminin"], ["baobab", "masculin"], ["plage", "féminin"]], expl: "Mets « un » ou « une » devant le nom pour trouver son genre." },
       { t: "qcm", q: "Quel mot désigne un lieu <b>en particulier</b> ?", choix: ["la ville", "le village", "Rufisque", "le pays"], r: "Rufisque", expl: "Rufisque est un nom propre : une ville précise." }
     ],
@@ -1327,7 +1381,7 @@ LECONS.push({
       { t: "qcm", q: "« Ferme la porte à clé. » Cette phrase est…", choix: ["déclarative", "interrogative", "exclamative", "impérative"], r: "impérative", expl: "Elle donne un ordre." },
       { t: "qcm", q: "« Le juge condamne l'accusé. » Cette phrase est…", choix: ["déclarative", "interrogative", "exclamative", "impérative"], r: "déclarative", expl: "Elle donne une information." },
       { t: "classer", q: "Range chaque phrase selon son type.", cases: ["déclarative", "interrogative", "exclamative", "impérative"], items: [["Fatou vend des mangues au marché.", "déclarative"], ["Où habite ton oncle ?", "interrogative"], ["Quelle belle pirogue !", "exclamative"], ["Range ta chambre.", "impérative"], ["Est-ce que tu viens ?", "interrogative"], ["Bois beaucoup d'eau.", "impérative"], ["Comme il fait chaud !", "exclamative"], ["Le car part à huit heures.", "déclarative"]], expl: "Information, question, sentiment ou ordre : regarde aussi la ponctuation." },
-      { t: "trous", q: "Mets le bon signe à la fin : . ou ? ou !", texte: "Quel âge as-tu [?] — Awa habite à Thiès [.] — Que ce plat est bon [!] — Viens-tu au champ demain [?]", expl: "Une question finit par ?, un sentiment par !, une information par un point." },
+      { t: "classer", q: "Quel signe faut-il à la fin de chaque phrase ?", cases: ["le point", "le point d'interrogation", "le point d'exclamation"], items: [["Quel âge as-tu", "le point d'interrogation"], ["Awa habite à Thiès", "le point"], ["Que ce plat est bon", "le point d'exclamation"], ["Viens-tu au champ demain", "le point d'interrogation"], ["Le car est plein", "le point"], ["Comme tu as grandi", "le point d'exclamation"]], expl: "Une question finit par ?, un sentiment par !, une information par un point." },
       { t: "vf", q: "« Lave tes mains avant de manger. » est une phrase impérative.", r: true, expl: "C'est un conseil, un ordre : la phrase est impérative." },
       { t: "saisie", q: "Écris le type de cette phrase : « Comme la mer est belle ! »", r: "exclamative", aide: "Elle exprime l'admiration.", expl: "Elle exprime un sentiment : phrase exclamative." },
       { t: "saisie", q: "Écris le type de cette phrase : « Pourquoi le ciel est-il bleu ? »", r: "interrogative", expl: "Elle pose une question : phrase interrogative." }
@@ -1342,12 +1396,1301 @@ LECONS.push({
       { t: "ordre", q: "Remets les mots dans l'ordre pour faire une phrase interrogative.", r: "As-tu fini tes devoirs ?", expl: "Le sujet « tu » est après le verbe et la phrase finit par « ? »." }
     ],
     [
-      { t: "trous", q: "Lis ce petit texte et écris le type de chaque phrase entre crochets.", texte: "Aïssatou entre dans la cuisine. ([déclarative]) — Quelle bonne odeur ! ([exclamative]) — Que prépares-tu, maman ? ([interrogative]) — Apporte-moi les oignons. ([impérative])", expl: "Information, sentiment, question, ordre." },
+      { t: "trous", q: "Lis ce petit texte et écris le type de chaque phrase dans la case.", texte: "Aïssatou entre dans la cuisine. ([déclarative]) — Quelle bonne odeur ! ([exclamative]) — Que prépares-tu, maman ? ([interrogative]) — Apporte-moi les oignons. ([impérative])", expl: "Information, sentiment, question, ordre." },
       { t: "dictee", texte: "Que ce marché de Sandaga est animé ! Achète-moi des mangues, s'il te plaît.", expl: "Une phrase exclamative (!) puis une phrase impérative (.)." },
       { t: "dictee", texte: "Est-ce que le car pour Saint-Louis est déjà parti ?", expl: "Phrase interrogative : elle finit par un point d'interrogation." },
       { t: "qcm", q: "Le maître dit : « Sortez vos cahiers. » Quel est le type de cette phrase ?", choix: ["déclarative", "interrogative", "exclamative", "impérative"], r: "impérative", expl: "Le maître donne un ordre aux élèves." },
       { t: "saisie", q: "Transforme en phrase impérative (avec « nous ») : « Nous traversons la route prudemment. »", r: "Traversons la route prudemment.", large: true, expl: "À l'impératif, on enlève le sujet « nous »." },
       { t: "classer", q: "Range ces phrases selon qu'elles finissent par « ? » ou par « ! ».", cases: ["finit par ?", "finit par !"], items: [["Que tu es grand", "finit par !"], ["Quand pars-tu", "finit par ?"], ["Quel beau ballon", "finit par !"], ["Qui a pris mon stylo", "finit par ?"], ["Comme il pleut fort", "finit par !"], ["Où vas-tu", "finit par ?"]], expl: "Une question prend ?, un sentiment prend !." }
+    ]
+  ]
+});
+
+
+/* ---- fr-lect-criteres-texte-explicatif.js ---- */
+LECONS.push({
+  id: "fr-lect-criteres-texte-explicatif",
+  cahier: "francais",
+  matiere: "Production d'écrits",
+  titre: "La fiche de critères de réussite d'un texte explicatif",
+  date: "2026-10-07",
+  photos: ["DJI_20261118220449_0035_D.jpg", "DJI_20261118220457_0036_D.jpg"],
+  retiens:
+    "<p><b>Critères</b> (ce que je dois faire…)</p>" +
+    "<p><b>Forme du texte : 3 parties</b> (introduction, développement, conclusion)</p><ol>" +
+    "<li>J'explique bien ce qu'on me demande : un objet, un phénomène… C'est l'<b>introduction</b> qui dit ce que je dois expliquer.</li>" +
+    "<li>J'organise mon texte en <b>paragraphes clairs</b>. Je donne des <b>exemples</b> pour aider à comprendre : c'est le <b>développement</b>.</li>" +
+    "<li>Je fais une petite <b>conclusion</b> à la fin.</li></ol>" +
+    "<p><b>Fond du texte</b> : je dois employer</p><ul>" +
+    "<li>des <b>mots clairs et simples</b> ;</li>" +
+    "<li>des <b>connecteurs logiques</b> pour expliquer, comme <b>parce que</b>, <b>donc</b>, <b>par exemple</b>, <b>cependant</b>…</li></ul>" +
+    "<p><b>Présentation</b> : je dois</p><ul>" +
+    "<li>faire attention à la langue : écrire sans fautes de grammaire… ;</li>" +
+    "<li>écrire lisiblement.</li></ul>",
+  astuce: "Les connecteurs : <b>parce que</b> donne la cause, <b>donc</b> la conséquence, <b>par exemple</b> annonce un exemple, <b>cependant</b> introduit une opposition.",
+  regle: "Un bon texte explicatif a 3 parties (introduction, développement en paragraphes avec des exemples, conclusion), des mots clairs, des connecteurs logiques, et il est écrit sans fautes et lisiblement.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Combien de parties doit avoir mon texte explicatif ?", choix: ["3", "2", "5"], r: "3", expl: "Introduction, développement, conclusion." },
+      { t: "qcm", q: "Quelle partie dit ce que je dois expliquer ?", choix: ["l'introduction", "le développement", "la conclusion"], r: "l'introduction", expl: "C'est l'introduction qui dit ce que je dois expliquer." },
+      { t: "qcm", q: "Dans quelle partie est-ce que je donne des exemples, en paragraphes clairs ?", choix: ["le développement", "l'introduction", "la conclusion"], r: "le développement", expl: "Le développement explique, avec des exemples." },
+      { t: "vf", q: "Je dois employer des mots clairs et simples.", r: true, expl: "C'est un critère du fond du texte." },
+      { t: "vf", q: "Dans un texte explicatif, l'écriture n'a pas d'importance si les idées sont bonnes.", r: false, expl: "La présentation compte : écrire lisiblement et sans fautes." },
+      { t: "classer", q: "Range ces mots.", cases: ["connecteur logique", "pas un connecteur"], items: [["parce que", "connecteur logique"], ["donc", "connecteur logique"], ["maison", "pas un connecteur"], ["par exemple", "connecteur logique"], ["courir", "pas un connecteur"], ["cependant", "connecteur logique"]], expl: "parce que, donc, par exemple, cependant sont les connecteurs de la leçon." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque connecteur à son rôle.", paires: [["parce que", "donne la cause"], ["donc", "donne la conséquence"], ["par exemple", "annonce un exemple"], ["cependant", "introduit une opposition"]], expl: "Les connecteurs relient les idées de l'explication." },
+      { t: "qcm", q: "« Le baobab perd ses feuilles … il veut garder son eau. »", choix: ["parce qu'", "donc", "cependant"], r: "parce qu'", expl: "On donne la cause : parce que (parce qu' devant il)." },
+      { t: "qcm", q: "« Il n'a pas plu depuis des mois, … les puits sont presque vides. »", choix: ["donc", "parce que", "par exemple"], r: "donc", expl: "On donne la conséquence : donc." },
+      { t: "qcm", q: "« Beaucoup de fruits poussent au Sénégal, … la mangue et l'orange. »", choix: ["par exemple", "donc", "cependant"], r: "par exemple", expl: "On annonce des exemples." },
+      { t: "qcm", q: "« Le soleil est très chaud ; … , le soir, il fait plus frais. »", choix: ["cependant", "parce que", "par exemple"], r: "cependant", expl: "On oppose deux idées : cependant." },
+      { t: "classer", q: "Range ces critères.", cases: ["forme du texte", "fond du texte", "présentation"], items: [["faire 3 parties", "forme du texte"], ["employer des mots simples", "fond du texte"], ["écrire lisiblement", "présentation"], ["faire une petite conclusion", "forme du texte"], ["utiliser des connecteurs logiques", "fond du texte"], ["écrire sans fautes", "présentation"]], expl: "C'est la fiche de critères du cahier." },
+      { t: "saisie", q: "Quel connecteur de la leçon sert à annoncer un exemple ?", r: "par exemple", expl: "par exemple" },
+      { t: "trous", q: "Complète la fiche de critères.", texte: "Forme : 3 parties : [introduction], développement, [conclusion]. Fond : des mots clairs et [simples], des connecteurs [logiques].", expl: "Ce sont les critères du cahier." }
+    ],
+    [
+      { t: "qcm", q: "Quelle introduction est la meilleure pour un texte « Comment se forme la pluie ? » ?", choix: ["La pluie tombe souvent en août. Mais comment se forme-t-elle ?", "Il était une fois un nuage gentil.", "Donc la pluie tombe."], r: "La pluie tombe souvent en août. Mais comment se forme-t-elle ?", expl: "L'introduction présente le sujet et dit ce qu'on va expliquer." },
+      { t: "qcm", q: "Quelle conclusion est la meilleure pour ce même texte ?", choix: ["Ainsi, l'eau qui s'évapore forme des nuages, puis retombe en pluie.", "Le nuage est blanc.", "Par exemple, il pleut."], r: "Ainsi, l'eau qui s'évapore forme des nuages, puis retombe en pluie.", expl: "Une petite conclusion résume l'explication." },
+      { t: "trous", q: "Complète avec le bon connecteur : <i>parce que, donc, par exemple, cependant</i>.", texte: "Il faut se laver les mains [parce que] les microbes sont partout. Les microbes sont invisibles ; [cependant], ils sont dangereux. Ils peuvent donner des maladies, [par exemple] la diarrhée. Lavons-nous [donc] les mains avant de manger.", expl: "cause, opposition, exemple, conséquence." },
+      { t: "vf", q: "Un texte explicatif bien organisé est découpé en paragraphes clairs.", r: true, expl: "« J'organise mon texte en paragraphes clairs. »" },
+      { t: "qcm", q: "Moussa a écrit un très bon développement mais il a oublié la fin. Quel critère manque ?", choix: ["la petite conclusion", "l'introduction", "les connecteurs"], r: "la petite conclusion", expl: "Il faut faire une petite conclusion à la fin." },
+      { t: "qcm", q: "Quelle phrase utilise des mots clairs et simples ?", choix: ["La pluie aide les plantes à pousser.", "La précipitation pluviométrique favorise la croissance végétale.", "Pluie plante pousser aider."], r: "La pluie aide les plantes à pousser.", expl: "Des mots clairs et simples, dans une phrase correcte." }
+    ],
+    [
+      { t: "qcm", q: "Remets dans l'ordre les parties d'un texte explicatif sur la pêche.", choix: ["1. Comment pêche-t-on à Kayar ? 2. Les pêcheurs partent en pirogue et jettent leurs filets. 3. Ainsi, ils rapportent du poisson pour tout le village.", "1. Ainsi, ils rapportent du poisson. 2. Comment pêche-t-on à Kayar ? 3. Les pêcheurs partent en pirogue.", "1. Les pêcheurs partent en pirogue. 2. Ainsi, ils rapportent du poisson. 3. Comment pêche-t-on à Kayar ?"], r: "1. Comment pêche-t-on à Kayar ? 2. Les pêcheurs partent en pirogue et jettent leurs filets. 3. Ainsi, ils rapportent du poisson pour tout le village.", expl: "Introduction (la question), développement (l'explication), conclusion (ainsi…)." },
+      { t: "dictee", texte: "Pour expliquer, j'utilise des connecteurs comme parce que, donc et par exemple.", expl: "Les connecteurs logiques de la fiche." },
+      { t: "classer", q: "Fatou relit son texte. Range ce qu'elle a fait.", cases: ["critère respecté", "critère pas respecté"], items: [["Elle a fait 3 parties.", "critère respecté"], ["Elle a écrit très vite, on ne peut pas la lire.", "critère pas respecté"], ["Elle a donné des exemples.", "critère respecté"], ["Elle a laissé beaucoup de fautes.", "critère pas respecté"], ["Elle a utilisé « parce que » et « donc ».", "critère respecté"]], expl: "Il faut écrire lisiblement et sans fautes." },
+      { t: "saisie", q: "Quel connecteur de la leçon introduit une opposition ?", r: "cependant", expl: "cependant = mais, pourtant." },
+      { t: "vf", q: "Dans l'introduction, je dois déjà donner toutes les explications et tous les exemples.", r: false, expl: "L'introduction dit ce que je vais expliquer ; les explications et les exemples sont dans le développement." }
+    ]
+  ]
+});
+
+
+/* ---- fr-lect-lettre-officielle.js ---- */
+// Source : cahier (photos 0047 à 0049) et photocopie du manuel (« Lire une lettre officielle », lettre de M. Bassirou Ndiaye, photo 0048). Le cahier note « Madame la Directrice de l'ONAS » ; le texte imprimé dit « Madame la Directrice générale » : le module suit le texte imprimé.
+LECONS.push({
+  id: "fr-lect-lettre-officielle",
+  cahier: "francais",
+  matiere: "Lecture",
+  titre: "Étude de texte informatif : la lettre officielle",
+  date: "2026-11-02",
+  photos: ["DJI_20261118220604_0047_D.jpg", "DJI_20261118220620_0048_D.jpg", "DJI_20261118220623_0049_D.jpg"],
+  retiens:
+    "<p>Une <b>lettre officielle</b> est un texte informatif adressé à une <b>autorité</b> pour une demande, une aide…</p>" +
+    "<p><b>Les informations utiles :</b></p><ul>" +
+    "<li><b>l'expéditeur</b> (ou l'expéditrice) : celui ou celle qui écrit ;</li>" +
+    "<li><b>le destinataire</b> : celui ou celle à qui on écrit ;</li>" +
+    "<li><b>l'objet</b> : ce pourquoi on écrit ;</li>" +
+    "<li><b>la formule d'appel</b> : le titre attribué au destinataire (ex : « Madame la Directrice générale, ») ;</li>" +
+    "<li><b>la formule de politesse</b> : pour clôturer la lettre, après le message.</li></ul>" +
+    "<p>Pour indiquer <b>l'expéditeur</b>, j'écris : Monsieur ou Madame + nom + le titre que je porte.<br>Ex : Monsieur Bassirou Ndiaye, Délégué du quartier.</p>" +
+    "<p>Pour indiquer <b>le destinataire</b>, j'écris : À Madame ou À Monsieur + titre.<br>Ex : À Madame la Directrice générale de l'ONAS.</p>" +
+    "<p><b>NB :</b> lorsqu'ils désignent plusieurs personnes : Monsieur → <b>Messieurs</b> ; Madame → <b>Mesdames</b> ; Mademoiselle → <b>Mesdemoiselles</b>.</p>" +
+    "<p><b>La lettre étudiée</b> (livre de lecture) : M. Bassirou Ndiaye, délégué du quartier Dagoudane, écrit le 12 septembre 2016, à Saint-Louis, à la Directrice générale de l'Office National de l'Assainissement du Sénégal (ONAS). Objet : évacuation des eaux usées du quartier. Il demande un réseau d'évacuation, car les eaux stagnantes favorisent les moustiques toute l'année. Les ménages, avec la mairie, participeront au financement.</p>",
+  astuce: "Pose-toi trois questions : <b>Qui</b> écrit ? (l'expéditeur) — <b>À qui</b> ? (le destinataire) — <b>Pourquoi</b> ? (l'objet).",
+  regle: "Une lettre officielle s'adresse à une autorité. On y trouve : l'expéditeur, le lieu et la date, le destinataire, l'objet, la formule d'appel, le message et la formule de politesse.",
+  niveaux: [
+    [
+      { t: "qcm", q: "À qui s'adresse une lettre officielle ?", choix: ["à une autorité", "à un ami", "à un membre de la famille"], r: "à une autorité", expl: "Une lettre officielle est adressée à une autorité pour une demande, une aide…" },
+      { t: "relier", q: "Relie chaque partie de la lettre à sa définition.", paires: [["l'expéditeur", "celui qui écrit"], ["le destinataire", "celui à qui on écrit"], ["l'objet", "ce pourquoi on écrit"], ["la formule d'appel", "le titre donné au destinataire"], ["la formule de politesse", "la phrase qui clôt la lettre"]], expl: "Ce sont les informations utiles de la leçon." },
+      { t: "qcm", q: "Dans la lettre étudiée, qui est l'expéditeur ?", choix: ["Monsieur Bassirou Ndiaye", "la Directrice générale de l'ONAS", "le maire de Saint-Louis"], r: "Monsieur Bassirou Ndiaye", expl: "C'est lui qui écrit : il est délégué du quartier." },
+      { t: "qcm", q: "Dans la lettre étudiée, qui est le destinataire ?", choix: ["la Directrice générale de l'ONAS", "Monsieur Bassirou Ndiaye", "les habitants du quartier"], r: "la Directrice générale de l'ONAS", expl: "La lettre est adressée « À Madame la Directrice générale de l'ONAS »." },
+      { t: "vf", q: "L'objet de la lettre est : « Évacuation des eaux usées du quartier ».", r: true, expl: "C'est écrit après le mot « Objet »." },
+      { t: "vf", q: "La formule de politesse se trouve au début de la lettre.", r: false, expl: "Elle clôt la lettre, après le message." }
+    ],
+    [
+      { t: "qcm", q: "Où et quand la lettre a-t-elle été écrite ?", choix: ["à Saint-Louis, le 12 septembre 2016", "à Dakar, le 12 septembre 2016", "à Saint-Louis, le 2 novembre 2026"], r: "à Saint-Louis, le 12 septembre 2016", expl: "C'est écrit en haut, à droite : « Saint-Louis, le 12 septembre 2016 »." },
+      { t: "qcm", q: "Que demande le délégué ?", choix: ["un réseau d'évacuation des eaux usées", "une nouvelle école", "une route goudronnée"], r: "un réseau d'évacuation des eaux usées", expl: "Il sollicite « la réalisation d'un réseau d'évacuation des eaux usées »." },
+      { t: "qcm", q: "Quel problème causent les eaux stagnantes dans les rues ?", choix: ["elles favorisent la prolifération des moustiques", "elles abîment les voitures", "elles font du bruit"], r: "elles favorisent la prolifération des moustiques", expl: "Les eaux stagnantes favorisent les moustiques pendant toute l'année." },
+      { t: "qcm", q: "Qui participera au financement des ouvrages ?", choix: ["tous les ménages, avec la mairie", "seulement l'ONAS", "le délégué tout seul"], r: "tous les ménages, avec la mairie", expl: "« En partenariat avec la mairie, tous les ménages participeront au financement. »" },
+      { t: "qcm", q: "Quelle est la formule d'appel de la lettre ?", choix: ["Madame la Directrice générale,", "Objet : Évacuation des eaux usées du quartier.", "Le délégué de quartier"], r: "Madame la Directrice générale,", expl: "La formule d'appel donne le titre du destinataire, au début du message." },
+      { t: "saisie", q: "Que veut dire le sigle ONAS ? Office National de l'… du Sénégal", r: "Assainissement", expl: "ONAS : Office National de l'Assainissement du Sénégal." },
+      { t: "saisie", q: "Comment s'appelle le quartier du délégué ?", r: "Dagoudane", expl: "Il est « Délégué du quartier Dagoudane »." },
+      { t: "classer", q: "Range ces éléments de la lettre.", cases: ["expéditeur", "destinataire", "objet"], items: [["Monsieur Bassirou Ndiaye", "expéditeur"], ["Délégué du quartier Dagoudane", "expéditeur"], ["À Madame la Directrice générale de l'ONAS", "destinataire"], ["Évacuation des eaux usées du quartier", "objet"]], expl: "Qui écrit ? À qui ? Pourquoi ?" }
+    ],
+    [
+      { t: "saisie", q: "Écris le pluriel de « Monsieur » (pour plusieurs personnes).", r: "Messieurs", expl: "Monsieur → Messieurs" },
+      { t: "saisie", q: "Écris le pluriel de « Madame ».", r: "Mesdames", expl: "Madame → Mesdames" },
+      { t: "saisie", q: "Écris le pluriel de « Mademoiselle ».", r: "Mesdemoiselles", expl: "Mademoiselle → Mesdemoiselles" },
+      { t: "qcm", q: "Comment Awa Diop, directrice d'école, indique-t-elle l'expéditeur ?", choix: ["Madame Awa Diop, Directrice de l'école", "À Madame Awa Diop", "Chère Awa"], r: "Madame Awa Diop, Directrice de l'école", expl: "Expéditeur : Madame + nom + le titre que je porte." },
+      { t: "qcm", q: "Comment écrire le destinataire d'une lettre au maire de Thiès ?", choix: ["À Monsieur le Maire de Thiès", "Monsieur le Maire de Thiès, je", "Salut le maire"], r: "À Monsieur le Maire de Thiès", expl: "Destinataire : À Monsieur ou À Madame + titre." },
+      { t: "qcm", q: "Pourquoi le délégué parle-t-il du financement par les ménages et la mairie ?", choix: ["pour montrer que les habitants sont prêts à aider", "pour se plaindre de la mairie", "pour demander de l'argent à l'ONAS pour lui"], r: "pour montrer que les habitants sont prêts à aider", expl: "Cela rend sa demande plus convaincante : le quartier participe." },
+      { t: "vf", q: "La lettre officielle est un texte informatif.", r: true, expl: "C'est ce que dit la leçon : elle informe l'autorité et lui fait une demande." }
+    ],
+    [
+      { t: "qcm", q: "Dans quel ordre trouve-t-on ces éléments dans la lettre étudiée ?", choix: ["expéditeur et date — destinataire — objet — formule d'appel — message — formule de politesse", "objet — formule de politesse — expéditeur — destinataire — message", "message — destinataire — objet — expéditeur — formule d'appel"], r: "expéditeur et date — destinataire — objet — formule d'appel — message — formule de politesse", expl: "C'est l'ordre de la lettre de M. Ndiaye." },
+      { t: "qcm", q: "Fatou veut écrire au directeur de l'hôpital pour demander une visite de sa classe. Quel objet convient ?", choix: ["Objet : demande de visite de l'hôpital", "Objet : Monsieur le Directeur", "Objet : Fatou"], r: "Objet : demande de visite de l'hôpital", expl: "L'objet dit pourquoi on écrit, en peu de mots." },
+      { t: "trous", q: "Complète avec : <i>expéditeur, destinataire, objet</i>.", texte: "Celui qui écrit est l'[expéditeur]. Celui qui reçoit la lettre est le [destinataire]. Ce pourquoi on écrit, c'est l'[objet].", expl: "Qui ? À qui ? Pourquoi ?" },
+      { t: "dictee", texte: "Le délégué du quartier écrit une lettre officielle à la Directrice générale de l'ONAS.", expl: "expéditeur : le délégué ; destinataire : la Directrice générale." },
+      { t: "saisie", q: "D'après la lettre, quels insectes prolifèrent à cause des eaux stagnantes ?", r: ["les moustiques", "moustiques", "des moustiques"], expl: "Les eaux stagnantes favorisent la prolifération des moustiques." }
+    ]
+  ]
+});
+
+
+/* ---- fr-lect-texte-explicatif.js ---- */
+// À VÉRIFIER : la définition du cahier (photo 0015) contient une phrase incohérente : « a pour objectif d'informer, de faire comprendre un d'informer une situation… ». On a écrit « d'informer et de faire comprendre quelque chose (un phénomène, une situation…) » : à confirmer avec le maître.
+// Ce module réunit les deux leçons de lecture sur le texte explicatif : « Étude de textes explicatifs » (0015, vers le 16 sept.) et « Manifester sa compréhension d'un texte explicatif » (« Les îles », 0022, 24 sept.). Le texte « Les îles » n'est pas recopié dans le cahier : seul son plan est travaillé. Le texte sur le baobab est un texte d'entraînement écrit pour l'application.
+LECONS.push({
+  id: "fr-lect-texte-explicatif",
+  cahier: "francais",
+  matiere: "Lecture",
+  titre: "Le texte explicatif (étude et compréhension : « Les îles »)",
+  date: "2026-09-24",
+  photos: ["DJI_20261118220140_0015_D.jpg", "DJI_20261118220245_0022_D.jpg"],
+  retiens:
+    "<p>Un <b>texte explicatif</b> a pour objectif d'<b>informer</b> et de <b>faire comprendre</b> quelque chose (un phénomène, une situation…) en répondant aux questions « <b>pourquoi ?</b> » ou « <b>comment ?</b> ».</p>" +
+    "<p>Pour rendre le propos clair et accessible, l'auteur peut s'appuyer sur plusieurs procédés :</p><ul>" +
+    "<li>la <b>définition</b> : le sens d'un terme (ex : le texte « Les îles », page 18) ;</li>" +
+    "<li>l'<b>énumération</b> : une liste des causes, des conséquences, des problèmes, des solutions… (ex : le texte « Le village inondé », page 27).</li></ul>" +
+    "<p>Un texte explicatif a trois parties :</p><ol>" +
+    "<li>l'<b>introduction</b> : elle présente le sujet ;</li>" +
+    "<li>le <b>développement</b> : il fournit les causes, les raisons, les particularités ou les explications. C'est le cœur du texte ;</li>" +
+    "<li>la <b>conclusion</b> : elle résume brièvement l'explication.</li></ol>" +
+    "<p><b>Le texte « Les îles »</b> (livre de lecture, page 18) : l'auteur écrit pour <b>expliquer</b> ce qu'est une île. Il commence par <b>définir</b> les îles. Les informations sont données dans cet ordre :<br>1. la définition des îles ; 2. la particularité des îles ; 3. les problèmes des îles ; 4. la conclusion.<br>C'est un texte explicatif (informatif).</p>",
+  astuce: "Introduction = de quoi on parle. Développement = pourquoi, comment (le cœur). Conclusion = on résume en une ou deux phrases.",
+  regle: "Le texte explicatif informe et fait comprendre en répondant à « pourquoi ? » ou « comment ? ». Il a une introduction, un développement (le cœur du texte) et une conclusion, et utilise la définition et l'énumération.",
+  niveaux: [
+    [
+      { t: "qcm", q: "À quoi sert un texte explicatif ?", choix: ["à informer et faire comprendre", "à raconter une histoire inventée", "à faire rire"], r: "à informer et faire comprendre", expl: "Il répond aux questions pourquoi ? ou comment ?" },
+      { t: "qcm", q: "À quelles questions répond un texte explicatif ?", choix: ["pourquoi ? comment ?", "qui ? quand ?", "combien ? où ?"], r: "pourquoi ? comment ?", expl: "C'est écrit dans la leçon." },
+      { t: "relier", q: "Relie chaque partie à son rôle.", paires: [["l'introduction", "présente le sujet"], ["le développement", "donne les causes et les explications"], ["la conclusion", "résume l'explication"]], expl: "Trois parties : introduction, développement, conclusion." },
+      { t: "vf", q: "Le développement est le cœur du texte explicatif.", r: true, expl: "C'est lui qui fournit les causes, les raisons et les explications." },
+      { t: "vf", q: "Dans le texte « Les îles », l'auteur commence par raconter une aventure.", r: false, expl: "Il commence par définir les îles." },
+      { t: "qcm", q: "Quel titre est celui d'un texte explicatif ?", choix: ["Pourquoi la mer est-elle salée ?", "Le lièvre et la tortue", "Lettre à mon cousin"], r: "Pourquoi la mer est-elle salée ?", expl: "Le titre pose une question « pourquoi ? » : on va expliquer." }
+    ],
+    [
+      { t: "qcm", q: "« Une île est une terre entourée d'eau de tous côtés. » Quel procédé l'auteur utilise-t-il ?", choix: ["la définition", "l'énumération", "le dialogue"], r: "la définition", expl: "La phrase donne le sens du mot « île »." },
+      { t: "qcm", q: "« L'inondation a plusieurs causes : les fortes pluies, les canaux bouchés et les maisons construites dans les zones basses. » Quel procédé ?", choix: ["l'énumération", "la définition", "la conclusion"], r: "l'énumération", expl: "L'auteur fait la liste des causes." },
+      { t: "relier", q: "Relie chaque procédé à ce qu'il fait.", paires: [["la définition", "donne le sens d'un terme"], ["l'énumération", "fait la liste des causes ou des solutions"]], expl: "Deux procédés pour rendre le propos clair." },
+      { t: "qcm", q: "Dans le texte « Les îles », quelle information vient en premier ?", choix: ["la définition des îles", "les problèmes des îles", "la conclusion"], r: "la définition des îles", expl: "Ordre : définition, particularité, problèmes, conclusion." },
+      { t: "qcm", q: "Dans « Les îles », que trouve-t-on juste après la définition ?", choix: ["la particularité des îles", "la conclusion", "les problèmes des îles"], r: "la particularité des îles", expl: "1. définition ; 2. particularité ; 3. problèmes ; 4. conclusion." },
+      { t: "saisie", q: "Comment appelle-t-on la partie qui présente le sujet ?", r: ["l'introduction", "introduction"], expl: "L'introduction présente le sujet." },
+      { t: "saisie", q: "Comment appelle-t-on la partie qui résume brièvement l'explication ?", r: ["la conclusion", "conclusion"], expl: "La conclusion résume l'explication." },
+      { t: "classer", q: "Range ces textes.", cases: ["texte explicatif", "autre texte"], items: [["Comment se forme la pluie ?", "texte explicatif"], ["Le conte de Leuk le lièvre", "autre texte"], ["Pourquoi le baobab perd-il ses feuilles ?", "texte explicatif"], ["Une lettre à ma grand-mère", "autre texte"], ["Comment les abeilles fabriquent le miel", "texte explicatif"], ["Un poème sur la mer", "autre texte"]], expl: "Le texte explicatif répond à pourquoi ? ou comment ?" }
+    ],
+    [
+      { t: "classer", q: "Lis ces phrases d'un texte sur le baobab et range-les dans la bonne partie.", cases: ["introduction", "développement", "conclusion"], items: [["Au Sénégal, pendant la saison sèche, les baobabs n'ont plus de feuilles. Pourquoi ?", "introduction"], ["Les feuilles laissent échapper de l'eau.", "développement"], ["Pendant la saison sèche, il ne pleut pas : l'arbre doit donc garder son eau.", "développement"], ["Ainsi, en perdant ses feuilles, le baobab peut attendre la saison des pluies.", "conclusion"]], expl: "L'introduction pose la question, le développement explique, la conclusion résume." },
+      { t: "qcm", q: "Dans le texte sur le baobab, à quelle question l'auteur répond-il ?", choix: ["Pourquoi le baobab perd-il ses feuilles ?", "Combien mesure un baobab ?", "Qui a planté le baobab ?"], r: "Pourquoi le baobab perd-il ses feuilles ?", expl: "L'introduction se termine par « Pourquoi ? »." },
+      { t: "qcm", q: "Quelle phrase pourrait servir de conclusion ?", choix: ["Voilà pourquoi le baobab perd ses feuilles : il garde ainsi son eau.", "Il était une fois un baobab géant.", "Le baobab a des feuilles."], r: "Voilà pourquoi le baobab perd ses feuilles : il garde ainsi son eau.", expl: "La conclusion résume brièvement l'explication." },
+      { t: "qcm", q: "Pourquoi l'auteur d'un texte explicatif utilise-t-il des définitions ?", choix: ["pour que le lecteur comprenne les mots difficiles", "pour faire peur au lecteur", "pour raconter une histoire"], r: "pour que le lecteur comprenne les mots difficiles", expl: "La définition rend le propos clair et accessible." },
+      { t: "vf", q: "Un texte explicatif est aussi appelé texte informatif dans le cahier.", r: true, expl: "« C'est un texte explicatif (informatif). »" },
+      { t: "qcm", q: "« Les problèmes des îles » : quel procédé l'auteur utilise-t-il sans doute pour les présenter ?", choix: ["l'énumération", "la définition", "le dialogue"], r: "l'énumération", expl: "Pour présenter plusieurs problèmes, on en fait la liste : c'est l'énumération." }
+    ],
+    [
+      { t: "qcm", q: "Remets les parties d'un texte explicatif dans l'ordre.", choix: ["introduction — développement — conclusion", "développement — introduction — conclusion", "conclusion — développement — introduction"], r: "introduction — développement — conclusion", expl: "On présente le sujet, on explique, puis on résume." },
+      { t: "trous", q: "Complète le plan du texte « Les îles ».", texte: "1. la [définition] des îles ; 2. la [particularité] des îles ; 3. les [problèmes] des îles ; 4. la [conclusion].", expl: "C'est l'ordre relevé dans le cahier." },
+      { t: "dictee", texte: "Un texte explicatif répond aux questions pourquoi ou comment pour faire comprendre un phénomène.", expl: "pourquoi, comment, phénomène : mots clés de la leçon." },
+      { t: "qcm", q: "Dans quelle partie l'auteur donne-t-il les causes et les raisons ?", choix: ["le développement", "l'introduction", "la conclusion"], r: "le développement", expl: "Le développement fournit les causes, les raisons, les explications." },
+      { t: "trous", q: "Complète la définition.", texte: "Un texte explicatif a pour objectif d'[informer] et de faire [comprendre] en répondant aux questions « pourquoi ? » ou « [comment] ? ».", expl: "C'est la définition de la leçon." }
+    ]
+  ]
+});
+
+
+/* ---- fr-orth-accord-verbe-sujet.js ---- */
+// Corrections : titre « avec sont sujet » → « avec son sujet » ; « Le gaitariste » → « Le guitariste ».
+LECONS.push({
+  id: "fr-orth-accord-verbe-sujet",
+  cahier: "francais",
+  matiere: "Orthographe",
+  titre: "L'accord du verbe avec son sujet",
+  date: "2026-10-13",
+  photos: ["DJI_20261118220513_0039_D.jpg", "DJI_20261118220520_0040_D.jpg"],
+  retiens:
+    "<p>Le sujet commande le verbe : le verbe s'accorde avec le <b>nom le plus important</b> du groupe nominal sujet.<br>Ex : Les <b>chaussures</b> neuves de Lalia brill<b>ent</b> au soleil. (c'est « chaussures » qui commande, pas « Lalia »)</p>" +
+    "<p>→ Un verbe commandé par <b>plusieurs sujets au singulier</b> s'écrit <b>au pluriel</b>.<br>Ex : Le guitariste, le pianiste et le batteur form<b>ent</b> un orchestre.</p>" +
+    "<p>→ <b>Plusieurs verbes</b> commandés par <b>un sujet au singulier</b> s'écrivent <b>au singulier</b>.<br>Ex : Le musicien tap<b>e</b>, tir<b>e</b> et souffl<b>e</b> dans ses instruments.</p>",
+  astuce: "Pour trouver le nom qui commande, enlève les mots en trop : « Les chaussures (neuves de Lalia) brillent. » Plusieurs sujets ? Remplace-les par « ils » : « Le guitariste, le pianiste et le batteur » = <b>ils</b> forment.",
+  regle: "Le verbe s'accorde avec le nom principal du groupe sujet. Plusieurs sujets au singulier → verbe au pluriel. Un sujet au singulier → tous ses verbes au singulier.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Qui commande le verbe ?", choix: ["le sujet", "le COD", "le complément de lieu"], r: "le sujet", expl: "Le sujet commande le verbe." },
+      { t: "qcm", q: "« Les chaussures neuves de Lalia brillent. » Quel nom commande le verbe ?", choix: ["chaussures", "Lalia", "neuves"], r: "chaussures", expl: "Ce sont les chaussures qui brillent : le verbe est au pluriel." },
+      { t: "vf", q: "Plusieurs sujets au singulier commandent un verbe au pluriel.", r: true, expl: "Le guitariste, le pianiste et le batteur forment un orchestre." },
+      { t: "vf", q: "Si un sujet au singulier commande plusieurs verbes, ces verbes s'écrivent au pluriel.", r: false, expl: "Ils restent au singulier : le musicien tape, tire et souffle." },
+      { t: "qcm", q: "« Le guitariste, le pianiste et le batteur … un orchestre. »", choix: ["forment", "forme", "formes"], r: "forment", expl: "Trois sujets au singulier = ils : forment." },
+      { t: "qcm", q: "« Le musicien tape, tire et … dans ses instruments. »", choix: ["souffle", "soufflent", "souffles"], r: "souffle", expl: "Un seul sujet au singulier : tous les verbes restent au singulier." }
+    ],
+    [
+      { t: "trous", q: "Accorde le verbe au présent.", texte: "Awa et Fatou [chantent] (chanter). — Le chien [aboie] (aboyer). — Les enfants [jouent] (jouer). — Mon père et mon oncle [partent] (partir).", expl: "Deux sujets → pluriel ; un sujet singulier → singulier." },
+      { t: "qcm", q: "« Les mangues du marché … très mûres. »", choix: ["sont", "est"], r: "sont", expl: "Le nom qui commande est « mangues » (pluriel), pas « marché »." },
+      { t: "qcm", q: "« Le panier de mangues … lourd. »", choix: ["est", "sont"], r: "est", expl: "Le nom qui commande est « panier » (singulier), pas « mangues »." },
+      { t: "saisie", q: "Accorde le verbe au présent : « Le lion et la hyène (chasser) la nuit. »", r: "chassent", expl: "Deux sujets au singulier → verbe au pluriel." },
+      { t: "saisie", q: "Accorde le verbe au présent : « La fille de nos voisins (danser) bien. »", r: "danse", expl: "C'est « la fille » qui danse : singulier." },
+      { t: "saisie", q: "Accorde le verbe au présent : « Les amis de Moussa (arriver) ce soir. »", r: "arrivent", expl: "C'est « les amis » qui arrivent : pluriel." },
+      { t: "trous", q: "Un seul sujet, plusieurs verbes : accorde au présent.", texte: "Le berger [appelle] (appeler), [compte] (compter) et [rentre] (rentrer) ses moutons.", aide: "appeler double le l.", expl: "Un sujet au singulier : tous les verbes au singulier." },
+      { t: "relier", q: "Relie chaque sujet au verbe bien accordé.", paires: [["Khady", "lave le linge."], ["Khady et sa sœur", "lavent le linge."], ["Les robes de Khady", "sèchent au soleil."], ["La robe des filles", "sèche au soleil."]], expl: "Cherche le nom qui commande dans chaque sujet." },
+      { t: "vf", q: "« Le maître et le directeur parle. » est bien écrit.", r: false, expl: "Deux sujets → pluriel : le maître et le directeur parlent." }
+    ],
+    [
+      { t: "qcm", q: "« Les cris des enfants … la maison. »", choix: ["remplissent", "remplit"], r: "remplissent", expl: "C'est « les cris » qui remplissent." },
+      { t: "qcm", q: "« Le bruit des vagues … les pêcheurs. »", choix: ["berce", "bercent"], r: "berce", expl: "C'est « le bruit » qui berce, pas « les vagues »." },
+      { t: "saisie", q: "Accorde le verbe au présent : « Dans la cour (jouer) Moussa et Ibrahima. »", r: "jouent", aide: "Le sujet est après le verbe.", expl: "Qui est-ce qui joue ? Moussa et Ibrahima : deux sujets → pluriel." },
+      { t: "saisie", q: "Accorde le verbe au présent : « La voiture de mes parents (rouler) vite. »", r: "roule", expl: "C'est « la voiture » qui roule : singulier." },
+      { t: "trous", q: "Accorde les verbes au présent.", texte: "Ma mère, ma tante et ma grand-mère [préparent] (préparer) le repas. Ma petite sœur [lave] (laver), [coupe] (couper) et [range] (ranger) les légumes.", expl: "Trois sujets → pluriel ; un seul sujet pour trois verbes → singulier." },
+      { t: "vf", q: "« Les élèves de la classe écoute le maître. » est bien écrit.", r: false, expl: "Le nom qui commande est « élèves » : les élèves écoutent." },
+      { t: "saisie", q: "Corrige le verbe : « Le car et le taxi arrive en même temps. »", r: "arrivent", expl: "Deux sujets au singulier → verbe au pluriel." }
+    ],
+    [
+      { t: "dictee", texte: "Les chaussures neuves de Lalia brillent au soleil du matin.", expl: "C'est « chaussures » qui commande le verbe : brillent." },
+      { t: "dictee", texte: "Le guitariste, le pianiste et le batteur forment un bel orchestre.", expl: "Plusieurs sujets au singulier : verbe au pluriel." },
+      { t: "dictee", texte: "Le vieux pêcheur répare, nettoie et repeint sa pirogue.", expl: "Un sujet au singulier commande trois verbes au singulier." },
+      { t: "trous", q: "Accorde les verbes au présent.", texte: "Au marché de Sandaga, les vendeuses de tissu [crient] (crier) fort. Une cliente [regarde] (regarder), [touche] (toucher) et [choisit] (choisir) un pagne. Son mari et son fils [attendent] (attendre) dehors.", expl: "vendeuses → pluriel ; une cliente → singulier pour les trois verbes ; deux sujets → pluriel." },
+      { t: "qcm", q: "Quelle phrase est bien accordée ?", choix: ["Le troupeau de vaches traverse la route.", "Le troupeau de vaches traversent la route.", "Les vaches du troupeau traverse la route.", "Le troupeau et le berger traverse la route."], r: "Le troupeau de vaches traverse la route.", expl: "C'est « le troupeau » (singulier) qui traverse." }
+    ]
+  ]
+});
+
+
+/* ---- fr-orth-le-la-les-lui-leur.js ---- */
+// Ajout : « leur placé devant un verbe ne prend jamais de s » ne figure pas mot pour mot dans cette leçon, mais découle de la correction de la leçon précédente (le cahier écrivait « leurs » parmi les pronoms) ; c'est le piège d'orthographe de la leçon.
+LECONS.push({
+  id: "fr-orth-le-la-les-lui-leur",
+  cahier: "francais",
+  matiere: "Orthographe",
+  titre: "Le, la, les, l', lui, leur devant un verbe",
+  date: "2026-10-15",
+  photos: ["DJI_20261118220539_0043_D.jpg", "DJI_20261118220547_0044_D.jpg"],
+  retiens:
+    "<p>Placés <b>devant un verbe</b>, le, la, les, l', lui, leur sont des <b>pronoms personnels compléments</b>.</p>" +
+    "<ul><li><b>le, la, les, l'</b> sont <b>COD</b>.<br>Ex : Je <b>le</b> vois. (Je vois qui ? le maître)</li>" +
+    "<li><b>lui, leur</b> sont <b>COI</b>.<br>Ex : Il <b>lui</b> demande comment il fait. (Il demande à qui ? à lui)</li></ul>" +
+    "<p><b>Attention :</b> devant un verbe, <b>leur</b> est un pronom : il ne prend jamais de <b>s</b>. Ex : Je <b>leur</b> parle.</p>" +
+    "<p>Devant un <b>nom</b>, le, la, les, l' sont des <b>articles</b> : <b>le</b> maître, <b>la</b> porte.</p>",
+  astuce: "Regarde le mot qui suit : un <b>verbe</b> → c'est un pronom (je <b>la</b> regarde) ; un <b>nom</b> → c'est un article (<b>la</b> porte). Pour leur : si tu peux dire « lui » à la place, c'est le pronom, sans s.",
+  regle: "Devant un verbe, le, la, les, l' sont des pronoms COD et lui, leur des pronoms COI. Le pronom leur ne prend jamais de s.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Devant un verbe, « le, la, les, l' » sont…", choix: ["des pronoms personnels compléments", "des articles", "des noms"], r: "des pronoms personnels compléments", expl: "Devant un verbe, ce sont des pronoms." },
+      { t: "qcm", q: "Devant un verbe, « le, la, les, l' » ont la fonction de…", choix: ["COD", "COI", "sujet"], r: "COD", expl: "Je le vois : je vois qui ? le (maître) : COD." },
+      { t: "qcm", q: "Devant un verbe, « lui, leur » ont la fonction de…", choix: ["COI", "COD", "sujet"], r: "COI", expl: "Il lui demande : il demande à qui ? à lui : COI." },
+      { t: "vf", q: "Dans « Je le vois », « le » est un article.", r: false, expl: "« le » est devant le verbe « vois » : c'est un pronom, COD." },
+      { t: "vf", q: "Le pronom « leur » placé devant un verbe ne prend jamais de s.", r: true, expl: "Je leur parle, je leur donne : jamais de s." },
+      { t: "classer", q: "Le mot en gras est-il devant un verbe ou devant un nom ?", cases: ["pronom (devant un verbe)", "article (devant un nom)"], items: [["Je <b>la</b> regarde.", "pronom (devant un verbe)"], ["<b>La</b> porte est ouverte.", "article (devant un nom)"], ["Tu <b>les</b> appelles.", "pronom (devant un verbe)"], ["<b>Les</b> élèves arrivent.", "article (devant un nom)"], ["Il <b>l'</b>aime.", "pronom (devant un verbe)"], ["<b>L'</b>école est fermée.", "article (devant un nom)"]], expl: "Devant un verbe : pronom. Devant un nom : article." }
+    ],
+    [
+      { t: "trous", q: "Remplace le groupe en gras par le, la, l' ou les.", texte: "Je vois <b>le maître</b> → Je [le] vois. — Awa lave <b>la marmite</b> → Awa [la] lave. — Il range <b>ses cahiers</b> → Il [les] range. — Tu aimes <b>ton école</b> → Tu [l']aimes.", expl: "Masculin : le ; féminin : la ; pluriel : les ; devant une voyelle : l'." },
+      { t: "trous", q: "Remplace le groupe en gras par lui ou leur.", texte: "Il parle <b>à son ami</b> → Il [lui] parle. — Je téléphone <b>à mes parents</b> → Je [leur] téléphone. — Nous obéissons <b>au maître</b> → Nous [lui] obéissons.", expl: "Un seul : lui ; plusieurs : leur (sans s)." },
+      { t: "qcm", q: "« Les enfants ont faim ; maman … donne du riz. »", choix: ["leur", "leurs", "les"], r: "leur", expl: "Maman donne du riz à qui ? aux enfants → leur, sans s." },
+      { t: "qcm", q: "« J'ai vu Fatou et je … ai parlé. »", choix: ["lui", "la", "leur"], r: "lui", expl: "J'ai parlé à qui ? à Fatou → lui (COI)." },
+      { t: "qcm", q: "« J'ai vu Fatou et je … ai saluée. »", choix: ["l'", "lui", "leur"], r: "l'", expl: "J'ai salué qui ? Fatou → la, qui devient l' devant une voyelle (COD)." },
+      { t: "saisie", q: "Quelle est la fonction de « lui » dans « Il lui demande comment il fait » ?", r: "COI", expl: "Il demande à qui ? à lui : COI." },
+      { t: "saisie", q: "Quelle est la fonction de « les » dans « Maman les reçoit » ?", r: "COD", expl: "Maman reçoit qui ? les (invités) : COD." },
+      { t: "relier", q: "Relie chaque pronom à sa fonction.", paires: [["le", "COD"], ["la", "COD"], ["lui", "COI"], ["leur", "COI"]], expl: "le, la, les, l' : COD ; lui, leur : COI." },
+      { t: "vf", q: "« Je leurs écris une lettre. » est bien écrit.", r: false, expl: "Devant le verbe, « leur » est un pronom : pas de s. Je leur écris." }
+    ],
+    [
+      { t: "classer", q: "Dans chaque phrase, « leur » est-il devant un verbe ou devant un nom ?", cases: ["pronom devant un verbe", "devant un nom"], items: [["Je leur parle.", "pronom devant un verbe"], ["C'est leur maison.", "devant un nom"], ["Il leur donne du pain.", "pronom devant un verbe"], ["Leur chien aboie.", "devant un nom"], ["Nous leur écrivons.", "pronom devant un verbe"], ["J'aime leur jardin.", "devant un nom"]], expl: "Le pronom « leur » est devant un verbe et ne prend jamais de s." },
+      { t: "saisie", q: "Récris la phrase en remplaçant « à ses cousins » par un pronom : « Khady envoie une lettre à ses cousins. »", r: "Khady leur envoie une lettre.", large: true, expl: "à ses cousins → leur (COI), placé devant le verbe, sans s." },
+      { t: "saisie", q: "Récris la phrase en remplaçant « la radio » par un pronom : « Grand-père écoute la radio. »", r: "Grand-père l'écoute.", large: true, expl: "la radio → la, qui devient l' devant une voyelle." },
+      { t: "qcm", q: "Dans « Le maître les félicite », « les » est…", choix: ["pronom personnel, COD de féliciter", "article défini", "pronom personnel, COI de féliciter"], r: "pronom personnel, COD de féliciter", expl: "Devant le verbe ; le maître félicite qui ? les (élèves) : COD." },
+      { t: "trous", q: "Complète avec le, la, les, lui ou leur.", texte: "Moussa a un vélo neuf ; il [le] nettoie chaque jour. Ses amis [l']admirent et il [leur] prête parfois son vélo.", expl: "le vélo → le (COD) ; Moussa → l' (COD, devant une voyelle) ; à ses amis → leur (COI)." },
+      { t: "vf", q: "Dans « Elle leur offre des bonbons », « leur » est COI.", r: true, expl: "Elle offre des bonbons à qui ? à eux → leur (COI)." }
+    ],
+    [
+      { t: "dictee", texte: "Les invités sont arrivés ; maman les accueille et leur offre du jus de bissap.", expl: "« les » : COD ; « leur » : COI, sans s devant le verbe." },
+      { t: "dictee", texte: "Mon petit frère a perdu son ballon ; je le cherche partout et je lui promets de le retrouver.", expl: "« le » (COD) ; « lui » (COI)." },
+      { t: "trous", q: "Complète ce texte.", texte: "Les élèves attendent le maître. Quand il arrive, ils [le] saluent. Le maître [leur] distribue les cahiers et [leur] demande de travailler en silence.", expl: "saluer qui ? le maître → le (COD) ; distribuer à qui ? aux élèves → leur (COI, sans s)." },
+      { t: "qcm", q: "Quelle phrase est bien écrite ?", choix: ["Je leur prête mes livres.", "Je leurs prête mes livres.", "Je leur prête mes livre.", "Je leurs prêtent mes livres."], r: "Je leur prête mes livres.", expl: "Le pronom leur ne prend pas de s ; « mes livres » est au pluriel." },
+      { t: "relier", q: "Relie chaque phrase au pronom qui convient.", paires: [["Tu vois la mer ? Je … vois.", "la"], ["Tu vois tes amis ? Je … vois.", "les"], ["Tu parles à tes amis ? Je … parle.", "leur"], ["Tu parles à Awa ? Je … parle.", "lui"]], expl: "COD : la, les ; COI : lui, leur." }
+    ]
+  ]
+});
+
+
+/* ---- fr-orth-noms-feminins-ee-te-tie.js ---- */
+// À VÉRIFIER : après « sauf la clé ou clef », le cahier ajoute un mot peu lisible (probablement « l'acné ») : non repris dans le module.
+// À VÉRIFIER : pour les noms qui expriment le contenu (une assiettée, une brouettée), le cahier ne dit pas explicitement qu'ils s'écrivent -ée ; c'est le sens de l'« Attention » et c'est la règle habituelle. Le module l'écrit.
+// Corrections : « une brouette » → « une brouettée » (nom de contenu) ; « la jette » → « la jetée » ; « Tous les noms femins par le son [é] » → « Tous les noms féminins terminés par le son [é] ».
+LECONS.push({
+  id: "fr-orth-noms-feminins-ee-te-tie",
+  cahier: "francais",
+  matiere: "Orthographe",
+  titre: "Les noms féminins en -ée, -té, -tié",
+  date: "2026-09-29",
+  photos: ["DJI_20261118220345_0028_D.jpg", "DJI_20261118220350_0029_D.jpg"],
+  retiens:
+    "<p>→ Les noms féminins terminés par le son [é] s'écrivent avec <b>-ée</b>.<br>Ex : la vallée, la soirée, la gorgée, la cheminée…<br>Sauf : la clé (ou la clef).</p>" +
+    "<p>→ Les noms terminés en <b>-té</b> ou en <b>-tié</b> se terminent généralement par <b>-é</b>.<br>Ex : la santé, la fidélité, la pitié, la moitié.</p>" +
+    "<p><b>Attention :</b></p><ul>" +
+    "<li>Les noms qui expriment un <b>contenu</b> s'écrivent <b>-ée</b> : une assiettée (le contenu d'une assiette), une brouettée (le contenu d'une brouette).</li>" +
+    "<li><b>6 noms</b> ne suivent pas la règle et s'écrivent <b>-tée</b> : la dictée, la jetée, la montée, la pâtée, la portée, la butée.</li></ul>",
+  astuce: "Pour les noms en <b>-té</b> : pense à la <b>santé</b>, à la <b>liberté</b> : un seul é. Les 6 rebelles en <b>-tée</b> : « Après la <b>dictée</b>, on monte la <b>montée</b> vers la <b>jetée</b> ; le chien mange sa <b>pâtée</b> avec la <b>portée</b> de chiots, jusqu'à la <b>butée</b>. »",
+  regle: "Nom féminin en [é] → -ée (la vallée), sauf la clé. Nom en -té ou -tié → -é (la santé, la moitié), sauf les noms de contenu (une assiettée) et dictée, jetée, montée, pâtée, portée, butée.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Les noms féminins terminés par le son [é] s'écrivent en général…", choix: ["-ée", "-é", "-er"], r: "-ée", expl: "la vallée, la soirée, la gorgée : -ée." },
+      { t: "qcm", q: "Les noms terminés en -té ou -tié se terminent généralement par…", choix: ["-é", "-ée", "-er"], r: "-é", expl: "la santé, la fidélité, la pitié, la moitié : -é." },
+      { t: "vf", q: "« la clé » est une exception : elle s'écrit sans e final.", r: true, expl: "On écrit la clé (ou la clef)." },
+      { t: "vf", q: "On écrit « la santée ».", r: false, expl: "Nom en -té → -é : la santé." },
+      { t: "classer", q: "Range ces noms selon leur terminaison.", cases: ["-ée", "-é"], items: [["la vallée", "-ée"], ["la santé", "-é"], ["la soirée", "-ée"], ["la pitié", "-é"], ["la cheminée", "-ée"], ["la moitié", "-é"]], expl: "Son [é] en général → -ée ; noms en -té ou -tié → -é." },
+      { t: "qcm", q: "Combien de noms en -tée font exception à la règle des noms en -té ?", choix: ["2", "6", "10"], r: "6", expl: "la dictée, la jetée, la montée, la pâtée, la portée, la butée." }
+    ],
+    [
+      { t: "trous", q: "Complète avec -ée ou -é.", texte: "la soir[ée] — la libert[é] — la gorg[ée] — la beaut[é] — la journ[ée] — l'amiti[é]", expl: "journée, soirée, gorgée : -ée ; liberté, beauté, amitié : -é." },
+      { t: "saisie", q: "Écris le nom : ce qu'on boit d'un seul coup, c'est une gorg…", r: "gorgée", expl: "Nom féminin en [é] → -ée." },
+      { t: "saisie", q: "Écris le nom : la fin de la journée, avant la nuit, c'est la soir…", r: "soirée", expl: "Nom féminin en [é] → -ée." },
+      { t: "saisie", q: "Écris le nom : le fait d'être en bonne forme, c'est la san…", r: "santé", expl: "Nom en -té → -é." },
+      { t: "saisie", q: "Écris le nom : une des deux parties égales d'un tout, c'est la moi…", r: "moitié", expl: "Nom en -tié → -é." },
+      { t: "qcm", q: "Quel nom est bien écrit ?", choix: ["la fidélité", "la fidélitée", "la fidéliter"], r: "la fidélité", expl: "Nom en -té → -é." },
+      { t: "qcm", q: "Quel nom est bien écrit ?", choix: ["la vallée", "la vallé", "la valée"], r: "la vallée", expl: "Nom féminin en [é] → -ée." },
+      { t: "relier", q: "Relie chaque début de mot à sa fin.", paires: [["la pit", "ié"], ["la chemin", "ée"], ["la clé", "(exception, sans e)"], ["la propret", "é"]], expl: "pitié, cheminée, clé, propreté." },
+      { t: "vf", q: "« la pitié » et « l'amitié » se terminent par -é.", r: true, expl: "Noms en -tié → -é." }
+    ],
+    [
+      { t: "qcm", q: "Quel nom en -té fait exception et s'écrit -tée ?", choix: ["la dictée", "la santé", "la beauté", "la bonté"], r: "la dictée", expl: "La dictée fait partie des 6 exceptions." },
+      { t: "classer", q: "Noms en [té] : règle (-té) ou exception (-tée) ?", cases: ["-té (règle)", "-tée (exception)"], items: [["la santé", "-té (règle)"], ["la jetée", "-tée (exception)"], ["la bonté", "-té (règle)"], ["la montée", "-tée (exception)"], ["la fierté", "-té (règle)"], ["la pâtée", "-tée (exception)"], ["la portée", "-tée (exception)"], ["la fidélité", "-té (règle)"]], expl: "Les 6 exceptions : dictée, jetée, montée, pâtée, portée, butée." },
+      { t: "saisie", q: "Écris le nom de contenu : le contenu d'une assiette, c'est une assiet…", r: "assiettée", expl: "Les noms qui expriment un contenu s'écrivent -ée : une assiettée." },
+      { t: "saisie", q: "Écris le nom de contenu : le contenu d'une brouette, c'est une brouet…", r: "brouettée", expl: "Nom de contenu → -ée : une brouettée." },
+      { t: "saisie", q: "Écris le nom (exception) : la nourriture qu'on donne au chien, c'est la pât…", r: "pâtée", expl: "« la pâtée » est une des 6 exceptions." },
+      { t: "vf", q: "« la montée » suit la règle des noms en -té.", r: false, expl: "C'est une exception : la montée." },
+      { t: "trous", q: "Complète ce texte.", texte: "Après la dict[ée], Awa a mangé une assiett[ée] de riz. Elle souhaite une bonne san[té] à sa grand-mère.", expl: "dictée (exception), assiettée (nom de contenu), santé (-té)." }
+    ],
+    [
+      { t: "dictee", texte: "Pendant la soirée, les pêcheurs se promènent sur la jetée de Saint-Louis.", expl: "soirée (-ée) ; jetée (une des 6 exceptions)." },
+      { t: "dictee", texte: "Grâce à sa bonté et à sa fidélité, Moussa a gardé la moitié de son goûter pour Ibrahima.", expl: "bonté, fidélité, moitié : -é." },
+      { t: "trous", q: "Complète ce texte.", texte: "Pendant la journ[ée], le maçon transporte une brouett[ée] de sable. En haut de la mont[ée], il boit une gorg[ée] d'eau et retrouve sa bonne humeur et sa san[té].", expl: "journée, gorgée (-ée) ; brouettée (nom de contenu) ; montée (exception) ; santé (-té)." },
+      { t: "qcm", q: "Quelle phrase ne contient aucune faute ?", choix: ["La beauté de la vallée nous émerveille.", "La beautée de la vallée nous émerveille.", "La beauté de la vallé nous émerveille.", "La beautée de la vallé nous émerveille."], r: "La beauté de la vallée nous émerveille.", expl: "beauté (-té → -é) ; vallée (-ée)." },
+      { t: "relier", q: "Relie chaque nom à la règle qu'il suit.", paires: [["la cheminée", "féminin en [é] → -ée"], ["la liberté", "nom en -té → -é"], ["une assiettée", "nom de contenu → -ée"], ["la portée", "une des 6 exceptions"], ["la clé", "exception sans e"]], expl: "Règles et exceptions de la leçon." }
+    ]
+  ]
+});
+
+
+/* ---- fr-orth-noms-feminins-u-i.js ---- */
+// À VÉRIFIER : parmi les noms masculins, le cahier écrit « le bout » ou « le but » (lecture incertaine) : mot non repris dans le module.
+// Précision : le son noté [u] au cahier est celui de « rue » (en alphabet phonétique [y]) ; le module l'écrit [u] comme au tableau et le précise.
+// Corrections : « la bienvenvenue » → « la bienvenue » ; « la brebis la perdrix » → virgule ajoutée.
+LECONS.push({
+  id: "fr-orth-noms-feminins-u-i",
+  cahier: "francais",
+  matiere: "Orthographe",
+  titre: "Les noms féminins terminés par le son [u] ou [i]",
+  date: "2026-09-24",
+  photos: ["DJI_20261118220310_0024_D.jpg", "DJI_20261118220316_0025_D.jpg"],
+  retiens:
+    "<p>(Le son [u] est celui qu'on entend à la fin de « la r<b>ue</b> ».)</p>" +
+    "<p>→ Les <b>noms féminins</b> terminés par le son [u] s'écrivent <b>-ue</b> : la rue, la charrue, la tortue, la bienvenue.<br>Exceptions : la vertu, la tribu, la bru, la glu.</p>" +
+    "<p>→ Les <b>noms féminins</b> terminés par le son [i] s'écrivent <b>-ie</b> : la vie, la sortie, la poésie, l'écurie.<br>Exceptions : la nuit, la fourmi, la souris, la brebis, la perdrix.</p>" +
+    "<p><b>Attention !</b> Pour les <b>noms masculins</b> terminés par le son [u] ou [i], les terminaisons sont très nombreuses. Il est prudent de consulter un dictionnaire en cas de doute.<br>Ex : le tissu, le fût, le dessus, un ennemi, un parapluie, un fusil, un prix, le riz, le nid, le bruit…</p>",
+  astuce: "Une fille porte une <b>e</b> : les noms <b>féminins</b> en [u] et [i] finissent par <b>-ue</b> et <b>-ie</b>. Retiens les exceptions en petite phrase : « La <b>souris</b>, la <b>fourmi</b> et la <b>brebis</b> dorment la <b>nuit</b> près de la <b>perdrix</b>. »",
+  regle: "Nom féminin en [u] → -ue (la rue), sauf vertu, tribu, bru, glu. Nom féminin en [i] → -ie (la vie), sauf nuit, fourmi, souris, brebis, perdrix.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Les noms féminins terminés par le son [u] (comme « rue ») s'écrivent…", choix: ["-ue", "-u", "-ut"], r: "-ue", expl: "la rue, la tortue, la charrue : -ue." },
+      { t: "qcm", q: "Les noms féminins terminés par le son [i] s'écrivent…", choix: ["-ie", "-i", "-is"], r: "-ie", expl: "la vie, la sortie, la poésie : -ie." },
+      { t: "vf", q: "« la tortue » s'écrit avec un e à la fin.", r: true, expl: "Nom féminin en [u] → -ue." },
+      { t: "vf", q: "« la souris » suit la règle des noms féminins en -ie.", r: false, expl: "C'est une exception : la souris." },
+      { t: "classer", q: "Range ces noms féminins.", cases: ["-ue", "-ie"], items: [["la rue", "-ue"], ["la vie", "-ie"], ["la charrue", "-ue"], ["la sortie", "-ie"], ["la tortue", "-ue"], ["la poésie", "-ie"]], expl: "Son [u] → -ue ; son [i] → -ie." },
+      { t: "qcm", q: "Pour les noms <b>masculins</b> en [u] ou [i], que conseille la leçon ?", choix: ["consulter un dictionnaire en cas de doute", "toujours écrire -ue ou -ie", "toujours écrire -u ou -i"], r: "consulter un dictionnaire en cas de doute", expl: "Les terminaisons des noms masculins sont très nombreuses." }
+    ],
+    [
+      { t: "trous", q: "Complète avec -ue ou -ie.", texte: "la r[ue] — la plu[ie] — la tort[ue] — la mair[ie] — une aven[ue] — la sort[ie]", expl: "Noms féminins : [u] → -ue ; [i] → -ie." },
+      { t: "saisie", q: "Écris le nom féminin : l'instrument qui sert à labourer, c'est la charr…", r: "charrue", expl: "Nom féminin en [u] → -ue." },
+      { t: "saisie", q: "Écris le nom féminin : l'eau qui tombe du ciel, c'est la plu…", r: "pluie", expl: "Nom féminin en [i] → -ie." },
+      { t: "saisie", q: "Écris le nom féminin : le lieu où dorment les chevaux, c'est l'écur…", r: "écurie", expl: "Nom féminin en [i] → -ie." },
+      { t: "saisie", q: "Écris le nom féminin : on la souhaite à un invité qui arrive, c'est la bienven…", r: "bienvenue", expl: "Nom féminin en [u] → -ue." },
+      { t: "qcm", q: "Quel nom est bien écrit ?", choix: ["la poésie", "la poési", "la poésis"], r: "la poésie", expl: "Nom féminin en [i] → -ie." },
+      { t: "qcm", q: "Quel nom est bien écrit ?", choix: ["la nuit", "la nuie", "la nui"], r: "la nuit", expl: "« la nuit » est une exception." },
+      { t: "relier", q: "Relie chaque exception à sa fin de mot.", paires: [["la vert", "u"], ["la fourm", "i"], ["la sour", "is"], ["la perdr", "ix"], ["la n", "uit"]], expl: "Ce sont des exceptions : elles ne finissent pas par -ue ou -ie." },
+      { t: "vf", q: "« la tribu » est une exception : elle ne prend pas de e.", r: true, expl: "Exceptions en [u] : la vertu, la tribu, la bru, la glu." }
+    ],
+    [
+      { t: "classer", q: "Règle ou exception ?", cases: ["suit la règle", "exception"], items: [["la tortue", "suit la règle"], ["la vertu", "exception"], ["la sortie", "suit la règle"], ["la brebis", "exception"], ["la rue", "suit la règle"], ["la glu", "exception"], ["la vie", "suit la règle"], ["la fourmi", "exception"]], expl: "Exceptions : vertu, tribu, bru, glu ; nuit, fourmi, souris, brebis, perdrix." },
+      { t: "saisie", q: "Écris ce nom féminin (exception) : le petit animal gris que le chat chasse, c'est la sour…", r: "souris", expl: "« la souris » est une exception : -is." },
+      { t: "saisie", q: "Écris ce nom féminin (exception) : la femelle du mouton, c'est la breb…", r: "brebis", expl: "« la brebis » est une exception : -is." },
+      { t: "saisie", q: "Écris ce nom féminin (exception) : le petit insecte qui vit en colonie, c'est la fourm…", r: "fourmi", expl: "« la fourmi » est une exception : -i sans e." },
+      { t: "vf", q: "« un parapluie » est un nom masculin terminé par -ie.", r: true, expl: "Pour les noms masculins, les terminaisons varient : un parapluie, un fusil, un prix, le riz…" },
+      { t: "classer", q: "Range ces noms masculins selon leur dernière lettre écrite.", cases: ["-i ou -ie", "-is, -ix ou -iz", "-il, -id ou -it"], items: [["un ennemi", "-i ou -ie"], ["un parapluie", "-i ou -ie"], ["un prix", "-is, -ix ou -iz"], ["le riz", "-is, -ix ou -iz"], ["un fusil", "-il, -id ou -it"], ["le nid", "-il, -id ou -it"], ["le bruit", "-il, -id ou -it"]], expl: "Pour les noms masculins, il n'y a pas de règle unique : il faut les apprendre ou vérifier au dictionnaire." },
+      { t: "trous", q: "Complète ces noms masculins de la leçon.", texte: "le tiss[u] — le dess[us] — le n[id] — le fus[il]", expl: "Ce sont les exemples du cahier : le tissu, le dessus, le nid, le fusil." }
+    ],
+    [
+      { t: "dictee", texte: "La nuit, une souris et une tortue traversent la rue près de la mairie.", expl: "nuit, souris (exceptions) ; tortue, rue (-ue) ; mairie (-ie)." },
+      { t: "dictee", texte: "Sous la pluie, la brebis cherche la sortie de l'écurie.", expl: "pluie, sortie, écurie (-ie) ; brebis (exception)." },
+      { t: "trous", q: "Complète ce texte.", texte: "Dans la cour de la mair[ie], une fourm[i] porte un grain de r[iz]. Elle évite la pl[uie] et rentre avant la n[uit].", expl: "mairie, pluie (-ie) ; fourmi, nuit (exceptions) ; riz (nom masculin)." },
+      { t: "qcm", q: "Quelle phrase ne contient aucune faute ?", choix: ["La perdrix se cache dans la prairie.", "La perdrie se cache dans la prairi.", "La perdrix se cache dans la prairi.", "La perdri se cache dans la prairie."], r: "La perdrix se cache dans la prairie.", expl: "perdrix est une exception ; prairie suit la règle (-ie)." },
+      { t: "relier", q: "Relie chaque nom à ce qu'il illustre.", paires: [["la charrue", "féminin en -ue"], ["la poésie", "féminin en -ie"], ["la bru", "exception en [u]"], ["la perdrix", "exception en [i]"]], expl: "Règles et exceptions de la leçon." }
+    ]
+  ]
+});
+
+
+/* ---- fr-orth-noms-oir-oire-eur.js ---- */
+// À VÉRIFIER : le cahier écrit « Les noms féminins terminés par le son [oir] s'écrivent tous oir ». C'est faux : ils s'écrivent « oire » (les exemples du cahier le montrent : l'armoire, la foire, une nageoire). Corrigé dans le module. Aucune exception n'est notée au cahier pour les noms féminins.
+// Corrections : titre « terminés par le oir/oire » → « par le son » ; « femins » → « féminins ».
+LECONS.push({
+  id: "fr-orth-noms-oir-oire-eur",
+  cahier: "francais",
+  matiere: "Orthographe",
+  titre: "Les noms terminés par le son [oir] ou [eur]",
+  date: "2026-09-22",
+  photos: ["DJI_20261118220225_0020_D.jpg", "DJI_20261118220234_0021_D.jpg"],
+  retiens:
+    "<p>→ Les <b>noms féminins</b> terminés par le son [oir] s'écrivent tous <b>-oire</b>.<br>Ex : l'armoire, la foire, une nageoire.</p>" +
+    "<p>→ Les <b>noms masculins</b> terminés par le son [oir] s'écrivent généralement <b>-oir</b>.<br>Ex : le rasoir, le mouchoir.<br>Exceptions : le laboratoire, l'interrogatoire, le territoire, l'observatoire.</p>" +
+    "<p>→ Les <b>noms masculins et féminins</b> terminés par le son [eur] s'écrivent <b>-eur</b>.<br>Ex : un lecteur, la pâleur, l'humeur.<br>Exceptions : le beurre, l'heure, un heurt (de heurter), le cœur, la sœur, la demeure.</p>",
+  astuce: "Mets <b>un</b> ou <b>une</b> devant le nom. <b>Une</b> → -oire (une armoire). <b>Un</b> → -oir (un mouchoir), sauf les 4 exceptions en -oire : laboratoire, interrogatoire, territoire, observatoire.",
+  regle: "Son [oir] : nom féminin → -oire ; nom masculin → -oir (sauf laboratoire, interrogatoire, territoire, observatoire). Son [eur] : -eur, sauf beurre, heure, heurt, cœur, sœur, demeure.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Les noms <b>féminins</b> terminés par le son [oir] s'écrivent…", choix: ["-oire", "-oir", "-oirs"], r: "-oire", expl: "Féminin → -oire : l'armoire, la foire, une nageoire." },
+      { t: "qcm", q: "Les noms <b>masculins</b> terminés par le son [oir] s'écrivent généralement…", choix: ["-oir", "-oire"], r: "-oir", expl: "Masculin → -oir : le rasoir, le mouchoir." },
+      { t: "qcm", q: "Les noms terminés par le son [eur] s'écrivent en général…", choix: ["-eur", "-eure", "-eurre"], r: "-eur", expl: "Masculins et féminins : -eur. Ex : un lecteur, la pâleur." },
+      { t: "vf", q: "« la foire » est un nom féminin en -oire.", r: true, expl: "Féminin → -oire." },
+      { t: "vf", q: "« le mouchoir » s'écrit avec un e à la fin.", r: false, expl: "C'est un nom masculin : -oir, sans e." },
+      { t: "classer", q: "Range ces noms selon leur terminaison.", cases: ["-oir", "-oire"], items: [["le rasoir", "-oir"], ["l'armoire", "-oire"], ["le mouchoir", "-oir"], ["la foire", "-oire"], ["une nageoire", "-oire"], ["le couloir", "-oir"]], expl: "Masculin → -oir ; féminin → -oire." }
+    ],
+    [
+      { t: "trous", q: "Complète avec -oir ou -oire.", texte: "une baign[oire] — un tir[oir] — la mém[oire] — un arros[oir] — une hist[oire] — le trott[oir]", expl: "une → -oire ; un, le → -oir." },
+      { t: "trous", q: "Complète avec -eur.", texte: "un vend[eur] — la chal[eur] — le chant[eur] — la coul[eur]", expl: "Le son [eur] s'écrit -eur, au masculin comme au féminin." },
+      { t: "saisie", q: "Écris le nom : le meuble où l'on range les vêtements, c'est une arm…", r: "armoire", expl: "« une armoire » : nom féminin → -oire." },
+      { t: "saisie", q: "Écris le nom : l'objet qui sert à se raser, c'est un ras…", r: "rasoir", expl: "« un rasoir » : nom masculin → -oir." },
+      { t: "saisie", q: "Écris le nom : celui qui lit, c'est un lect…", r: "lecteur", expl: "Le son [eur] s'écrit -eur." },
+      { t: "qcm", q: "Quel mot est bien écrit ?", choix: ["la victoire", "la victoir", "la victoirre"], r: "la victoire", expl: "Nom féminin → -oire." },
+      { t: "qcm", q: "Quel mot est bien écrit ?", choix: ["un miroir", "un miroire", "un miroirs"], r: "un miroir", expl: "Nom masculin → -oir." },
+      { t: "relier", q: "Relie chaque début de mot à sa fin.", paires: [["la pâl", "eur"], ["une nage", "oire"], ["le mouch", "oir"], ["la f", "oire"]], expl: "pâleur, nageoire, mouchoir, foire." },
+      { t: "vf", q: "« la pâleur » et « l'humeur » sont des noms féminins en -eur.", r: true, expl: "Le son [eur] s'écrit -eur même au féminin." }
+    ],
+    [
+      { t: "qcm", q: "Quel nom masculin s'écrit en -oire ?", choix: ["le laboratoire", "le rasoir", "le mouchoir", "le couloir"], r: "le laboratoire", expl: "Laboratoire est une exception : masculin, mais en -oire." },
+      { t: "classer", q: "Range ces noms masculins : règle (-oir) ou exception (-oire) ?", cases: ["-oir (règle)", "-oire (exception)"], items: [["le rasoir", "-oir (règle)"], ["le territoire", "-oire (exception)"], ["le mouchoir", "-oir (règle)"], ["l'observatoire", "-oire (exception)"], ["le trottoir", "-oir (règle)"], ["l'interrogatoire", "-oire (exception)"]], expl: "Les 4 exceptions : laboratoire, interrogatoire, territoire, observatoire." },
+      { t: "classer", q: "Son [eur] : règle (-eur) ou exception ?", cases: ["-eur (règle)", "exception"], items: [["un lecteur", "-eur (règle)"], ["le beurre", "exception"], ["la chaleur", "-eur (règle)"], ["l'heure", "exception"], ["la peur", "-eur (règle)"], ["la demeure", "exception"]], expl: "Exceptions : le beurre, l'heure, un heurt, le cœur, la sœur, la demeure." },
+      { t: "saisie", q: "Écris le nom qui désigne une partie de la journée de 60 minutes : l'…", r: "heure", expl: "« l'heure » est une exception : -eure." },
+      { t: "saisie", q: "Écris le nom (exception) : on le tartine sur le pain, c'est le b…", r: "beurre", expl: "« le beurre » est une exception : -eurre." },
+      { t: "vf", q: "« le territoire » suit la règle des noms masculins.", r: false, expl: "C'est une exception : nom masculin écrit -oire." },
+      { t: "trous", q: "Complète avec -oir, -oire, -eur ou -eure.", texte: "Le ministre visite le laborat[oire]. — Mon frère a p[eur] du n[oir]. — À quelle h[eure] pars-tu ?", aide: "Pense aux exceptions.", expl: "laboratoire et heure sont des exceptions ; peur suit la règle (-eur)  ; le noir est un nom masculin en -oir." }
+    ],
+    [
+      { t: "dictee", texte: "Ma tante range ses mouchoirs dans la vieille armoire du couloir.", expl: "mouchoir et couloir (masculins en -oir), armoire (féminin en -oire)." },
+      { t: "dictee", texte: "À la foire de Dakar, un vendeur de beurre parle avec bonne humeur.", expl: "foire (-oire), vendeur et humeur (-eur), beurre (exception)." },
+      { t: "trous", q: "Complète ce texte.", texte: "Le soir, grand-père raconte une hist[oire]. Il parle d'un chass[eur] qui cherchait un territ[oire] où vivre. Le cœur battant, les enfants écoutent sur le trott[oir].", expl: "histoire (féminin), chasseur (-eur), territoire (exception), trottoir (masculin)." },
+      { t: "qcm", q: "Quelle phrase ne contient aucune faute ?", choix: ["Le docteur travaille dans un laboratoire.", "Le docteur travaille dans un laboratoir.", "Le docteure travaille dans un laboratoire.", "Le docteur travaille dans un labouratoir."], r: "Le docteur travaille dans un laboratoire.", expl: "docteur (-eur) ; laboratoire (exception en -oire)." },
+      { t: "relier", q: "Relie chaque nom à la règle qu'il suit.", paires: [["une baignoire", "féminin → -oire"], ["un arrosoir", "masculin → -oir"], ["l'observatoire", "exception masculine en -oire"], ["la demeure", "exception en -eure"]], expl: "Règles et exceptions de la leçon." }
+    ]
+  ]
+});
+
+
+/* ---- fr-orth-ponctuation.js ---- */
+// Corrections : « Elle sépare » → « Il sépare » (le point-virgule est masculin) ; « une explication de rapporter un discours » → « une explication ou de rapporter un discours » ; exemple « lave-toi » → « Lave-toi. »
+LECONS.push({
+  id: "fr-orth-ponctuation",
+  cahier: "francais",
+  matiere: "Orthographe",
+  titre: "Les signes de ponctuation",
+  date: "2026-09-15",
+  photos: ["DJI_20261118220052_0013_D.jpg", "DJI_20261118220108_0014_D.jpg"],
+  retiens:
+    "<ul>" +
+    "<li>Le <b>point (.)</b> se met à la fin d'une phrase qui donne une information. Le <b>point d'interrogation (?)</b> s'utilise quand on pose une question. Le <b>point d'exclamation (!)</b> sert à exprimer une émotion.</li>" +
+    "<li>La <b>virgule (,)</b> marque une petite pause.</li>" +
+    "<li>Le <b>point-virgule (;)</b> marque une pause plus longue que la virgule. Il sépare deux parties d'une phrase.</li>" +
+    "<li>Les <b>deux-points (:)</b> permettent d'introduire une explication ou de rapporter un discours.</li>" +
+    "<li>Les <b>guillemets (« »)</b> servent à écrire un dialogue.</li>" +
+    "</ul>" +
+    "<p><b>NB :</b> quand un verbe comme hurler, crier, dire introduit des paroles, on met deux-points avant les guillemets.<br>Ex : Mon père me dit : « Lave-toi. »</p>",
+  astuce: "Pour rapporter des paroles, pense au trio : <b>verbe de parole + deux-points + guillemets</b>. Ex : Awa crie : « Attends-moi ! »",
+  regle: "Le point termine une information, ? une question, ! une émotion. La virgule est une petite pause, le point-virgule une pause plus longue. Les deux-points et les guillemets introduisent des paroles.",
+  niveaux: [
+    [
+      { t: "relier", q: "Relie chaque signe à son nom.", paires: [[".", "le point"], [",", "la virgule"], [";", "le point-virgule"], [":", "les deux-points"], ["« »", "les guillemets"]], expl: "Ce sont les signes de ponctuation de la leçon." },
+      { t: "qcm", q: "Quel signe marque une petite pause ?", choix: ["la virgule", "le point", "le point d'interrogation"], r: "la virgule", expl: "La virgule marque une petite pause." },
+      { t: "qcm", q: "Quel signe termine une question ?", choix: ["?", "!", "."], r: "?", expl: "On met un point d'interrogation quand on pose une question." },
+      { t: "qcm", q: "À quoi servent les guillemets ?", choix: ["à écrire un dialogue", "à poser une question", "à marquer une petite pause"], r: "à écrire un dialogue", expl: "Les guillemets encadrent les paroles." },
+      { t: "vf", q: "Le point-virgule marque une pause plus longue que la virgule.", r: true, expl: "Il sépare deux parties d'une phrase." },
+      { t: "vf", q: "Le point d'exclamation sert à exprimer une émotion.", r: true, expl: "Ex : Quelle surprise !" }
+    ],
+    [
+      { t: "classer", q: "Quel signe faut-il à la fin de chaque phrase ?", cases: ["le point", "le point d'interrogation", "le point d'exclamation"], items: [["Le car arrive à midi", "le point"], ["Où as-tu mis mon cahier", "le point d'interrogation"], ["Quelle chaleur aujourd'hui", "le point d'exclamation"], ["Fatou habite à Rufisque", "le point"], ["Qui frappe à la porte", "le point d'interrogation"], ["Bravo, tu as gagné", "le point d'exclamation"]], expl: "Information : point. Question : point d'interrogation. Émotion : point d'exclamation." },
+      { t: "qcm", q: "Quelle phrase est bien ponctuée ?", choix: ["Mon père me dit : « Lave-toi. »", "Mon père me dit « Lave-toi. »", "Mon père me dit, Lave-toi."], r: "Mon père me dit : « Lave-toi. »", expl: "Après un verbe de parole : deux-points, puis guillemets." },
+      { t: "qcm", q: "Quel signe faut-il avant les guillemets dans « Le maître dit … « Silence ! » » ?", choix: [":", ";", "?"], r: ":", expl: "Le verbe « dire » introduit des paroles : on met deux-points." },
+      { t: "trous", q: "Ajoute les virgules qui manquent dans cette liste.", texte: "Au marché, maman achète des oignons[,] des tomates[,] du poisson et du riz.", expl: "Dans une liste, on sépare les mots par des virgules ; le dernier est relié par « et »." },
+      { t: "classer", q: "Range chaque signe selon son rôle.", cases: ["termine une phrase", "marque une pause dans la phrase"], items: [[".", "termine une phrase"], ["?", "termine une phrase"], ["!", "termine une phrase"], [",", "marque une pause dans la phrase"], [";", "marque une pause dans la phrase"]], expl: "Le point, ? et ! terminent la phrase ; la virgule et le point-virgule marquent des pauses." },
+      { t: "qcm", q: "Les deux-points permettent…", choix: ["d'introduire une explication ou de rapporter un discours", "de terminer une phrase", "de poser une question"], r: "d'introduire une explication ou de rapporter un discours", expl: "C'est ce que dit la règle." },
+      { t: "vf", q: "On met des deux-points après « crier » quand il introduit des paroles.", r: true, expl: "Hurler, crier, dire… introduisent des paroles : deux-points puis guillemets." },
+      { t: "saisie", q: "Écris le nom du signe qui sépare deux parties d'une phrase avec une pause plus longue que la virgule.", r: "le point-virgule", expl: "Le point-virgule (;)." },
+      { t: "ordre", q: "Remets la phrase dans l'ordre.", r: "Awa demande : « Où est mon sac ? »", expl: "Verbe de parole, deux-points, guillemets, et le point d'interrogation dans les guillemets." }
+    ],
+    [
+      { t: "qcm", q: "Quelle phrase est bien ponctuée ?", choix: ["Il pleut fort ; les enfants restent à la maison.", "Il pleut fort les enfants ; restent à la maison.", "Il pleut ; fort les enfants restent à la maison."], r: "Il pleut fort ; les enfants restent à la maison.", expl: "Le point-virgule sépare les deux parties de la phrase." },
+      { t: "qcm", q: "Dans « Moussa est content : il a réussi son examen », les deux-points introduisent…", choix: ["une explication", "un dialogue", "une question"], r: "une explication", expl: "« il a réussi son examen » explique pourquoi il est content." },
+      { t: "vf", q: "« Ma mère crie « Viens manger ! » » est bien ponctué.", r: false, expl: "Il manque les deux-points après « crie » : Ma mère crie : « Viens manger ! »" },
+      { t: "qcm", q: "Quelle est la bonne ponctuation ?", choix: ["Le maître dit : « Fermez vos cahiers. »", "Le maître dit ; « Fermez vos cahiers. »", "Le maître dit, Fermez vos cahiers.", "Le maître dit : Fermez vos cahiers ?"], r: "Le maître dit : « Fermez vos cahiers. »", expl: "Deux-points après « dit », puis les paroles entre guillemets, avec une majuscule et un point." },
+      { t: "relier", q: "Relie chaque phrase au signe qui manque à l'endroit des trois points.", paires: [["Khady a acheté trois choses … du pain, du lait et du sucre.", "les deux-points"], ["Veux-tu venir avec nous …", "le point d'interrogation"], ["Le soleil se couche … les pêcheurs rentrent au port.", "le point-virgule"]], expl: "Deux-points avant une énumération qui explique ; point d'interrogation pour la question ; point-virgule entre deux parties d'une phrase." },
+      { t: "relier", q: "Relie chaque phrase au signe qui manque à la fin.", paires: [["Que ce pagne est beau", "!"], ["As-tu soif", "?"], ["Le marché ouvre à huit heures", "."]], expl: "Émotion : ! ; question : ? ; information : point." },
+      { t: "qcm", q: "Où faut-il mettre la virgule ? « Le matin … Ibrahima va chercher de l'eau. »", choix: ["après « Le matin »", "après « Ibrahima »", "après « chercher »"], r: "après « Le matin »", expl: "La virgule marque une petite pause après le complément placé en tête." }
+    ],
+    [
+      { t: "dictee", texte: "Au marché, maman achète des oignons, des tomates, du poisson et du riz.", expl: "Une virgule après « Au marché » et entre les éléments de la liste ; un point à la fin." },
+      { t: "dictee", texte: "Le soleil se couche sur Dakar ; les pêcheurs rentrent au port.", expl: "Le point-virgule sépare les deux parties de la phrase ; un point à la fin." },
+      { t: "qcm", q: "Quel texte est bien ponctué ?", choix: ["Moussa entre dans la classe. Il crie : « Bonjour tout le monde ! »", "Moussa entre dans la classe, il crie « Bonjour tout le monde ? »", "Moussa entre dans la classe ; Il crie. Bonjour tout le monde !", "Moussa entre : dans la classe. Il crie « bonjour tout le monde »"], r: "Moussa entre dans la classe. Il crie : « Bonjour tout le monde ! »", expl: "Point pour l'information, deux-points et guillemets pour les paroles, point d'exclamation pour le cri." },
+      { t: "qcm", q: "Fatou appelle à l'aide. Quelle est la bonne ponctuation ?", choix: ["Fatou hurle : « Au secours ! »", "Fatou hurle : « Au secours ? »", "Fatou hurle « Au secours. »", "Fatou hurle, au secours !"], r: "Fatou hurle : « Au secours ! »", expl: "Hurler introduit des paroles : deux-points, guillemets ; c'est un cri, donc un point d'exclamation." },
+      { t: "qcm", q: "Combien de signes de ponctuation différents vois-tu dans cette phrase ?<br>Awa dit : « Tu viens ? »", choix: ["deux", "trois", "quatre"], r: "trois", expl: "Les deux-points, les guillemets et le point d'interrogation." }
+    ]
+  ]
+});
+
+
+/* ---- fr-orth-prepositions.js ---- */
+// Corrections : « Les prépositions usuelle » → « usuelles » ; « Lorqu'on » → « Lorsqu'on ».
+LECONS.push({
+  id: "fr-orth-prepositions",
+  cahier: "francais",
+  matiere: "Orthographe",
+  titre: "Les prépositions",
+  date: "2026-11-12",
+  photos: ["DJI_20261118220644_0053_D.jpg", "DJI_20261118220650_0054_D.jpg"],
+  retiens:
+    "<p>La <b>préposition</b> est un mot <b>invariable</b> qui sert à relier deux noms, ou un verbe à un nom.<br>Ex : Il part <b>en</b> ville. Le vélo <b>de</b> Jean a disparu.</p>" +
+    "<p>Les prépositions usuelles sont : <b>à, dans, par, pour, en, vers, avec, de, sans, sous…</b></p>" +
+    "<p><b>NB :</b> lorsqu'on a un verbe derrière une préposition, ce verbe se met à l'<b>infinitif</b>.<br>Ex : Il vient <b>de partir</b>. Il vient <b>de rentrer</b>.</p>",
+  astuce: "Après une préposition, remplace le verbe par <b>prendre</b> ou <b>vendre</b> : « Il vient de (mang…) » → « Il vient de <b>prendre</b> » : c'est l'infinitif, donc on écrit <b>manger</b>, avec -er.",
+  regle: "La préposition est un mot invariable qui relie deux mots (à, dans, par, pour, en, vers, avec, de, sans, sous…). Un verbe placé après une préposition se met à l'infinitif.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Une préposition est un mot…", choix: ["invariable", "qui s'accorde avec le nom", "qui se conjugue"], r: "invariable", expl: "La préposition ne change jamais : ni genre, ni nombre." },
+      { t: "qcm", q: "Quel mot est une préposition ?", choix: ["avec", "maison", "chanter", "joli"], r: "avec", expl: "« avec » fait partie des prépositions usuelles." },
+      { t: "qcm", q: "« Le vélo de Jean a disparu. » Quelle est la préposition ?", choix: ["de", "vélo", "a"], r: "de", expl: "« de » relie le nom « vélo » au nom « Jean »." },
+      { t: "vf", q: "Après une préposition, le verbe se met à l'infinitif.", r: true, expl: "Ex : Il vient de partir." },
+      { t: "classer", q: "Préposition ou pas ?", cases: ["préposition", "autre mot"], items: [["dans", "préposition"], ["sous", "préposition"], ["table", "autre mot"], ["pour", "préposition"], ["courir", "autre mot"], ["sans", "préposition"], ["vers", "préposition"], ["rouge", "autre mot"]], expl: "Prépositions usuelles : à, dans, par, pour, en, vers, avec, de, sans, sous…" },
+      { t: "qcm", q: "« Il part en ville. » Quelle est la préposition ?", choix: ["en", "part", "ville"], r: "en", expl: "« en » relie le verbe « part » au nom « ville »." }
+    ],
+    [
+      { t: "trous", q: "Complète avec une préposition (aide : dans, sous, avec, pour).", texte: "Le chat dort [sous] la table. — Awa range ses habits [dans] l'armoire. — Je mange [avec] une cuillère. — Ce cadeau est [pour] toi.", expl: "Chaque préposition relie deux mots et donne un sens précis." },
+      { t: "saisie", q: "Écris la préposition : « Moussa marche vers la mosquée. »", r: "vers", expl: "« vers » relie le verbe « marche » au nom « mosquée »." },
+      { t: "saisie", q: "Écris la préposition : « Khady boit son thé sans sucre. »", r: "sans", expl: "« sans » relie « thé » à « sucre »." },
+      { t: "qcm", q: "« Il vient de … »", choix: ["partir", "partit", "parti"], r: "partir", expl: "Après la préposition « de », le verbe est à l'infinitif." },
+      { t: "qcm", q: "« Awa sort pour … du pain. »", choix: ["acheter", "acheté", "achète"], r: "acheter", expl: "Après « pour », le verbe se met à l'infinitif : acheter." },
+      { t: "qcm", q: "« Il est parti sans … au revoir. »", choix: ["dire", "dit", "dis"], r: "dire", expl: "Après « sans », infinitif : dire." },
+      { t: "trous", q: "Écris le verbe à l'infinitif après la préposition.", texte: "Il vient de [rentrer] (rentrer). — Nous allons au marché pour [vendre] (vendre) nos légumes. — Elle commence à [lire] (lire).", expl: "Après une préposition, le verbe reste à l'infinitif." },
+      { t: "relier", q: "Relie chaque début de phrase à la bonne préposition.", paires: [["Le livre est posé", "sur la table."], ["Le poisson nage", "dans l'eau."], ["Je vais à l'école", "avec mon frère."], ["Le chien dort", "sous l'arbre."]], expl: "La préposition précise le rapport entre les mots." },
+      { t: "vf", q: "La préposition « sous » change de forme selon que le nom est masculin ou féminin.", r: false, expl: "La préposition est invariable : sous le lit, sous la table, sous les arbres." }
+    ],
+    [
+      { t: "qcm", q: "Quelle phrase est bien écrite ?", choix: ["Il vient de manger.", "Il vient de mangé.", "Il vient de mangez."], r: "Il vient de manger.", aide: "Remplace par « prendre ».", expl: "Après « de », infinitif : manger (« il vient de prendre »)." },
+      { t: "qcm", q: "Quelle phrase est bien écrite ?", choix: ["Elle travaille pour réussir.", "Elle travaille pour réussit.", "Elle travaille pour réussis."], r: "Elle travaille pour réussir.", expl: "Après « pour », infinitif : réussir." },
+      { t: "saisie", q: "Écris le verbe correctement : « Fatou est venue pour (aider) sa mère. »", r: "aider", expl: "Après « pour » : infinitif en -er." },
+      { t: "saisie", q: "Écris le verbe correctement : « Les enfants rentrent sans (parler). »", r: "parler", expl: "Après « sans » : infinitif." },
+      { t: "trous", q: "Écris -er ou -é.", texte: "Il a fini de mang[er]. — Il a mang[é] tout le riz. — Ils sont partis sans chant[er]. — Elle commence à dans[er].", aide: "Après une préposition : -er.", expl: "Après de, sans, à : infinitif en -er. Après « a » (avoir), c'est le participe passé : mangé." },
+      { t: "vf", q: "Dans « Il commence à écrire », « à » est une préposition et « écrire » est à l'infinitif.", r: true, expl: "Après la préposition « à », le verbe reste à l'infinitif." },
+      { t: "ordre", q: "Remets la phrase dans l'ordre.", r: "Mamadou vient de rentrer du champ.", expl: "Après « de », le verbe « rentrer » est à l'infinitif." }
+    ],
+    [
+      { t: "dictee", texte: "Mamadou vient de rentrer du champ avec son père pour se reposer.", expl: "Prépositions : de, avec, pour ; « rentrer » et « se reposer » sont à l'infinitif." },
+      { t: "dictee", texte: "Sans attendre, Awa part en ville pour acheter des tissus.", expl: "Après sans et pour, les verbes sont à l'infinitif : attendre, acheter." },
+      { t: "trous", q: "Complète ce texte (aide : à, avec).", texte: "Ce matin, Ibrahima est parti [à] l'école [avec] son cartable. Il marche vite pour ne pas arriv[er] en retard. Il vient de travers[er] la route.", expl: "Prépositions : à, avec ; après pour et de, infinitif en -er." },
+      { t: "qcm", q: "Combien de prépositions dans « Le chat de Fatou dort sous le lit avec sa balle » ?", choix: ["deux", "trois", "quatre"], r: "trois", expl: "de, sous, avec." },
+      { t: "saisie", q: "Corrige le verbe mal écrit : « Il est sorti pour joué au ballon. »", r: "jouer", expl: "Après « pour », le verbe se met à l'infinitif : jouer." }
+    ]
+  ]
+});
+
+
+/* ---- fr-orth-quand-quant-quen.js ---- */
+// Le prénom de l'exemple du cahier (« Aston est studieuse », lecture incertaine) est remplacé par « Awa ».
+LECONS.push({
+  id: "fr-orth-quand-quant-quen",
+  cahier: "francais",
+  matiere: "Orthographe",
+  titre: "Les homophones quand, quant, qu'en",
+  date: "2026-10-20",
+  photos: ["DJI_20261118220552_0045_D.jpg", "DJI_20261118220559_0046_D.jpg"],
+  retiens:
+    "<p>On écrit :</p><ul>" +
+    "<li><b>quand</b> s'il exprime le <b>temps</b>. On peut le remplacer par <b>lorsque</b>.<br>Ex : Je partirai <b>quand</b> il sera là.</li>" +
+    "<li><b>quant</b> s'il est suivi de <b>à, au, aux</b>.<br>Ex : Awa est studieuse. <b>Quant à</b> David, il s'amuse toujours.</li>" +
+    "<li><b>qu'en</b> si on peut le remplacer par <b>que en</b>.<br>Ex : La mer est agitée. <b>Qu'en</b> penses-tu ? (que penses-tu <b>de cela</b> ?)</li></ul>",
+  astuce: "<b>quand</b> → lorsque (le temps). <b>quant</b> → toujours suivi de à, au, aux. <b>qu'en</b> → que + en.",
+  regle: "quand = lorsque (temps) ; quant est toujours suivi de à, au, aux ; qu'en = que en.",
+  niveaux: [
+    [
+      { t: "qcm", q: "On écrit « quand » s'il exprime…", choix: ["le temps", "le lieu", "la cause"], r: "le temps", expl: "« quand » exprime le temps ; on peut le remplacer par « lorsque »." },
+      { t: "qcm", q: "Par quel mot peut-on remplacer « quand » ?", choix: ["lorsque", "que en", "à propos"], r: "lorsque", expl: "Je partirai quand il sera là = je partirai lorsqu'il sera là." },
+      { t: "qcm", q: "« quant » est toujours suivi de…", choix: ["à, au ou aux", "un verbe", "un point"], r: "à, au ou aux", expl: "quant à, quant au, quant aux." },
+      { t: "vf", q: "On écrit « qu'en » quand on peut le remplacer par « que en ».", r: true, expl: "Qu'en penses-tu ? = Que penses-tu de cela ?" },
+      { t: "relier", q: "Relie chaque homophone à son truc.", paires: [["quand", "lorsque"], ["quant", "suivi de à, au, aux"], ["qu'en", "que en"]], expl: "Ce sont les trois moyens de la leçon." },
+      { t: "qcm", q: "« Je partirai … il sera là. »", choix: ["quand", "quant", "qu'en"], r: "quand", expl: "On peut dire « lorsqu'il sera là » : c'est le temps." }
+    ],
+    [
+      { t: "trous", q: "Complète avec quand, quant ou qu'en.", texte: "[Quand] il pleut, je reste à la maison. — Awa aime lire ; [quant] à Moussa, il préfère jouer. — La mer est agitée. [Qu'en] penses-tu ?", expl: "lorsque → quand ; suivi de à → quant ; que en → qu'en." },
+      { t: "qcm", q: "« … la cloche sonne, les élèves sortent. »", choix: ["Quand", "Quant", "Qu'en"], r: "Quand", expl: "Lorsque la cloche sonne : c'est le temps." },
+      { t: "qcm", q: "« Fatou est arrivée ; … aux autres, ils sont en retard. »", choix: ["quant", "quand", "qu'en"], r: "quant", expl: "Suivi de « aux » : quant." },
+      { t: "qcm", q: "« Voici mon dessin. … dis-tu ? »", choix: ["Qu'en", "Quand", "Quant"], r: "Qu'en", expl: "Que dis-tu de cela ? → que en → qu'en." },
+      { t: "qcm", q: "« … pars-tu pour Saint-Louis ? »", choix: ["Quand", "Quant", "Qu'en"], r: "Quand", expl: "On demande le moment : quand." },
+      { t: "classer", q: "Range ces phrases selon le mot qui manque.", cases: ["quand", "quant", "qu'en"], items: [["… tu auras fini, appelle-moi.", "quand"], ["… au repas, il est prêt.", "quant"], ["… penses-tu ?", "qu'en"], ["… il fait chaud, on boit beaucoup.", "quand"], ["… à moi, je reste ici.", "quant"], ["Ce film ? … dit ton frère ?", "qu'en"]], expl: "lorsque → quand ; à, au, aux → quant ; que en → qu'en." },
+      { t: "vf", q: "Dans « Quant à mon frère, il dort », on peut remplacer « quant » par « lorsque ».", r: false, expl: "« Lorsque à mon frère » ne veut rien dire : ici c'est « quant », suivi de « à »." },
+      { t: "saisie", q: "Écris le mot qui manque (quand, quant ou qu'en) : « … aux bagages, ils sont dans le car. »", r: "Quant", expl: "Suivi de « aux » : quant." },
+      { t: "saisie", q: "Écris le mot qui manque (quand, quant ou qu'en) : « Je serai content … tu viendras. »", r: "quand", expl: "Lorsque tu viendras : c'est le temps." }
+    ],
+    [
+      { t: "qcm", q: "Quelle phrase est juste ?", choix: ["Quant au marché, il ouvre à huit heures.", "Quand au marché, il ouvre à huit heures.", "Qu'en au marché, il ouvre à huit heures."], r: "Quant au marché, il ouvre à huit heures.", expl: "Suivi de « au » : quant." },
+      { t: "qcm", q: "Quelle phrase est juste ?", choix: ["Quand le soleil se couche, les pêcheurs rentrent.", "Quant le soleil se couche, les pêcheurs rentrent.", "Qu'en le soleil se couche, les pêcheurs rentrent."], r: "Quand le soleil se couche, les pêcheurs rentrent.", expl: "Lorsque le soleil se couche : quand." },
+      { t: "saisie", q: "Écris le mot qui manque : « Tu as lu ce conte ? … retiens-tu ? »", r: "Qu'en", expl: "Que retiens-tu de ce conte ? → que en → qu'en." },
+      { t: "trous", q: "Complète avec quand, quant ou qu'en.", texte: "[Quand] l'harmattan souffle, la poussière envahit tout. [Quant] aux enfants, ils se couvrent le visage. Cette saison est difficile ; [qu'en] disent les anciens ?", expl: "lorsque → quand ; aux → quant ; que en → qu'en." },
+      { t: "vf", q: "« Quand » peut servir à poser une question sur le moment.", r: true, expl: "Quand arrives-tu ? On demande le moment : c'est le temps." },
+      { t: "saisie", q: "Remplace « lorsque » par « quand » : « Lorsque la pluie tombe, les champs verdissent. »", r: "Quand la pluie tombe, les champs verdissent.", large: true, expl: "lorsque = quand : on garde le même sens (le temps)." },
+      { t: "relier", q: "Relie chaque début de phrase à sa fin.", paires: [["Quand le car arrive,", "les voyageurs descendent."], ["Quant aux bagages,", "ils restent sur le toit."], ["Le voyage est long ;", "qu'en pense le chauffeur ?"]], expl: "Temps : quand ; suivi de aux : quant ; que en : qu'en." }
+    ],
+    [
+      { t: "dictee", texte: "Quand la pluie tombe sur Ziguinchor, les enfants courent se mettre à l'abri.", expl: "Lorsque la pluie tombe : quand." },
+      { t: "dictee", texte: "Ibrahima a fini ses devoirs ; quant à sa cousine, elle joue encore dans la cour.", expl: "Suivi de « à » : quant." },
+      { t: "dictee", texte: "Le maître nous montre une carte du Sénégal. Qu'en pensez-vous ?", expl: "Que pensez-vous de cela ? → qu'en." },
+      { t: "trous", q: "Complète ce dialogue.", texte: "— [Quand] partons-nous au village ? — Demain matin. [Quant] à ton frère, il nous rejoindra le soir. — Et le cadeau pour grand-mère, [qu'en] fais-tu ?", expl: "quand (le moment) ; quant à ; qu'en (que fais-tu de cela ?)." },
+      { t: "qcm", q: "Dans quelle phrase faut-il écrire « quant » ?", choix: ["… aux poules, elles dorment déjà.", "… il fait nuit, les poules dorment.", "Ces poules, … fais-tu ?"], r: "… aux poules, elles dorment déjà.", expl: "Suivi de « aux » : quant." }
+    ]
+  ]
+});
+
+
+/* ---- fr-voc-contraires.js ---- */
+// À VÉRIFIER : le cahier (photo 0020) écrit « certains contraires sont des mots qui appartiennent à la même . » ; le mot manquant est très probablement « famille ».
+LECONS.push({
+  id: "fr-voc-contraires",
+  cahier: "francais",
+  matiere: "Vocabulaire",
+  titre: "Les contraires",
+  date: "2026-09-21",
+  photos: ["DJI_20261118220216_0019_D.jpg", "DJI_20261118220225_0020_D.jpg"],
+  retiens:
+    "<p>Deux noms, deux adjectifs ou deux verbes de <b>sens opposé</b> sont des <b>contraires</b>.</p>" +
+    "<ul><li>deux noms : La Terre subit des <b>réchauffements</b> ou des <b>refroidissements</b>.</li>" +
+    "<li>deux adjectifs : La météo annonce parfois du <b>beau</b> temps, parfois du <b>mauvais</b> temps.</li>" +
+    "<li>deux verbes : Les températures risquent de <b>monter</b> ou de <b>descendre</b> selon le vent.</li></ul>" +
+    "<p>Certains contraires sont des mots qui appartiennent à la <b>même famille</b> : ils sont construits à partir d'un radical et d'un <b>préfixe</b>.<br>" +
+    "Ex : Mon nouvel anorak est très <b>confortable</b>, l'ancien était devenu <b>in</b>confortable.</p>",
+  astuce: "Le contraire est toujours de la même nature : un nom ↔ un nom (le jour ↔ la nuit), un adjectif ↔ un adjectif (chaud ↔ froid), un verbe ↔ un verbe (ouvrir ↔ fermer).",
+  regle: "Deux contraires ont des sens opposés et sont de la même nature. On peut parfois former un contraire avec un préfixe : confortable → inconfortable.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Que sont des contraires ?", choix: ["des mots de sens opposé", "des mots de sens proche", "des mots qui s'écrivent pareil"], r: "des mots de sens opposé", expl: "Deux contraires ont des sens opposés." },
+      { t: "qcm", q: "Quel est le contraire de <b>monter</b> ?", choix: ["descendre", "grimper", "courir"], r: "descendre", expl: "Les températures montent ou descendent." },
+      { t: "qcm", q: "Quel est le contraire de <b>beau</b> (temps) ?", choix: ["mauvais", "joli", "chaud"], r: "mauvais", expl: "du beau temps / du mauvais temps." },
+      { t: "vf", q: "« réchauffement » et « refroidissement » sont deux noms contraires.", r: true, expl: "Ce sont deux noms de sens opposé." },
+      { t: "vf", q: "« confortable » et « inconfortable » sont des contraires de la même famille.", r: true, expl: "inconfortable = préfixe in- + confortable." },
+      { t: "relier", q: "Relie chaque mot à son contraire.", paires: [["grand", "petit"], ["ouvrir", "fermer"], ["le jour", "la nuit"], ["rapide", "lent"], ["entrer", "sortir"]], expl: "Chaque paire a des sens opposés." }
+    ],
+    [
+      { t: "saisie", q: "Écris le contraire de <b>chaud</b>.", r: "froid", expl: "chaud ↔ froid" },
+      { t: "saisie", q: "Écris le contraire de <b>gagner</b> (un match).", r: "perdre", expl: "gagner ↔ perdre" },
+      { t: "saisie", q: "Écris le contraire de <b>possible</b> avec un préfixe.", r: "impossible", expl: "im- + possible : impossible." },
+      { t: "saisie", q: "Écris le contraire de <b>connu</b> avec un préfixe.", r: "inconnu", expl: "in- + connu : inconnu." },
+      { t: "saisie", q: "Écris le contraire de <b>faire</b> avec un préfixe.", r: "défaire", expl: "dé- + faire : défaire." },
+      { t: "classer", q: "Range ces paires de contraires selon leur nature.", cases: ["deux noms", "deux adjectifs", "deux verbes"], items: [["la paix / la guerre", "deux noms"], ["propre / sale", "deux adjectifs"], ["aimer / détester", "deux verbes"], ["le début / la fin", "deux noms"], ["riche / pauvre", "deux adjectifs"], ["allumer / éteindre", "deux verbes"]], expl: "Les deux mots d'une paire de contraires sont toujours de la même nature." },
+      { t: "qcm", q: "Quel est le contraire de <b>heureux</b> ?", choix: ["malheureux", "joyeux", "content"], r: "malheureux", expl: "mal- + heureux : malheureux." },
+      { t: "qcm", q: "Quel est le contraire de <b>la joie</b> ?", choix: ["la tristesse", "triste", "pleurer"], r: "la tristesse", expl: "joie est un nom : son contraire doit être un nom, la tristesse." }
+    ],
+    [
+      { t: "classer", q: "Comment est formé le contraire ?", cases: ["avec un préfixe", "avec un autre mot"], items: [["poli / impoli", "avec un préfixe"], ["haut / bas", "avec un autre mot"], ["obéir / désobéir", "avec un préfixe"], ["vieux / jeune", "avec un autre mot"], ["lisible / illisible", "avec un préfixe"], ["acheter / vendre", "avec un autre mot"]], expl: "impoli, désobéir, illisible : préfixe + mot. bas, jeune, vendre : un mot différent." },
+      { t: "qcm", q: "Le contraire de <b>patient</b> est…", choix: ["impatient", "inpatient", "dépatient"], r: "impatient", expl: "Devant p, on écrit im- : impatient." },
+      { t: "saisie", q: "Écris le contraire de <b>honnête</b> avec un préfixe.", r: "malhonnête", expl: "mal- + honnête : malhonnête." },
+      { t: "saisie", q: "Écris le contraire de <b>coller</b> avec un préfixe.", r: "décoller", expl: "dé- + coller : décoller." },
+      { t: "qcm", q: "« Le magasin est <b>ouvert</b>. » Quelle phrase dit le contraire ?", choix: ["Le magasin est fermé.", "Le magasin est grand.", "Le magasin est neuf."], r: "Le magasin est fermé.", expl: "ouvert ↔ fermé" },
+      { t: "saisie", q: "Écris la phrase contraire en changeant le mot en gras : « L'eau du puits est <b>propre</b>. »", r: "L'eau du puits est sale.", large: true, expl: "propre ↔ sale" },
+      { t: "vf", q: "« la joie » et « triste » sont des contraires.", r: false, expl: "la joie est un nom et triste un adjectif : deux contraires sont de la même nature. On dit la joie ↔ la tristesse, ou joyeux ↔ triste." }
+    ],
+    [
+      { t: "trous", q: "Écris le contraire du mot entre parenthèses.", texte: "Hier, il faisait [froid] (chaud). Les enfants sont [sortis] (entrés) de la classe en [riant] (pleurant).", expl: "chaud ↔ froid, entrer ↔ sortir, pleurer ↔ rire." },
+      { t: "trous", q: "Forme le contraire avec un préfixe.", texte: "un travail possible → un travail [impossible] ; un élève obéissant → un élève [désobéissant] ; un mot connu → un mot [inconnu]", expl: "im-, dés-, in- servent à former des contraires." },
+      { t: "dictee", texte: "La météo annonce parfois du beau temps et parfois du mauvais temps.", expl: "beau / mauvais : deux adjectifs contraires." },
+      { t: "qcm", q: "Trouve l'intrus (la paire qui n'est PAS une paire de contraires).", choix: ["joli / beau", "monter / descendre", "jour / nuit", "propre / sale"], r: "joli / beau", expl: "joli et beau ont un sens proche : ce sont des synonymes." },
+      { t: "saisie", q: "Écris la phrase contraire en changeant les deux mots en gras : « Le petit garçon <b>monte</b> vers le <b>haut</b> de la colline. »", r: "Le petit garçon descend vers le bas de la colline.", large: true, expl: "monter ↔ descendre, haut ↔ bas." }
+    ]
+  ]
+});
+
+
+/* ---- fr-voc-famille-de-mots.js ---- */
+LECONS.push({
+  id: "fr-voc-famille-de-mots",
+  cahier: "francais",
+  matiere: "Vocabulaire",
+  titre: "Les mots de la même famille",
+  date: "2026-10-12",
+  photos: ["DJI_20261118220502_0037_D.jpg", "DJI_20261118220508_0038_D.jpg"],
+  retiens:
+    "<p>Une <b>famille de mots</b> rassemble tous les mots construits à partir d'un même mot.<br>" +
+    "Ex : Le <b>jardinier jardine</b> dans son <b>jardin</b>. La <b>danseuse</b> et le <b>danseur dansent</b> sur la piste de <b>danse</b>.</p>" +
+    "<p>Les mots d'une famille sont formés à partir d'une partie commune appelée le <b>radical</b>. Ils font tous penser à la même chose : ils ont la même idée.<br>" +
+    "Ex : <b>mont</b>er, <b>mont</b>agne, <b>mont</b>agneux → radical : <b>mont</b>.</p>" +
+    "<p>Une famille de mots peut être constituée de <b>noms</b>, d'<b>adjectifs</b> et de <b>verbes</b>.<br>" +
+    "Ex : Le chemin est <b>long</b> (adjectif). Les promeneurs <b>longent</b> (verbe) l'orée du bois. Ce pré a une <b>longueur</b> (nom) de cent mètres.</p>" +
+    "<p><b>Attention !</b> Des mots peuvent avoir des lettres communes mais ne pas être de la même famille.<br>Ex : <b>terre</b> et <b>terreur</b> ; <b>couper</b> et <b>couple</b>.</p>",
+  astuce: "Pour vérifier, demande-toi : est-ce que les deux mots ont la même idée ? Terre (le sol) et terreur (la grande peur) n'ont pas la même idée : pas la même famille.",
+  regle: "Les mots d'une même famille ont le même radical ET la même idée. Avoir des lettres en commun ne suffit pas (terre / terreur).",
+  niveaux: [
+    [
+      { t: "qcm", q: "Quel mot est de la famille de <b>jardin</b> ?", choix: ["jardinier", "jaune", "jarre"], r: "jardinier", expl: "Le jardinier travaille au jardin : même radical, même idée." },
+      { t: "qcm", q: "Quel est le radical de <b>montagne</b>, <b>monter</b>, <b>montagneux</b> ?", choix: ["mont", "mon", "agne"], r: "mont", expl: "C'est l'exemple de la leçon : radical mont." },
+      { t: "vf", q: "« terre » et « terreur » sont de la même famille.", r: false, expl: "Ils ont des lettres communes, mais pas la même idée." },
+      { t: "vf", q: "« danse », « danseur » et « dansent » sont de la même famille.", r: true, expl: "Ils sont construits à partir du même mot et font penser à la même chose." },
+      { t: "qcm", q: "Une famille de mots peut contenir…", choix: ["des noms, des adjectifs et des verbes", "seulement des noms", "seulement des verbes"], r: "des noms, des adjectifs et des verbes", expl: "long (adjectif), longer (verbe), longueur (nom)." },
+      { t: "classer", q: "Range ces mots dans leur famille.", cases: ["famille de « jardin »", "famille de « danse »"], items: [["jardiner", "famille de « jardin »"], ["danseuse", "famille de « danse »"], ["jardinier", "famille de « jardin »"], ["danser", "famille de « danse »"], ["jardinage", "famille de « jardin »"], ["danseur", "famille de « danse »"]], expl: "Chaque famille a son radical : jardin-, dans-." }
+    ],
+    [
+      { t: "qcm", q: "Quel mot est de la famille de <b>long</b> ?", choix: ["longueur", "loge", "loin"], r: "longueur", expl: "long, longer, longueur : même radical." },
+      { t: "qcm", q: "Quel mot est de la famille de <b>pêche</b> ?", choix: ["pêcheur", "pelle", "perle"], r: "pêcheur", expl: "Le pêcheur fait la pêche." },
+      { t: "qcm", q: "Quel mot est de la famille de <b>fleur</b> ?", choix: ["fleuriste", "flèche", "fleuve"], r: "fleuriste", expl: "Le fleuriste vend des fleurs ; le fleuve n'a rien à voir." },
+      { t: "saisie", q: "Écris le nom de la famille de <b>long</b> qui désigne une mesure (dans la leçon : « une … de cent mètres »).", r: "longueur", expl: "Ce pré a une longueur de cent mètres." },
+      { t: "saisie", q: "Écris le verbe de la famille de <b>jardin</b>.", r: "jardiner", expl: "Le jardinier jardine : verbe jardiner." },
+      { t: "relier", q: "Relie chaque mot à un mot de sa famille.", paires: [["école", "écolier"], ["chant", "chanteur"], ["lait", "laitier"], ["pêche", "pêcheur"], ["mont", "montagne"]], expl: "Même radical, même idée." },
+      { t: "classer", q: "Range ces mots de la famille de « long » selon leur nature.", cases: ["nom", "adjectif", "verbe"], items: [["longueur", "nom"], ["long", "adjectif"], ["longer", "verbe"], ["allonger", "verbe"], ["longue", "adjectif"]], expl: "Une famille peut réunir des noms, des adjectifs et des verbes." },
+      { t: "qcm", q: "Quel est le radical commun de <b>chanter</b>, <b>chanteur</b>, <b>chanteuse</b> ?", choix: ["chant", "chan", "eur"], r: "chant", expl: "chant- est la partie commune." }
+    ],
+    [
+      { t: "qcm", q: "Trouve l'intrus dans la famille : terre, terrain, enterrer, terreur.", choix: ["terreur", "terrain", "enterrer", "terre"], r: "terreur", expl: "terreur veut dire grande peur : il n'a pas la même idée que terre." },
+      { t: "qcm", q: "Trouve l'intrus dans la famille : couper, coupure, découper, couple.", choix: ["couple", "coupure", "découper", "couper"], r: "couple", expl: "Un couple, ce sont deux personnes : rien à voir avec couper." },
+      { t: "qcm", q: "Trouve l'intrus dans la famille : chat, chaton, chatte, château.", choix: ["château", "chaton", "chatte", "chat"], r: "château", expl: "Un château est une grande maison fortifiée : pas la même idée que chat." },
+      { t: "qcm", q: "Trouve l'intrus dans la famille : bois, boisé, boiser, boisson.", choix: ["boisson", "boisé", "boiser", "bois"], r: "boisson", expl: "La boisson vient de boire, pas du bois." },
+      { t: "vf", q: "Deux mots qui commencent par les mêmes lettres sont toujours de la même famille.", r: false, expl: "Non : terre / terreur, couper / couple. Il faut aussi la même idée." },
+      { t: "saisie", q: "Écris l'adjectif de la famille de <b>montagne</b> (dans la leçon).", r: "montagneux", expl: "monter, montagne, montagneux." },
+      { t: "trous", q: "Complète avec un mot de la même famille.", texte: "Le [jardinier] jardine dans son jardin. Les promeneurs [longent] le chemin long. La danseuse [danse] sur la piste.", expl: "jardinier, longent, danse." }
+    ],
+    [
+      { t: "dictee", texte: "Le jardinier jardine dans son jardin pendant que la danseuse danse.", expl: "Deux familles : jardin- et dans-." },
+      { t: "dictee", texte: "Les promeneurs longent le chemin qui a une longueur de cent mètres.", expl: "longer, longueur : famille de long." },
+      { t: "classer", q: "Ces mots sont-ils de la famille de « terre » ?", cases: ["même famille", "pas la même famille"], items: [["terrain", "même famille"], ["terreur", "pas la même famille"], ["enterrer", "même famille"], ["terrible", "pas la même famille"], ["terrasse", "même famille"], ["terminer", "pas la même famille"]], expl: "terrain, enterrer, terrasse ont l'idée du sol ; terreur, terrible, terminer non." },
+      { t: "qcm", q: "Quelle phrase contient trois mots de la même famille ?", choix: ["Le pêcheur va pêcher : la pêche est bonne.", "Le pêcheur mange une pêche et une poire.", "Le pêcheur prend sa pirogue et part en mer."], r: "Le pêcheur va pêcher : la pêche est bonne.", expl: "pêcheur, pêcher, pêche (l'activité) : même radical, même idée." },
+      { t: "saisie", q: "Trouve le nom de métier de la famille de <b>lait</b>.", r: "laitier", expl: "Le laitier vend du lait." }
+    ]
+  ]
+});
+
+
+/* ---- fr-voc-formule-politesse.js ---- */
+// À VÉRIFIER : formules recopiées avec des fautes dans le cahier (photos 0055-0056) : « En espirant » → « En espérant », « d'greer » → « d'agréer », « nos sentiment distingués » → « nos sentiments distingués », « respectieux » → « respectueux » ; l'abréviation « Mr » (anglaise) est remplacée par « Monsieur » écrit en entier (abréviation française : M.).
+LECONS.push({
+  id: "fr-voc-formule-politesse",
+  cahier: "francais",
+  matiere: "Vocabulaire",
+  titre: "La formule de politesse de la lettre officielle",
+  date: "2026-11-16",
+  photos: ["DJI_20261118220656_0055_D.jpg", "DJI_20261118220703_0056_D.jpg"],
+  retiens:
+    "<p>On écrit une <b>formule de politesse</b> pour <b>terminer le corps de la lettre</b>. Elle sert à montrer son <b>respect au destinataire</b> et à avoir plus de chances d'obtenir une considération réciproque.</p>" +
+    "<p>On peut employer des formules comme :</p><ul>" +
+    "<li>En espérant une suite favorable, je vous prie d'agréer, Monsieur (ou Madame), l'expression de ma considération.</li>" +
+    "<li>Dans l'attente d'une suite favorable, nous vous prions d'agréer, Monsieur (ou Madame), l'expression de nos sentiments distingués.</li>" +
+    "<li>Veuillez recevoir, Monsieur (ou Madame), nos sentiments respectueux.</li></ul>" +
+    "<p>Dans la formule, on reprend le titre du destinataire, comme dans la formule d'appel. Ex : « je vous prie d'agréer, <b>Madame la Directrice générale</b>, l'expression de ma considération. »</p>",
+  astuce: "Si la lettre dit <b>je</b>, la formule dit <b>je</b> vous prie… <b>ma</b> considération. Si elle dit <b>nous</b> : <b>nous</b> vous prions… <b>nos</b> sentiments. « Agréer » s'écrit avec un accent aigu et deux e : a-gré-er.",
+  regle: "La formule de politesse termine le corps de la lettre officielle et montre le respect au destinataire. Elle reprend son titre (Monsieur, Madame…) et s'accorde avec l'expéditeur (je… ma / nous… nos).",
+  niveaux: [
+    [
+      { t: "qcm", q: "Où place-t-on la formule de politesse dans une lettre officielle ?", choix: ["à la fin du corps de la lettre", "tout en haut, avant la date", "juste après l'objet"], r: "à la fin du corps de la lettre", expl: "Elle sert à terminer le corps de la lettre, après le message." },
+      { t: "qcm", q: "À quoi sert la formule de politesse ?", choix: ["à montrer son respect au destinataire", "à donner la date", "à dire pourquoi on écrit"], r: "à montrer son respect au destinataire", expl: "C'est la leçon : montrer son respect et obtenir une considération réciproque." },
+      { t: "vf", q: "« En espérant une suite favorable, je vous prie d'agréer, Madame, l'expression de ma considération. » est une formule de politesse.", r: true, expl: "C'est la première formule de la leçon." },
+      { t: "vf", q: "« Salut, à plus tard ! » convient pour terminer une lettre officielle.", r: false, expl: "Une lettre officielle s'adresse à une autorité : il faut une formule respectueuse." },
+      { t: "qcm", q: "Laquelle de ces phrases est une formule de politesse ?", choix: ["Veuillez recevoir, Monsieur, nos sentiments respectueux.", "Objet : demande d'aide.", "Madame la Directrice,"], r: "Veuillez recevoir, Monsieur, nos sentiments respectueux.", expl: "« Objet » annonce le sujet de la lettre ; « Madame la Directrice, » est la formule d'appel." },
+      { t: "classer", q: "Range ces phrases.", cases: ["convient à une lettre officielle", "ne convient pas"], items: [["Veuillez recevoir, Madame, nos sentiments respectueux.", "convient à une lettre officielle"], ["Gros bisous !", "ne convient pas"], ["Je vous prie d'agréer, Monsieur, l'expression de ma considération.", "convient à une lettre officielle"], ["À plus, mon pote !", "ne convient pas"]], expl: "Une lettre officielle demande des formules respectueuses." }
+    ],
+    [
+      { t: "trous", q: "Complète la formule.", texte: "En espérant une suite [favorable], je vous prie d'[agréer], Monsieur, l'expression de ma [considération].", expl: "C'est la première formule de la leçon." },
+      { t: "trous", q: "Complète la formule.", texte: "Dans l'[attente] d'une suite favorable, nous vous prions d'agréer, Madame, l'expression de nos sentiments [distingués].", expl: "nos sentiments distingués : sentiments au pluriel." },
+      { t: "trous", q: "Complète la formule.", texte: "Veuillez [recevoir], Monsieur, nos sentiments [respectueux].", expl: "respectueux : qui montre du respect." },
+      { t: "saisie", q: "Écris correctement le verbe : « je vous prie d'… » (accepter, en langage poli)", r: "agréer", expl: "a-gré-er : un accent aigu et deux e." },
+      { t: "saisie", q: "Corrige le mot : « En espirant une suite favorable… »", r: "espérant", expl: "espérer → en espérant." },
+      { t: "saisie", q: "Corrige le mot : « nos sentiments respectieux »", r: "respectueux", expl: "respect + ueux : respectueux." },
+      { t: "qcm", q: "Une lettre est écrite au nom de tous les habitants (« nous »). Quelle formule convient ?", choix: ["Nous vous prions d'agréer, Monsieur, l'expression de nos sentiments distingués.", "Je vous prie d'agréer, Monsieur, l'expression de ma considération.", "Nous vous prions d'agréer, Monsieur, l'expression de ma considération."], r: "Nous vous prions d'agréer, Monsieur, l'expression de nos sentiments distingués.", expl: "nous… nos : la formule s'accorde avec l'expéditeur." },
+      { t: "ordre", q: "Remets la formule dans l'ordre.", r: "Veuillez recevoir, Madame, nos sentiments respectueux.", expl: "Veuillez recevoir + titre du destinataire + nos sentiments respectueux." }
+    ],
+    [
+      { t: "qcm", q: "On écrit au maire de Thiès. Quelle formule est la mieux adaptée ?", choix: ["Je vous prie d'agréer, Monsieur le Maire, l'expression de ma considération.", "Je vous prie d'agréer, Madame la Directrice, l'expression de ma considération.", "Je vous prie d'agréer, mon ami, l'expression de ma considération."], r: "Je vous prie d'agréer, Monsieur le Maire, l'expression de ma considération.", expl: "On reprend le titre du destinataire : Monsieur le Maire." },
+      { t: "qcm", q: "Quelle formule contient une faute ?", choix: ["nous vous prions d'agréer l'expression de nos sentiment distingués", "je vous prie d'agréer l'expression de ma considération", "veuillez recevoir nos sentiments respectueux"], r: "nous vous prions d'agréer l'expression de nos sentiment distingués", expl: "nos sentiment<b>s</b> : pluriel, avec un s." },
+      { t: "vf", q: "En français, l'abréviation de « Monsieur » est « Mr ».", r: false, expl: "« Mr » est l'abréviation anglaise. En français : <b>M.</b> Dans une lettre officielle, on écrit le mot en entier." },
+      { t: "saisie", q: "La lettre s'adresse à plusieurs messieurs. Complète : « Veuillez recevoir, …, nos sentiments respectueux. »", r: "Messieurs", expl: "Monsieur → Messieurs au pluriel." },
+      { t: "saisie", q: "La lettre s'adresse à plusieurs dames. Complète : « Je vous prie d'agréer, …, l'expression de ma considération. »", r: "Mesdames", expl: "Madame → Mesdames au pluriel." },
+      { t: "ordre", q: "Remets la formule dans l'ordre.", r: "En espérant une suite favorable, je vous prie d'agréer, Madame, l'expression de ma considération.", expl: "C'est la première formule de la leçon." }
+    ],
+    [
+      { t: "dictee", texte: "En espérant une suite favorable, je vous prie d'agréer l'expression de ma considération.", expl: "espérant, agréer (accent aigu, deux e), considération." },
+      { t: "dictee", texte: "Veuillez recevoir, Madame la Directrice, nos sentiments respectueux.", expl: "sentiments au pluriel, respectueux." },
+      { t: "qcm", q: "Bassirou Ndiaye écrit à la Directrice générale de l'ONAS. Quelle fin de lettre est correcte ?", choix: ["En espérant une suite favorable, je vous prie d'agréer, Madame la Directrice générale, l'expression de ma considération.", "Merci et à bientôt, Madame !", "En espérant une suite favorable, je vous prie d'agréer, Monsieur le Maire, l'expression de ma considération."], r: "En espérant une suite favorable, je vous prie d'agréer, Madame la Directrice générale, l'expression de ma considération.", expl: "C'est la formule de la lettre étudiée en lecture : on reprend le titre exact de la destinataire." },
+      { t: "saisie", q: "Mets la formule au nom de « nous » : « Je vous prie d'agréer, Monsieur, l'expression de ma considération. »", r: "Nous vous prions d'agréer, Monsieur, l'expression de notre considération.", large: true, expl: "je → nous, prie → prions, ma → notre." },
+      { t: "classer", q: "Dans une lettre officielle, range chaque élément.", cases: ["formule d'appel (au début)", "formule de politesse (à la fin)"], items: [["Monsieur le Maire,", "formule d'appel (au début)"], ["Veuillez recevoir, Monsieur le Maire, nos sentiments respectueux.", "formule de politesse (à la fin)"], ["Madame la Directrice,", "formule d'appel (au début)"], ["Je vous prie d'agréer, Madame, l'expression de ma considération.", "formule de politesse (à la fin)"]], expl: "La formule d'appel ouvre la lettre ; la formule de politesse la termine." }
+    ]
+  ]
+});
+
+
+/* ---- fr-voc-homonymes.js ---- */
+LECONS.push({
+  id: "fr-voc-homonymes",
+  cahier: "francais",
+  matiere: "Vocabulaire",
+  titre: "Les homonymes",
+  date: "2026-10-14",
+  photos: ["DJI_20261118220520_0040_D.jpg", "DJI_20261118220525_0041_D.jpg"],
+  retiens:
+    "<p>Certains mots ont la <b>même prononciation</b> mais pas le <b>même sens</b> : ce sont des <b>homonymes</b>.</p>" +
+    "<p>Pour trouver leur orthographe exacte, il faut s'aider du <b>contexte</b> (les mots qui les entourent dans la phrase).</p>" +
+    "<table><tr><th>phrase</th><th>mot</th><th>sens</th></tr>" +
+    "<tr><td>La pelouse est d'un <b>vert</b> magnifique.</td><td>vert</td><td>la couleur</td></tr>" +
+    "<tr><td>Le <b>ver</b> de terre est très utile pour aérer le sol.</td><td>ver</td><td>l'animal</td></tr>" +
+    "<tr><td>La serre de son jardin est faite de panneaux de <b>verre</b>.</td><td>verre</td><td>la matière</td></tr>" +
+    "<tr><td>Les nuages se dirigent <b>vers</b> le nord.</td><td>vers</td><td>la direction</td></tr></table>",
+  astuce: "Lis toute la phrase avant d'écrire : c'est le sens qui choisit l'orthographe. Un vert (couleur), un ver (animal), un verre (pour boire ou matière), vers (direction).",
+  regle: "Les homonymes se prononcent pareil mais n'ont pas le même sens ni, souvent, la même orthographe. C'est le contexte qui indique comment écrire le mot.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Que sont des homonymes ?", choix: ["des mots qui se prononcent pareil mais n'ont pas le même sens", "des mots de sens proche", "des mots de sens contraire"], r: "des mots qui se prononcent pareil mais n'ont pas le même sens", expl: "C'est la définition de la leçon." },
+      { t: "qcm", q: "Comment savoir quel homonyme écrire ?", choix: ["en s'aidant du contexte", "en choisissant le plus court", "en écrivant toujours le même"], r: "en s'aidant du contexte", expl: "Les mots qui entourent l'homonyme dans la phrase indiquent son sens." },
+      { t: "relier", q: "Relie chaque mot à son sens.", paires: [["vert", "la couleur"], ["ver", "l'animal"], ["verre", "la matière"], ["vers", "la direction"]], expl: "C'est l'exemple de la leçon." },
+      { t: "vf", q: "« ver » et « verre » sont des homonymes.", r: true, expl: "Ils se prononcent de la même façon mais ont des sens différents." },
+      { t: "vf", q: "« voiture » et « automobile » sont des homonymes.", r: false, expl: "Ils ont le même sens mais ne se prononcent pas pareil : ce sont des synonymes." },
+      { t: "qcm", q: "« Le … de terre aère le sol. »", choix: ["ver", "vert", "verre", "vers"], r: "ver", expl: "Il s'agit de l'animal : le ver." }
+    ],
+    [
+      { t: "qcm", q: "« La pelouse est d'un … magnifique. »", choix: ["vert", "ver", "verre", "vers"], r: "vert", expl: "Il s'agit de la couleur : vert." },
+      { t: "qcm", q: "« Les oiseaux volent … le sud. »", choix: ["vers", "vert", "verre", "ver"], r: "vers", expl: "Il s'agit de la direction : vers." },
+      { t: "qcm", q: "« Je bois un … d'eau. »", choix: ["verre", "vert", "ver", "vers"], r: "verre", expl: "Un verre pour boire, fait de verre." },
+      { t: "qcm", q: "« Ma … prépare le repas. »", choix: ["mère", "mer", "maire"], r: "mère", expl: "La maman : la mère." },
+      { t: "qcm", q: "« Les pirogues partent en … . »", choix: ["mer", "mère", "maire"], r: "mer", expl: "L'étendue d'eau salée : la mer." },
+      { t: "qcm", q: "« Le … de la commune inaugure l'école. »", choix: ["maire", "mer", "mère"], r: "maire", expl: "Celui qui dirige la commune : le maire." },
+      { t: "relier", q: "Relie chaque homonyme à son sens.", paires: [["le sang", "liquide rouge du corps"], ["cent", "le nombre 100"], ["sans", "le contraire de avec"]], expl: "sang, cent, sans se prononcent pareil." },
+      { t: "relier", q: "Relie chaque homonyme à son sens.", paires: [["le pain", "aliment du boulanger"], ["le pin", "un arbre"], ["peint", "du verbe peindre"]], expl: "pain, pin, peint se prononcent pareil." }
+    ],
+    [
+      { t: "trous", q: "Écris le bon homonyme : <i>vert, ver, verre, vers</i>.", texte: "Moussa marche [vers] la boutique. Il achète un [verre] et une chemise [verte]. Dans le jardin, il voit un [ver] de terre.", expl: "vers (direction), verre (objet), verte (couleur, accordée avec chemise), ver (animal)." },
+      { t: "trous", q: "Écris le bon homonyme : <i>mer, mère, maire</i>.", texte: "La [mère] d'Awa habite près de la [mer]. Le [maire] de Mbour lui a rendu visite.", expl: "mère (maman), mer (eau salée), maire (chef de la commune)." },
+      { t: "qcm", q: "« Il a payé … francs. »", choix: ["cent", "sang", "sans"], r: "cent", expl: "Le nombre : cent." },
+      { t: "qcm", q: "« Il est parti … son sac. »", choix: ["sans", "cent", "sang"], r: "sans", expl: "Le contraire de avec : sans." },
+      { t: "qcm", q: "Quelle phrase est bien écrite ?", choix: ["Le boulanger vend du pain.", "Le boulanger vend du pin.", "Le boulanger vend du peint."], r: "Le boulanger vend du pain.", expl: "L'aliment : le pain." },
+      { t: "vf", q: "Dans « Il a mal au cou », on pourrait aussi écrire « coup ».", r: false, expl: "Le cou est la partie du corps ; un coup est un choc. Le contexte choisit « cou »." },
+      { t: "qcm", q: "« Le joueur a reçu un … de pied. »", choix: ["coup", "cou", "coût"], r: "coup", expl: "Un choc : un coup." }
+    ],
+    [
+      { t: "dictee", texte: "Le ver de terre glisse vers la pelouse verte au bord du jardin.", expl: "ver (animal), vers (direction), verte (couleur)." },
+      { t: "dictee", texte: "Ma mère regarde la mer pendant que le maire parle aux pêcheurs.", expl: "mère, mer, maire : trois homonymes." },
+      { t: "trous", q: "Complète avec <i>cent, sang, sans</i>.", texte: "L'infirmier fait une prise de [sang]. Il ne prend pas d'argent : c'est [sans] frais. Pourtant, ailleurs, cela coûte [cent] francs.", expl: "sang (liquide), sans (contraire de avec), cent (nombre)." },
+      { t: "qcm", q: "Dans quelle phrase y a-t-il une erreur d'homonyme ?", choix: ["Je bois un vert de lait.", "Il marche vers l'école.", "La feuille est verte.", "Le ver aère la terre."], r: "Je bois un vert de lait.", expl: "Pour boire, c'est un <b>verre</b>." },
+      { t: "classer", q: "Range chaque mot selon son sens.", cases: ["animal", "couleur", "objet ou matière", "direction"], items: [["un ver de terre", "animal"], ["un pagne vert", "couleur"], ["un verre cassé", "objet ou matière"], ["vers la mer", "direction"], ["une robe verte", "couleur"]], expl: "C'est le contexte qui donne le sens." }
+    ]
+  ]
+});
+
+
+/* ---- fr-voc-prefixes.js ---- */
+LECONS.push({
+  id: "fr-voc-prefixes",
+  cahier: "francais",
+  matiere: "Vocabulaire",
+  titre: "Les préfixes",
+  date: "2026-09-28",
+  photos: ["DJI_20261118220316_0025_D.jpg", "DJI_20261118220325_0026_D.jpg"],
+  retiens:
+    "<p>Les <b>préfixes</b> sont placés <b>devant le radical</b> d'un mot pour former des mots nouveaux.</p>" +
+    "<p>Ex : Théo aime <b>re</b>lire (re + lire) les récits <b>in</b>croyables (in + croyables) qui se déroulent au temps de la <b>pré</b>histoire (pré + histoire).</p>" +
+    "<p>Certains préfixes sont utilisés pour dire le <b>contraire</b>.<br>Ex : La patience et l'obéissance sont des qualités. L'<b>im</b>patience et la <b>dés</b>obéissance sont des défauts.</p>" +
+    "<p>Le préfixe <b>pré-</b> signifie <b>avant</b>. Le préfixe <b>re-</b> signifie <b>à nouveau</b>.</p>" +
+    "<p>D'autres indiquent le <b>nombre</b>.<br>Ex : Cette hôtesse de l'air est <b>tri</b>lingue → elle parle <b>trois</b> langues.</p>",
+  astuce: "Préfixe = au début du mot (comme « pré », qui veut dire avant). Pour trouver le préfixe, enlève-le : il doit rester un vrai mot (re-lire → lire).",
+  regle: "Le préfixe se place devant le radical et change le sens du mot : re- (à nouveau), pré- (avant), in-, im-, dés- (le contraire), tri- (trois).",
+  niveaux: [
+    [
+      { t: "qcm", q: "Où se place un préfixe ?", choix: ["devant le radical", "après le radical", "au milieu du mot"], r: "devant le radical", expl: "Le préfixe est au début du mot." },
+      { t: "qcm", q: "Que signifie le préfixe <b>re-</b> dans « relire » ?", choix: ["à nouveau", "avant", "le contraire"], r: "à nouveau", expl: "relire = lire à nouveau." },
+      { t: "qcm", q: "Que signifie le préfixe <b>pré-</b> dans « préhistoire » ?", choix: ["avant", "à nouveau", "trois"], r: "avant", expl: "la préhistoire = la période avant l'histoire." },
+      { t: "vf", q: "Dans « impatience », le préfixe im- sert à dire le contraire.", r: true, expl: "l'impatience est le contraire de la patience." },
+      { t: "vf", q: "« trilingue » veut dire qui parle deux langues.", r: false, expl: "tri- indique trois : trilingue = qui parle trois langues." },
+      { t: "relier", q: "Relie chaque préfixe à son sens.", paires: [["re-", "à nouveau"], ["pré-", "avant"], ["tri-", "trois"], ["dés-", "le contraire"]], expl: "Ce sont les préfixes de la leçon." }
+    ],
+    [
+      { t: "saisie", q: "Écris le préfixe de <b>refaire</b>.", r: ["re", "re-"], expl: "re + faire" },
+      { t: "saisie", q: "Écris le préfixe de <b>incroyable</b>.", r: ["in", "in-"], expl: "in + croyable" },
+      { t: "saisie", q: "Écris le préfixe de <b>désobéir</b>.", r: ["dés", "dés-"], expl: "dés + obéir" },
+      { t: "saisie", q: "Ajoute le préfixe <b>re-</b> au verbe <b>venir</b>.", r: "revenir", expl: "re + venir = revenir (venir à nouveau)." },
+      { t: "saisie", q: "Ajoute le préfixe <b>pré-</b> au verbe <b>voir</b>.", r: "prévoir", expl: "pré + voir = prévoir (voir avant)." },
+      { t: "qcm", q: "Que veut dire <b>repeindre</b> ?", choix: ["peindre à nouveau", "peindre avant", "ne pas peindre"], r: "peindre à nouveau", expl: "re- = à nouveau." },
+      { t: "qcm", q: "Un <b>tricycle</b> a…", choix: ["trois roues", "deux roues", "quatre roues"], r: "trois roues", expl: "tri- indique le nombre trois." },
+      { t: "classer", q: "Range ces mots selon le sens de leur préfixe.", cases: ["à nouveau", "le contraire"], items: [["relire", "à nouveau"], ["impatient", "le contraire"], ["reprendre", "à nouveau"], ["désobéissant", "le contraire"], ["recommencer", "à nouveau"], ["inconnu", "le contraire"]], expl: "re- = à nouveau ; im-, dés-, in- = le contraire." }
+    ],
+    [
+      { t: "qcm", q: "Dans quel mot « re » est-il un préfixe ?", choix: ["relire", "reine", "renard"], r: "relire", expl: "Si on enlève re-, il reste « lire », un vrai mot. Ce n'est pas le cas pour reine ou renard." },
+      { t: "qcm", q: "Dans quel mot « in » est-il un préfixe ?", choix: ["inutile", "insecte", "infirmier"], r: "inutile", expl: "in + utile : inutile veut dire « pas utile »." },
+      { t: "saisie", q: "Forme le contraire de <b>patience</b> avec un préfixe.", r: "impatience", expl: "Devant p, in- devient im- : impatience." },
+      { t: "saisie", q: "Forme le contraire de <b>obéissance</b> avec un préfixe.", r: "désobéissance", expl: "dés + obéissance" },
+      { t: "qcm", q: "La patience est une qualité. L'impatience est…", choix: ["un défaut", "une qualité", "un nombre"], r: "un défaut", expl: "Le préfixe dit le contraire : la qualité devient un défaut." },
+      { t: "saisie", q: "Écris la phrase en remplaçant « lire à nouveau » par un seul verbe : « Awa aime lire à nouveau ses contes. »", r: "Awa aime relire ses contes.", large: true, expl: "lire à nouveau = relire." },
+      { t: "trous", q: "Complète avec le bon préfixe : <i>re, pré, in, tri</i>.", texte: "Le boulanger [pré]chauffe son four avant de cuire le pain. Mon cousin parle trois langues : il est [tri]lingue. Ce chemin m'est [in]connu. Nous devons [re]copier la leçon.", expl: "préchauffer (avant), trilingue (trois), inconnu (contraire), recopier (à nouveau)." }
+    ],
+    [
+      { t: "dictee", texte: "Théo aime relire les récits incroyables qui se déroulent au temps de la préhistoire.", expl: "re-lire, in-croyables, pré-histoire." },
+      { t: "dictee", texte: "La patience est une qualité mais la désobéissance est un défaut.", expl: "dés- + obéissance : le contraire de l'obéissance." },
+      { t: "qcm", q: "Une hôtesse de l'air parle wolof, français et anglais. Elle est…", choix: ["trilingue", "bilingue", "monolingue"], r: "trilingue", expl: "Trois langues : tri- + lingue." },
+      { t: "relier", q: "Relie chaque mot à sa définition.", paires: [["prévenir", "avertir avant"], ["revoir", "voir à nouveau"], ["inutile", "qui ne sert à rien"], ["triangle", "figure à trois angles"]], expl: "Le préfixe aide à deviner le sens du mot." },
+      { t: "qcm", q: "Trouve l'intrus (le seul mot qui n'a pas de préfixe).", choix: ["renard", "refaire", "revenir", "repartir"], r: "renard", expl: "Sans « re », il ne reste pas un vrai mot : renard n'a pas de préfixe." }
+    ]
+  ]
+});
+
+
+/* ---- fr-voc-suffixes.js ---- */
+// À VÉRIFIER : dans le tableau du cahier (photo 0031), « un Sinégalais » → « un Sénégalais », « un africain » → « un Africain » (nom d'habitant, majuscule), et la ligne « tion - ition - action » se lit « tion - ition - ation » (l'exemple « continuation » le confirme).
+LECONS.push({
+  id: "fr-voc-suffixes",
+  cahier: "francais",
+  matiere: "Vocabulaire",
+  titre: "Les suffixes",
+  date: "2026-10-05",
+  photos: ["DJI_20261118220409_0031_D.jpg"],
+  retiens:
+    "<p>Les <b>suffixes</b> sont placés <b>après le radical</b> d'un mot pour former des mots nouveaux. Ils apportent une indication sur le <b>sens</b> des mots.</p>" +
+    "<table><tr><th>suffixes</th><th>sens</th><th>exemples</th></tr>" +
+    "<tr><td>-able, -ible</td><td>possibilité</td><td>lav<b>able</b>, lis<b>ible</b></td></tr>" +
+    "<tr><td>-ade, -age</td><td>résultat d'une action</td><td>une fusill<b>ade</b>, un atterriss<b>age</b></td></tr>" +
+    "<tr><td>-ain, -ais, -ois</td><td>habitant</td><td>un Sénégal<b>ais</b>, un Afric<b>ain</b></td></tr>" +
+    "<tr><td>-eux, -euse</td><td>qualité ou défaut</td><td>courag<b>eux</b>, orgueill<b>euse</b></td></tr>" +
+    "<tr><td>-tion, -ition, -ation</td><td>action ou son résultat</td><td>fini<b>tion</b>, continu<b>ation</b></td></tr>" +
+    "<tr><td>-iste</td><td>profession</td><td>dent<b>iste</b></td></tr></table>",
+  astuce: "Le <b>pré</b>fixe est devant (comme « pré » = avant), le <b>suf</b>fixe est à la fin. Le nom d'un habitant prend une majuscule : un Sénégalais, une Dakaroise.",
+  regle: "Le suffixe se place après le radical et indique le sens du mot : -able/-ible (possibilité), -ade/-age (résultat d'une action), -ain/-ais/-ois (habitant), -eux/-euse (qualité ou défaut), -tion/-ation (action), -iste (profession).",
+  niveaux: [
+    [
+      { t: "qcm", q: "Où se place un suffixe ?", choix: ["après le radical", "devant le radical", "il remplace le radical"], r: "après le radical", expl: "Le suffixe est à la fin du mot." },
+      { t: "qcm", q: "Dans « lavable », quel est le suffixe ?", choix: ["-able", "lav-", "la-"], r: "-able", expl: "lav + able : qu'on peut laver." },
+      { t: "qcm", q: "Le suffixe <b>-iste</b> indique…", choix: ["une profession", "un habitant", "une possibilité"], r: "une profession", expl: "dentiste, fleuriste : des métiers." },
+      { t: "vf", q: "« Sénégalais » désigne un habitant du Sénégal grâce au suffixe -ais.", r: true, expl: "-ain, -ais, -ois indiquent l'habitant." },
+      { t: "vf", q: "« lisible » veut dire « qu'on ne peut pas lire ».", r: false, expl: "-ible indique la possibilité : lisible = qu'on peut lire." },
+      { t: "relier", q: "Relie chaque suffixe à son sens.", paires: [["-able", "possibilité"], ["-ais", "habitant"], ["-eux", "qualité ou défaut"], ["-iste", "profession"], ["-age", "résultat d'une action"]], expl: "C'est le tableau de la leçon." }
+    ],
+    [
+      { t: "saisie", q: "Écris le suffixe de <b>courageux</b>.", r: ["eux", "-eux"], expl: "courag + eux" },
+      { t: "saisie", q: "Écris le suffixe de <b>dentiste</b>.", r: ["iste", "-iste"], expl: "dent + iste" },
+      { t: "saisie", q: "Ajoute le suffixe <b>-able</b> au radical de <b>manger</b> (on garde le e).", r: "mangeable", expl: "mange + able = mangeable : qu'on peut manger." },
+      { t: "saisie", q: "Comment appelle-t-on un habitant de l'Afrique ? (avec la majuscule)", r: ["un Africain", "Un Africain", "Africain"], casse: true, expl: "Afric + ain, avec une majuscule : un Africain." },
+      { t: "qcm", q: "Une personne qui a peur de tout est…", choix: ["peureuse", "peurable", "peuriste"], r: "peureuse", expl: "-eux / -euse indique une qualité ou un défaut." },
+      { t: "qcm", q: "Celui qui joue du piano est un…", choix: ["pianiste", "pianais", "pianage"], r: "pianiste", expl: "-iste indique la profession ou l'activité." },
+      { t: "classer", q: "Range ces mots selon le sens de leur suffixe.", cases: ["habitant", "profession", "possibilité"], items: [["Dakarois", "habitant"], ["fleuriste", "profession"], ["buvable", "possibilité"], ["Marocain", "habitant"], ["journaliste", "profession"], ["visible", "possibilité"]], expl: "-ois/-ain : habitant ; -iste : profession ; -able/-ible : possibilité." },
+      { t: "relier", q: "Relie chaque verbe au nom formé avec un suffixe.", paires: [["laver", "le lavage"], ["glisser", "la glissade"], ["finir", "la finition"], ["planter", "la plantation"]], expl: "-age, -ade, -tion, -ation : résultat ou action." }
+    ],
+    [
+      { t: "qcm", q: "Dans quel mot « -able » est-il un suffixe ?", choix: ["lavable", "table", "sable"], r: "lavable", expl: "lav- + -able : qu'on peut laver. Table et sable ne contiennent pas de suffixe." },
+      { t: "qcm", q: "Quel mot désigne le résultat de l'action d'atterrir ?", choix: ["l'atterrissage", "atterrissable", "l'atterrisseur"], r: "l'atterrissage", expl: "-age indique le résultat d'une action." },
+      { t: "saisie", q: "Comment appelle-t-on un habitant de Dakar ? (avec la majuscule)", r: ["un Dakarois", "Un Dakarois", "Dakarois"], casse: true, expl: "Dakar + ois : un Dakarois." },
+      { t: "saisie", q: "Forme un adjectif avec <b>orgueil</b> et le suffixe -euse.", r: "orgueilleuse", expl: "orgueil + l + euse : orgueilleuse (avec deux l), comme dans le cahier." },
+      { t: "classer", q: "Préfixe ou suffixe ? Range la partie en gras.", cases: ["préfixe", "suffixe"], items: [["<b>re</b>lire", "préfixe"], ["lav<b>able</b>", "suffixe"], ["<b>in</b>connu", "préfixe"], ["dent<b>iste</b>", "suffixe"], ["<b>pré</b>histoire", "préfixe"], ["joy<b>eux</b>", "suffixe"]], expl: "Le préfixe est devant le radical, le suffixe après." },
+      { t: "saisie", q: "Écris la phrase avec un seul mot à la place des mots en gras : « Cette robe est une robe <b>qu'on peut laver</b>. » → Cette robe est …", r: "Cette robe est lavable.", large: true, expl: "qu'on peut laver = lavable." },
+      { t: "qcm", q: "« Un enfant qui a du courage » est un enfant…", choix: ["courageux", "courageable", "couragiste"], r: "courageux", expl: "-eux indique une qualité." }
+    ],
+    [
+      { t: "dictee", texte: "Le dentiste soigne un Sénégalais courageux qui n'a pas peur.", expl: "dent-iste, Sénégal-ais, courag-eux." },
+      { t: "trous", q: "Complète chaque mot avec le bon suffixe : <i>iste, able, ais, eux, age</i>.", texte: "Le fleur[iste] vend des roses. Cette eau est buv[able]. Mon voisin est un Sénégal[ais] très joy[eux]. Le lav[age] du linge se fait le samedi.", expl: "fleuriste (profession), buvable (possibilité), Sénégalais (habitant), joyeux (qualité), lavage (résultat d'une action)." },
+      { t: "qcm", q: "Trouve l'intrus (le mot dont le suffixe n'a pas le même sens que les autres).", choix: ["courageux", "dentiste", "fleuriste", "pianiste"], r: "courageux", expl: "-iste indique une profession ; -eux indique une qualité." },
+      { t: "relier", q: "Relie chaque définition au mot qui convient.", paires: [["qu'on peut voir", "visible"], ["habitant du Maroc", "Marocain"], ["qui a de la joie", "joyeux"], ["action de continuer", "continuation"]], expl: "Le suffixe donne le sens : -ible, -ain, -eux, -ation." },
+      { t: "saisie", q: "Forme un nom de profession avec <b>journal</b> et le suffixe -iste.", r: "journaliste", expl: "journal + iste = journaliste." }
+    ]
+  ]
+});
+
+
+/* ---- fr-voc-synonymes.js ---- */
+LECONS.push({
+  id: "fr-voc-synonymes",
+  cahier: "francais",
+  matiere: "Vocabulaire",
+  titre: "Les synonymes",
+  date: "2026-09-16",
+  photos: ["DJI_20261118220140_0015_D.jpg", "DJI_20261118220154_0016_D.jpg"],
+  retiens:
+    "<p>Les <b>synonymes</b> sont des mots qui ont un <b>sens proche</b>.</p>" +
+    "<p>Ex : Mon père a acheté une <b>belle voiture</b> bleue. Son ancienne <b>automobile</b> n'était plus très <b>jolie</b>.<br>" +
+    "Les noms <b>voiture</b> et <b>automobile</b> ont le même sens. Les adjectifs <b>belle</b> et <b>jolie</b> signifient presque la même chose.</p>" +
+    "<p>Certains synonymes ont un sens <b>plus ou moins fort</b>.<br>Ex : Je trouve ta voiture <b>superbe</b>, elle est vraiment <b>magnifique</b> !<br>" +
+    "<b>Superbe</b> et <b>magnifique</b> ont un sens plus fort que belle et jolie.</p>",
+  astuce: "Un synonyme doit pouvoir <b>remplacer</b> le mot dans la phrase sans changer le sens. Il est de la même nature : un nom pour un nom, un adjectif pour un adjectif, un verbe pour un verbe.",
+  regle: "Deux synonymes ont un sens proche et peuvent se remplacer dans la phrase. Certains sont plus forts que d'autres (belle < magnifique).",
+  niveaux: [
+    [
+      { t: "qcm", q: "Que sont des synonymes ?", choix: ["des mots qui ont un sens proche", "des mots de sens contraire", "des mots qui se prononcent pareil"], r: "des mots qui ont un sens proche", expl: "C'est la définition de la leçon." },
+      { t: "qcm", q: "Quel est le synonyme de <b>voiture</b> ?", choix: ["automobile", "route", "chauffeur"], r: "automobile", expl: "voiture et automobile ont le même sens." },
+      { t: "qcm", q: "Quel est le synonyme de <b>jolie</b> ?", choix: ["belle", "laide", "petite"], r: "belle", expl: "belle et jolie signifient presque la même chose." },
+      { t: "vf", q: "« Magnifique » a un sens plus fort que « jolie ».", r: true, expl: "Superbe et magnifique sont plus forts que belle et jolie." },
+      { t: "vf", q: "« Grand » et « petit » sont des synonymes.", r: false, expl: "Ils ont des sens opposés : ce sont des contraires." },
+      { t: "relier", q: "Relie chaque mot à son synonyme.", paires: [["voiture", "automobile"], ["content", "heureux"], ["maison", "habitation"], ["commencer", "débuter"], ["peur", "frayeur"]], expl: "Chaque paire a un sens proche." }
+    ],
+    [
+      { t: "qcm", q: "Remplace le mot en gras par un synonyme : « Awa est <b>rapide</b> à la course. »", choix: ["vive", "lente", "fatiguée"], r: "vive", expl: "rapide et vive ont un sens proche ici." },
+      { t: "qcm", q: "Remplace le mot en gras : « Le maître nous <b>donne</b> un exercice. »", choix: ["propose", "prend", "efface"], r: "propose", expl: "donner un exercice = proposer un exercice." },
+      { t: "qcm", q: "Remplace le mot en gras : « Moussa a <b>peur</b> du noir. »", choix: ["la frayeur", "la joie", "le courage"], r: "la frayeur", expl: "peur et frayeur sont synonymes." },
+      { t: "qcm", q: "Quel mot n'est PAS un synonyme de <b>content</b> ?", choix: ["triste", "heureux", "joyeux", "ravi"], r: "triste", expl: "triste est le contraire de content." },
+      { t: "saisie", q: "Écris le synonyme de <b>automobile</b> donné dans la leçon.", r: "voiture", expl: "voiture et automobile ont le même sens." },
+      { t: "classer", q: "Range ces mots selon leur sens.", cases: ["proche de « beau »", "proche de « content »"], items: [["joli", "proche de « beau »"], ["joyeux", "proche de « content »"], ["magnifique", "proche de « beau »"], ["heureux", "proche de « content »"], ["superbe", "proche de « beau »"], ["ravi", "proche de « content »"]], expl: "Chaque groupe réunit des synonymes." },
+      { t: "relier", q: "Relie chaque verbe à son synonyme.", paires: [["crier", "hurler"], ["regarder", "observer"], ["finir", "terminer"], ["bâtir", "construire"]], expl: "Ces verbes ont un sens proche." },
+      { t: "qcm", q: "Dans « Mon père a acheté une belle voiture. Son ancienne automobile n'était plus très jolie. », pourquoi l'auteur emploie-t-il « automobile » ?", choix: ["pour ne pas répéter « voiture »", "parce que c'est une autre voiture plus grande", "parce que « voiture » est faux"], r: "pour ne pas répéter « voiture »", expl: "Les synonymes servent à éviter les répétitions." }
+    ],
+    [
+      { t: "classer", q: "Range ces adjectifs : sens normal ou sens fort ?", cases: ["sens normal", "sens fort"], items: [["beau", "sens normal"], ["magnifique", "sens fort"], ["chaud", "sens normal"], ["brûlant", "sens fort"], ["fatigué", "sens normal"], ["épuisé", "sens fort"]], expl: "magnifique, brûlant, épuisé disent la même chose en plus fort." },
+      { t: "qcm", q: "Quel synonyme est le plus fort ?", choix: ["glacial", "frais", "froid"], r: "glacial", expl: "glacial = très, très froid." },
+      { t: "qcm", q: "Quel synonyme est le plus fort ?", choix: ["immense", "grand", "haut"], r: "immense", expl: "immense = très grand." },
+      { t: "qcm", q: "Range du moins fort au plus fort : bon, délicieux.", choix: ["bon, puis délicieux", "délicieux, puis bon"], r: "bon, puis délicieux", expl: "délicieux veut dire « très bon »." },
+      { t: "vf", q: "Dans « Il fait une chaleur terrible », on peut remplacer « chaleur » par « fournaise » pour dire que c'est encore plus fort.", r: true, expl: "fournaise est un synonyme fort de chaleur." },
+      { t: "qcm", q: "Quel mot peut remplacer « joli » dans « un joli dessin » sans changer la nature du mot ?", choix: ["beau", "beauté", "embellir"], r: "beau", expl: "joli est un adjectif : son synonyme doit aussi être un adjectif. beauté est un nom, embellir un verbe." }
+    ],
+    [
+      { t: "qcm", q: "Trouve l'intrus (celui qui n'est pas synonyme des autres) : maison, demeure, habitation, jardin.", choix: ["jardin", "maison", "demeure", "habitation"], r: "jardin", expl: "maison, demeure, habitation ont un sens proche ; le jardin est autre chose." },
+      { t: "qcm", q: "Trouve l'intrus : rapide, vif, lent, prompt.", choix: ["lent", "rapide", "vif", "prompt"], r: "lent", expl: "lent est le contraire des autres." },
+      { t: "trous", q: "Remplace chaque mot entre parenthèses par le synonyme proposé dans la liste : <i>automobile, jolie, magnifique</i>.", texte: "Fatou a une [jolie] (belle) robe. Son père conduit une [automobile] (voiture) neuve. La fête était [magnifique] (superbe) !", expl: "belle = jolie ; voiture = automobile ; superbe = magnifique." },
+      { t: "dictee", texte: "Mon père a acheté une belle voiture bleue et son ancienne automobile n'était plus jolie.", expl: "voiture / automobile et belle / jolie sont des synonymes." },
+      { t: "qcm", q: "Quelle phrase évite une répétition grâce à un synonyme ?", choix: ["Le chat dort. Le matou ronronne.", "Le chat dort. Le chat ronronne.", "Le chat dort. Le chien aboie."], r: "Le chat dort. Le matou ronronne.", expl: "matou est un synonyme de chat (chat mâle) : il évite de répéter le même mot." }
+    ]
+  ]
+});
+
+
+/* ---- ge-agriculture.js ---- */
+LECONS.push({
+  id: "ge-agriculture",
+  cahier: "histgeo",
+  matiere: "Géographie",
+  titre: "L'agriculture au Sénégal (1re et 2e parties)",
+  date: "2026-09-16",
+  photos: ["DJI_20261118222023_0137_D.jpg", "DJI_20261118222048_0138_D.jpg"],
+  retiens:
+    "<p>Le Sénégal dispose d'énormes <b>potentialités agricoles</b> (terres arables, ressources humaines…). <b>70 %</b> de la population vit de l'agriculture.</p>" +
+    "<p><b>Les cultures vivrières</b> servent à la consommation de la population locale :</p>" +
+    "<ul><li>le <b>mil</b> (Fatick, Kaolack, Diourbel…) ;</li><li>le <b>riz</b> (Saint-Louis, Ziguinchor, Kolda) ;</li><li>le <b>maïs</b> (Tambacounda, Kolda, Kaolack…).</li></ul>" +
+    "<p><b>Les cultures industrielles</b> sont transformées dans des usines :</p>" +
+    "<ul><li>l'<b>arachide</b> (Diourbel, Kaolack, Louga…) ;</li><li>le <b>coton</b> (Tambacounda) ;</li><li>la <b>canne à sucre</b> (Richard-Toll, région de Saint-Louis) ;</li><li>la <b>tomate</b> (Saint-Louis, zone des Niayes).</li></ul>" +
+    "<p><b>Les cultures maraîchères</b> (chou, patate…) se font dans la zone des Niayes et dans la vallée du fleuve.</p>" +
+    "<p><b>Les cultures fruitières</b> se trouvent à Thiès et à Ziguinchor.</p>" +
+    "<p><b>NB</b> : un pays qui atteint l'<b>autosuffisance alimentaire</b> est un pays qui produit toute la nourriture consommée par sa population.</p>" +
+    "<p><b>Les problèmes</b> : malgré ses potentialités, notre agriculture souffre de l'<b>aridité des sols</b>, de la <b>faiblesse de la pluviométrie</b> et du <b>manque d'infrastructures agricoles</b> adaptées (outils).</p>" +
+    "<p><b>Les solutions</b> : le Sénégal a fait de gros efforts pour atteindre l'autosuffisance alimentaire. L'État doit aussi moderniser l'agriculture : construire des <b>bassins de rétention</b> d'eau, <b>irriguer</b> les terres arides, renouveler le matériel agricole…</p>",
+  astuce: "<b>Vivrière</b> vient de « vivre » : on la mange. <b>Industrielle</b> : elle part à l'usine (arachide → huile, canne → sucre).",
+  regle: "Les cultures vivrières (mil, riz, maïs) nourrissent la population ; les cultures industrielles (arachide, coton, canne à sucre, tomate) sont transformées dans des usines.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Quelle part de la population sénégalaise vit de l'agriculture ?", choix: ["70 %", "10 %", "100 %"], r: "70 %", expl: "70 % de la population vit de l'agriculture." },
+      { t: "qcm", q: "À quoi servent les cultures vivrières ?", choix: ["à nourrir la population locale", "à être transformées dans des usines", "à décorer les maisons"], r: "à nourrir la population locale", expl: "Vivrière vient de « vivre » : on les consomme." },
+      { t: "qcm", q: "Que deviennent les cultures industrielles ?", choix: ["elles sont transformées dans des usines", "elles sont jetées", "elles restent au champ"], r: "elles sont transformées dans des usines", expl: "L'arachide devient de l'huile, la canne à sucre devient du sucre…" },
+      { t: "classer", q: "Range chaque culture.", cases: ["culture vivrière", "culture industrielle"], items: [["le mil", "culture vivrière"], ["l'arachide", "culture industrielle"], ["le riz", "culture vivrière"], ["le coton", "culture industrielle"], ["le maïs", "culture vivrière"], ["la canne à sucre", "culture industrielle"]], expl: "Mil, riz, maïs : vivrières. Arachide, coton, canne à sucre : industrielles." },
+      { t: "vf", q: "Le chou et la patate sont des cultures maraîchères.", r: true, expl: "On les cultive dans les Niayes et dans la vallée du fleuve." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque culture industrielle à sa région.", paires: [["le coton", "Tambacounda"], ["la canne à sucre", "Richard-Toll"], ["la tomate", "zone des Niayes"]], expl: "Ce sont les zones citées dans la leçon." },
+      { t: "relier", q: "Relie chaque culture vivrière à une de ses régions.", paires: [["le mil", "Fatick"], ["le riz", "Ziguinchor"], ["le maïs", "Tambacounda"]], expl: "Mil : Fatick, Kaolack, Diourbel. Riz : Saint-Louis, Ziguinchor, Kolda. Maïs : Tambacounda, Kolda, Kaolack." },
+      { t: "qcm", q: "Où se trouvent les cultures fruitières ?", choix: ["à Thiès et à Ziguinchor", "à Dakar et à Louga", "à Matam et à Kédougou"], r: "à Thiès et à Ziguinchor", expl: "La leçon cite Thiès et Ziguinchor." },
+      { t: "saisie", q: "Dans quelle ville du nord cultive-t-on la canne à sucre ?", r: "Richard-Toll", aide: "Deux mots reliés par un trait d'union.", expl: "À Richard-Toll, dans la région de Saint-Louis." },
+      { t: "qcm", q: "Quelle culture est transformée en huile ?", choix: ["l'arachide", "le mil", "le chou"], r: "l'arachide", expl: "L'arachide est une culture industrielle." },
+      { t: "classer", q: "Range ces problèmes et solutions.", cases: ["problème", "solution"], items: [["l'aridité des sols", "problème"], ["la faiblesse de la pluviométrie", "problème"], ["construire des bassins de rétention", "solution"], ["le manque d'outils adaptés", "problème"], ["irriguer les terres arides", "solution"], ["renouveler le matériel agricole", "solution"]], expl: "Les problèmes de l'agriculture et les solutions de la 2e partie." },
+      { t: "trous", q: "Complète.", texte: "Les cultures [maraîchères] comme le chou se font dans la zone des [Niayes].", expl: "Les cultures maraîchères poussent dans les Niayes et la vallée du fleuve." },
+      { t: "vf", q: "La pluviométrie très forte est un problème de l'agriculture sénégalaise.", r: false, expl: "Le problème, c'est la faiblesse de la pluviométrie : il ne pleut pas assez." },
+      { t: "saisie", q: "Quelle culture industrielle est cultivée à Tambacounda ?", r: "le coton", expl: "Le coton, à Tambacounda." }
+    ],
+    [
+      { t: "qcm", q: "Qu'est-ce qu'un pays qui a atteint l'autosuffisance alimentaire ?", choix: ["un pays qui produit toute la nourriture de sa population", "un pays qui achète toute sa nourriture à l'étranger", "un pays sans agriculteurs"], r: "un pays qui produit toute la nourriture de sa population", expl: "Il n'a pas besoin d'acheter de la nourriture ailleurs." },
+      { t: "qcm", q: "Pourquoi construire des bassins de rétention d'eau ?", choix: ["pour garder l'eau de pluie et arroser les champs", "pour élever des chevaux", "pour faire des routes"], r: "pour garder l'eau de pluie et arroser les champs", expl: "La pluviométrie est faible : on garde l'eau pour irriguer." },
+      { t: "vf", q: "Kaolack est citée à la fois pour le mil, le maïs et l'arachide.", r: true, expl: "Une même région peut produire plusieurs cultures." },
+      { t: "qcm", q: "La tomate est une culture…", choix: ["industrielle", "fruitière", "vivrière"], r: "industrielle", expl: "Dans ta leçon, la tomate est rangée avec les cultures industrielles (on en fait du concentré à l'usine)." },
+      { t: "classer", q: "Range chaque culture dans sa famille.", cases: ["vivrière", "industrielle", "maraîchère"], items: [["le riz", "vivrière"], ["le coton", "industrielle"], ["le chou", "maraîchère"], ["le mil", "vivrière"], ["la tomate", "industrielle"], ["la patate", "maraîchère"]], expl: "Trois familles de cultures." },
+      { t: "saisie", q: "Comment appelle-t-on l'action d'apporter de l'eau aux terres sèches ? (verbe à l'infinitif)", r: "irriguer", expl: "Irriguer les terres arides est une des solutions." },
+      { t: "vf", q: "Le Sénégal a de grandes potentialités agricoles : des terres arables et des ressources humaines.", r: true, expl: "C'est le début de la leçon." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "Au Sénégal, [70] % de la population vit de l'agriculture. Les cultures [vivrières] comme le mil, le riz et le maïs nourrissent la population. Les cultures [industrielles] comme l'arachide et le coton sont transformées dans des usines. Les problèmes sont l'aridité des sols et la faiblesse de la [pluviométrie].", expl: "Les deux parties de la leçon." },
+      { t: "qcm", q: "Mamadou cultive du mil à Diourbel pour nourrir sa famille. Quelle sorte de culture fait-il ?", choix: ["une culture vivrière", "une culture industrielle", "une culture fruitière"], r: "une culture vivrière", expl: "Le mil sert à nourrir la famille : c'est une culture vivrière." },
+      { t: "qcm", q: "Khady vend ses arachides à l'usine de Kaolack. Quelle sorte de culture fait-elle ?", choix: ["une culture industrielle", "une culture vivrière", "une culture maraîchère"], r: "une culture industrielle", expl: "L'arachide part à l'usine : c'est une culture industrielle." },
+      { t: "relier", q: "Relie chaque problème à une solution.", paires: [["la faiblesse de la pluviométrie", "construire des bassins de rétention"], ["les terres arides", "irriguer"], ["le manque d'outils adaptés", "renouveler le matériel agricole"]], expl: "Chaque solution répond à un problème." },
+      { t: "vf", q: "Si le Sénégal produisait tout le riz que mange sa population, il serait plus proche de l'autosuffisance alimentaire.", r: true, expl: "L'autosuffisance, c'est produire toute la nourriture consommée par la population." }
+    ]
+  ]
+});
+
+
+/* ---- ge-elevage.js ---- */
+LECONS.push({
+  id: "ge-elevage",
+  cahier: "histgeo",
+  matiere: "Géographie",
+  titre: "L'élevage au Sénégal (1re partie et suite)",
+  date: "2026-10-14",
+  photos: ["DJI_20261118222132_0145_D.jpg", "DJI_20261118222145_0147_D.jpg", "DJI_20261118222153_0148_D.jpg"],
+  retiens:
+    "<p>L'élevage au Sénégal est pratiqué sous <b>deux formes</b> :</p>" +
+    "<p>1. <b>L'élevage extensif ou nomade</b> : les animaux se déplacent sur de grandes étendues à la recherche de pâturages. C'est l'<b>élevage traditionnel</b>, surtout pratiqué par les <b>Peuls</b> dans la <b>zone sylvopastorale</b>. Il dépend fortement de la pluviométrie.</p>" +
+    "<p>2. <b>L'élevage intensif ou sédentaire</b> se pratique dans des <b>fermes</b>, sur des espaces réduits. C'est l'<b>élevage moderne</b> : il donne d'importants rendements en lait et en viande, et les animaux sont mieux soignés.</p>" +
+    "<p><b>Mots importants</b></p>" +
+    "<ul><li><b>Pâturage</b> : endroit où les animaux trouvent leur nourriture.</li>" +
+    "<li><b>Nomade</b> : éleveur qui se déplace avec son troupeau.</li>" +
+    "<li><b>Sédentaire</b> : éleveur qui reste sur place avec son troupeau.</li>" +
+    "<li><b>Transhumance</b> : déplacement périodique du bétail vers d'autres localités à la recherche de pâturages.</li></ul>" +
+    "<p><b>Les animaux élevés</b> : les bovins (bœufs), les ovins (moutons), les caprins (chèvres), les porcins (porcs), les canins (chiens), la volaille (poules, canards…), les équins (chevaux), les asins (ânes), les félins (chats)… L'ensemble des animaux élevés s'appelle le <b>cheptel</b>.</p>" +
+    "<p><b>Les ressources de l'élevage</b> : le lait, la viande, le cuir, le beurre, les cornes, les œufs… Certains animaux servent aussi au transport et aux travaux des champs.</p>" +
+    "<p><b>Les problèmes</b> : le manque de pâturages, le nomadisme, l'aridité du sol et du climat, les maladies.</p>" +
+    "<p><b>Les solutions</b> : créer des centres de recherches zootechniques ; construire des forages dans les zones d'élevage ; améliorer les espèces animales et les vacciner ; moderniser les techniques d'élevage ; pratiquer l'<b>insémination artificielle</b> (déposer la semence du mâle dans l'organe génital de la femelle).</p>",
+  astuce: "<b>Bo</b>vins comme <b>bœ</b>uf ; <b>é</b>quins comme <b>é</b>quitation (le cheval) ; <b>a</b>sins comme <b>â</b>ne ; <b>ca</b>prins comme <b>ca</b>bri (la petite chèvre).",
+  regle: "L'élevage extensif (nomade, traditionnel) déplace les troupeaux vers les pâturages ; l'élevage intensif (sédentaire, moderne) se fait dans des fermes avec de gros rendements.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Combien de formes d'élevage y a-t-il au Sénégal dans ta leçon ?", choix: ["deux", "quatre", "une seule"], r: "deux", expl: "L'élevage extensif (nomade) et l'élevage intensif (sédentaire)." },
+      { t: "qcm", q: "Qui pratique surtout l'élevage extensif ?", choix: ["les Peuls", "les Lébous", "les Perses"], r: "les Peuls", expl: "Les Peuls, dans la zone sylvopastorale." },
+      { t: "vf", q: "L'élevage intensif se pratique dans des fermes.", r: true, expl: "C'est l'élevage moderne, sur des espaces réduits." },
+      { t: "qcm", q: "Un pâturage, c'est…", choix: ["un endroit où les animaux trouvent leur nourriture", "une maison pour les poules", "un médicament pour les vaches"], r: "un endroit où les animaux trouvent leur nourriture", expl: "Les troupeaux se déplacent à la recherche de pâturages." },
+      { t: "classer", q: "Range ces mots.", cases: ["élevage extensif", "élevage intensif"], items: [["nomade", "élevage extensif"], ["sédentaire", "élevage intensif"], ["traditionnel", "élevage extensif"], ["moderne", "élevage intensif"], ["dépend de la pluie", "élevage extensif"], ["fermes", "élevage intensif"]], expl: "Extensif = nomade, traditionnel ; intensif = sédentaire, moderne." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque nom savant à l'animal.", paires: [["les bovins", "les bœufs"], ["les ovins", "les moutons"], ["les caprins", "les chèvres"], ["les équins", "les chevaux"], ["les asins", "les ânes"]], expl: "Ce sont les noms des groupes d'animaux élevés." },
+      { t: "saisie", q: "Comment appelle-t-on l'ensemble des animaux élevés ?", r: "le cheptel", expl: "C'est le cheptel." },
+      { t: "saisie", q: "Comment appelle-t-on le déplacement périodique du bétail à la recherche de pâturages ?", r: "la transhumance", expl: "La transhumance." },
+      { t: "qcm", q: "Les poules et les canards font partie de…", choix: ["la volaille", "les bovins", "les félins"], r: "la volaille", expl: "La volaille : poules, canards…" },
+      { t: "classer", q: "Range ces ressources.", cases: ["produit de l'élevage", "pas un produit de l'élevage"], items: [["le lait", "produit de l'élevage"], ["le cuir", "produit de l'élevage"], ["les œufs", "produit de l'élevage"], ["le mil", "pas un produit de l'élevage"], ["le beurre", "produit de l'élevage"], ["le poisson de mer", "pas un produit de l'élevage"]], expl: "Le mil vient de l'agriculture, le poisson de mer de la pêche." },
+      { t: "vf", q: "Certains animaux servent au transport et aux travaux des champs.", r: true, expl: "Par exemple l'âne et le cheval tirent les charrettes." },
+      { t: "trous", q: "Complète.", texte: "L'élevage [extensif] ou nomade est pratiqué par les Peuls. L'élevage [intensif] ou sédentaire se fait dans des fermes.", expl: "Les deux formes d'élevage." },
+      { t: "qcm", q: "Un éleveur qui reste sur place avec son troupeau est…", choix: ["sédentaire", "nomade", "transhumant"], r: "sédentaire", expl: "Le sédentaire reste sur place, le nomade se déplace." },
+      { t: "relier", q: "Relie.", paires: [["les porcins", "les porcs"], ["les canins", "les chiens"], ["les félins", "les chats"]], expl: "D'autres noms d'animaux élevés." }
+    ],
+    [
+      { t: "classer", q: "Range ces problèmes et solutions.", cases: ["problème", "solution"], items: [["le manque de pâturages", "problème"], ["les maladies", "problème"], ["construire des forages", "solution"], ["vacciner les animaux", "solution"], ["l'aridité du climat", "problème"], ["créer des centres de recherches zootechniques", "solution"]], expl: "Les difficultés de l'élevage et leurs remèdes." },
+      { t: "qcm", q: "Pourquoi construire des forages dans les zones d'élevage ?", choix: ["pour donner de l'eau aux troupeaux", "pour chercher de l'or", "pour pêcher"], r: "pour donner de l'eau aux troupeaux", expl: "Avec de l'eau sur place, les troupeaux se déplacent moins." },
+      { t: "vf", q: "L'élevage extensif ne dépend pas de la pluie.", r: false, expl: "Il dépend fortement de la pluviométrie : sans pluie, pas d'herbe dans les pâturages." },
+      { t: "qcm", q: "Pourquoi l'élevage intensif donne-t-il plus de lait et de viande ?", choix: ["les animaux sont bien nourris et bien soignés à la ferme", "les animaux marchent beaucoup", "les animaux mangent du sable"], r: "les animaux sont bien nourris et bien soignés à la ferme", expl: "C'est un élevage moderne avec une meilleure couverture sanitaire." },
+      { t: "saisie", q: "Les moutons font partie des … (nom savant)", r: "ovins", expl: "Les ovins = les moutons." },
+      { t: "saisie", q: "Les chèvres font partie des … (nom savant)", r: "caprins", expl: "Les caprins = les chèvres." },
+      { t: "vf", q: "Le nomadisme est cité parmi les problèmes de l'élevage.", r: true, expl: "Les déplacements fatiguent les animaux et rendent les soins difficiles." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "L'élevage extensif est un élevage [nomade] pratiqué par les Peuls. L'élevage intensif est un élevage [moderne] qui se fait dans des fermes. L'ensemble des animaux élevés s'appelle le [cheptel]. Le déplacement du bétail à la recherche de pâturages s'appelle la [transhumance].", expl: "Toute la leçon en un texte." },
+      { t: "qcm", q: "Pendant la saison sèche, Samba conduit ses bœufs du Ferlo vers le sud pour trouver de l'herbe, puis il revient. Comment appelle-t-on ce déplacement ?", choix: ["la transhumance", "l'insémination", "la pisciculture"], r: "la transhumance", expl: "C'est un déplacement périodique du bétail à la recherche de pâturages." },
+      { t: "qcm", q: "Fatou a une ferme près de Thiès avec des vaches laitières bien soignées et vaccinées. Quel élevage pratique-t-elle ?", choix: ["l'élevage intensif", "l'élevage extensif", "la transhumance"], r: "l'élevage intensif", expl: "Ferme, soins, rendement en lait : c'est l'élevage intensif." },
+      { t: "relier", q: "Relie chaque problème à une solution.", paires: [["les maladies", "vacciner les animaux"], ["le manque d'eau", "construire des forages"], ["des races peu productives", "améliorer les espèces animales"]], expl: "Chaque solution répond à un problème." },
+      { t: "classer", q: "Défi : range ces animaux dans leur groupe.", cases: ["bovins", "ovins", "équins", "asins"], items: [["le taureau", "bovins"], ["la vache", "bovins"], ["le bélier", "ovins"], ["la brebis", "ovins"], ["le cheval", "équins"], ["l'âne", "asins"]], expl: "Bovins : bœufs, vaches ; ovins : moutons ; équins : chevaux ; asins : ânes." }
+    ]
+  ]
+});
+
+
+/* ---- ge-industrie.js ---- */
+// À VÉRIFIER : au cahier (photo 0149), la matière première de GMD et de NMA est notée « Farine ». La farine est le produit fini ; la matière première est le blé. Le module écrit « blé ».
+// À VÉRIFIER : quelques cases des tableaux sont floues (photos 0149 et 0151) : 2e produit de la SONACOS, produits finis de SODEFITEX/NSTS, 2e produit de la SAR. Elles ne sont pas utilisées en exercice. « SABADOLA » corrigé en « Sabodala » (mine d'or).
+LECONS.push({
+  id: "ge-industrie",
+  cahier: "histgeo",
+  matiere: "Géographie",
+  titre: "L'industrie au Sénégal",
+  date: "2026-11-04",
+  photos: ["DJI_20261118222156_0149_D.jpg", "DJI_20261118222207_0151_D.jpg"],
+  retiens:
+    "<p>Les industries transforment des produits du sous-sol, de la pêche, de l'agriculture et des matières importées. Le Sénégal possède des industries variées.</p>" +
+    "<table><tr><th>Usines</th><th>Matières premières</th><th>Produits finis</th></tr>" +
+    "<tr><th colspan='3'>1. Industries alimentaires</th></tr>" +
+    "<tr><td>SONACOS</td><td>arachide</td><td>huile…</td></tr>" +
+    "<tr><td>CSS</td><td>canne à sucre</td><td>sucre</td></tr>" +
+    "<tr><td>SOBOA</td><td>fruits</td><td>boissons gazeuses</td></tr>" +
+    "<tr><td>SAPROLAIT</td><td>lait naturel</td><td>lait en poudre, en boîte</td></tr>" +
+    "<tr><td>GMD</td><td>blé</td><td>farine, pâtes alimentaires</td></tr>" +
+    "<tr><td>NMA</td><td>blé</td><td>farine de blé, aliment de bétail</td></tr>" +
+    "<tr><th colspan='3'>2. Industries textiles</th></tr>" +
+    "<tr><td>SODEFITEX, NSTS</td><td>coton en graine, fil…</td><td>coton, tissu</td></tr>" +
+    "<tr><th colspan='3'>3. Industries chimiques</th></tr>" +
+    "<tr><td>NSOA</td><td>arachide</td><td>savon</td></tr>" +
+    "<tr><td>ICS</td><td>phosphates</td><td>engrais</td></tr>" +
+    "<tr><td>SAR</td><td>pétrole brut</td><td>essence…</td></tr>" +
+    "<tr><th colspan='3'>4. Industries minières</th></tr>" +
+    "<tr><td>SOCOCIM</td><td>gisement</td><td>ciment</td></tr>" +
+    "<tr><td>Sabodala</td><td>gisement</td><td>or</td></tr>" +
+    "<tr><th colspan='3'>5. Industries mécaniques</th></tr>" +
+    "<tr><td>SENBUS</td><td>pièces détachées</td><td>véhicules « Tata »</td></tr>" +
+    "<tr><td>SEMI</td><td>pièces détachées</td><td>matériels marins</td></tr></table>" +
+    "<p><b>Mots importants</b></p>" +
+    "<ul><li>Une <b>matière première</b> : c'est un produit destiné à être transformé.</li>" +
+    "<li>Un <b>produit fini</b> : c'est un produit qui, après transformation, est prêt à être utilisé.</li></ul>",
+  astuce: "Matière <b>première</b> = ce qui entre en <b>premier</b> dans l'usine. Produit <b>fini</b> = ce qui sort à la <b>fin</b>.",
+  regle: "Une usine transforme une matière première (arachide, canne à sucre, phosphates…) en produit fini (huile, sucre, engrais…).",
+  niveaux: [
+    [
+      { t: "qcm", q: "Qu'est-ce qu'une matière première ?", choix: ["un produit destiné à être transformé", "un produit prêt à être utilisé", "un produit cassé"], r: "un produit destiné à être transformé", expl: "La matière première entre dans l'usine pour être transformée." },
+      { t: "qcm", q: "Qu'est-ce qu'un produit fini ?", choix: ["un produit prêt à être utilisé après transformation", "un produit qui sort de la terre", "un produit qu'on jette"], r: "un produit prêt à être utilisé après transformation", expl: "Le produit fini sort de l'usine, prêt à l'emploi." },
+      { t: "qcm", q: "Que produit la CSS à partir de la canne à sucre ?", choix: ["du sucre", "du savon", "du ciment"], r: "du sucre", expl: "CSS : canne à sucre → sucre." },
+      { t: "classer", q: "Matière première ou produit fini ?", cases: ["matière première", "produit fini"], items: [["l'arachide", "matière première"], ["l'huile", "produit fini"], ["la canne à sucre", "matière première"], ["le sucre", "produit fini"], ["le pétrole brut", "matière première"], ["l'essence", "produit fini"]], expl: "La matière première entre dans l'usine, le produit fini en sort." },
+      { t: "vf", q: "L'ICS transforme les phosphates en engrais.", r: true, expl: "ICS : phosphates → engrais." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque usine à son produit fini.", paires: [["SONACOS", "huile"], ["CSS", "sucre"], ["SOBOA", "boissons gazeuses"], ["SAPROLAIT", "lait en poudre"], ["SOCOCIM", "ciment"]], expl: "C'est le tableau de la leçon." },
+      { t: "relier", q: "Relie chaque usine à sa matière première.", paires: [["ICS", "phosphates"], ["SAR", "pétrole brut"], ["NSOA", "arachide"], ["GMD", "blé"]], expl: "GMD transforme le blé en farine et en pâtes." },
+      { t: "saisie", q: "Quelle usine transforme la canne à sucre en sucre ? (sigle)", r: ["CSS", "C.S.S"], expl: "La CSS, à Richard-Toll." },
+      { t: "qcm", q: "Dans quelle famille d'industries range-t-on la SOCOCIM (ciment) ?", choix: ["les industries minières", "les industries alimentaires", "les industries textiles"], r: "les industries minières", expl: "Le ciment vient d'un gisement du sous-sol." },
+      { t: "qcm", q: "Que produit la SENBUS avec des pièces détachées ?", choix: ["des véhicules « Tata »", "de l'huile", "des engrais"], r: "des véhicules « Tata »", expl: "C'est une industrie mécanique." },
+      { t: "vf", q: "La NSOA fabrique du savon avec de l'arachide.", r: true, expl: "C'est une industrie chimique." },
+      { t: "classer", q: "Range chaque usine dans sa famille.", cases: ["alimentaire", "chimique", "minière", "mécanique"], items: [["CSS", "alimentaire"], ["SOBOA", "alimentaire"], ["ICS", "chimique"], ["SAR", "chimique"], ["Sabodala", "minière"], ["SEMI", "mécanique"]], expl: "Les familles d'industries du tableau." },
+      { t: "saisie", q: "Que produit la mine de Sabodala ?", r: "l'or", expl: "Sabodala est une mine d'or." },
+      { t: "qcm", q: "Que fabrique la NMA, en plus de la farine de blé ?", choix: ["de l'aliment de bétail", "du sucre", "du ciment"], r: "de l'aliment de bétail", expl: "NMA : blé → farine de blé, aliment de bétail." }
+    ],
+    [
+      { t: "vf", q: "La farine est la matière première de la GMD.", r: false, expl: "La matière première est le blé ; la farine est le produit fini." },
+      { t: "qcm", q: "L'arachide est la matière première de deux usines du tableau. Lesquelles ?", choix: ["la SONACOS et la NSOA", "la CSS et la SAR", "l'ICS et la SOCOCIM"], r: "la SONACOS et la NSOA", expl: "SONACOS : huile ; NSOA : savon." },
+      { t: "classer", q: "Range ces usines.", cases: ["industrie alimentaire", "industrie chimique"], items: [["SAPROLAIT", "industrie alimentaire"], ["NSOA", "industrie chimique"], ["GMD", "industrie alimentaire"], ["ICS", "industrie chimique"], ["SONACOS", "industrie alimentaire"], ["SAR", "industrie chimique"]], expl: "Attention : l'arachide va à la SONACOS (alimentaire, huile) et à la NSOA (chimique, savon)." },
+      { t: "qcm", q: "D'où viennent les produits transformés par les industries ?", choix: ["du sous-sol, de la pêche, de l'agriculture et des importations", "seulement de la mer", "seulement de l'étranger"], r: "du sous-sol, de la pêche, de l'agriculture et des importations", expl: "C'est la première phrase de la leçon." },
+      { t: "saisie", q: "Quelle est la matière première de l'ICS ?", r: "les phosphates", expl: "L'ICS transforme les phosphates en engrais." },
+      { t: "relier", q: "Relie chaque matière première à son produit fini.", paires: [["lait naturel", "lait en poudre"], ["phosphates", "engrais"], ["fruits", "boissons gazeuses"], ["blé", "pâtes alimentaires"]], expl: "Chaque matière première devient un produit fini." },
+      { t: "vf", q: "La SEMI fabrique des matériels marins.", r: true, expl: "C'est une industrie mécanique, avec des pièces détachées." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "Une usine transforme une matière [première] en produit [fini]. Par exemple, la CSS transforme la canne à sucre en [sucre] et l'ICS transforme les phosphates en [engrais].", expl: "Le principe de l'industrie." },
+      { t: "qcm", q: "Awa achète un paquet de pâtes au marché de Thiès. Quelle usine a pu le fabriquer, et avec quoi ?", choix: ["la GMD, avec du blé", "la SOCOCIM, avec un gisement", "la SAR, avec du pétrole"], r: "la GMD, avec du blé", expl: "GMD : blé → farine, pâtes alimentaires." },
+      { t: "qcm", q: "Le papa de Moussa met de l'engrais dans son champ d'arachide. Quelle usine fabrique cet engrais ?", choix: ["l'ICS", "la SOBOA", "la SENBUS"], r: "l'ICS", expl: "L'ICS transforme les phosphates en engrais." },
+      { t: "classer", q: "Défi : range ces usines dans leur famille.", cases: ["alimentaire", "chimique", "minière", "mécanique"], items: [["SAPROLAIT", "alimentaire"], ["NSOA", "chimique"], ["SOCOCIM", "minière"], ["SENBUS", "mécanique"], ["NMA", "alimentaire"], ["Sabodala", "minière"]], expl: "Révise le tableau famille par famille." },
+      { t: "vf", q: "L'arachide peut donner de l'huile à la SONACOS et du savon à la NSOA.", r: true, expl: "Une même matière première peut aller dans deux industries différentes." }
+    ]
+  ]
+});
+
+
+/* ---- ge-peche.js ---- */
+LECONS.push({
+  id: "ge-peche",
+  cahier: "histgeo",
+  matiere: "Géographie",
+  titre: "La pêche au Sénégal (1re partie et suite)",
+  date: "2026-09-30",
+  photos: ["DJI_20261118222101_0140_D.jpg", "DJI_20261118222107_0141_D.jpg", "DJI_20261118222115_0142_D.jpg"],
+  retiens:
+    "<p>La pêche au Sénégal se pratique sous <b>deux formes</b> :</p>" +
+    "<p>1. <b>La pêche artisanale</b> (maritime ou fluviale) se pratique avec des outils souvent rudimentaires : <b>pirogue</b> à rames ou à moteur, filet, hameçons, nasses… Elle est souvent pratiquée par les Lébous, les Wolofs… Les produits pêchés sont les sardines, les carpes, les mulets, les daurades, les crevettes…, destinés à la <b>consommation</b> et à la <b>vente</b>. Elle a un <b>faible rendement</b>.</p>" +
+    "<p>2. <b>La pêche industrielle</b> se pratique avec des <b>bateaux</b> (thoniers, chalutiers, sardiniers…) et donne des <b>rendements importants</b>. Les produits pêchés (thons, mérous…) sont destinés à l'<b>exportation</b>.</p>" +
+    "<p>Le Sénégal a plusieurs <b>ports de pêche</b> sur la côte : Saint-Louis, Louga (Lompoul), Thiès (Mbour, Kayar, Joal), Dakar (Yarakh), Ziguinchor…</p>" +
+    "<p><b>L'aquaculture</b> : en plus de ces deux types de pêche, on pratique :</p>" +
+    "<ul><li>la <b>pisciculture</b> (élevage de poissons) ;</li><li>l'<b>ostréiculture</b> (élevage d'huîtres) ;</li><li>la <b>crevetticulture</b> (élevage de crevettes).</li></ul>" +
+    "<p>Il existe aussi une aquaculture de repeuplement et une aquaculture commerciale.</p>" +
+    "<p><b>Les problèmes de la pêche</b> : le non-respect du repos biologique, l'insuffisance des moyens de conservation, l'utilisation de filets à mailles non conformes, la surexploitation des ressources…</p>" +
+    "<p><b>Les solutions</b> : la gestion rationnelle des ressources, la réglementation des types de filets, la construction de quais de pêche équipés pour conserver le poisson…</p>",
+  astuce: "<b>Piscis</b> = poisson (pisciculture) ; <b>ostréi</b> = huître (ostréiculture) ; <b>crevetti</b> = crevette.",
+  regle: "La pêche artisanale utilise des pirogues, a un faible rendement et nourrit le marché local ; la pêche industrielle utilise des bateaux, a de forts rendements et exporte.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Combien de formes de pêche y a-t-il au Sénégal dans ta leçon ?", choix: ["deux", "trois", "cinq"], r: "deux", expl: "La pêche artisanale et la pêche industrielle." },
+      { t: "qcm", q: "Avec quoi pratique-t-on la pêche artisanale ?", choix: ["des pirogues", "de grands chalutiers", "des avions"], r: "des pirogues", expl: "Pirogue à rames ou à moteur, filets, hameçons, nasses." },
+      { t: "qcm", q: "Où partent surtout les produits de la pêche industrielle ?", choix: ["à l'exportation", "au marché du village", "à la poubelle"], r: "à l'exportation", expl: "Thons, mérous… sont exportés." },
+      { t: "vf", q: "La pêche artisanale a un faible rendement.", r: true, expl: "Ses outils sont souvent rudimentaires." },
+      { t: "classer", q: "Range ces outils.", cases: ["pêche artisanale", "pêche industrielle"], items: [["la pirogue à rames", "pêche artisanale"], ["le chalutier", "pêche industrielle"], ["la nasse", "pêche artisanale"], ["le thonier", "pêche industrielle"], ["l'hameçon", "pêche artisanale"], ["le sardinier", "pêche industrielle"]], expl: "Pirogues et petits outils pour l'artisanale ; grands bateaux pour l'industrielle." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque activité à ce qu'on élève.", paires: [["la pisciculture", "des poissons"], ["l'ostréiculture", "des huîtres"], ["la crevetticulture", "des crevettes"]], expl: "Ce sont les activités d'aquaculture." },
+      { t: "relier", q: "Relie chaque port de pêche à sa région.", paires: [["Kayar", "Thiès"], ["Yarakh", "Dakar"], ["Lompoul", "Louga"]], expl: "Mbour, Kayar et Joal sont dans la région de Thiès." },
+      { t: "qcm", q: "Quel peuple est cité comme pratiquant souvent la pêche artisanale ?", choix: ["les Lébous", "les Touaregs", "les Perses"], r: "les Lébous", expl: "Les Lébous et les Wolofs." },
+      { t: "saisie", q: "Comment appelle-t-on l'élevage de poissons ?", r: "la pisciculture", expl: "La pisciculture." },
+      { t: "classer", q: "Range ces poissons selon la pêche citée dans la leçon.", cases: ["pêche artisanale", "pêche industrielle"], items: [["la sardine", "pêche artisanale"], ["le thon", "pêche industrielle"], ["le mulet", "pêche artisanale"], ["le mérou", "pêche industrielle"], ["la daurade", "pêche artisanale"]], expl: "C'est la répartition de la leçon." },
+      { t: "vf", q: "La pêche artisanale peut être maritime ou fluviale.", r: true, expl: "En mer ou sur le fleuve." },
+      { t: "trous", q: "Complète.", texte: "La pêche [industrielle] se pratique avec des bateaux et donne des rendements [importants].", expl: "Thoniers, chalutiers, sardiniers." },
+      { t: "qcm", q: "Lequel de ces lieux est un port de pêche de la région de Thiès ?", choix: ["Joal", "Yarakh", "Lompoul"], r: "Joal", expl: "Mbour, Kayar et Joal sont dans la région de Thiès." },
+      { t: "saisie", q: "Comment appelle-t-on l'élevage des huîtres ?", r: "l'ostréiculture", expl: "L'ostréiculture." }
+    ],
+    [
+      { t: "classer", q: "Range ces problèmes et solutions.", cases: ["problème", "solution"], items: [["la surexploitation des ressources", "problème"], ["le non-respect du repos biologique", "problème"], ["la réglementation des filets", "solution"], ["le manque de moyens de conservation", "problème"], ["la construction de quais de pêche équipés", "solution"], ["la gestion rationnelle des ressources", "solution"]], expl: "Les difficultés de la pêche et leurs remèdes." },
+      { t: "qcm", q: "Que veut dire « respecter le repos biologique » ?", choix: ["arrêter de pêcher pendant un temps pour laisser les poissons se reproduire", "dormir sur la pirogue", "pêcher la nuit seulement"], r: "arrêter de pêcher pendant un temps pour laisser les poissons se reproduire", expl: "Si on ne laisse pas les poissons se reproduire, il y en aura de moins en moins." },
+      { t: "qcm", q: "Pourquoi les filets à mailles trop petites posent-ils problème ?", choix: ["ils attrapent aussi les tout petits poissons", "ils coûtent trop cher", "ils sont trop lourds"], r: "ils attrapent aussi les tout petits poissons", expl: "Les jeunes poissons n'ont pas le temps de grandir : c'est pourquoi on réglemente les filets." },
+      { t: "vf", q: "La pêche industrielle a un faible rendement.", r: false, expl: "C'est la pêche artisanale qui a un faible rendement ; l'industrielle donne des rendements importants." },
+      { t: "saisie", q: "Comment appelle-t-on l'élevage des crevettes ?", r: "la crevetticulture", expl: "La crevetticulture." },
+      { t: "qcm", q: "Pourquoi construire des quais équipés pour la conservation ?", choix: ["pour que le poisson ne pourrisse pas", "pour faire du sport", "pour garer des voitures"], r: "pour que le poisson ne pourrisse pas", expl: "L'insuffisance des moyens de conservation est un problème de la pêche." },
+      { t: "vf", q: "La pisciculture, l'ostréiculture et la crevetticulture sont des activités d'aquaculture.", r: true, expl: "L'aquaculture, c'est l'élevage d'animaux qui vivent dans l'eau." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "La pêche [artisanale] se pratique avec des pirogues et a un faible rendement. La pêche industrielle se pratique avec des [bateaux] et ses produits sont destinés à l'[exportation]. L'élevage de poissons s'appelle la [pisciculture].", expl: "Toute la leçon en un texte." },
+      { t: "qcm", q: "Ibrahima part de Kayar à l'aube avec sa pirogue à moteur et revient vendre ses sardines au marché. Quelle pêche pratique-t-il ?", choix: ["la pêche artisanale", "la pêche industrielle", "l'ostréiculture"], r: "la pêche artisanale", expl: "Pirogue, sardines, vente au marché : c'est la pêche artisanale." },
+      { t: "qcm", q: "Un grand thonier pêche des tonnes de thons qui partent en Europe. Quelle pêche est-ce ?", choix: ["la pêche industrielle", "la pêche artisanale", "la pisciculture"], r: "la pêche industrielle", expl: "Grand bateau, gros rendement, exportation : c'est la pêche industrielle." },
+      { t: "relier", q: "Relie chaque problème à sa solution.", paires: [["les filets à mailles non conformes", "réglementer les types de filets"], ["le manque de conservation", "construire des quais équipés"], ["la surexploitation", "gérer les ressources de façon rationnelle"]], expl: "Chaque solution répond à un problème." },
+      { t: "classer", q: "Défi : range ces mots.", cases: ["pêche artisanale", "pêche industrielle", "aquaculture"], items: [["pirogue", "pêche artisanale"], ["chalutier", "pêche industrielle"], ["élevage d'huîtres", "aquaculture"], ["nasse", "pêche artisanale"], ["exportation de thons", "pêche industrielle"], ["élevage de crevettes", "aquaculture"]], expl: "Trois manières de tirer des produits de l'eau." }
     ]
   ]
 });
@@ -1383,7 +2726,7 @@ LECONS.push({
     [
       { t: "saisie", q: "En quelle année a eu lieu l'hégire ?", r: "622", nombre: true, expl: "L'hégire a eu lieu en 622." },
       { t: "classer", q: "Range chaque source dans la bonne catégorie.", cases: ["source écrite", "source orale", "source muette"], items: [["un vieux livre", "source écrite"], ["le récit d'un griot", "source orale"], ["un outil en pierre retrouvé dans le sol", "source muette"], ["une lettre ancienne", "source écrite"], ["un conte raconté par la grand-mère", "source orale"], ["les ruines d'une ancienne ville", "source muette"]], expl: "On lit les sources écrites, on écoute les sources orales ; les vestiges sont des sources muettes." },
-      { t: "relier", q: "Relie chaque religion à son point de départ pour compter les années.", paires: [["les chrétiens", "la naissance de Jésus-Christ"], ["les musulmans", "l'hégire (622)"]], expl: "Ce sont les deux systèmes de datation de la leçon." },
+      { t: "relier", q: "Relie correctement.", paires: [["les chrétiens", "à partir de la naissance de Jésus-Christ"], ["les musulmans", "à partir de l'hégire"], ["l'année de l'hégire", "622"]], expl: "Ce sont les deux systèmes de datation de la leçon ; l'hégire a eu lieu en 622." },
       { t: "trous", q: "Complète la leçon.", texte: "L'histoire est une [science] qui étudie le [passé] des hommes. Elle nous permet de connaître les conditions de vie de nos [ancêtres].", expl: "C'est la définition de l'histoire." },
       { t: "qcm", q: "Le griot qui raconte l'histoire d'un roi d'autrefois est une source…", choix: ["orale", "écrite", "muette"], r: "orale", expl: "Il raconte avec la parole : c'est une source orale." },
       { t: "vf", q: "Une vieille poterie retrouvée par des chercheurs est une source muette.", r: true, expl: "C'est un vestige : il ne parle pas, il ne porte pas d'écrit." },
@@ -1765,6 +3108,7 @@ LECONS.push({
 
 
 /* ---- hi-prehistoire.js ---- */
+// À VÉRIFIER : le tableau du cahier (photo 0140) place la « découverte du feu » au Néolithique. En réalité, l'homme maîtrise le feu bien avant, dès le Paléolithique. Le module garde « aliments cuits » au Néolithique comme au cahier, sans affirmer que le feu y a été découvert.
 LECONS.push({
   id: "hi-prehistoire",
   cahier: "histgeo",
@@ -1781,7 +3125,7 @@ LECONS.push({
     "<tr><td><b>Outils et armes</b></td><td>pierre taillée, bifaces, outils en os (harpons…)</td><td>pierre polie (meule, hameçon, couteau…)</td></tr>" +
     "<tr><td><b>Activités</b></td><td>chasse, pêche, cueillette</td><td>élevage, agriculture, pêche, poterie, tissage…</td></tr>" +
     "<tr><td><b>Habitat</b></td><td>grottes, cavernes, huttes</td><td>villages, cases…</td></tr>" +
-    "<tr><td><b>Alimentation</b></td><td>aliments crus, fruits</td><td>aliments cuits (découverte du feu)</td></tr>" +
+    "<tr><td><b>Alimentation</b></td><td>aliments crus, fruits</td><td>aliments cuits</td></tr>" +
     "<tr><td><b>Organisation sociale</b></td><td>nomadisme, vie en communauté</td><td>sédentarisme (division du travail…), enterrement des morts</td></tr></table>",
   astuce: "<b>Paléo</b>lithique = pierre taillée, on se <b>promène</b> (nomade). <b>Néo</b>lithique = pierre polie, on reste au village (sédentaire) : <b>n</b>éo comme <b>n</b>ouveau.",
   regle: "Au Paléolithique (pierre taillée), l'homme est un prédateur nomade : chasse, pêche, cueillette. Au Néolithique (pierre polie), il devient un producteur sédentaire : agriculture, élevage, villages.",
@@ -1798,10 +3142,10 @@ LECONS.push({
       { t: "classer", q: "Range chaque habitat dans la bonne période.", cases: ["Paléolithique", "Néolithique"], items: [["les grottes", "Paléolithique"], ["les cavernes", "Paléolithique"], ["les villages", "Néolithique"], ["les cases", "Néolithique"], ["les huttes", "Paléolithique"]], expl: "Le nomade s'abrite dans des grottes, des cavernes, des huttes ; le sédentaire construit des villages et des cases." },
       { t: "classer", q: "Range chaque outil dans la bonne période.", cases: ["Paléolithique", "Néolithique"], items: [["le biface", "Paléolithique"], ["le harpon en os", "Paléolithique"], ["la meule en pierre polie", "Néolithique"], ["l'hameçon en pierre polie", "Néolithique"], ["la pierre taillée", "Paléolithique"]], expl: "Pierre taillée et os au Paléolithique ; pierre polie au Néolithique." },
       { t: "qcm", q: "Que mangeait surtout l'homme du Paléolithique ?", choix: ["des aliments crus et des fruits", "du riz cuit", "du pain"], r: "des aliments crus et des fruits", expl: "Au Paléolithique, les aliments sont crus ; la cuisson vient au Néolithique dans le tableau du cahier." },
-      { t: "qcm", q: "Au Néolithique, les aliments sont…", choix: ["cuits, grâce au feu", "toujours crus", "achetés au marché"], r: "cuits, grâce au feu", expl: "Le tableau du cahier indique la cuisson des aliments avec la découverte du feu." },
+      { t: "qcm", q: "Au Néolithique, les aliments sont…", choix: ["cuits", "toujours crus", "achetés au marché"], r: "cuits", expl: "Le tableau du cahier indique la cuisson des aliments au Néolithique." },
       { t: "saisie", q: "Comment appelle-t-on un homme qui se déplace sans cesse et n'a pas de demeure fixe ?", r: "nomade", aide: "C'est le contraire de sédentaire.", expl: "Le nomade se déplace ; le sédentaire reste sur place." },
       { t: "saisie", q: "Comment appelle-t-on un homme qui reste vivre au même endroit ?", r: "sédentaire", expl: "Au Néolithique, l'homme devient sédentaire." },
-      { t: "relier", q: "Relie chaque période à son autre nom.", paires: [["Paléolithique", "âge de la pierre taillée"], ["Néolithique", "âge de la pierre polie"]], expl: "Ce sont les deux grandes périodes de la préhistoire." },
+      { t: "relier", q: "Relie chaque mot à ce qui lui correspond.", paires: [["Paléolithique", "âge de la pierre taillée"], ["Néolithique", "âge de la pierre polie"], ["prédateur nomade", "homme du Paléolithique"], ["producteur sédentaire", "homme du Néolithique"]], expl: "Ce sont les deux grandes périodes de la préhistoire." },
       { t: "vf", q: "L'enterrement des morts apparaît au Néolithique, d'après ton tableau.", r: true, expl: "Le tableau le place dans l'organisation sociale du Néolithique." },
       { t: "trous", q: "Complète.", texte: "Au Paléolithique, l'homme est un [prédateur] nomade. Au Néolithique, il devient un [producteur] sédentaire.", expl: "Le prédateur prend dans la nature ; le producteur fait pousser et élève." }
     ],
@@ -1870,7 +3214,7 @@ LECONS.push({
     ],
     [
       { t: "trous", q: "Complète le résumé.", texte: "Avant l'arrivée des Blancs, le Sénégal était formé de plusieurs [royaumes]. Les sociétés étaient divisées en [castes]. En 1549, au [16]e siècle, Amary Ngoné Sobel Fall battit le Grand Djolof à [Danki]. Le Cayor, le Baol, le Walo, le Sine et le [Saloum] se libérèrent peu à peu.", expl: "Toute la leçon en un texte." },
-      { t: "relier", q: "Ne confonds pas les batailles : relie chaque bataille à sa date.", paires: [["Kirina", "1235"], ["Danki", "1549"]], expl: "Kirina : Soundiata (Mali). Danki : Amary Ngoné Sobel Fall (Sénégal)." },
+      { t: "relier", q: "Ne confonds pas les dates : relie chaque événement à son année.", paires: [["Kirina", "1235"], ["Danki", "1549"], ["conquête du Songhaï par les Marocains", "1591"]], expl: "Kirina : Soundiata (Mali). Danki : Amary Ngoné Sobel Fall (Sénégal). 1591 : fin de la puissance songhaï." },
       { t: "probleme", q: "La bataille de Kirina a eu lieu en 1235 et celle de Danki en 1549.", etapes: [{ q: "Combien d'années séparent ces deux batailles ?", r: "314", unite: "ans" }], expl: "1549 − 1235 = 314." },
       { t: "qcm", q: "Lequel de ces noms n'est PAS un royaume du Sénégal cité dans la leçon ?", choix: ["Niani", "Cayor", "Walo", "Sine"], r: "Niani", expl: "Niani est la capitale de l'empire du Mali." },
       { t: "vf", q: "Après la victoire de Danki, le Djolof est devenu encore plus puissant.", r: false, expl: "Au contraire, ses royaumes vassaux ont commencé à se libérer." }
@@ -1928,6 +3272,840 @@ LECONS.push({
       { t: "vf", q: "Le royaume est la cellule de base de la société.", r: false, expl: "La cellule de base, c'est la famille." },
       { t: "qcm", q: "Quel mot complète la phrase ? « Le … est un groupe social et politique lié par une solidarité de parenté ethnique. »", choix: ["la tribu", "le royaume", "la famille"], r: "la tribu", expl: "C'est la définition de la tribu." },
       { t: "classer", q: "Défi : range ces phrases.", cases: ["juste", "faux"], items: [["Le clan descend d'un même ancêtre.", "juste"], ["La famille est la cellule de base.", "juste"], ["Le royaume est gouverné par un pêcheur.", "faux"], ["L'ethnie n'a aucune culture commune.", "faux"]], expl: "Relis les cinq définitions." }
+    ]
+  ]
+});
+
+
+/* ---- ist-balance.js ---- */
+LECONS.push({
+  id: "ist-balance",
+  cahier: "sciences",
+  matiere: "IST",
+  titre: "La balance",
+  date: "2026-10-13",
+  photos: ["DJI_20261118221940_0132_D.jpg"],
+  retiens:
+    "<p>La <b>balance</b> est un <b>instrument de mesure</b> qui sert à connaître la <b>masse</b> des objets.</p>" +
+    "<p>Il existe différentes sortes de balances : la <b>balance Roberval</b> (à deux plateaux), la <b>balance électronique</b>, la <b>balance romaine</b>, la <b>bascule</b>, le <b>pèse-bébé</b>…</p>" +
+    "<p>Les qualités d'une bonne balance sont la <b>justesse</b>, la <b>sensibilité</b> et la <b>fidélité</b>.</p>",
+  astuce: "Une bonne balance est <b>J S F</b> : <b>J</b>uste, <b>S</b>ensible, <b>F</b>idèle.",
+  regle: "La balance est un instrument qui mesure la masse des objets. Une bonne balance est juste, sensible et fidèle.",
+  niveaux: [
+    [
+      { t: "qcm", q: "À quoi sert une balance ?", choix: ["à connaître la masse des objets", "à mesurer une longueur", "à connaître l'heure"], r: "à connaître la masse des objets", expl: "La balance mesure la masse." },
+      { t: "qcm", q: "La balance est…", choix: ["un instrument de mesure", "un appareil de cuisine", "un outil du maçon"], r: "un instrument de mesure", expl: "Elle mesure la masse." },
+      { t: "vf", q: "La balance Roberval a deux plateaux.", r: true, expl: "C'est celle de la photocopie du cahier." },
+      { t: "qcm", q: "Combien de qualités d'une bonne balance cite la leçon ?", choix: ["trois", "deux", "cinq"], r: "trois", expl: "La justesse, la sensibilité et la fidélité." },
+      { t: "vf", q: "On utilise une règle pour connaître la masse d'un sac de riz.", r: false, expl: "La règle mesure les longueurs ; pour la masse, il faut une balance." }
+    ],
+    [
+      { t: "classer", q: "Est-ce une sorte de balance ?", cases: ["sorte de balance", "autre instrument"], items: [["la balance Roberval", "sorte de balance"], ["la bascule", "sorte de balance"], ["le pèse-bébé", "sorte de balance"], ["la règle", "autre instrument"], ["la balance romaine", "sorte de balance"], ["le thermomètre", "autre instrument"]], expl: "La règle mesure les longueurs, le thermomètre la température." },
+      { t: "saisie", q: "Quelle balance utilise-t-on au dispensaire pour peser un nourrisson ?", r: ["le pèse-bébé", "pèse-bébé", "un pèse-bébé"], expl: "Le pèse-bébé." },
+      { t: "trous", q: "Complète.", texte: "Les qualités d'une bonne balance sont la [justesse], la [sensibilité] et la [fidélité].", expl: "Trois qualités : J, S, F." },
+      { t: "qcm", q: "Quelle grandeur mesure la balance ?", choix: ["la masse", "la longueur", "la durée"], r: "la masse", expl: "La masse s'exprime en grammes, en kilogrammes…" },
+      { t: "qcm", q: "Laquelle de ces balances a deux plateaux ?", choix: ["la balance Roberval", "la balance électronique", "le pèse-bébé"], r: "la balance Roberval", expl: "La balance Roberval a deux plateaux." },
+      { t: "vf", q: "La balance électronique est une sorte de balance.", r: true, expl: "Elle est citée dans la leçon." },
+      { t: "saisie", q: "Comment s'appelle la balance à deux plateaux de la leçon ? La balance …", r: "Roberval", expl: "La balance Roberval." },
+      { t: "qcm", q: "Laquelle de ces balances n'est PAS citée dans la leçon ?", choix: ["la balance à ressort de poche", "la balance romaine", "la bascule", "le pèse-bébé"], r: "la balance à ressort de poche", expl: "La leçon cite la balance Roberval, la balance électronique, la balance romaine, la bascule et le pèse-bébé." },
+    ],
+    [
+      { t: "qcm", q: "Une balance qui montre toujours le même résultat quand on pèse plusieurs fois le même objet est…", choix: ["fidèle", "cassée", "romaine"], r: "fidèle", expl: "Fidèle : elle redonne toujours le même résultat." },
+      { t: "qcm", q: "Une balance qui donne la masse exacte de l'objet est…", choix: ["juste", "lourde", "fidèle seulement"], r: "juste", expl: "La justesse, c'est donner la vraie masse." },
+      { t: "qcm", q: "Une balance qui réagit même pour un tout petit objet est…", choix: ["sensible", "juste", "électronique"], r: "sensible", expl: "La sensibilité, c'est réagir à une très petite masse." },
+      { t: "vf", q: "Une balance qui indique 2 kg pour un sac de 5 kg est juste.", r: false, expl: "Elle n'est pas juste : elle ne donne pas la vraie masse." },
+      { t: "relier", q: "Relie chaque qualité à sa signification.", paires: [["la justesse", "donne la vraie masse"], ["la sensibilité", "réagit à une très petite masse"], ["la fidélité", "redonne toujours le même résultat"]], expl: "Les trois qualités d'une bonne balance." },
+      { t: "saisie", q: "Que mesure-t-on avec une balance ? La …", r: "masse", expl: "La masse des objets." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "La balance est un instrument de [mesure] qui sert à connaître la [masse] des objets. Une bonne balance est juste, [sensible] et fidèle.", expl: "Toute la leçon." },
+      { t: "qcm", q: "Au marché, Fatou pèse trois fois le même sac de mangues : la balance indique 3 kg, puis 4 kg, puis 2 kg. Quelle qualité manque à cette balance ?", choix: ["la fidélité", "la couleur", "la taille"], r: "la fidélité", expl: "Une balance fidèle redonne toujours le même résultat pour le même objet." },
+      { t: "qcm", q: "Au dispensaire de Ziguinchor, l'infirmière pèse le petit frère d'Awa. Quelle balance utilise-t-elle ?", choix: ["le pèse-bébé", "la bascule des camions", "la balance romaine du boucher"], r: "le pèse-bébé", expl: "Le pèse-bébé est fait pour les nourrissons." },
+      { t: "vf", q: "La justesse, la sensibilité et la fidélité sont les trois qualités d'une bonne balance.", r: true, expl: "C'est exactement la leçon." },
+      { t: "classer", q: "Défi : qualité d'une balance ou sorte de balance ?", cases: ["qualité", "sorte de balance"], items: [["la justesse", "qualité"], ["la balance romaine", "sorte de balance"], ["la fidélité", "qualité"], ["la bascule", "sorte de balance"], ["la sensibilité", "qualité"], ["la balance électronique", "sorte de balance"]], expl: "Ne confonds pas les qualités et les sortes de balances." }
+    ]
+  ]
+});
+
+
+/* ---- ist-manipulation-appareils.js ---- */
+// À VÉRIFIER : la date et le point 1 (téléviseur) sont flous sur la photo 0134 ; la phrase sur le téléviseur est remise au propre d'après le sens probable. La fin de la page (« des aliments… ») est coupée.
+LECONS.push({
+  id: "ist-manipulation-appareils",
+  cahier: "sciences",
+  matiere: "IST",
+  titre: "La manipulation d'appareils simples",
+  date: "2026-11-06",
+  photos: ["DJI_20261118221956_0134_D.jpg"],
+  retiens:
+    "<p>1. Le <b>téléviseur</b> reçoit les émissions par les <b>ondes</b>. On le commande avec une <b>télécommande</b> ou avec des boutons situés sur l'appareil.</p>" +
+    "<p>2. L'<b>appareil photo numérique</b> capte la <b>lumière</b> et en fait une photographie que l'on voit sur un écran.</p>" +
+    "<p>3. Le <b>téléphone</b> est un appareil qui sert à <b>communiquer</b> avec des personnes éloignées.</p>" +
+    "<p>4. La <b>cuisinière</b> comporte une <b>table de cuisson</b> et un <b>four</b> ; elle fonctionne au <b>gaz</b> ou à l'<b>électricité</b>. Elle permet de faire cuire les aliments.</p>" +
+    "<p>5. Le <b>réfrigérateur</b> a <b>deux compartiments</b> : l'un sert à <b>refroidir</b>, l'autre à <b>congeler</b>. Le congélateur descend à <b>−18 °C</b>, ce qui permet de conserver longtemps les aliments.</p>",
+  astuce: "Le congélateur, c'est <b>moins dix-huit</b> : bien plus froid que la glace qui fond à 0 °C.",
+  regle: "Chaque appareil a sa fonction : le téléviseur reçoit les ondes, l'appareil photo capte la lumière, le téléphone communique au loin, la cuisinière cuit, le réfrigérateur refroidit et congèle.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Comment le téléviseur reçoit-il les émissions ?", choix: ["par les ondes", "par la poste", "par un tuyau d'eau"], r: "par les ondes", expl: "Le téléviseur reçoit les émissions par les ondes." },
+      { t: "qcm", q: "À quoi sert le téléphone ?", choix: ["à communiquer avec des personnes éloignées", "à cuire les aliments", "à conserver la viande"], r: "à communiquer avec des personnes éloignées", expl: "On parle à quelqu'un qui est loin." },
+      { t: "qcm", q: "Que capte l'appareil photo numérique ?", choix: ["la lumière", "le son", "la chaleur"], r: "la lumière", expl: "Il capte la lumière et en fait une photo visible sur un écran." },
+      { t: "vf", q: "La cuisinière peut fonctionner au gaz ou à l'électricité.", r: true, expl: "C'est ce que dit la leçon." },
+      { t: "relier", q: "Relie chaque appareil à sa fonction.", paires: [["le téléviseur", "recevoir les émissions"], ["le téléphone", "communiquer de loin"], ["la cuisinière", "cuire les aliments"], ["le réfrigérateur", "refroidir et congeler"]], expl: "Chaque appareil a son rôle." }
+    ],
+    [
+      { t: "saisie", q: "Le congélateur descend à « moins combien » de degrés ? Écris le nombre sans le signe moins.", r: "18", nombre: true, unite: "°C", expl: "Le congélateur descend à −18 °C." },
+      { t: "qcm", q: "Combien de compartiments a le réfrigérateur ?", choix: ["deux", "un", "quatre"], r: "deux", expl: "Un pour refroidir, un pour congeler." },
+      { t: "classer", q: "Range les parties.", cases: ["cuisinière", "réfrigérateur"], items: [["la table de cuisson", "cuisinière"], ["le four", "cuisinière"], ["le compartiment qui refroidit", "réfrigérateur"], ["le congélateur", "réfrigérateur"]], expl: "La cuisinière cuit ; le réfrigérateur garde au froid." },
+      { t: "qcm", q: "Avec quoi peut-on commander le téléviseur sans se lever ?", choix: ["la télécommande", "la souris", "la truelle"], r: "la télécommande", expl: "On peut aussi utiliser les boutons sur l'appareil." },
+      { t: "trous", q: "Complète.", texte: "La cuisinière comporte une table de [cuisson] et un [four].", expl: "Les deux parties de la cuisinière." },
+      { t: "vf", q: "L'appareil photo numérique montre la photo sur un écran.", r: true, expl: "La photo se voit sur l'écran." },
+      { t: "saisie", q: "Quel appareil sert à appeler sa tante qui habite à Saint-Louis ?", r: ["le téléphone", "un téléphone", "téléphone"], expl: "Le téléphone sert à communiquer avec des personnes éloignées." },
+      { t: "qcm", q: "Pourquoi met-on la viande au congélateur ?", choix: ["pour la conserver longtemps", "pour la cuire", "pour la rendre chaude"], r: "pour la conserver longtemps", expl: "À −18 °C, les aliments se conservent longtemps." },
+      { t: "vf", q: "Le réfrigérateur sert à faire cuire les aliments.", r: false, expl: "Il refroidit et congèle. C'est la cuisinière qui cuit." }
+    ],
+    [
+      { t: "qcm", q: "Quel compartiment du réfrigérateur est le plus froid ?", choix: ["le congélateur", "le compartiment qui refroidit", "ils ont la même température"], r: "le congélateur", expl: "Le congélateur descend à −18 °C pour congeler." },
+      { t: "vf", q: "Le téléviseur se commande seulement avec une télécommande.", r: false, expl: "On peut aussi utiliser les boutons situés sur l'appareil." },
+      { t: "qcm", q: "La maman de Fatou n'a pas d'électricité ce soir. Peut-elle utiliser sa cuisinière ?", choix: ["oui, si sa cuisinière fonctionne au gaz", "non, jamais", "oui, avec la télécommande"], r: "oui, si sa cuisinière fonctionne au gaz", expl: "Une cuisinière peut fonctionner au gaz ou à l'électricité." },
+      { t: "vf", q: "L'appareil photo numérique reçoit les émissions par les ondes, comme le téléviseur.", r: false, expl: "L'appareil photo capte la lumière ; c'est le téléviseur qui reçoit les ondes." },
+      { t: "saisie", q: "Comment s'appelle le compartiment du réfrigérateur qui descend à −18 °C ?", r: "le congélateur", expl: "Le congélateur." },
+      { t: "qcm", q: "Que comporte la cuisinière en plus de la table de cuisson ?", choix: ["un four", "un écran", "une antenne"], r: "un four", expl: "Table de cuisson et four." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "Le téléviseur reçoit les émissions par les [ondes]. L'appareil photo numérique capte la [lumière]. Le [téléphone] sert à communiquer avec des personnes éloignées. Le congélateur descend à −[18] °C.", expl: "Toute la leçon." },
+      { t: "relier", q: "Relie chaque situation à l'appareil qui convient.", paires: [["garder du poisson pendant un mois", "le congélateur"], ["faire cuire un gâteau", "le four de la cuisinière"], ["photographier sa classe", "l'appareil photo numérique"], ["regarder un match de football", "le téléviseur"]], expl: "On choisit l'appareil selon sa fonction." },
+      { t: "qcm", q: "Ibrahima veut garder des jus de bissap bien frais, mais pas gelés. Où les met-il ?", choix: ["dans le compartiment qui refroidit", "dans le congélateur", "dans le four"], r: "dans le compartiment qui refroidit", expl: "Le congélateur ferait geler les jus ; l'autre compartiment les refroidit seulement." },
+      { t: "vf", q: "À −18 °C, l'eau est gelée.", r: true, expl: "L'eau gèle à 0 °C ; à −18 °C, il fait beaucoup plus froid." },
+      { t: "classer", q: "Défi : range ces appareils.", cases: ["sert à communiquer ou à s'informer", "sert à préparer ou conserver les aliments"], items: [["le téléphone", "sert à communiquer ou à s'informer"], ["le téléviseur", "sert à communiquer ou à s'informer"], ["la cuisinière", "sert à préparer ou conserver les aliments"], ["le réfrigérateur", "sert à préparer ou conserver les aliments"]], expl: "Deux grandes familles d'usages." }
+    ]
+  ]
+});
+
+
+/* ---- ist-objets-naturels-techniques.js ---- */
+LECONS.push({
+  id: "ist-objets-naturels-techniques",
+  cahier: "sciences",
+  matiere: "IST",
+  titre: "Les objets naturels et les objets techniques",
+  date: "2026-09-15",
+  photos: ["DJI_20261118221756_0123_D.jpg"],
+  retiens:
+    "<p>On appelle <b>objet</b> toute chose concrète <b>non vivante</b>, considérée comme un tout.</p>" +
+    "<p>On distingue <b>deux types d'objets</b> :</p>" +
+    "<ul><li>les <b>objets naturels</b> : ils ne sont <b>pas modifiés par l'homme</b> et sont présents dans la nature. Exemples : un caillou, l'eau, une branche… ;</li>" +
+    "<li>les <b>objets techniques</b> : ils sont <b>fabriqués par l'homme</b> dans un but utile, comme la truelle, la scie, les ciseaux, le vélo… Ces objets existent parce que l'homme en a besoin.</li></ul>",
+  astuce: "Pose-toi la question : « Quelqu'un l'a-t-il fabriqué ? » Oui → objet <b>technique</b>. Non, on le trouve tel quel dans la nature → objet <b>naturel</b>.",
+  regle: "Un objet naturel se trouve dans la nature sans être modifié par l'homme ; un objet technique est fabriqué par l'homme pour être utile.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Un objet, c'est une chose concrète…", choix: ["non vivante", "vivante", "imaginaire"], r: "non vivante", expl: "Un objet est une chose concrète non vivante." },
+      { t: "qcm", q: "Combien de types d'objets distingue-t-on ?", choix: ["deux", "trois", "quatre"], r: "deux", expl: "Les objets naturels et les objets techniques." },
+      { t: "vf", q: "Un caillou est un objet naturel.", r: true, expl: "Personne ne l'a fabriqué : on le trouve dans la nature." },
+      { t: "vf", q: "Une scie est un objet naturel.", r: false, expl: "La scie est fabriquée par l'homme : c'est un objet technique." },
+      { t: "qcm", q: "Qui fabrique les objets techniques ?", choix: ["l'homme", "la pluie", "les arbres"], r: "l'homme", expl: "Les objets techniques sont fabriqués par l'homme dans un but utile." },
+      { t: "classer", q: "Range ces objets.", cases: ["objet naturel", "objet technique"], items: [["un caillou", "objet naturel"], ["une truelle", "objet technique"], ["l'eau de la rivière", "objet naturel"], ["un vélo", "objet technique"], ["une branche", "objet naturel"], ["des ciseaux", "objet technique"]], expl: "Fabriqué par l'homme : technique. Trouvé tel quel dans la nature : naturel." }
+    ],
+    [
+      { t: "classer", q: "Range ces nouveaux objets.", cases: ["objet naturel", "objet technique"], items: [["un coquillage sur la plage", "objet naturel"], ["une pirogue", "objet technique"], ["le sable de la plage", "objet naturel"], ["un seau", "objet technique"], ["une pierre", "objet naturel"], ["une table", "objet technique"]], expl: "La pirogue, le seau et la table ont été fabriqués par l'homme." },
+      { t: "qcm", q: "Lequel de ces objets est un objet technique ?", choix: ["un marteau", "une feuille tombée d'un arbre", "un caillou"], r: "un marteau", expl: "Le marteau a été fabriqué par l'homme." },
+      { t: "qcm", q: "Lequel de ces objets est un objet naturel ?", choix: ["un coquillage", "une chaise", "un téléphone"], r: "un coquillage", expl: "Le coquillage se trouve dans la nature sans être modifié." },
+      { t: "trous", q: "Complète.", texte: "Les objets [naturels] ne sont pas modifiés par l'homme. Les objets [techniques] sont fabriqués par l'homme.", expl: "Les deux types d'objets." },
+      { t: "saisie", q: "Comment appelle-t-on un objet fabriqué par l'homme dans un but utile ? Un objet …", r: "technique", expl: "Un objet technique." },
+      { t: "saisie", q: "Comment appelle-t-on un objet présent dans la nature, que l'homme n'a pas modifié ? Un objet …", r: "naturel", expl: "Un objet naturel." },
+      { t: "vf", q: "Les objets techniques existent parce que l'homme en a besoin.", r: true, expl: "Ils sont fabriqués dans un but utile." },
+      { t: "vf", q: "Une chèvre est un objet naturel.", r: false, expl: "Une chèvre est vivante. Un objet est une chose non vivante." }
+    ],
+    [
+      { t: "qcm", q: "Moussa ramasse une branche, puis il la taille pour en faire un manche de pioche. Le manche est…", choix: ["un objet technique", "un objet naturel", "un être vivant"], r: "un objet technique", expl: "La branche était naturelle, mais une fois modifiée par l'homme, elle devient un objet technique." },
+      { t: "vf", q: "Un arbre vivant est un objet naturel.", r: false, expl: "Un arbre vivant est un être vivant. Un objet est non vivant ; une branche cassée et sèche, elle, est un objet naturel." },
+      { t: "qcm", q: "Pourquoi le vélo est-il un objet technique ?", choix: ["parce que l'homme l'a fabriqué pour se déplacer", "parce qu'il pousse dans la nature", "parce qu'il est vivant"], r: "parce que l'homme l'a fabriqué pour se déplacer", expl: "Il est fabriqué dans un but utile." },
+      { t: "classer", q: "Range ces mots.", cases: ["objet naturel", "objet technique", "être vivant"], items: [["un caillou", "objet naturel"], ["un mouton", "être vivant"], ["une scie", "objet technique"], ["un manguier", "être vivant"], ["l'eau", "objet naturel"], ["une truelle", "objet technique"]], expl: "Les êtres vivants ne sont pas des objets." },
+      { t: "qcm", q: "Quelle est la question à se poser pour savoir si un objet est technique ?", choix: ["A-t-il été fabriqué par l'homme ?", "Est-il lourd ?", "Est-il de couleur bleue ?"], r: "A-t-il été fabriqué par l'homme ?", expl: "C'est ce qui distingue un objet technique d'un objet naturel." },
+      { t: "vf", q: "Une calebasse vidée et décorée pour servir de récipient est un objet technique.", r: true, expl: "L'homme l'a transformée dans un but utile." }
+    ],
+    [
+      { t: "trous", q: "Complète la définition.", texte: "On appelle objet toute chose concrète non [vivante]. Les objets naturels sont présents dans la [nature]. Les objets techniques sont [fabriqués] par l'homme dans un but utile.", expl: "Toute la leçon en trois phrases." },
+      { t: "classer", q: "Défi : dans la maison de Fatou, range ces objets.", cases: ["objet naturel", "objet technique"], items: [["un coquillage ramassé à la plage", "objet naturel"], ["la télévision", "objet technique"], ["un galet", "objet naturel"], ["le réchaud à gaz", "objet technique"], ["une plume tombée", "objet naturel"], ["la marmite", "objet technique"]], expl: "Fabriqué par l'homme : technique." },
+      { t: "qcm", q: "Laquelle de ces phrases est juste ?", choix: ["La truelle est un objet technique, la branche est un objet naturel.", "La truelle est un objet naturel, la branche est un objet technique.", "La truelle et la branche sont des objets naturels."], r: "La truelle est un objet technique, la branche est un objet naturel.", expl: "La truelle est fabriquée ; la branche vient de la nature." },
+      { t: "vf", q: "Le sable devient un objet technique quand on le mélange au ciment pour faire une brique.", r: true, expl: "La brique est fabriquée par l'homme : c'est un objet technique." },
+      { t: "qcm", q: "Pourquoi l'homme fabrique-t-il des objets techniques ?", choix: ["parce qu'il en a besoin", "pour remplacer la nature", "par hasard"], r: "parce qu'il en a besoin", expl: "Ces objets existent parce que l'homme en a besoin." }
+    ]
+  ]
+});
+
+
+/* ---- ist-ordinateur.js ---- */
+LECONS.push({
+  id: "ist-ordinateur",
+  cahier: "sciences",
+  matiere: "IST",
+  titre: "L'ordinateur",
+  date: "2026-10-20",
+  photos: ["DJI_20261118221940_0132_D.jpg", "DJI_20261118221950_0133_D.jpg"],
+  retiens:
+    "<p>L'<b>ordinateur</b> permet de <b>stocker</b> des informations, de <b>communiquer</b> et de faire des travaux de toutes sortes.</p>" +
+    "<p>Les différentes parties d'un ordinateur sont : l'<b>unité centrale</b> (UC), l'<b>écran</b> (moniteur), le <b>clavier</b> et la <b>souris</b>.</p>" +
+    "<p>Les <b>périphériques</b> d'un ordinateur sont : la <b>clé USB</b>, l'<b>imprimante</b>, le <b>scanner</b>, le <b>modem</b>.</p>" +
+    "<p>Pour faire fonctionner un ordinateur fixe :</p>" +
+    "<ul><li>il faut allumer l'<b>UC</b>, puis l'<b>écran</b> ;</li><li>attendre que tout s'affiche, puis commencer à travailler.</li></ul>" +
+    "<p><b>NB</b> : tous les éléments de l'ordinateur fixe sont réunis dans l'<b>ordinateur portable</b>.</p>",
+  astuce: "Les 4 parties : <b>U</b>C, <b>É</b>cran, <b>C</b>lavier, <b>S</b>ouris. Les périphériques s'ajoutent autour : clé USB, imprimante, scanner, modem.",
+  regle: "Un ordinateur fixe a quatre parties : l'unité centrale, l'écran, le clavier et la souris. On allume d'abord l'UC, puis l'écran.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Que permet de faire un ordinateur ?", choix: ["stocker des informations, communiquer, faire des travaux", "seulement regarder la télévision", "cuire les aliments"], r: "stocker des informations, communiquer, faire des travaux", expl: "C'est la première phrase de la leçon." },
+      { t: "qcm", q: "Que veut dire UC ?", choix: ["unité centrale", "unité de couleur", "union des claviers"], r: "unité centrale", expl: "UC = unité centrale." },
+      { t: "vf", q: "L'écran s'appelle aussi le moniteur.", r: true, expl: "L'écran (moniteur)." },
+      { t: "qcm", q: "Lequel de ces éléments est une partie de l'ordinateur fixe ?", choix: ["le clavier", "le réfrigérateur", "la truelle"], r: "le clavier", expl: "UC, écran, clavier, souris." },
+      { t: "vf", q: "Dans l'ordinateur portable, tous les éléments de l'ordinateur fixe sont réunis.", r: true, expl: "C'est le NB de la leçon." }
+    ],
+    [
+      { t: "classer", q: "Partie de l'ordinateur ou périphérique ?", cases: ["partie de l'ordinateur", "périphérique"], items: [["l'unité centrale", "partie de l'ordinateur"], ["la clé USB", "périphérique"], ["le clavier", "partie de l'ordinateur"], ["l'imprimante", "périphérique"], ["la souris", "partie de l'ordinateur"], ["le scanner", "périphérique"]], expl: "Les 4 parties : UC, écran, clavier, souris. Les périphériques : clé USB, imprimante, scanner, modem." },
+      { t: "qcm", q: "Que faut-il allumer en premier ?", choix: ["l'unité centrale", "l'écran", "l'imprimante"], r: "l'unité centrale", expl: "On allume l'UC, puis l'écran." },
+      { t: "saisie", q: "Combien de parties a l'ordinateur fixe d'après la leçon ?", r: "4", nombre: true, expl: "L'UC, l'écran, le clavier et la souris." },
+      { t: "relier", q: "Relie chaque élément à son usage.", paires: [["le clavier", "taper des lettres"], ["l'écran", "voir ce qu'on fait"], ["l'imprimante", "sortir une feuille imprimée"], ["la clé USB", "emporter des fichiers"]], expl: "Chaque élément a son rôle." },
+      { t: "trous", q: "Complète.", texte: "Pour faire fonctionner l'ordinateur fixe, il faut allumer l'[UC] puis l'[écran].", expl: "L'ordre de mise en marche." },
+      { t: "vf", q: "Le modem est un périphérique de l'ordinateur.", r: true, expl: "Clé USB, imprimante, scanner, modem." },
+      { t: "saisie", q: "Comment s'appelle aussi l'écran de l'ordinateur ?", r: "le moniteur", expl: "Le moniteur." },
+      { t: "qcm", q: "Que fait-on après avoir allumé l'UC et l'écran ?", choix: ["attendre que tout s'affiche, puis travailler", "débrancher la souris", "éteindre l'UC"], r: "attendre que tout s'affiche, puis travailler", expl: "C'est la deuxième étape." }
+    ],
+    [
+      { t: "vf", q: "Pour démarrer un ordinateur fixe, on allume d'abord l'écran, puis l'unité centrale.", r: false, expl: "C'est l'inverse : l'UC d'abord, puis l'écran." },
+      { t: "qcm", q: "Moussa veut imprimer son exposé. De quel périphérique a-t-il besoin ?", choix: ["une imprimante", "un scanner", "un modem"], r: "une imprimante", expl: "L'imprimante sort le document sur papier." },
+      { t: "qcm", q: "Khady veut mettre une photo papier dans l'ordinateur. Quel périphérique utilise-t-elle ?", choix: ["le scanner", "l'imprimante", "la clé USB"], r: "le scanner", expl: "Le scanner fait passer une image papier dans l'ordinateur." },
+      { t: "classer", q: "Range ces éléments.", cases: ["partie de l'ordinateur", "périphérique", "n'appartient pas à l'ordinateur"], items: [["l'écran", "partie de l'ordinateur"], ["le modem", "périphérique"], ["le réchaud", "n'appartient pas à l'ordinateur"], ["la souris", "partie de l'ordinateur"], ["la clé USB", "périphérique"], ["le marteau", "n'appartient pas à l'ordinateur"]], expl: "Révise les parties et les périphériques." },
+      { t: "saisie", q: "Quel périphérique branche-t-on pour emporter ses fichiers dans sa poche ? La clé …", r: "USB", expl: "La clé USB." },
+      { t: "vf", q: "Un ordinateur portable n'a pas de clavier.", r: false, expl: "Il réunit tous les éléments de l'ordinateur fixe, clavier compris." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "Les parties d'un ordinateur sont l'unité [centrale], l'écran, le [clavier] et la [souris]. Les périphériques sont la clé USB, l'imprimante, le [scanner] et le modem.", expl: "Toute la leçon." },
+      { t: "relier", q: "Remets la mise en marche dans l'ordre : relie chaque étape à son numéro.", paires: [["1", "allumer l'unité centrale"], ["2", "allumer l'écran"], ["3", "attendre que tout s'affiche"], ["4", "commencer à travailler"]], expl: "UC, écran, attendre, travailler." },
+      { t: "qcm", q: "Pourquoi l'ordinateur portable est-il pratique pour voyager ?", choix: ["parce que tous les éléments sont réunis dans un seul appareil", "parce qu'il n'a pas besoin d'écran", "parce qu'il fonctionne au gaz"], r: "parce que tous les éléments sont réunis dans un seul appareil", expl: "C'est le NB de la leçon." },
+      { t: "vf", q: "L'ordinateur est un appareil électronique, car il traite l'information.", r: true, expl: "Tu l'as vu dans la leçon sur les types d'appareils." },
+      { t: "qcm", q: "Lequel n'est PAS un périphérique cité dans la leçon ?", choix: ["la souris", "l'imprimante", "le scanner", "le modem"], r: "la souris", expl: "La souris est une des quatre parties de l'ordinateur, pas un périphérique." }
+    ]
+  ]
+});
+
+
+/* ---- ist-outils-marteau-tenailles-pince.js ---- */
+// À VÉRIFIER : la légende du rond central des tenailles est peu lisible (« le point ? », photo 0129) ; elle n'est pas utilisée. L'étape 3 de l'arrachage d'un clou est recopiée telle qu'au cahier (« appuyer sur l'axe »).
+LECONS.push({
+  id: "ist-outils-marteau-tenailles-pince",
+  cahier: "sciences",
+  matiere: "IST",
+  titre: "Les outils simples : le marteau, les tenailles, la pince universelle",
+  date: "2026-09-29",
+  photos: ["DJI_20261118221859_0127_D.jpg", "DJI_20261118221915_0129_D.jpg"],
+  retiens:
+    "<p>Le <b>marteau</b> sert à <b>enfoncer un clou</b> ou à <b>battre le fer</b>. L'effet d'un coup de marteau s'appelle l'<b>effet de choc</b>.<br>Ses parties : la <b>table</b> (la face plate qui frappe), la <b>panne</b> (le côté étroit de la tête) et le manche.</p>" +
+    "<p>Les <b>tenailles</b> servent à <b>arracher un clou</b> selon la technique suivante :</p>" +
+    "<ul><li>1. écarter les branches ;</li><li>2. saisir la tête du clou entre les mâchoires ;</li><li>3. appuyer sur l'axe ;</li><li>4. exercer une pression vers le bas.</li></ul>" +
+    "<p>Ses parties : les <b>branches</b> et les <b>mâchoires</b>.</p>" +
+    "<p>La <b>pince universelle</b> est un outil qui a <b>plusieurs fonctions</b> : elle sert à <b>serrer</b> deux objets pour les tirer et les maintenir ; elle sert aussi à <b>couper</b> ou à <b>enlever des clous</b>.<br>Ses parties : la <b>mâchoire</b> et les <b>branches</b>.</p>",
+  astuce: "Le marteau <b>enfonce</b>, les tenailles <b>arrachent</b>, la pince universelle fait un peu <b>tout</b> (d'où son nom).",
+  regle: "Le marteau enfonce les clous (effet de choc) ; les tenailles arrachent les clous ; la pince universelle serre, maintient, coupe et enlève les clous.",
+  niveaux: [
+    [
+      { t: "qcm", q: "À quoi sert le marteau ?", choix: ["à enfoncer un clou", "à arracher un clou", "à couper du papier"], r: "à enfoncer un clou", expl: "Il sert aussi à battre le fer." },
+      { t: "qcm", q: "À quoi servent les tenailles ?", choix: ["à arracher un clou", "à enfoncer un clou", "à étaler le mortier"], r: "à arracher un clou", expl: "On saisit la tête du clou entre les mâchoires et on tire." },
+      { t: "qcm", q: "Pourquoi dit-on que la pince est « universelle » ?", choix: ["parce qu'elle a plusieurs fonctions", "parce qu'elle vient de l'univers", "parce qu'elle est très grande"], r: "parce qu'elle a plusieurs fonctions", expl: "Elle serre, maintient, coupe et enlève les clous." },
+      { t: "vf", q: "L'effet d'un coup de marteau s'appelle l'effet de choc.", r: true, expl: "C'est ce que dit la leçon." },
+      { t: "relier", q: "Relie chaque outil à son usage principal.", paires: [["le marteau", "enfoncer un clou"], ["les tenailles", "arracher un clou"], ["la pince universelle", "serrer, couper, maintenir"]], expl: "Trois outils, trois usages." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque étape à son numéro pour arracher un clou avec les tenailles.", paires: [["étape 1", "écarter les branches"], ["étape 2", "saisir la tête du clou entre les mâchoires"], ["étape 3", "appuyer sur l'axe"], ["étape 4", "exercer une pression vers le bas"]], expl: "C'est la technique de la leçon, dans l'ordre." },
+      { t: "classer", q: "Range ces parties.", cases: ["marteau", "tenailles"], items: [["la table", "marteau"], ["la panne", "marteau"], ["les mâchoires", "tenailles"], ["les branches", "tenailles"]], expl: "Le marteau a une table et une panne ; les tenailles ont des mâchoires et des branches." },
+      { t: "qcm", q: "Quelle partie du marteau frappe le clou ?", choix: ["la table", "la panne", "la mâchoire"], r: "la table", expl: "La table est la face plate de la tête du marteau." },
+      { t: "saisie", q: "Quel outil prends-tu pour enfoncer un clou dans une planche ?", r: ["le marteau", "un marteau", "marteau"], expl: "Le marteau enfonce les clous." },
+      { t: "saisie", q: "Quel outil prends-tu pour arracher un clou tordu ?", r: ["les tenailles", "des tenailles", "tenailles"], expl: "Les tenailles arrachent les clous." },
+      { t: "vf", q: "La pince universelle peut aussi couper.", r: true, expl: "Elle sert à couper ou à enlever des clous." },
+      { t: "trous", q: "Complète.", texte: "Les tenailles saisissent la tête du clou entre les [mâchoires]. Il faut d'abord écarter les [branches].", expl: "Les deux parties des tenailles." },
+      { t: "qcm", q: "Que fait-on en dernier pour arracher un clou avec les tenailles ?", choix: ["exercer une pression vers le bas", "écarter les branches", "saisir la tête du clou"], r: "exercer une pression vers le bas", expl: "C'est l'étape 4." },
+      { t: "vf", q: "Le marteau sert aussi à battre le fer.", r: true, expl: "Le forgeron bat le fer avec un marteau." }
+    ],
+    [
+      { t: "qcm", q: "Que fait-on juste avant de saisir la tête du clou ?", choix: ["écarter les branches", "exercer une pression vers le bas", "appuyer sur l'axe"], r: "écarter les branches", expl: "Étape 1 : écarter les branches ; étape 2 : saisir le clou." },
+      { t: "vf", q: "Les tenailles servent à enfoncer les clous.", r: false, expl: "Elles servent à les arracher. C'est le marteau qui enfonce." },
+      { t: "qcm", q: "Le papa de Moussa veut tenir fermement un petit fil de fer et le couper. Quel outil choisit-il ?", choix: ["la pince universelle", "le marteau", "la truelle"], r: "la pince universelle", expl: "Elle serre, maintient et coupe." },
+      { t: "classer", q: "Range ces actions.", cases: ["marteau", "tenailles", "pince universelle"], items: [["enfoncer un clou", "marteau"], ["battre le fer", "marteau"], ["arracher un clou", "tenailles"], ["maintenir deux objets serrés", "pince universelle"], ["couper un fil", "pince universelle"]], expl: "Chaque outil a ses fonctions." },
+      { t: "saisie", q: "Comment s'appelle l'effet d'un coup de marteau ? L'effet de …", r: "choc", expl: "L'effet de choc." },
+      { t: "qcm", q: "Comment s'appelle le côté étroit de la tête du marteau ?", choix: ["la panne", "la table", "la branche"], r: "la panne", expl: "La table est la face plate ; la panne est le côté étroit." },
+      { t: "vf", q: "La pince universelle a une mâchoire et des branches.", r: true, expl: "C'est ce que montre le dessin du cahier." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "Le [marteau] enfonce les clous. Les [tenailles] arrachent les clous. La pince [universelle] a plusieurs fonctions : serrer, couper, enlever des clous.", expl: "Les trois outils de la leçon." },
+      { t: "qcm", q: "Ibrahima a planté un clou au mauvais endroit. Que doit-il faire ?", choix: ["l'arracher avec les tenailles, puis le replanter avec le marteau", "le couper avec des ciseaux", "l'étaler avec la truelle"], r: "l'arracher avec les tenailles, puis le replanter avec le marteau", expl: "Les tenailles arrachent, le marteau enfonce." },
+      { t: "relier", q: "Défi : relie chaque partie à son outil.", paires: [["la table", "le marteau"], ["les mâchoires qui saisissent le clou", "les tenailles"], ["les dents", "la scie"], ["les deux lames mobiles", "les ciseaux"]], expl: "Tu révises aussi la leçon sur la scie et les ciseaux." },
+      { t: "vf", q: "Le marteau, les tenailles et la pince sont des objets techniques.", r: true, expl: "Ils sont fabriqués par l'homme dans un but utile." },
+      { t: "qcm", q: "Dans quel ordre fait-on les deux premières étapes avec les tenailles ?", choix: ["écarter les branches, puis saisir la tête du clou", "saisir la tête du clou, puis écarter les branches", "appuyer vers le bas, puis écarter les branches"], r: "écarter les branches, puis saisir la tête du clou", expl: "Il faut ouvrir les tenailles avant de saisir le clou." }
+    ]
+  ]
+});
+
+
+/* ---- ist-outils-truelle-scie-ciseaux.js ---- */
+// À VÉRIFIER : sur le dessin des ciseaux (photo 0125), les légendes « le rivet » et « la branche » semblent mal placées (« rivet » au bout d'une lame). Elles ne sont ni reprises dans la leçon ni utilisées en exercice ; seules « lame » et « poignée » sont gardées.
+LECONS.push({
+  id: "ist-outils-truelle-scie-ciseaux",
+  cahier: "sciences",
+  matiere: "IST",
+  titre: "Les outils technologiques simples : truelle, scie, ciseaux",
+  date: "2026-09-23",
+  photos: ["DJI_20261118221806_0124_D.jpg", "DJI_20261118221812_0125_D.jpg", "DJI_20261118221828_0126_D.jpg"],
+  retiens:
+    "<p>La <b>truelle</b> est une petite pelle à main qui sert à <b>étendre ou racler le plâtre ou le mortier</b> (mélange de sable, de ciment et d'eau…). C'est un outil de base du <b>maçon</b>.<br>Ses parties : la <b>lame</b> et le <b>manche</b>.</p>" +
+    "<p>La <b>scie</b> est une <b>lame dentelée</b> en acier, munie d'un manche en bois, que l'on utilise pour <b>couper des matériaux durs</b> comme le bois.<br>Ses parties : le <b>dos</b>, les <b>dents</b>, la <b>lame</b> et le <b>manche</b>.</p>" +
+    "<p>Les <b>ciseaux</b> sont composés de <b>deux lames mobiles</b> et articulées, qui glissent l'une sur l'autre pour <b>trancher les matériaux minces</b> (tissu, papier…).<br>On y reconnaît les <b>lames</b> et les <b>poignées</b>.</p>",
+  astuce: "Truelle → <b>t</b>ravaux du maçon ; scie → <b>dur</b> (bois) ; ciseaux → <b>mince</b> (papier, tissu).",
+  regle: "La truelle étend le mortier, la scie coupe les matériaux durs comme le bois, les ciseaux tranchent les matériaux minces comme le papier et le tissu.",
+  niveaux: [
+    [
+      { t: "qcm", q: "À quoi sert la truelle ?", choix: ["à étendre ou racler le mortier", "à couper le bois", "à couper le papier"], r: "à étendre ou racler le mortier", expl: "C'est l'outil de base du maçon." },
+      { t: "qcm", q: "À quoi sert la scie ?", choix: ["à couper des matériaux durs comme le bois", "à étendre le plâtre", "à couper les cheveux"], r: "à couper des matériaux durs comme le bois", expl: "Sa lame dentelée coupe le bois." },
+      { t: "qcm", q: "À quoi servent les ciseaux ?", choix: ["à trancher les matériaux minces comme le papier", "à couper un tronc d'arbre", "à étaler du ciment"], r: "à trancher les matériaux minces comme le papier", expl: "Tissu, papier… sont des matériaux minces." },
+      { t: "vf", q: "La truelle est un outil du maçon.", r: true, expl: "C'est même son outil de base." },
+      { t: "relier", q: "Relie chaque outil à son usage.", paires: [["la truelle", "étendre le mortier"], ["la scie", "couper le bois"], ["les ciseaux", "couper le papier"]], expl: "Chaque outil a son travail." }
+    ],
+    [
+      { t: "classer", q: "Range les parties de chaque outil.", cases: ["scie", "truelle"], items: [["le dos", "scie"], ["les dents", "scie"], ["la lame triangulaire", "truelle"], ["le manche coudé", "truelle"]], expl: "La scie a un dos, des dents, une lame, un manche ; la truelle a une lame et un manche." },
+      { t: "qcm", q: "Combien de lames ont les ciseaux ?", choix: ["deux", "une", "trois"], r: "deux", expl: "Deux lames mobiles qui glissent l'une sur l'autre." },
+      { t: "saisie", q: "Avec quel outil Awa découpe-t-elle une image dans un journal ?", r: ["les ciseaux", "des ciseaux", "ciseaux"], expl: "Le papier est un matériau mince : on utilise les ciseaux." },
+      { t: "saisie", q: "Avec quel outil le menuisier coupe-t-il une planche ?", r: ["la scie", "une scie", "scie"], expl: "Le bois est un matériau dur : on utilise la scie." },
+      { t: "saisie", q: "Avec quel outil le maçon étale-t-il le mortier entre les briques ?", r: ["la truelle", "une truelle", "truelle"], expl: "C'est la truelle." },
+      { t: "trous", q: "Complète.", texte: "La scie est une lame [dentelée] en acier munie d'un [manche] en bois.", expl: "C'est la définition de la scie." },
+      { t: "vf", q: "Le mortier est un mélange de sable, de ciment et d'eau.", r: true, expl: "La truelle sert à l'étendre." },
+      { t: "qcm", q: "En quelle matière est la lame de la scie ?", choix: ["en acier", "en plastique", "en papier"], r: "en acier", expl: "Une lame dentelée en acier." },
+      { t: "relier", q: "Relie chaque matériau à l'outil qui le coupe ou l'étale.", paires: [["le tissu", "les ciseaux"], ["une planche", "la scie"], ["le plâtre", "la truelle"]], expl: "Matériau mince, matériau dur, plâtre." }
+    ],
+    [
+      { t: "qcm", q: "Pourquoi n'utilise-t-on pas les ciseaux pour couper une planche ?", choix: ["parce que les ciseaux tranchent seulement les matériaux minces", "parce que les ciseaux sont trop grands", "parce que les ciseaux n'ont pas de lame"], r: "parce que les ciseaux tranchent seulement les matériaux minces", expl: "Pour le bois, matériau dur, il faut la scie." },
+      { t: "vf", q: "Les lames des ciseaux glissent l'une sur l'autre.", r: true, expl: "C'est ce qui leur permet de trancher." },
+      { t: "qcm", q: "Quelle partie de la scie coupe le bois ?", choix: ["les dents", "le manche", "le dos"], r: "les dents", expl: "La lame est dentelée : ce sont les dents qui coupent." },
+      { t: "qcm", q: "Quelle partie tient-on dans la main quand on utilise une truelle ?", choix: ["le manche", "la lame", "les dents"], r: "le manche", expl: "On tient le manche ; la lame étale le mortier." },
+      { t: "classer", q: "Range ces matériaux.", cases: ["matériau mince", "matériau dur"], items: [["le papier", "matériau mince"], ["le bois", "matériau dur"], ["le tissu", "matériau mince"], ["une branche épaisse", "matériau dur"], ["le carton fin", "matériau mince"]], expl: "Mince : ciseaux. Dur : scie." },
+      { t: "saisie", q: "Comment appelle-t-on le mélange de sable, de ciment et d'eau ?", r: "le mortier", expl: "Le mortier, étendu avec la truelle." },
+      { t: "vf", q: "La scie et la truelle ont toutes les deux un manche.", r: true, expl: "On les tient par le manche." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "La [truelle] sert à étendre le mortier. La [scie] coupe les matériaux durs comme le bois. Les [ciseaux] tranchent les matériaux minces comme le papier.", expl: "Trois outils, trois usages." },
+      { t: "qcm", q: "Ibrahima construit un petit mur et doit aussi couper une planche pour la porte. De quels outils a-t-il besoin ?", choix: ["une truelle et une scie", "des ciseaux et une truelle", "seulement des ciseaux"], r: "une truelle et une scie", expl: "La truelle pour le mortier du mur, la scie pour la planche." },
+      { t: "classer", q: "Défi : range ces parties.", cases: ["scie", "truelle", "ciseaux"], items: [["les dents", "scie"], ["le dos", "scie"], ["la lame triangulaire", "truelle"], ["les deux lames mobiles", "ciseaux"], ["les poignées", "ciseaux"]], expl: "Révise les dessins du cahier." },
+      { t: "vf", q: "La truelle, la scie et les ciseaux sont des objets techniques.", r: true, expl: "Ils sont fabriqués par l'homme dans un but utile." },
+      { t: "qcm", q: "Khady coud une robe. Pour couper le tissu, elle prend…", choix: ["des ciseaux", "une scie", "une truelle"], r: "des ciseaux", expl: "Le tissu est un matériau mince." }
+    ]
+  ]
+});
+
+
+/* ---- ist-types-appareils.js ---- */
+// À VÉRIFIER : le titre et le début de cette leçon (définition des appareils électriques) sont sur la photo 0128, illisible ; la date est incertaine (début octobre 2026). La leçon « Le levier et la poulie » (même photo 0128) est illisible : seul le dessin légendé de la poulie (photo 0130) est repris ici ; rien n'est dit du levier.
+LECONS.push({
+  id: "ist-types-appareils",
+  cahier: "sciences",
+  matiere: "IST",
+  titre: "Les types d'appareils (et la poulie)",
+  date: "2026-10-06",
+  photos: ["DJI_20261118221922_0130_D.jpg", "DJI_20261118221927_0131_D.jpg"],
+  retiens:
+    "<p>Les <b>appareils électriques</b> fonctionnent avec le courant électrique et produisent par exemple le son, le froid, le mouvement… Ce courant peut provenir d'un <b>panneau solaire</b>. Exemples : la radio, le téléviseur, le ventilateur…</p>" +
+    "<p>Les <b>appareils électroniques</b> s'occupent du <b>traitement de l'information</b>. Ils n'utilisent en général que des courants électriques faibles. Exemples : l'ordinateur, la tablette, le téléphone…</p>" +
+    "<p>Les <b>appareils ménagers</b> servent à <b>préparer ou cuisiner les aliments</b>… Exemples : le réfrigérateur, la cuisinière, le réchaud à gaz, le grille-pain…</p>" +
+    "<p>Les <b>appareils mécaniques</b> <b>transforment une force</b> qu'on leur applique en une force plus ou moins grande. Exemples : le vélo, la poulie, la brouette…</p>" +
+    "<p><b>La poulie</b> (dessin du cahier) : elle est formée d'une <b>chape</b> (la pièce qui tient la roue, accrochée au crochet), d'une <b>roue à gorge</b> sur laquelle passe une <b>corde ou une chaîne</b> ; au bout de la corde, on accroche la <b>charge</b> (par exemple un seau).</p>",
+  astuce: "<b>Électronique</b> → <b>information</b> (ordinateur, téléphone) ; <b>ménager</b> → la <b>cuisine</b> de la maison ; <b>mécanique</b> → la <b>force</b> des bras ou des jambes (vélo, brouette, poulie).",
+  regle: "Appareils électriques : son, froid, mouvement (radio, ventilateur). Électroniques : information (ordinateur, téléphone). Ménagers : cuisine (cuisinière, réfrigérateur). Mécaniques : transforment une force (vélo, poulie, brouette).",
+  niveaux: [
+    [
+      { t: "qcm", q: "À quoi servent les appareils électroniques ?", choix: ["au traitement de l'information", "à cuisiner", "à soulever des charges"], r: "au traitement de l'information", expl: "Ordinateur, tablette, téléphone traitent l'information." },
+      { t: "qcm", q: "À quoi servent les appareils ménagers ?", choix: ["à préparer ou cuisiner les aliments", "à envoyer des messages", "à rouler"], r: "à préparer ou cuisiner les aliments", expl: "Réfrigérateur, cuisinière, réchaud à gaz, grille-pain." },
+      { t: "qcm", q: "Que font les appareils mécaniques ?", choix: ["ils transforment une force en une force plus ou moins grande", "ils traitent l'information", "ils produisent du froid"], r: "ils transforment une force en une force plus ou moins grande", expl: "Vélo, poulie, brouette." },
+      { t: "vf", q: "Le courant électrique peut provenir d'un panneau solaire.", r: true, expl: "C'est ce que dit la leçon." },
+      { t: "classer", q: "Range ces appareils.", cases: ["électronique", "mécanique"], items: [["l'ordinateur", "électronique"], ["le vélo", "mécanique"], ["la tablette", "électronique"], ["la brouette", "mécanique"], ["le téléphone", "électronique"], ["la poulie", "mécanique"]], expl: "Électronique : information. Mécanique : force." }
+    ],
+    [
+      { t: "classer", q: "Range les exemples de la leçon.", cases: ["électrique", "électronique", "ménager", "mécanique"], items: [["le ventilateur", "électrique"], ["la radio", "électrique"], ["l'ordinateur", "électronique"], ["le réchaud à gaz", "ménager"], ["le grille-pain", "ménager"], ["la brouette", "mécanique"]], expl: "Ce sont les exemples du cahier." },
+      { t: "relier", q: "Relie chaque type d'appareil à sa fonction.", paires: [["électronique", "traiter l'information"], ["ménager", "préparer les aliments"], ["mécanique", "transformer une force"]], expl: "Chaque famille a sa fonction." },
+      { t: "relier", q: "Relie chaque partie de la poulie à sa description.", paires: [["la chape", "tient la roue, sous le crochet"], ["la roue à gorge", "la roue qui tourne"], ["la corde ou la chaîne", "passe sur la roue"], ["la charge", "ce qu'on soulève"]], expl: "C'est le dessin de la poulie du cahier." },
+      { t: "saisie", q: "Sur quelle sorte de roue passe la corde d'une poulie ? Une roue à …", r: "gorge", expl: "La roue à gorge a un creux où passe la corde." },
+      { t: "qcm", q: "Le seau accroché au bout de la corde d'une poulie s'appelle…", choix: ["la charge", "la chape", "la gorge"], r: "la charge", expl: "La charge est ce qu'on soulève." },
+      { t: "vf", q: "Le téléviseur est donné comme exemple d'appareil électrique.", r: true, expl: "Radio, téléviseur, ventilateur." },
+      { t: "trous", q: "Complète.", texte: "Le vélo, la poulie et la brouette sont des appareils [mécaniques]. L'ordinateur et la tablette sont des appareils [électroniques].", expl: "Deux familles d'appareils." },
+      { t: "qcm", q: "Les appareils électroniques utilisent en général…", choix: ["des courants électriques faibles", "des courants très forts", "uniquement du gaz"], r: "des courants électriques faibles", expl: "C'est ce que dit la leçon." },
+      { t: "saisie", q: "Comment s'appelle la pièce de la poulie qui tient la roue ?", r: "la chape", expl: "La chape, accrochée au crochet." }
+    ],
+    [
+      { t: "qcm", q: "Le réfrigérateur fonctionne à l'électricité. Dans quelle famille la leçon le range-t-elle ?", choix: ["les appareils ménagers", "les appareils mécaniques", "les appareils électroniques"], r: "les appareils ménagers", expl: "Il sert à conserver les aliments à la maison : la leçon le range dans les appareils ménagers." },
+      { t: "qcm", q: "Pourquoi la brouette est-elle un appareil mécanique ?", choix: ["elle aide à transporter une charge lourde avec moins de force", "elle traite l'information", "elle produit du froid"], r: "elle aide à transporter une charge lourde avec moins de force", expl: "Elle transforme la force qu'on lui applique." },
+      { t: "vf", q: "Une poulie fonctionne avec le courant électrique.", r: false, expl: "La poulie est un appareil mécanique : elle fonctionne avec la force de celui qui tire la corde." },
+      { t: "classer", q: "Range ces appareils de la maison d'Aïssatou.", cases: ["électronique", "ménager"], items: [["la tablette", "électronique"], ["la cuisinière", "ménager"], ["le téléphone", "électronique"], ["le réfrigérateur", "ménager"], ["l'ordinateur", "électronique"], ["le grille-pain", "ménager"]], expl: "Électronique : information. Ménager : cuisine." },
+      { t: "qcm", q: "Quel appareil produit du mouvement pour rafraîchir la pièce ?", choix: ["le ventilateur", "la brouette", "la tablette"], r: "le ventilateur", expl: "Le ventilateur est un appareil électrique." },
+      { t: "saisie", q: "D'où peut provenir le courant électrique, en plus du réseau ? D'un panneau …", r: "solaire", expl: "D'un panneau solaire." },
+      { t: "vf", q: "Pour remonter un seau d'un puits, une poulie est utile.", r: true, expl: "La corde passe sur la roue à gorge et on tire la charge vers le haut." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "Les appareils [électroniques] traitent l'information. Les appareils [ménagers] servent à préparer les aliments. Les appareils [mécaniques] transforment une force. Dans une poulie, la corde passe sur la roue à [gorge].", expl: "Toute la leçon." },
+      { t: "classer", q: "Défi : range tous ces appareils.", cases: ["électrique", "électronique", "ménager", "mécanique"], items: [["la radio", "électrique"], ["le ventilateur", "électrique"], ["la tablette", "électronique"], ["le réchaud à gaz", "ménager"], ["le vélo", "mécanique"], ["la poulie", "mécanique"]], expl: "Révise les quatre familles." },
+      { t: "qcm", q: "Mamadou remonte un seau d'eau du puits avec une corde passée sur une roue. Il utilise…", choix: ["une poulie, appareil mécanique", "un ordinateur, appareil électronique", "une cuisinière, appareil ménager"], r: "une poulie, appareil mécanique", expl: "Corde, roue, charge : c'est une poulie." },
+      { t: "relier", q: "Relie chaque appareil à sa famille.", paires: [["le téléphone", "électronique"], ["la cuisinière", "ménager"], ["la brouette", "mécanique"], ["la radio", "électrique"]], expl: "Les exemples de la leçon." },
+      { t: "vf", q: "Le vélo transforme la force des jambes du cycliste : c'est un appareil mécanique.", r: true, expl: "C'est un exemple d'appareil mécanique." }
+    ]
+  ]
+});
+
+
+/* ---- ma-geo-angles.js ---- */
+// À VÉRIFIER : au cahier (photo 0071), l'angle aigu « mesure − 90° » et l'angle obtus « mesure + 90° ».
+// Le module écrit « moins de 90° » et « plus de 90° » (un angle n'est jamais négatif), et précise que l'angle obtus reste plus petit qu'un angle plat (180°).
+LECONS.push({
+  id: "ma-geo-angles",
+  cahier: "maths",
+  matiere: "Géométrie",
+  titre: "Les angles",
+  date: "2026-10-01",
+  photos: ["DJI_20261118220908_0070_D.jpg", "DJI_20261118220914_0071_D.jpg", "DJI_20261118220918_0072_D.jpg"],
+  retiens:
+    "<p>Un <b>angle</b> est l'écartement entre deux droites qui se coupent en un même point. Il existe 4 sortes d'angles :</p>" +
+    "<table><tr><th>Angle</th><th>Mesure</th></tr>" +
+    "<tr><td><b>droit</b></td><td>toujours 90° (degrés)</td></tr>" +
+    "<tr><td><b>aigu</b></td><td>moins de 90° : il est plus petit qu'un angle droit</td></tr>" +
+    "<tr><td><b>obtus</b></td><td>plus de 90° : il est plus grand qu'un angle droit (mais plus petit qu'un angle plat)</td></tr>" +
+    "<tr><td><b>plat</b></td><td>180° : ses deux côtés forment une ligne droite</td></tr></table>" +
+    "<p>NB : pour mesurer un angle, on prend une règle et un <b>rapporteur</b>.</p>",
+  astuce: "Compare avec le coin d'une feuille (angle droit) : plus fermé, c'est <b>aigu</b> ; plus ouvert, c'est <b>obtus</b> ; tout à plat, c'est <b>plat</b>.",
+  regle: "Angle droit = 90° ; aigu : moins de 90° ; obtus : plus de 90° (et moins de 180°) ; plat = 180°.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Combien mesure un angle droit ?", choix: ["90°", "180°", "45°", "100°"], r: "90°", expl: "Un angle droit mesure toujours 90°." },
+      { t: "qcm", q: "Combien mesure un angle plat ?", choix: ["180°", "90°", "360°"], r: "180°", expl: "Un angle plat mesure 180° : ses côtés sont alignés." },
+      { t: "qcm", q: "Un angle plus petit qu'un angle droit est…", choix: ["aigu", "obtus", "plat"], r: "aigu", expl: "L'angle aigu mesure moins de 90°." },
+      { t: "qcm", q: "Un angle plus grand qu'un angle droit, mais plus petit qu'un angle plat, est…", choix: ["obtus", "aigu", "droit"], r: "obtus", expl: "L'angle obtus mesure plus de 90°." },
+      { t: "qcm", q: "Quel instrument sert à mesurer un angle ?", choix: ["le rapporteur", "le compas", "la balance"], r: "le rapporteur", expl: "On mesure un angle avec une règle et un rapporteur." },
+      { t: "relier", q: "Relie chaque angle à sa mesure.", paires: [["angle droit", "90°"], ["angle plat", "180°"], ["angle aigu", "moins de 90°"], ["angle obtus", "plus de 90°"]], expl: "Ce sont les 4 sortes d'angles de la leçon." }
+    ],
+    [
+      { t: "classer", q: "Range chaque angle selon sa mesure.", cases: ["aigu", "droit", "obtus", "plat"], items: [["45°", "aigu"], ["90°", "droit"], ["120°", "obtus"], ["180°", "plat"], ["30°", "aigu"], ["150°", "obtus"], ["60°", "aigu"], ["100°", "obtus"]], expl: "Moins de 90° : aigu ; 90° : droit ; entre 90° et 180° : obtus ; 180° : plat." },
+      { t: "saisie", q: "Un angle de 70° est un angle …", r: "aigu", expl: "70° est moins que 90° : angle aigu." },
+      { t: "saisie", q: "Un angle de 135° est un angle …", r: "obtus", expl: "135° est plus que 90° : angle obtus." },
+      { t: "saisie", q: "Un angle dont les deux côtés forment une ligne droite est un angle …", r: "plat", expl: "Côtés alignés : angle plat, 180°." },
+      { t: "qcm", q: "Le coin d'une feuille de cahier forme un angle…", choix: ["droit", "aigu", "obtus"], r: "droit", expl: "Les bords d'une feuille sont perpendiculaires : angle droit." },
+      { t: "qcm", q: "À 3 heures, les aiguilles d'une horloge forment un angle…", choix: ["droit", "plat", "aigu"], r: "droit", expl: "Une aiguille sur 12, l'autre sur 3 : un quart de tour, 90°." },
+      { t: "qcm", q: "À 6 heures, les aiguilles d'une horloge forment un angle…", choix: ["plat", "droit", "obtus"], r: "plat", expl: "Une aiguille sur 12, l'autre sur 6 : elles forment une ligne droite, 180°." },
+      { t: "trous", q: "Complète.", texte: "Un angle droit mesure [90]°. Un angle plat mesure [180]°. Un angle [aigu] est plus petit qu'un angle droit. Un angle [obtus] est plus grand qu'un angle droit.", expl: "Droit 90°, plat 180°, aigu plus petit, obtus plus grand." }
+    ],
+    [
+      { t: "qcm", q: "Un angle de 89° est…", choix: ["aigu", "droit", "obtus"], r: "aigu", expl: "89° est un tout petit peu moins que 90° : il est aigu." },
+      { t: "qcm", q: "Un angle de 91° est…", choix: ["obtus", "droit", "aigu"], r: "obtus", expl: "91° dépasse 90° : il est obtus." },
+      { t: "qcm", q: "À 1 heure, les aiguilles d'une horloge forment un angle…", choix: ["aigu", "obtus", "droit"], r: "aigu", expl: "L'écart entre 12 et 1 est plus petit qu'un quart de tour : angle aigu." },
+      { t: "qcm", q: "À 5 heures, les aiguilles d'une horloge forment un angle…", choix: ["obtus", "aigu", "plat"], r: "obtus", expl: "Entre 12 et 5, l'écart dépasse le quart de tour (3 h) sans atteindre le demi-tour (6 h) : angle obtus." },
+      { t: "vf", q: "Un angle obtus peut mesurer 200°.", r: false, expl: "L'angle obtus est plus grand que l'angle droit mais plus petit que l'angle plat : entre 90° et 180°." },
+      { t: "vf", q: "Deux angles droits mis côte à côte forment un angle plat.", r: true, expl: "90° + 90° = 180° : c'est un angle plat." },
+      { t: "vf", q: "« Un angle aigu mesure − 90° » signifie qu'il mesure moins de 90°.", r: true, expl: "Le signe − de la classe veut dire « moins de ». Un angle n'est jamais négatif : on écrit « moins de 90° »." }
+    ],
+    [
+      { t: "saisie", q: "Un angle plat est partagé en deux angles. L'un mesure 130°. L'autre mesure … °", r: "50", nombre: true, unite: "°", expl: "Un angle plat mesure 180° : 180 − 130 = 50°." },
+      { t: "saisie", q: "Un angle droit est partagé en deux angles. L'un mesure 35°. L'autre mesure … °", r: "55", nombre: true, unite: "°", expl: "Un angle droit mesure 90° : 90 − 35 = 55°." },
+      { t: "saisie", q: "La moitié d'un angle droit mesure … °", r: "45", nombre: true, unite: "°", expl: "90 : 2 = 45° : c'est un angle aigu." },
+      { t: "classer", q: "Un angle plat est partagé en deux. Range chaque partie selon sa sorte.", cases: ["aigu", "droit", "obtus"], items: [["l'autre partie quand l'une mesure 150°", "aigu"], ["l'autre partie quand l'une mesure 90°", "droit"], ["l'autre partie quand l'une mesure 40°", "obtus"], ["l'autre partie quand l'une mesure 100°", "aigu"]], expl: "180 − 150 = 30° (aigu) ; 180 − 90 = 90° (droit) ; 180 − 40 = 140° (obtus) ; 180 − 100 = 80° (aigu)." },
+      { t: "trous", q: "Complète la leçon.", texte: "Un angle est l'[écartement] entre deux droites qui se coupent en un même point. Pour mesurer un angle, je prends une règle et un [rapporteur].", expl: "Définition de l'angle et instrument de mesure, tels qu'au cahier." }
+    ]
+  ]
+});
+
+
+/* ---- ma-geo-carre.js ---- */
+LECONS.push({
+  id: "ma-geo-carre",
+  cahier: "maths",
+  matiere: "Géométrie",
+  titre: "Le carré : construction et propriétés",
+  date: "2026-10-07",
+  photos: ["DJI_20261118221008_0075_D.jpg"],
+  retiens:
+    "<p>Un <b>carré</b> est un quadrilatère (une figure à 4 côtés) qui a :</p>" +
+    "<ul><li><b>4 côtés égaux</b> ;</li><li><b>4 angles droits</b> ;</li><li><b>4 sommets</b>.</li></ul>" +
+    "<p>La <b>médiane</b> est le segment qui relie les milieux de deux côtés opposés. Le carré a 2 médianes.</p>" +
+    "<p>La <b>diagonale</b> est le segment qui relie deux sommets opposés. Le carré a 2 diagonales.</p>" +
+    "<p>Les médianes et les diagonales se coupent <b>au même point</b>, le centre du carré.</p>" +
+    "<p>Exemple : dans le carré ABCD de 4 cm de côté (A en haut à gauche, B en haut à droite, C en bas à droite, D en bas à gauche), les diagonales sont [AC] et [BD].</p>" +
+    "<p>Pour le construire sur ton cahier, on utilise la règle et l'équerre.</p>",
+  astuce: "<b>Diagonale</b> : d'un coin au coin d'en face. <b>Médiane</b> : du milieu d'un côté au milieu du côté d'en face.",
+  regle: "Le carré a 4 côtés égaux, 4 angles droits et 4 sommets. Diagonale : relie deux sommets opposés. Médiane : relie les milieux de deux côtés opposés.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Combien de côtés égaux a un carré ?", choix: ["4", "2", "3"], r: "4", expl: "Le carré a 4 côtés égaux." },
+      { t: "qcm", q: "Combien d'angles droits a un carré ?", choix: ["4", "2", "0"], r: "4", expl: "Les 4 angles du carré sont droits." },
+      { t: "qcm", q: "Un quadrilatère est une figure qui a…", choix: ["4 côtés", "3 côtés", "5 côtés"], r: "4 côtés", expl: "quadri = quatre : un quadrilatère a 4 côtés." },
+      { t: "qcm", q: "Le segment qui relie deux sommets opposés s'appelle…", choix: ["une diagonale", "une médiane", "un côté"], r: "une diagonale", expl: "La diagonale va d'un sommet au sommet opposé." },
+      { t: "qcm", q: "Le segment qui relie les milieux de deux côtés opposés s'appelle…", choix: ["une médiane", "une diagonale", "un sommet"], r: "une médiane", expl: "La médiane relie les milieux de deux côtés opposés." },
+      { t: "vf", q: "Les médianes et les diagonales d'un carré se coupent au même point.", r: true, expl: "Elles passent toutes par le centre du carré." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque mot à sa définition.", paires: [["diagonale", "relie deux sommets opposés"], ["médiane", "relie les milieux de deux côtés opposés"], ["sommet", "point où deux côtés se rejoignent"], ["côté", "segment qui borde la figure"]], expl: "Ce sont les mots de la leçon." },
+      { t: "saisie", q: "Combien de diagonales a un carré ?", r: "2", nombre: true, expl: "Il y a 2 paires de sommets opposés : 2 diagonales." },
+      { t: "saisie", q: "Combien de médianes a un carré ?", r: "2", nombre: true, expl: "Il y a 2 paires de côtés opposés : 2 médianes." },
+      { t: "saisie", q: "Combien de sommets a un carré ?", r: "4", nombre: true, expl: "Le carré a 4 sommets, un à chaque coin." },
+      { t: "qcm", q: "Dans le carré ABCD, quel segment est une diagonale ?", choix: ["[AC]", "[AB]", "[BC]", "[CD]"], r: "[AC]", expl: "A et C sont des sommets opposés : [AC] est une diagonale. [AB], [BC], [CD] sont des côtés." },
+      { t: "qcm", q: "Dans le carré ABCD, quel est le sommet opposé à B ?", choix: ["D", "A", "C"], r: "D", expl: "B est en haut à droite, D en bas à gauche : ils sont opposés. La diagonale est [BD]." },
+      { t: "trous", q: "Complète.", texte: "Un carré est un quadrilatère qui a 4 côtés [égaux], 4 angles [droits] et 4 [sommets].", expl: "Ce sont les trois propriétés du carré." },
+      { t: "classer", q: "Dans le carré ABCD, range chaque segment.", cases: ["côté", "diagonale"], items: [["[AB]", "côté"], ["[AC]", "diagonale"], ["[BC]", "côté"], ["[BD]", "diagonale"], ["[CD]", "côté"], ["[DA]", "côté"]], expl: "Un côté relie deux sommets voisins ; une diagonale relie deux sommets opposés." }
+    ],
+    [
+      { t: "vf", q: "Une figure à 4 côtés égaux mais sans angle droit est un carré.", r: false, expl: "Il faut aussi 4 angles droits pour que ce soit un carré." },
+      { t: "vf", q: "Une figure à 4 angles droits dont les côtés ne sont pas tous égaux est un carré.", r: false, expl: "Il faut aussi 4 côtés égaux. Sinon, c'est un rectangle." },
+      { t: "qcm", q: "Une médiane d'un carré passe…", choix: ["par les milieux de deux côtés opposés", "par deux sommets opposés", "par un seul sommet"], r: "par les milieux de deux côtés opposés", expl: "C'est la diagonale qui passe par deux sommets opposés." },
+      { t: "qcm", q: "Dans le carré ABCD, la médiane verticale relie…", choix: ["le milieu de [AB] et le milieu de [DC]", "A et C", "B et D"], r: "le milieu de [AB] et le milieu de [DC]", expl: "[AB] (en haut) et [DC] (en bas) sont des côtés opposés : la médiane relie leurs milieux." },
+      { t: "saisie", q: "Combien de segments (médianes et diagonales) se coupent au centre du carré ?", r: "4", nombre: true, expl: "2 médianes + 2 diagonales = 4 segments, qui se coupent au même point." },
+      { t: "qcm", q: "Quel instrument permet de vérifier qu'un angle du carré est droit ?", choix: ["l'équerre", "le compas", "la balance"], r: "l'équerre", expl: "On pose l'angle droit de l'équerre sur le coin du carré." }
+    ],
+    [
+      { t: "trous", q: "Complète la leçon.", texte: "La médiane est le segment qui relie les [milieux] des côtés opposés. La diagonale est le segment qui relie deux [sommets] opposés. Les médianes et les diagonales se coupent au même [point].", expl: "Définitions du cahier." },
+      { t: "saisie", q: "Le carré ABCD a 4 cm de côté. Combien mesure son périmètre ? … cm", r: "16", nombre: true, unite: "cm", expl: "4 côtés égaux : 4 × 4 = 16 cm." },
+      { t: "saisie", q: "Le carré ABCD a 4 cm de côté. Une médiane relie les milieux de deux côtés opposés. Combien mesure-t-elle ? … cm", r: "4", nombre: true, unite: "cm", aide: "La médiane traverse le carré d'un côté à l'autre, bien droit.", expl: "La médiane va droit d'un côté au côté d'en face : elle a la longueur du côté, 4 cm." },
+      { t: "qcm", q: "Awa décrit une figure : « 4 sommets, 4 côtés de 5 cm, et tous ses coins s'ajustent à l'angle droit de l'équerre. » C'est…", choix: ["un carré", "un rectangle non carré", "un triangle"], r: "un carré", expl: "4 côtés égaux et 4 angles droits : c'est un carré." },
+      { t: "classer", q: "Vrai ou faux pour le carré ?", cases: ["vrai", "faux"], items: [["Il a 4 côtés égaux.", "vrai"], ["Il a 3 sommets.", "faux"], ["Il a 2 diagonales.", "vrai"], ["Ses médianes relient deux sommets.", "faux"], ["Il a 4 angles droits.", "vrai"], ["Ses diagonales et médianes se coupent au même point.", "vrai"]], expl: "Carré : 4 côtés égaux, 4 angles droits, 4 sommets, 2 diagonales, 2 médianes qui se coupent au centre." }
+    ]
+  ]
+});
+
+
+/* ---- ma-geo-droite-demi-droite-segment.js ---- */
+LECONS.push({
+  id: "ma-geo-droite-demi-droite-segment",
+  cahier: "maths",
+  matiere: "Géométrie",
+  titre: "Droite, demi-droite, segment",
+  date: "2026-09-17",
+  photos: ["DJI_20261118220750_0062_D.jpg", "DJI_20261118220759_0063_D.jpg"],
+  retiens:
+    "<p><b>Une droite</b> est une suite illimitée de points alignés. Elle n'a <b>pas d'extrémités</b>. On la représente par une ligne continue, qu'on imagine prolongée des deux côtés. On la note avec des parenthèses : <b>(SV)</b> est une droite.</p>" +
+    "<p><b>Une demi-droite</b> est une partie de droite limitée d'un côté par un point appelé <b>origine</b>, et illimitée de l'autre côté. On la note <b>[AC)</b> : le crochet est du côté de l'origine A.</p>" +
+    "<p><b>Un segment</b> est une partie de droite limitée des deux côtés par deux points appelés <b>extrémités</b>. On le note avec deux crochets : <b>[AB]</b> est un segment. Un segment a une longueur qu'on peut mesurer, par exemple [AB] = 6 cm.</p>",
+  astuce: "Regarde les signes : <b>( )</b> la ligne ne s'arrête jamais ; <b>[ )</b> elle s'arrête d'un seul côté ; <b>[ ]</b> elle s'arrête des deux côtés.",
+  regle: "Droite : aucune extrémité, notée (AB). Demi-droite : une origine, notée [AB). Segment : deux extrémités, noté [AB].",
+  niveaux: [
+    [
+      { t: "qcm", q: "Combien d'extrémités a une droite ?", choix: ["aucune", "une", "deux"], r: "aucune", expl: "La droite est illimitée des deux côtés : elle n'a pas d'extrémités." },
+      { t: "qcm", q: "Combien d'extrémités a un segment ?", choix: ["deux", "une", "aucune"], r: "deux", expl: "Le segment est limité des deux côtés par deux points : ses extrémités." },
+      { t: "qcm", q: "Le point qui limite une demi-droite s'appelle…", choix: ["l'origine", "le milieu", "le sommet"], r: "l'origine", expl: "La demi-droite est limitée d'un seul côté, par son origine." },
+      { t: "relier", q: "Relie chaque notation à ce qu'elle désigne.", paires: [["(SV)", "une droite"], ["[AC)", "une demi-droite"], ["[AB]", "un segment"]], expl: "Parenthèses : droite. Un crochet et une parenthèse : demi-droite. Deux crochets : segment." },
+      { t: "vf", q: "Une droite est une suite illimitée de points alignés.", r: true, expl: "C'est la définition de la leçon." },
+      { t: "vf", q: "On peut mesurer la longueur d'une droite avec une règle.", r: false, expl: "Une droite est illimitée : elle n'a pas de longueur. On ne mesure que des segments." }
+    ],
+    [
+      { t: "classer", q: "Droite, demi-droite ou segment ?", cases: ["droite", "demi-droite", "segment"], items: [["(MN)", "droite"], ["[MN]", "segment"], ["[MN)", "demi-droite"], ["(DE)", "droite"], ["[OX)", "demi-droite"], ["[CD]", "segment"]], expl: "( ) droite ; [ ) demi-droite ; [ ] segment." },
+      { t: "saisie", q: "Les deux points qui limitent un segment s'appellent ses …", r: "extrémités", expl: "Un segment est limité par deux points appelés extrémités." },
+      { t: "saisie", q: "Le point qui limite une demi-droite s'appelle son …", r: "origine", expl: "La demi-droite part de son origine et ne s'arrête pas de l'autre côté." },
+      { t: "qcm", q: "Quelle notation désigne le segment d'extrémités E et F ?", choix: ["[EF]", "(EF)", "[EF)"], r: "[EF]", expl: "Segment : deux crochets." },
+      { t: "qcm", q: "Dans la demi-droite [AC), quel point est l'origine ?", choix: ["A", "C", "aucun"], r: "A", expl: "Le crochet est placé du côté de l'origine : c'est A." },
+      { t: "trous", q: "Complète.", texte: "Une droite n'a [pas] d'extrémités. Une demi-droite a [une] origine. Un segment a [deux] extrémités.", expl: "Droite : 0 extrémité ; demi-droite : 1 origine ; segment : 2 extrémités." },
+      { t: "vf", q: "Un segment est une partie de droite.", r: true, expl: "On prend un morceau de droite entre deux points : c'est un segment." },
+      { t: "vf", q: "Une demi-droite est limitée des deux côtés.", r: false, expl: "Elle n'est limitée que d'un côté, par son origine." }
+    ],
+    [
+      { t: "qcm", q: "Un rayon de soleil part du soleil et file tout droit sans s'arrêter. À quoi ressemble-t-il ?", choix: ["une demi-droite", "un segment", "une droite"], r: "une demi-droite", expl: "Il a un point de départ (l'origine) mais pas de fin : c'est comme une demi-droite." },
+      { t: "qcm", q: "Le bord d'une règle de 30 cm ressemble à…", choix: ["un segment", "une droite", "une demi-droite"], r: "un segment", expl: "Il a deux bouts et une longueur mesurable : c'est un segment." },
+      { t: "qcm", q: "Quelle phrase est juste ?", choix: ["[AB] mesure 6 cm.", "(AB) mesure 6 cm.", "[AB) mesure 6 cm."], r: "[AB] mesure 6 cm.", expl: "Seul un segment a une longueur ; droites et demi-droites sont illimitées." },
+      { t: "vf", q: "[AB) et [BA) désignent la même demi-droite.", r: false, expl: "[AB) a pour origine A ; [BA) a pour origine B. Elles partent dans des sens opposés." },
+      { t: "vf", q: "[AB] et [BA] désignent le même segment.", r: true, expl: "Un segment a deux extrémités ; l'ordre des lettres ne change rien." },
+      { t: "saisie", q: "Trois points A, B, C sont alignés dans cet ordre. Combien de segments peut-on nommer avec ces points ?", r: "3", nombre: true, aide: "Cherche toutes les paires de points.", expl: "[AB], [BC] et [AC] : 3 segments." }
+    ],
+    [
+      { t: "trous", q: "Complète la leçon.", texte: "Une droite est une suite [illimitée] de points [alignés]. Une demi-droite est limitée d'un côté par un point appelé [origine]. Un segment est limité des deux côtés par deux points appelés [extrémités].", expl: "Ce sont les trois définitions du cahier." },
+      { t: "classer", q: "Range chaque propriété.", cases: ["droite", "demi-droite", "segment"], items: [["aucune extrémité", "droite"], ["une seule origine", "demi-droite"], ["deux extrémités", "segment"], ["se mesure avec la règle", "segment"], ["notée (SV)", "droite"], ["notée [AC)", "demi-droite"]], expl: "Seul le segment, limité des deux côtés, a une longueur mesurable." },
+      { t: "qcm", q: "Sur une droite, on place les points A, B et C. Combien de demi-droites ont pour origine B ?", choix: ["2", "1", "3"], r: "2", aide: "À partir de B, on peut partir vers A ou vers C.", expl: "[BA) et [BC) : deux demi-droites de même origine, dans des sens opposés." },
+      { t: "saisie", q: "Sur une droite, A, B et C sont dans cet ordre, avec AB = 6 cm et BC = 4 cm. Longueur de [AC] = … cm", r: "10", nombre: true, unite: "cm", expl: "B est entre A et C : AC = 6 + 4 = 10 cm." },
+      { t: "qcm", q: "Quelle figure peut-on tracer entièrement sur une feuille ?", choix: ["un segment", "une droite", "une demi-droite"], r: "un segment", expl: "Le segment s'arrête des deux côtés ; la droite et la demi-droite continuent sans fin : on n'en dessine qu'un morceau." }
+    ]
+  ]
+});
+
+
+/* ---- ma-geo-droites.js ---- */
+// Date absente de la page (photo 0067) : leçon placée au vendredi 25 septembre 2026, entre la page du 23-25 septembre et celle du 28 septembre.
+LECONS.push({
+  id: "ma-geo-droites",
+  cahier: "maths",
+  matiere: "Géométrie",
+  titre: "Les droites : sécantes, perpendiculaires, parallèles",
+  date: "2026-09-25",
+  photos: ["DJI_20261118220833_0067_D.jpg", "DJI_20261118220845_0068_D.jpg"],
+  retiens:
+    "<p>Des droites sont <b>sécantes</b> quand elles se coupent en un point.</p>" +
+    "<p>Deux droites sont <b>perpendiculaires</b> quand elles sont sécantes en formant des <b>angles droits</b>.</p>" +
+    "<p>Deux droites <b>parallèles</b> ne se rencontrent jamais : elles gardent le <b>même écartement</b> entre elles.</p>" +
+    "<table><tr><th>Droites</th><th>Se coupent ?</th><th>Angles droits ?</th></tr>" +
+    "<tr><td>sécantes</td><td>oui, en un point</td><td>pas forcément</td></tr>" +
+    "<tr><td>perpendiculaires</td><td>oui, en un point</td><td>oui</td></tr>" +
+    "<tr><td>parallèles</td><td>jamais</td><td>—</td></tr></table>",
+  astuce: "Pense aux lettres : <b>X</b> = deux droites sécantes ; <b>T</b> ou <b>+</b> = perpendiculaires ; <b>=</b> = parallèles.",
+  regle: "Sécantes : elles se coupent en un point. Perpendiculaires : elles se coupent en formant des angles droits. Parallèles : elles ne se rencontrent jamais et gardent le même écartement.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Deux droites qui se coupent en un point sont…", choix: ["sécantes", "parallèles", "confondues"], r: "sécantes", expl: "Se couper en un point, c'est la définition de droites sécantes." },
+      { t: "qcm", q: "Deux droites qui ne se rencontrent jamais sont…", choix: ["parallèles", "sécantes", "perpendiculaires"], r: "parallèles", expl: "Les droites parallèles gardent le même écartement : elles ne se rencontrent jamais." },
+      { t: "qcm", q: "Deux droites qui se coupent en formant des angles droits sont…", choix: ["perpendiculaires", "parallèles", "illimitées"], r: "perpendiculaires", expl: "Perpendiculaires = sécantes avec des angles droits." },
+      { t: "relier", q: "Relie chaque lettre ou signe au type de droites qu'il rappelle.", paires: [["X", "sécantes"], ["T", "perpendiculaires"], ["=", "parallèles"]], expl: "X : deux traits qui se croisent en biais ; T : un angle droit ; = : deux traits qui ne se touchent jamais." },
+      { t: "vf", q: "Deux droites parallèles gardent toujours le même écartement.", r: true, expl: "C'est ce qui les empêche de se rencontrer." },
+      { t: "vf", q: "Deux droites parallèles se coupent très loin.", r: false, expl: "Des droites parallèles ne se rencontrent jamais, même très loin." }
+    ],
+    [
+      { t: "classer", q: "Range chaque exemple de la vie courante.", cases: ["parallèles", "perpendiculaires"], items: [["les deux rails d'un chemin de fer", "parallèles"], ["le bord du haut et le bord de gauche d'une feuille", "perpendiculaires"], ["les lignes d'un cahier", "parallèles"], ["un poteau bien droit et le sol plat", "perpendiculaires"], ["les deux bords d'une route droite", "parallèles"], ["les deux traits de la croix d'une fenêtre", "perpendiculaires"]], expl: "Parallèles : même écartement, jamais de rencontre. Perpendiculaires : elles se coupent en formant un angle droit." },
+      { t: "saisie", q: "Des droites qui se coupent en un point sont dites …", r: "sécantes", expl: "Sécantes : elles se coupent." },
+      { t: "saisie", q: "Des droites qui ne se rencontrent jamais sont dites …", r: "parallèles", expl: "Parallèles : même écartement." },
+      { t: "saisie", q: "Des droites sécantes qui forment des angles droits sont dites …", r: "perpendiculaires", expl: "Perpendiculaires : des angles droits à l'intersection." },
+      { t: "qcm", q: "Deux droites perpendiculaires forment combien d'angles droits à leur point de rencontre ?", choix: ["4", "1", "2"], r: "4", expl: "Comme le signe +, elles forment 4 angles droits autour du point." },
+      { t: "trous", q: "Complète.", texte: "Les droites (D1) et (D2) se coupent : elles sont [sécantes]. Si elles forment des angles droits, elles sont [perpendiculaires]. Les droites (D3) et (D4) ne se rencontrent jamais : elles sont [parallèles].", expl: "Sécantes, perpendiculaires, parallèles." },
+      { t: "qcm", q: "Quel outil permet de vérifier que deux droites sont perpendiculaires ?", choix: ["l'équerre", "le compas", "le rapporteur seul"], r: "l'équerre", expl: "L'équerre a un angle droit : on la pose au point de rencontre pour vérifier." },
+      { t: "vf", q: "Des droites perpendiculaires sont aussi des droites sécantes.", r: true, expl: "Elles se coupent en un point : elles sont sécantes, avec en plus des angles droits." }
+    ],
+    [
+      { t: "vf", q: "Deux droites sécantes sont toujours perpendiculaires.", r: false, expl: "Elles peuvent se couper en biais, comme un X : elles ne forment alors pas d'angles droits." },
+      { t: "vf", q: "Deux droites parallèles peuvent être sécantes.", r: false, expl: "Des parallèles ne se rencontrent jamais ; des sécantes se coupent. C'est impossible d'être les deux." },
+      { t: "qcm", q: "Les deux traits de la lettre X…", choix: ["sont sécants mais pas perpendiculaires", "sont parallèles", "sont perpendiculaires"], r: "sont sécants mais pas perpendiculaires", expl: "Ils se croisent en biais : sécants, sans angle droit." },
+      { t: "qcm", q: "Les deux traits du signe +…", choix: ["sont perpendiculaires", "sont parallèles", "ne se coupent pas"], r: "sont perpendiculaires", expl: "Ils se coupent en formant 4 angles droits." },
+      { t: "qcm", q: "Dans la lettre H, les deux grands traits verticaux sont…", choix: ["parallèles", "sécants", "perpendiculaires"], r: "parallèles", expl: "Ils gardent le même écartement et ne se rencontrent jamais." },
+      { t: "qcm", q: "Dans la lettre H, le petit trait du milieu et un grand trait vertical sont…", choix: ["perpendiculaires", "parallèles", "confondus"], r: "perpendiculaires", expl: "Le trait horizontal coupe le trait vertical en formant un angle droit." },
+      { t: "classer", q: "Range chaque phrase : vraie ou fausse ?", cases: ["vraie", "fausse"], items: [["Des perpendiculaires se coupent en un point.", "vraie"], ["Des parallèles se coupent en un point.", "fausse"], ["Des sécantes ont toujours des angles droits.", "fausse"], ["Des parallèles gardent le même écartement.", "vraie"]], expl: "Seules les perpendiculaires ont forcément des angles droits ; les parallèles ne se coupent jamais." }
+    ],
+    [
+      { t: "qcm", q: "Dans un carré, deux côtés opposés (face à face) sont…", choix: ["parallèles", "perpendiculaires", "sécants"], r: "parallèles", expl: "Ils sont face à face et gardent le même écartement." },
+      { t: "qcm", q: "Dans un carré, deux côtés qui se touchent à un sommet sont…", choix: ["perpendiculaires", "parallèles", "illimités"], r: "perpendiculaires", expl: "Ils se coupent au sommet en formant un angle droit." },
+      { t: "trous", q: "Complète la leçon.", texte: "Des droites sont sécantes quand elles se [coupent] en un point. Deux droites sont perpendiculaires quand elles sont sécantes en formant des angles [droits]. Deux droites parallèles ne se rencontrent [jamais] : elles gardent le même [écartement].", expl: "Ce sont les trois définitions du cahier." },
+      { t: "qcm", q: "La droite (D1) est perpendiculaire à (D3), et la droite (D2) est aussi perpendiculaire à (D3). Comment sont (D1) et (D2) ?", choix: ["parallèles", "perpendiculaires", "sécantes en biais"], r: "parallèles", aide: "Pense aux barreaux d'une échelle posés sur un montant.", expl: "Comme les barreaux d'une échelle, deux droites perpendiculaires à la même droite sont parallèles." },
+      { t: "relier", q: "Relie chaque description à son nom.", paires: [["se coupent en biais, sans angle droit", "sécantes non perpendiculaires"], ["se coupent avec 4 angles droits", "perpendiculaires"], ["même écartement, jamais de rencontre", "parallèles"]], expl: "C'est le résumé de la leçon." }
+    ]
+  ]
+});
+
+
+/* ---- ma-geo-rectangle.js ---- */
+// À VÉRIFIER : au cahier (photo 0080), « Il y a 2 médianes de mêmes mesures qui se coupent perpendiculairement ».
+// Dans un rectangle de 4 cm sur 2 cm, les médianes mesurent 4 cm et 2 cm : elles ne sont pas égales. Ce sont les DIAGONALES
+// qui ont la même mesure. Le module enseigne : diagonales de même longueur ; médianes perpendiculaires (non égales).
+LECONS.push({
+  id: "ma-geo-rectangle",
+  cahier: "maths",
+  matiere: "Géométrie",
+  titre: "Le rectangle : construction et propriétés",
+  date: "2026-10-13",
+  photos: ["DJI_20261118221101_0079_D.jpg", "DJI_20261118221108_0080_D.jpg"],
+  retiens:
+    "<p>Un <b>rectangle</b> est un quadrilatère qui a :</p>" +
+    "<ul><li><b>4 côtés égaux 2 à 2</b> : les côtés opposés ont la même longueur ;</li><li><b>4 angles droits</b> ;</li><li><b>4 sommets</b>.</li></ul>" +
+    "<p>Ses <b>dimensions</b> sont la <b>longueur</b> et la <b>largeur</b>. Exemple : un rectangle de 4 cm sur 2 cm (longueur 4 cm, largeur 2 cm).</p>" +
+    "<p>Le rectangle a <b>2 diagonales de même mesure</b> (elles relient les sommets opposés) et <b>2 médianes qui se coupent perpendiculairement</b> (elles relient les milieux des côtés opposés). Les médianes n'ont pas la même mesure : dans le rectangle de 4 cm sur 2 cm, l'une mesure 4 cm, l'autre 2 cm.</p>" +
+    "<p>Pour le construire sur ton cahier, on utilise la règle et l'équerre.</p>",
+  astuce: "Le rectangle ressemble au carré (4 angles droits) mais ses côtés ne sont égaux que <b>deux par deux</b> : deux longueurs, deux largeurs.",
+  regle: "Le rectangle a 4 angles droits, 4 sommets et des côtés opposés égaux (2 longueurs, 2 largeurs). Ses 2 diagonales ont la même mesure ; ses 2 médianes se coupent perpendiculairement.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Combien d'angles droits a un rectangle ?", choix: ["4", "2", "1"], r: "4", expl: "Comme le carré, le rectangle a 4 angles droits." },
+      { t: "qcm", q: "Les côtés d'un rectangle sont…", choix: ["égaux 2 à 2", "tous égaux", "tous différents"], r: "égaux 2 à 2", expl: "Les deux longueurs sont égales, les deux largeurs aussi." },
+      { t: "qcm", q: "Quelles sont les dimensions d'un rectangle ?", choix: ["la longueur et la largeur", "la base et la hauteur", "le rayon et le diamètre"], r: "la longueur et la largeur", expl: "On donne un rectangle par sa longueur et sa largeur : 4 cm sur 2 cm." },
+      { t: "vf", q: "Un rectangle a 4 sommets.", r: true, expl: "Un sommet à chaque coin : 4 sommets." },
+      { t: "vf", q: "Les deux diagonales d'un rectangle ont la même mesure.", r: true, expl: "C'est une propriété du rectangle : ses diagonales sont égales." },
+      { t: "relier", q: "Relie chaque mot à sa définition.", paires: [["diagonale", "relie deux sommets opposés"], ["médiane", "relie les milieux de deux côtés opposés"], ["longueur", "le plus grand côté"], ["largeur", "le plus petit côté"]], expl: "Vocabulaire du rectangle." }
+    ],
+    [
+      { t: "saisie", q: "Combien de diagonales a un rectangle ?", r: "2", nombre: true, expl: "Deux paires de sommets opposés : 2 diagonales." },
+      { t: "saisie", q: "Combien de médianes a un rectangle ?", r: "2", nombre: true, expl: "Deux paires de côtés opposés : 2 médianes." },
+      { t: "trous", q: "Complète.", texte: "Un rectangle est un [quadrilatère] qui a 4 côtés égaux 2 à 2, 4 angles [droits] et 4 [sommets].", expl: "Ce sont les propriétés de la leçon." },
+      { t: "qcm", q: "Un rectangle mesure 4 cm sur 2 cm. Combien mesure le côté opposé à la longueur ?", choix: ["4 cm", "2 cm", "6 cm"], r: "4 cm", expl: "Les côtés opposés sont égaux : l'autre longueur mesure aussi 4 cm." },
+      { t: "qcm", q: "Les deux médianes d'un rectangle se coupent…", choix: ["perpendiculairement", "sans former d'angle droit", "jamais"], r: "perpendiculairement", expl: "L'une est horizontale, l'autre verticale : elles forment des angles droits." },
+      { t: "classer", q: "Carré, rectangle ou les deux ?", cases: ["carré seulement", "rectangle et carré"], items: [["4 côtés égaux", "carré seulement"], ["4 angles droits", "rectangle et carré"], ["4 sommets", "rectangle et carré"], ["côtés opposés égaux", "rectangle et carré"], ["2 diagonales de même mesure", "rectangle et carré"]], expl: "Le carré a toutes les propriétés du rectangle, avec en plus 4 côtés égaux." },
+      { t: "saisie", q: "Rectangle de 4 cm sur 2 cm. La médiane qui relie les milieux des deux largeurs mesure … cm", r: "4", nombre: true, unite: "cm", expl: "Elle traverse le rectangle dans le sens de la longueur : 4 cm." },
+      { t: "saisie", q: "Rectangle de 4 cm sur 2 cm. La médiane qui relie les milieux des deux longueurs mesure … cm", r: "2", nombre: true, unite: "cm", expl: "Elle traverse le rectangle dans le sens de la largeur : 2 cm." }
+    ],
+    [
+      { t: "vf", q: "Les deux médianes d'un rectangle de 4 cm sur 2 cm ont la même mesure.", r: false, expl: "L'une mesure 4 cm et l'autre 2 cm. Ce sont les diagonales qui ont la même mesure." },
+      { t: "vf", q: "Un carré est un rectangle particulier, dont les 4 côtés sont égaux.", r: true, expl: "Le carré a 4 angles droits et des côtés opposés égaux, comme le rectangle ; en plus, tous ses côtés sont égaux." },
+      { t: "vf", q: "Une figure à 4 côtés égaux 2 à 2, sans angle droit, est un rectangle.", r: false, expl: "Un rectangle doit avoir 4 angles droits." },
+      { t: "qcm", q: "Dans le rectangle EFGH, la diagonale [EG] mesure 5 cm. Combien mesure la diagonale [FH] ?", choix: ["5 cm", "on ne peut pas savoir", "2,5 cm"], r: "5 cm", expl: "Les deux diagonales d'un rectangle ont la même mesure." },
+      { t: "qcm", q: "Moussa dit : « Dans un rectangle, les médianes ont la même mesure. » Que lui réponds-tu ?", choix: ["Non : ce sont les diagonales qui ont la même mesure.", "Oui, c'est toujours vrai.", "Non : un rectangle n'a pas de médianes."], r: "Non : ce sont les diagonales qui ont la même mesure.", expl: "Les médianes d'un rectangle ne sont égales que si c'est un carré." },
+      { t: "classer", q: "Range chaque propriété du rectangle.", cases: ["propriété des diagonales", "propriété des médianes"], items: [["relient les sommets opposés", "propriété des diagonales"], ["relient les milieux des côtés opposés", "propriété des médianes"], ["ont la même mesure", "propriété des diagonales"], ["se coupent perpendiculairement", "propriété des médianes"]], expl: "Diagonales : sommets opposés, même mesure. Médianes : milieux des côtés, perpendiculaires." }
+    ],
+    [
+      { t: "trous", q: "Complète.", texte: "Le rectangle a 2 [diagonales] de même mesure et 2 [médianes] qui se coupent perpendiculairement. Ses dimensions sont la [longueur] et la [largeur].", expl: "Propriétés du rectangle." },
+      { t: "saisie", q: "Rectangle de 6 cm sur 3 cm. Combien mesure son périmètre ? … cm", r: "18", nombre: true, unite: "cm", expl: "(6 + 3) × 2 = 18 cm." },
+      { t: "qcm", q: "Fatou décrit une figure : « 4 angles droits, deux côtés de 7 cm et deux côtés de 4 cm. » C'est…", choix: ["un rectangle", "un carré", "un triangle"], r: "un rectangle", expl: "4 angles droits et des côtés égaux 2 à 2 (mais pas tous égaux) : un rectangle." },
+      { t: "qcm", q: "Dans un rectangle de 5 cm sur 3 cm, que mesurent les deux médianes ?", choix: ["5 cm et 3 cm", "5 cm et 5 cm", "3 cm et 3 cm"], r: "5 cm et 3 cm", expl: "Chaque médiane traverse le rectangle d'un côté à l'autre : l'une dans le sens de la longueur (5 cm), l'autre dans le sens de la largeur (3 cm)." },
+      { t: "classer", q: "Vrai ou faux pour le rectangle ?", cases: ["vrai", "faux"], items: [["Il a 4 angles droits.", "vrai"], ["Ses 4 côtés sont toujours égaux.", "faux"], ["Ses diagonales ont la même mesure.", "vrai"], ["Ses médianes ont toujours la même mesure.", "faux"], ["Ses médianes se coupent perpendiculairement.", "vrai"], ["Ses côtés opposés sont égaux.", "vrai"]], expl: "Rectangle : 4 angles droits, côtés opposés égaux, diagonales égales, médianes perpendiculaires." }
+    ]
+  ]
+});
+
+
+/* ---- ma-geo-triangle-base-hauteur.js ---- */
+LECONS.push({
+  id: "ma-geo-triangle-base-hauteur",
+  cahier: "maths",
+  matiere: "Géométrie",
+  titre: "Le triangle : la base et la hauteur",
+  date: "2026-11-18",
+  photos: ["DJI_20261118221301_0098_D.jpg", "DJI_20261118221304_0099_D.jpg"],
+  retiens:
+    "<p>La <b>hauteur</b> d'un triangle est la <b>perpendiculaire</b> abaissée d'un <b>sommet</b> sur le <b>côté opposé</b>. Ce côté s'appelle la <b>base</b>.</p>" +
+    "<p>La hauteur forme un <b>angle droit</b> avec la base : pour la tracer sur ton cahier, on utilise l'équerre.</p>" +
+    "<p>Exemple : dans le triangle ABC, la hauteur issue de A tombe sur la base [BC] ; celle issue de B tombe sur [AC] ; celle issue de C tombe sur [AB].</p>" +
+    "<p>Un triangle a donc <b>3 hauteurs</b>, une par sommet. Les 3 hauteurs se coupent <b>au même point</b>.</p>",
+  astuce: "Imagine un fil à plomb qui tombe du sommet, bien droit, sur le côté d'en face : c'est la hauteur. Le côté qu'il touche, c'est la base.",
+  regle: "La hauteur part d'un sommet et tombe perpendiculairement sur le côté opposé, appelé base. Un triangle a 3 hauteurs qui se coupent au même point.",
+  niveaux: [
+    [
+      { t: "qcm", q: "D'où part la hauteur d'un triangle ?", choix: ["d'un sommet", "du milieu d'un côté", "du centre du triangle"], r: "d'un sommet", expl: "La hauteur est abaissée d'un sommet." },
+      { t: "qcm", q: "Le côté sur lequel tombe la hauteur s'appelle…", choix: ["la base", "le sommet", "la diagonale"], r: "la base", expl: "Le côté opposé au sommet, sur lequel tombe la hauteur, est la base." },
+      { t: "qcm", q: "Quel angle la hauteur forme-t-elle avec la base ?", choix: ["un angle droit", "un angle aigu", "un angle plat"], r: "un angle droit", expl: "La hauteur est perpendiculaire à la base : elle forme un angle droit." },
+      { t: "qcm", q: "Combien de hauteurs a un triangle ?", choix: ["3", "1", "2"], r: "3", expl: "Une hauteur par sommet : 3 hauteurs." },
+      { t: "vf", q: "Les 3 hauteurs d'un triangle se coupent au même point.", r: true, expl: "C'est ce que montre la construction du cahier." }
+    ],
+    [
+      { t: "qcm", q: "Dans le triangle ABC, sur quel côté tombe la hauteur issue de A ?", choix: ["[BC]", "[AB]", "[AC]"], r: "[BC]", expl: "Le côté opposé au sommet A est [BC] : c'est la base." },
+      { t: "qcm", q: "Dans le triangle ABC, sur quel côté tombe la hauteur issue de B ?", choix: ["[AC]", "[AB]", "[BC]"], r: "[AC]", expl: "Le côté opposé au sommet B est [AC]." },
+      { t: "qcm", q: "Dans le triangle ABC, sur quel côté tombe la hauteur issue de C ?", choix: ["[AB]", "[BC]", "[AC]"], r: "[AB]", expl: "Le côté opposé au sommet C est [AB]." },
+      { t: "relier", q: "Triangle MNP : relie chaque sommet à la base de sa hauteur.", paires: [["M", "[NP]"], ["N", "[MP]"], ["P", "[MN]"]], expl: "La base est toujours le côté qui ne contient pas le sommet." },
+      { t: "qcm", q: "Quel instrument permet de tracer la hauteur ?", choix: ["l'équerre", "le compas seul", "la balance"], r: "l'équerre", expl: "L'équerre donne l'angle droit entre la hauteur et la base." },
+      { t: "trous", q: "Complète.", texte: "La hauteur est la [perpendiculaire] abaissée du [sommet] au côté opposé appelé la [base].", expl: "C'est la définition du cahier." },
+      { t: "saisie", q: "Combien de points d'intersection les 3 hauteurs d'un triangle ont-elles en commun ?", r: "1", nombre: true, expl: "Les 3 hauteurs se coupent en un seul et même point." },
+      { t: "vf", q: "Un triangle n'a qu'une seule base possible.", r: false, expl: "Chaque côté peut être une base : celle de la hauteur issue du sommet opposé." }
+    ],
+    [
+      { t: "vf", q: "La hauteur coupe toujours la base en son milieu.", r: false, expl: "La hauteur est perpendiculaire à la base, mais elle ne tombe pas forcément au milieu. (Celle qui relie un sommet au milieu du côté opposé n'est pas toujours perpendiculaire.)" },
+      { t: "qcm", q: "Ibrahima trace un segment qui part du sommet A et tombe en biais sur [BC], sans angle droit. Est-ce une hauteur ?", choix: ["Non, la hauteur doit être perpendiculaire à la base.", "Oui, elle part bien d'un sommet.", "Oui, elle touche bien la base."], r: "Non, la hauteur doit être perpendiculaire à la base.", expl: "Sans angle droit avec la base, ce n'est pas une hauteur." },
+      { t: "qcm", q: "Dans le triangle DEF, la hauteur issue de E est perpendiculaire à…", choix: ["[DF]", "[DE]", "[EF]"], r: "[DF]", expl: "Le côté opposé à E est [DF]." },
+      { t: "qcm", q: "Une hauteur et sa base sont…", choix: ["perpendiculaires", "parallèles", "de même longueur"], r: "perpendiculaires", expl: "Elles se coupent en formant un angle droit." },
+      { t: "classer", q: "Triangle RST : la hauteur issue de chaque sommet tombe sur quelle base ?", cases: ["base [ST]", "base [RT]", "base [RS]"], items: [["hauteur issue de R", "base [ST]"], ["hauteur issue de S", "base [RT]"], ["hauteur issue de T", "base [RS]"]], expl: "La base est le côté opposé au sommet." },
+      { t: "vf", q: "La hauteur relie un sommet au côté qui est en face de lui.", r: true, expl: "Elle part du sommet et tombe sur le côté opposé." }
+    ],
+    [
+      { t: "qcm", q: "Le triangle ABC est rectangle en A ([AB] et [AC] forment un angle droit). Quelle est la hauteur issue de B, qui tombe sur [AC] ?", choix: ["le côté [AB]", "le côté [BC]", "il n'y en a pas"], r: "le côté [AB]", aide: "[AB] part de B et forme déjà un angle droit avec [AC].", expl: "[AB] part du sommet B et tombe perpendiculairement sur [AC] : c'est la hauteur." },
+      { t: "trous", q: "Complète.", texte: "Un triangle a [3|trois] hauteurs, une par [sommet]. Elles se coupent au même [point].", expl: "3 hauteurs, une par sommet, qui se coupent en un point." },
+      { t: "classer", q: "Vrai ou faux ?", cases: ["vrai", "faux"], items: [["La hauteur part d'un sommet.", "vrai"], ["La hauteur est parallèle à la base.", "faux"], ["Un triangle a 3 hauteurs.", "vrai"], ["La base est le côté opposé au sommet.", "vrai"], ["Les hauteurs ne se rencontrent jamais.", "faux"]], expl: "La hauteur part d'un sommet, perpendiculaire au côté opposé (la base) ; les 3 hauteurs se coupent en un point." },
+      { t: "qcm", q: "Dans le triangle KLM, on trace la hauteur sur la base [KL]. De quel sommet part-elle ?", choix: ["M", "K", "L"], r: "M", expl: "Le sommet opposé à [KL] est M." },
+      { t: "qcm", q: "Pour tracer la hauteur issue de A dans le triangle ABC, on pose l'équerre…", choix: ["avec un côté de l'angle droit le long de [BC], l'autre passant par A", "avec un côté le long de [AB]", "au milieu de [AC]"], r: "avec un côté de l'angle droit le long de [BC], l'autre passant par A", expl: "On cherche la droite qui passe par A et qui est perpendiculaire à la base [BC]." }
+    ]
+  ]
+});
+
+
+/* ---- ma-geo-types-triangles.js ---- */
+// À VÉRIFIER : au cahier (photo 0089), les angles notés en rouge sur le triangle AB = 5 cm, BC = 7 cm, angle B = 40° (environ 55° et 85°)
+// ne correspondent pas à la figure (elle donnerait environ 95° et 45°) : ces valeurs ne sont pas reprises. Le triangle « quelconque »
+// du cahier (5 cm, 4 cm, 3 cm) est en fait rectangle : il n'est pas utilisé comme exemple de triangle quelconque.
+// Les exercices d'angles utilisent de nouvelles valeurs, toutes cohérentes (somme = 180°).
+LECONS.push({
+  id: "ma-geo-types-triangles",
+  cahier: "maths",
+  matiere: "Géométrie",
+  titre: "Les types de triangles : découverte et construction",
+  date: "2026-11-04",
+  photos: ["DJI_20261118221156_0088_D.jpg", "DJI_20261118221204_0089_D.jpg", "DJI_20261118221212_0090_D.jpg"],
+  retiens:
+    "<p>Le <b>triangle</b> est une figure géométrique qui a <b>3 côtés</b>, <b>3 sommets</b> et <b>3 angles</b>.</p>" +
+    "<p>Dans tout triangle, <b>la somme des angles fait 180°</b>.</p>" +
+    "<table><tr><th>Triangle</th><th>Ce qui le reconnaît</th></tr>" +
+    "<tr><td><b>quelconque</b></td><td>ni côtés égaux, ni angle droit</td></tr>" +
+    "<tr><td><b>rectangle</b></td><td>un angle droit (90°)</td></tr>" +
+    "<tr><td><b>isocèle</b></td><td>2 côtés égaux et 2 angles égaux</td></tr>" +
+    "<tr><td><b>équilatéral</b></td><td>3 côtés égaux et 3 angles égaux</td></tr></table>" +
+    "<p>NB : pour construire un triangle isocèle ou équilatéral, on utilise le <b>compas</b> et la <b>règle</b> ; on utilise le <b>rapporteur</b> pour mesurer les angles.</p>",
+  astuce: "<b>Équi</b>-latéral : tous les côtés sont <b>égaux</b>. <b>Iso</b>-cèle : deux « jambes » pareilles. <b>Rectangle</b> : il a un coin comme le rectangle, un angle droit.",
+  regle: "Un triangle a 3 côtés, 3 sommets, 3 angles, et la somme de ses angles fait 180°. Rectangle : un angle droit ; isocèle : 2 côtés égaux ; équilatéral : 3 côtés égaux.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Combien de côtés a un triangle ?", choix: ["3", "4", "2"], r: "3", expl: "tri = trois : 3 côtés, 3 sommets, 3 angles." },
+      { t: "qcm", q: "Combien fait la somme des angles d'un triangle ?", choix: ["180°", "90°", "360°"], r: "180°", expl: "Dans tout triangle, la somme des 3 angles fait 180°." },
+      { t: "qcm", q: "Un triangle qui a un angle droit est un triangle…", choix: ["rectangle", "équilatéral", "isocèle"], r: "rectangle", expl: "Le triangle rectangle a un angle droit de 90°." },
+      { t: "qcm", q: "Un triangle qui a 3 côtés égaux est un triangle…", choix: ["équilatéral", "isocèle", "rectangle"], r: "équilatéral", expl: "Équilatéral : 3 côtés égaux et 3 angles égaux." },
+      { t: "qcm", q: "Un triangle qui a 2 côtés égaux est un triangle…", choix: ["isocèle", "équilatéral", "quelconque"], r: "isocèle", expl: "Isocèle : 2 côtés égaux et 2 angles égaux." },
+      { t: "relier", q: "Relie chaque triangle à sa propriété.", paires: [["rectangle", "un angle droit"], ["isocèle", "2 côtés égaux"], ["équilatéral", "3 côtés égaux"], ["quelconque", "aucun côté égal, pas d'angle droit"]], expl: "Ce sont les types de triangles de la leçon." }
+    ],
+    [
+      { t: "classer", q: "Range chaque triangle d'après ses côtés.", cases: ["équilatéral", "isocèle", "quelconque"], items: [["5 cm, 5 cm, 5 cm", "équilatéral"], ["6 cm, 6 cm, 4 cm", "isocèle"], ["3 cm, 5 cm, 6 cm", "quelconque"], ["7 cm, 7 cm, 7 cm", "équilatéral"], ["8 cm, 3 cm, 8 cm", "isocèle"], ["4 cm, 6 cm, 7 cm", "quelconque"]], expl: "3 côtés égaux : équilatéral ; 2 côtés égaux : isocèle ; aucun : quelconque." },
+      { t: "saisie", q: "Deux angles d'un triangle mesurent 60° et 70°. Le troisième mesure … °", r: "50", nombre: true, unite: "°", expl: "60 + 70 = 130 ; 180 − 130 = 50°." },
+      { t: "saisie", q: "Deux angles d'un triangle mesurent 45° et 100°. Le troisième mesure … °", r: "35", nombre: true, unite: "°", expl: "45 + 100 = 145 ; 180 − 145 = 35°." },
+      { t: "saisie", q: "Dans un triangle rectangle, un des angles aigus mesure 35°. L'autre angle aigu mesure … °", r: "55", nombre: true, unite: "°", expl: "L'angle droit fait 90° : 90 + 35 = 125 ; 180 − 125 = 55°." },
+      { t: "saisie", q: "Un triangle a 3 sommets, 3 côtés et … angles.", r: "3", nombre: true, expl: "Un triangle a 3 angles, un à chaque sommet." },
+      { t: "qcm", q: "Pour construire un triangle équilatéral, on utilise…", choix: ["le compas et la règle", "la balance", "seulement l'équerre"], r: "le compas et la règle", expl: "Le compas permet de reporter la même longueur pour les 3 côtés." },
+      { t: "qcm", q: "Pour mesurer un angle du triangle, on utilise…", choix: ["le rapporteur", "le compas", "le mètre ruban"], r: "le rapporteur", expl: "Le rapporteur mesure les angles en degrés." },
+      { t: "trous", q: "Complète.", texte: "Le triangle isocèle a [2|deux] côtés égaux et 2 angles égaux. Le triangle équilatéral a [3|trois] côtés égaux et 3 angles égaux.", expl: "Isocèle : 2 ; équilatéral : 3." }
+    ],
+    [
+      { t: "saisie", q: "Les 3 angles d'un triangle équilatéral sont égaux. Chacun mesure … °", r: "60", nombre: true, unite: "°", expl: "180 : 3 = 60°." },
+      { t: "saisie", q: "Dans un triangle isocèle, l'angle entre les deux côtés égaux mesure 40°. Les deux autres angles sont égaux. Chacun mesure … °", r: "70", nombre: true, unite: "°", expl: "180 − 40 = 140 ; 140 : 2 = 70°." },
+      { t: "vf", q: "Un triangle peut avoir deux angles droits.", r: false, expl: "90 + 90 = 180 : il ne resterait rien pour le troisième angle. Impossible." },
+      { t: "vf", q: "Un triangle équilatéral est aussi isocèle.", r: true, expl: "Il a 3 côtés égaux, donc il en a au moins 2 égaux." },
+      { t: "vf", q: "Un triangle peut être à la fois rectangle et isocèle.", r: true, expl: "Exemple : un angle droit et deux côtés égaux de part et d'autre ; les deux autres angles mesurent alors 45° chacun." },
+      { t: "qcm", q: "Les angles d'un triangle mesurent 90°, 50° et 40°. Ce triangle est…", choix: ["rectangle", "équilatéral", "isocèle"], r: "rectangle", expl: "Il a un angle de 90° : c'est un triangle rectangle." },
+      { t: "qcm", q: "Les angles d'un triangle mesurent 70°, 70° et 40°. Ce triangle est…", choix: ["isocèle", "rectangle", "équilatéral"], r: "isocèle", expl: "Il a 2 angles égaux : il est isocèle." }
+    ],
+    [
+      { t: "qcm", q: "Aïssatou dit : « Les angles de mon triangle mesurent 60°, 70° et 60°. » Est-ce possible ?", choix: ["Non, car la somme fait 190°.", "Oui, c'est un triangle isocèle.", "Oui, c'est un triangle équilatéral."], r: "Non, car la somme fait 190°.", expl: "60 + 70 + 60 = 190°. La somme des angles d'un triangle doit faire 180°." },
+      { t: "saisie", q: "Dans un triangle rectangle et isocèle, les deux angles aigus sont égaux. Chacun mesure … °", r: "45", nombre: true, unite: "°", expl: "180 − 90 = 90 ; 90 : 2 = 45°." },
+      { t: "saisie", q: "Un triangle équilatéral a 6 cm de côté. Son périmètre = … cm", r: "18", nombre: true, unite: "cm", expl: "3 côtés égaux : 6 × 3 = 18 cm." },
+      { t: "saisie", q: "Un triangle isocèle a deux côtés de 7 cm et un côté de 4 cm. Son périmètre = … cm", r: "18", nombre: true, unite: "cm", expl: "7 + 7 + 4 = 18 cm." },
+      { t: "classer", q: "Range chaque triangle d'après ses angles.", cases: ["rectangle", "équilatéral", "isocèle non rectangle"], items: [["90°, 30°, 60°", "rectangle"], ["60°, 60°, 60°", "équilatéral"], ["50°, 50°, 80°", "isocèle non rectangle"], ["90°, 45°, 45°", "rectangle"], ["30°, 30°, 120°", "isocèle non rectangle"]], expl: "Un angle de 90° : rectangle. Trois angles de 60° : équilatéral. Deux angles égaux sans angle droit : isocèle." },
+      { t: "trous", q: "Complète la leçon.", texte: "Le triangle est une figure qui a 3 [côtés], 3 [sommets] et 3 [angles]. La somme des angles fait [180]°.", expl: "Définition du triangle et somme des angles." }
+    ]
+  ]
+});
+
+
+/* ---- ma-mes-calcul-echelle.js ---- */
+// À VÉRIFIER : au cahier (photo 0098), la formule est recopiée à l'envers : « Échelle = Dimension réelle (convertie) / Dimension sur le plan ».
+// Le module enseigne : Échelle = dimension sur le plan / dimension réelle (mêmes unités). Le résultat de l'exemple du cahier (1/2 000) reste juste.
+LECONS.push({
+  id: "ma-mes-calcul-echelle",
+  cahier: "maths",
+  matiere: "Activités de mesure",
+  titre: "Calcul de l'échelle",
+  date: "2026-11-18",
+  photos: ["DJI_20261118221301_0098_D.jpg"],
+  retiens:
+    "<p><b>Échelle = dimension sur le plan / dimension réelle</b>, les deux dimensions étant exprimées <b>dans la même unité</b>.</p>" +
+    "<p>Comme le numérateur d'une échelle vaut 1, on procède ainsi :</p>" +
+    "<ul><li>on convertit la dimension réelle dans l'unité du plan ;</li>" +
+    "<li>on divise la dimension réelle par la dimension sur le plan : on obtient le <b>dénominateur</b> ;</li>" +
+    "<li>on écrit l'échelle : 1/dénominateur.</li></ul>" +
+    "<p>Exemple : ton père veut connaître le périmètre de son jardin, qui mesure 60 mm sur 40 mm sur le plan. Il ignore l'échelle ; il mesure la longueur réelle et trouve 120 m.<br>" +
+    "On convertit : 120 m = 120 000 mm.<br>120 000 : 60 = 2 000<br>L'échelle est <b>1/2 000</b>.</p>",
+  astuce: "Pose-toi la question : « 1 mm (ou 1 cm) du plan représente combien dans la réalité ? » La réponse, c'est le dénominateur.",
+  regle: "Échelle = dimension sur le plan / dimension réelle, dans la même unité. Le dénominateur = dimension réelle convertie : dimension sur le plan.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Quelle formule donne l'échelle ?", choix: ["dimension sur le plan / dimension réelle", "dimension réelle / dimension sur le plan", "dimension réelle × dimension sur le plan"], r: "dimension sur le plan / dimension réelle", expl: "Le plan est au numérateur, la réalité au dénominateur : c'est pour cela qu'on obtient 1/100, 1/1 000…" },
+      { t: "vf", q: "Avant de calculer l'échelle, il faut mettre les deux dimensions dans la même unité.", r: true, expl: "On ne peut comparer que des longueurs exprimées dans la même unité." },
+      { t: "qcm", q: "Sur le plan : 1 cm. En réalité : 100 cm. L'échelle est…", choix: ["1/100", "100/1", "1/10"], r: "1/100", expl: "1 cm du plan pour 100 cm réels : 1/100." },
+      { t: "qcm", q: "Sur le plan : 60 mm. En réalité : 120 000 mm. Quel calcul donne le dénominateur ?", choix: ["120 000 : 60", "60 : 120 000", "120 000 × 60", "120 000 − 60"], r: "120 000 : 60", expl: "120 000 : 60 = 2 000 : l'échelle est 1/2 000." },
+      { t: "relier", q: "Relie chaque situation à son échelle.", paires: [["1 cm pour 10 cm", "1/10"], ["1 cm pour 50 cm", "1/50"], ["1 cm pour 1 000 cm", "1/1 000"], ["1 mm pour 2 000 mm", "1/2 000"]], expl: "Le dénominateur est la longueur réelle représentée par une unité du plan." },
+      { t: "saisie", q: "Plan : 5 cm. Réalité : 500 cm. Échelle = 1/…", r: "100", nombre: true, expl: "500 : 5 = 100 : l'échelle est 1/100." }
+    ],
+    [
+      { t: "saisie", q: "Plan : 4 cm. Réalité : 40 m = 4 000 cm. Échelle = 1/…", r: "1000", nombre: true, expl: "4 000 : 4 = 1 000 : l'échelle est 1/1 000." },
+      { t: "saisie", q: "Plan : 8 cm. Réalité : 4 m. Échelle = 1/…", r: "50", nombre: true, aide: "4 m = 400 cm.", expl: "4 m = 400 cm ; 400 : 8 = 50 : l'échelle est 1/50." },
+      { t: "saisie", q: "Plan : 6 cm. Réalité : 120 m. Échelle = 1/…", r: "2000", nombre: true, expl: "120 m = 12 000 cm ; 12 000 : 6 = 2 000 : l'échelle est 1/2 000." },
+      { t: "saisie", q: "Plan : 25 mm. Réalité : 50 m. Échelle = 1/…", r: "2000", nombre: true, expl: "50 m = 50 000 mm ; 50 000 : 25 = 2 000 : l'échelle est 1/2 000." },
+      { t: "saisie", q: "Plan : 2 cm. Réalité : 1 km. Échelle = 1/…", r: "50000", nombre: true, expl: "1 km = 100 000 cm ; 100 000 : 2 = 50 000 : l'échelle est 1/50 000." },
+      { t: "saisie", q: "Plan : 10 cm. Réalité : 20 m. Échelle = 1/…", r: "200", nombre: true, expl: "20 m = 2 000 cm ; 2 000 : 10 = 200 : l'échelle est 1/200." },
+      { t: "saisie", q: "Plan : 7 cm. Réalité : 70 km (Dakar–Thiès). Échelle = 1/…", r: "1000000", nombre: true, expl: "70 km = 7 000 000 cm ; 7 000 000 : 7 = 1 000 000 : l'échelle est 1/1 000 000." },
+      { t: "trous", q: "Complète les conversions avant le calcul.", nombre: true, texte: "120 m = [120000] mm — 40 m = [4000] cm — 3 km = [300000] cm", expl: "1 m = 1 000 mm = 100 cm ; 1 km = 100 000 cm." }
+    ],
+    [
+      { t: "qcm", q: "Plan : 60 mm. Réalité : 120 m. Awa écrit 120 : 60 = 2, donc l'échelle est 1/2. Quelle est son erreur ?", choix: ["Elle n'a pas converti : 120 m = 120 000 mm, l'échelle est 1/2 000.", "Il fallait faire 60 : 120.", "Il n'y a pas d'erreur."], r: "Elle n'a pas converti : 120 m = 120 000 mm, l'échelle est 1/2 000.", expl: "Les deux dimensions doivent être dans la même unité avant la division." },
+      { t: "qcm", q: "Fatou écrit l'échelle « 2 000/1 ». Pourquoi est-ce faux ?", choix: ["Le numérateur d'une échelle vaut toujours 1 : c'est 1/2 000.", "Il fallait écrire 1/20.", "C'est juste."], r: "Le numérateur d'une échelle vaut toujours 1 : c'est 1/2 000.", expl: "Échelle = plan / réalité : le plan est le plus petit, il est au numérateur." },
+      { t: "saisie", q: "Plan : 3 cm. Réalité : 15 km. Échelle = 1/…", r: "500000", nombre: true, expl: "15 km = 1 500 000 cm ; 1 500 000 : 3 = 500 000 : l'échelle est 1/500 000." },
+      { t: "saisie", q: "Plan : 12 cm. Réalité : 6 m. Échelle = 1/…", r: "50", nombre: true, expl: "6 m = 600 cm ; 600 : 12 = 50 : l'échelle est 1/50." },
+      { t: "vf", q: "Un plan au 1/50 et un plan au 1/5 000 : le second représente les objets plus petits.", r: true, expl: "Au 1/5 000, 1 cm représente 5 000 cm : le dessin est beaucoup plus réduit." },
+      { t: "saisie", q: "Une pirogue de 15 m est dessinée par un trait de 3 cm. Échelle = 1/…", r: "500", nombre: true, expl: "15 m = 1 500 cm ; 1 500 : 3 = 500 : l'échelle est 1/500." }
+    ],
+    [
+      { t: "probleme", q: "Ton père veut connaître le périmètre de son jardin, qui mesure 60 mm sur 40 mm sur le plan. Il mesure la longueur réelle et trouve 120 m.", etapes: [{ q: "Étape 1 : 120 m en mm", r: "120000", unite: "mm" }, { q: "Étape 2 : dénominateur de l'échelle (échelle = 1/…)", r: "2000" }, { q: "Étape 3 : largeur réelle (en m)", r: "80", unite: "m" }, { q: "Étape 4 : périmètre réel du jardin (en m)", r: "400", unite: "m" }], expl: "120 m = 120 000 mm ; 120 000 : 60 = 2 000, échelle 1/2 000 ; largeur : 40 × 2 000 = 80 000 mm = 80 m ; périmètre : (120 + 80) × 2 = 400 m." },
+      { t: "probleme", q: "Sur un plan, la cour de l'école mesure 9 cm. En réalité, elle mesure 45 m. Sur le même plan, le préau mesure 2 cm.", etapes: [{ q: "Étape 1 : dénominateur de l'échelle (1/…)", r: "500" }, { q: "Étape 2 : longueur réelle du préau (en m)", r: "10", unite: "m" }], expl: "45 m = 4 500 cm ; 4 500 : 9 = 500, échelle 1/500 ; préau : 2 × 500 = 1 000 cm = 10 m." },
+      { t: "probleme", q: "Sur une carte, Dakar et Thiès (70 km) sont à 7 cm l'une de l'autre. Sur la même carte, Dakar et Mbour sont à 8 cm.", etapes: [{ q: "Étape 1 : dénominateur de l'échelle (1/…)", r: "1000000" }, { q: "Étape 2 : distance réelle Dakar–Mbour (en km)", r: "80", unite: "km" }], expl: "70 km = 7 000 000 cm ; 7 000 000 : 7 = 1 000 000 ; 8 × 1 000 000 = 8 000 000 cm = 80 km." },
+      { t: "probleme", q: "Sur le plan d'une maison, la chambre de Mamadou mesure 8 cm de long. En réalité, elle mesure 4 m. Le salon mesure 14 cm sur ce plan.", etapes: [{ q: "Étape 1 : dénominateur de l'échelle (1/…)", r: "50" }, { q: "Étape 2 : longueur réelle du salon (en m)", r: "7", unite: "m" }], expl: "4 m = 400 cm ; 400 : 8 = 50 ; salon : 14 × 50 = 700 cm = 7 m." },
+      { t: "qcm", q: "Un terrain de football de 100 m est dessiné par un trait de 5 cm. Quelle est l'échelle ?", choix: ["1/2 000", "1/20", "1/200", "1/20 000"], r: "1/2 000", expl: "100 m = 10 000 cm ; 10 000 : 5 = 2 000 : l'échelle est 1/2 000." }
     ]
   ]
 });
@@ -1992,6 +4170,66 @@ LECONS.push({
 });
 
 
+/* ---- ma-mes-echelle-dimensions.js ---- */
+// À VÉRIFIER : le bas de la photo 0095 (titre et définition de l'échelle) est flou. Le titre est reconstitué d'après la photo 0096 ;
+// la définition est reformulée simplement, sans recopier la phrase incertaine du cahier.
+LECONS.push({
+  id: "ma-mes-echelle-dimensions",
+  cahier: "maths",
+  matiere: "Activités de mesure",
+  titre: "Dimension réelle et dimension sur le plan (échelle)",
+  date: "2026-11-16",
+  photos: ["DJI_20261118221240_0095_D.jpg", "DJI_20261118221246_0096_D.jpg", "DJI_20261118221252_0097_D.jpg"],
+  retiens:
+    "<p>Sur un plan ou une carte, les objets sont dessinés plus petits qu'en réalité. L'<b>échelle</b> indique de combien ils ont été réduits. Elle s'écrit sous forme d'une <b>fraction</b> : 1/10 ; 1/100 ; 1/1 000…</p>" +
+    "<p>Si j'écris <b>1/100</b>, cela signifie que <b>1 cm sur le plan représente 100 cm dans la réalité</b>. Le numérateur de l'échelle est toujours égal à 1.</p>" +
+    "<p><b>1. Calcul de la dimension réelle</b></p>" +
+    "<p><b>Dimension réelle = dimension sur le plan × dénominateur de l'échelle</b></p>" +
+    "<p>Exemple : sur un plan à l'échelle 1/2 000, une rue mesure 9 mm. Dimension réelle : 9 mm × 2 000 = 18 000 mm, soit 18 m.</p>" +
+    "<p><b>2. Calcul de la dimension sur le plan</b> (on dit aussi dimension réduite)</p>" +
+    "<p><b>Dimension sur le plan = dimension réelle convertie : dénominateur de l'échelle</b></p>" +
+    "<p>Exemple : la distance entre Dakar et Thiès est de 70 km. On la représente à l'échelle 1/1 000 000.<br>" +
+    "On convertit : 70 km = 7 000 000 cm. Dimension sur le plan : 7 000 000 cm : 1 000 000 = 7 cm.</p>",
+  astuce: "Du plan vers la réalité, on <b>agrandit</b> : on multiplie. De la réalité vers le plan, on <b>réduit</b> : on divise. Le résultat garde l'unité de départ ; on convertit ensuite si besoin.",
+  regle: "Dimension réelle = dimension sur le plan × dénominateur ; dimension sur le plan = dimension réelle (convertie) : dénominateur.",
+  niveaux: [
+    [
+      { t: "qcm", q: "À l'échelle 1/100, 1 cm sur le plan représente…", choix: ["100 cm dans la réalité", "1 cm dans la réalité", "100 m dans la réalité"], r: "100 cm dans la réalité", expl: "Le dénominateur dit combien de fois la réalité est plus grande : 1 cm → 100 cm." },
+      { t: "qcm", q: "Le numérateur d'une échelle est toujours…", choix: ["1", "10", "100"], r: "1", expl: "Une échelle s'écrit 1/10, 1/100, 1/1 000… : le numérateur vaut 1." },
+      { t: "qcm", q: "Pour trouver la dimension réelle, on…", choix: ["multiplie la dimension sur le plan par le dénominateur", "divise la dimension sur le plan par le dénominateur", "ajoute le dénominateur"], r: "multiplie la dimension sur le plan par le dénominateur", expl: "La réalité est plus grande que le plan : on multiplie." },
+      { t: "qcm", q: "Pour trouver la dimension sur le plan, on…", choix: ["divise la dimension réelle par le dénominateur", "multiplie la dimension réelle par le dénominateur", "retire le dénominateur"], r: "divise la dimension réelle par le dénominateur", expl: "Le plan est plus petit que la réalité : on divise." },
+      { t: "vf", q: "Sur un plan, une maison est dessinée plus petite qu'en réalité.", r: true, expl: "C'est le rôle de l'échelle : réduire pour faire tenir l'objet sur la feuille." },
+      { t: "relier", q: "Relie chaque échelle à sa signification.", paires: [["1/10", "1 cm pour 10 cm"], ["1/100", "1 cm pour 100 cm"], ["1/1 000", "1 cm pour 1 000 cm"]], expl: "Le dénominateur indique la longueur réelle représentée par 1 cm du plan." }
+    ],
+    [
+      { t: "saisie", q: "Échelle 1/100. Sur le plan : 5 cm. Dimension réelle = … cm", r: "500", nombre: true, unite: "cm", expl: "5 × 100 = 500 cm (soit 5 m)." },
+      { t: "saisie", q: "Échelle 1/1 000. Sur le plan : 4 cm. Dimension réelle = … m", r: "40", nombre: true, unite: "m", expl: "4 × 1 000 = 4 000 cm = 40 m." },
+      { t: "saisie", q: "Échelle 1/200. Sur le plan : 3 cm. Dimension réelle = … m", r: "6", nombre: true, unite: "m", expl: "3 × 200 = 600 cm = 6 m." },
+      { t: "saisie", q: "Échelle 1/2 000. Une rue mesure 9 mm sur le plan. Dimension réelle = … m", r: "18", nombre: true, unite: "m", expl: "9 × 2 000 = 18 000 mm = 18 m." },
+      { t: "saisie", q: "Échelle 1/50. Sur le plan : 8 cm. Dimension réelle = … m", r: "4", nombre: true, unite: "m", expl: "8 × 50 = 400 cm = 4 m." },
+      { t: "saisie", q: "Échelle 1/100. Dimension réelle : 20 m = 2 000 cm. Dimension sur le plan = … cm", r: "20", nombre: true, unite: "cm", expl: "2 000 : 100 = 20 cm." },
+      { t: "saisie", q: "Échelle 1/1 000. Dimension réelle : 50 m. Dimension sur le plan = … cm", r: "5", nombre: true, unite: "cm", aide: "Convertis d'abord 50 m en cm.", expl: "50 m = 5 000 cm ; 5 000 : 1 000 = 5 cm." },
+      { t: "saisie", q: "Dakar–Thiès : 70 km, échelle 1/1 000 000. 70 km = 7 000 000 cm. Dimension sur le plan = … cm", r: "7", nombre: true, unite: "cm", expl: "7 000 000 : 1 000 000 = 7 cm." }
+    ],
+    [
+      { t: "saisie", q: "Échelle 1/500. Sur le plan : 12 mm. Dimension réelle = … m", r: "6", nombre: true, unite: "m", expl: "12 × 500 = 6 000 mm = 6 m." },
+      { t: "saisie", q: "Échelle 1/100 000. Dimension réelle : 3 km. Dimension sur le plan = … cm", r: "3", nombre: true, unite: "cm", expl: "3 km = 300 000 cm ; 300 000 : 100 000 = 3 cm." },
+      { t: "qcm", q: "Moussa veut placer sur un plan au 1/1 000 un mur de 30 m. Il écrit 30 : 1 000 = 0,03. Quelle est son erreur ?", choix: ["Il n'a pas converti 30 m en cm : 3 000 cm : 1 000 = 3 cm.", "Il fallait multiplier.", "Il n'y a pas d'erreur."], r: "Il n'a pas converti 30 m en cm : 3 000 cm : 1 000 = 3 cm.", expl: "On convertit la dimension réelle avant de diviser ; ici en cm, l'unité du plan." },
+      { t: "vf", q: "À l'échelle 1/1 000, un plan est plus réduit qu'à l'échelle 1/100.", r: true, expl: "Au 1/1 000, 1 cm représente 1 000 cm ; au 1/100, seulement 100 cm. Plus le dénominateur est grand, plus le dessin est réduit." },
+      { t: "saisie", q: "Carte au 1/500 000. Deux villages sont à 4 cm l'un de l'autre. Distance réelle = … km", r: "20", nombre: true, unite: "km", expl: "4 × 500 000 = 2 000 000 cm = 20 km." },
+      { t: "trous", q: "Complète.", nombre: true, texte: "1/100 : 7 cm sur le plan → [7] m en réalité — 1/1 000 : 25 m en réalité → [2,5|2.5] cm sur le plan — 1/200 : 10 cm sur le plan → [20] m en réalité", expl: "7 × 100 = 700 cm = 7 m ; 2 500 cm : 1 000 = 2,5 cm ; 10 × 200 = 2 000 cm = 20 m." }
+    ],
+    [
+      { t: "probleme", q: "Sur le plan d'une maison à l'échelle 1/50, la chambre de Khady mesure 10 cm sur 8 cm.", etapes: [{ q: "Étape 1 : longueur réelle (en m)", r: "5", unite: "m" }, { q: "Étape 2 : largeur réelle (en m)", r: "4", unite: "m" }, { q: "Étape 3 : périmètre réel de la chambre (en m)", r: "18", unite: "m" }], expl: "10 × 50 = 500 cm = 5 m ; 8 × 50 = 400 cm = 4 m ; (5 + 4) × 2 = 18 m." },
+      { t: "probleme", q: "On veut dessiner un terrain rectangulaire de 30 m sur 20 m sur un plan à l'échelle 1/500.", etapes: [{ q: "Étape 1 : longueur sur le plan (en cm)", r: "6", unite: "cm" }, { q: "Étape 2 : largeur sur le plan (en cm)", r: "4", unite: "cm" }], expl: "30 m = 3 000 cm ; 3 000 : 500 = 6 cm. 20 m = 2 000 cm ; 2 000 : 500 = 4 cm." },
+      { t: "probleme", q: "Sur une carte au 1/1 000 000, la route de Dakar à Saint-Louis mesure 26 cm.", etapes: [{ q: "Étape 1 : distance réelle en cm", r: "26000000", unite: "cm" }, { q: "Étape 2 : distance réelle en km", r: "260", unite: "km" }], expl: "26 × 1 000 000 = 26 000 000 cm = 260 km." },
+      { t: "probleme", q: "La distance entre Dakar et Thiès est de 70 km. Elle est représentée à l'échelle 1/1 000 000. Trouve sa dimension sur le plan.", etapes: [{ q: "Étape 1 : 70 km en cm", r: "7000000", unite: "cm" }, { q: "Étape 2 : dimension sur le plan (en cm)", r: "7", unite: "cm" }], expl: "70 km = 7 000 000 cm ; 7 000 000 : 1 000 000 = 7 cm." },
+      { t: "qcm", q: "Sur un plan au 1/200, la cour de l'école mesure 15 cm de long. Quelle est sa longueur réelle ?", choix: ["30 m", "3 m", "300 m", "15 m"], r: "30 m", expl: "15 × 200 = 3 000 cm = 30 m." }
+    ]
+  ]
+});
+
+
 /* ---- ma-mes-intervalles.js ---- */
 LECONS.push({
   id: "ma-mes-intervalles",
@@ -2031,7 +4269,7 @@ LECONS.push({
       { t: "saisie", q: "Autour d'un champ, 20 intervalles entre les piquets. Nombre de piquets = …", r: "20", nombre: true, expl: "Ligne fermée : NO = NI = 20." }
     ],
     [
-      { t: "qcm", q: "Une rangée de 5 chaises, sans rien aux deux bouts. Combien y a-t-il d'espaces si l'on compte aussi les espaces avant la première et après la dernière chaise jusqu'aux murs ?", choix: ["6", "5", "4"], r: "6", aide: "Fais un croquis : mur — chaise — … — chaise — mur.", expl: "Rien aux extrémités : NI = NO + 1 = 6." },
+      { t: "qcm", q: "Une corde est tendue entre deux arbres. On y accroche 5 lanternes, aucune contre les arbres. Combien y a-t-il d'intervalles ?", choix: ["6", "5", "4"], r: "6", aide: "Fais un croquis : arbre — lanterne — … — lanterne — arbre.", expl: "Rien aux extrémités : NI = NO + 1 = 6." },
       { t: "qcm", q: "Moussa plante 8 arbres le long d'une route, un à chaque bout. Il dit : « Il y a 8 intervalles. » A-t-il raison ?", choix: ["Non, il y en a 7.", "Oui.", "Non, il y en a 9."], r: "Non, il y en a 7.", expl: "Avec un objet à chaque extrémité, NI = NO − 1 = 7." },
       { t: "vf", q: "Pour le même nombre d'arbres, une ligne fermée a un intervalle de plus qu'une ligne ouverte avec un arbre à chaque bout.", r: true, expl: "Ligne fermée : NI = NO. Ligne ouverte avec un arbre à chaque bout : NI = NO − 1. La différence est de 1." },
       { t: "classer", q: "Combien d'intervalles pour 6 objets ?", cases: ["5 intervalles", "6 intervalles", "7 intervalles"], items: [["ligne ouverte, un objet à chaque bout", "5 intervalles"], ["ligne fermée", "6 intervalles"], ["ligne ouverte, un objet à un seul bout", "6 intervalles"], ["ligne ouverte, rien aux bouts", "7 intervalles"]], expl: "6 − 1 = 5 ; 6 ; 6 ; 6 + 1 = 7." },
@@ -2102,6 +4340,73 @@ LECONS.push({
       { t: "probleme", q: "Le terrain de l'école de Ziguinchor mesure 80 m de long et 55 m de large. On l'entoure d'un grillage d'une seule rangée, avec un portail de 6 m.", etapes: [{ q: "Étape 1 : périmètre du terrain (en m)", r: "270", unite: "m" }, { q: "Étape 2 : longueur du grillage (en m)", r: "264", unite: "m" }], expl: "(80 + 55) × 2 = 270 m ; 270 − 6 = 264 m." },
       { t: "probleme", q: "Khady entoure son potager carré de 12 m de côté avec 4 rangées de fil, et laisse une porte de 1 m. Elle a déjà 100 m de fil.", etapes: [{ q: "Étape 1 : longueur de fil nécessaire (en m)", r: "188", unite: "m" }, { q: "Étape 2 : longueur de fil qui lui manque (en m)", r: "88", unite: "m" }], expl: "12 × 4 = 48 m ; 48 − 1 = 47 m ; 47 × 4 = 188 m ; 188 − 100 = 88 m." },
       { t: "qcm", q: "Un champ carré de 25 m de côté a une porte de 3 m et 2 rangées de fil. Quelle est la longueur de fil ?", choix: ["194 m", "200 m", "197 m", "97 m"], r: "194 m", expl: "25 × 4 = 100 m ; 100 − 3 = 97 m ; 97 × 2 = 194 m." }
+    ]
+  ]
+});
+
+
+/* ---- ma-mes-longueur-intervalle.js ---- */
+// À VÉRIFIER : au cahier (photo 0093), les formules de la ligne ouverte sont mal parenthésées :
+// « LI = (LT : NO) − 1 » et « LI = (LT : NO) + 1 ». On ne retranche pas 1 à une longueur : on corrige le NOMBRE
+// d'intervalles avant de diviser. Le module enseigne LI = LT : (NO − 1) et LI = LT : (NO + 1),
+// comme l'exemple du cahier lui-même (51 − 1 = 50 intervalles ; 450 : 50 = 9 m).
+LECONS.push({
+  id: "ma-mes-longueur-intervalle",
+  cahier: "maths",
+  matiere: "Activités de mesure",
+  titre: "Calcul de la longueur d'un intervalle (LI) et de la longueur totale (LT)",
+  date: "2026-11-09",
+  photos: ["DJI_20261118221221_0092_D.jpg", "DJI_20261118221227_0093_D.jpg", "DJI_20261118221235_0094_D.jpg"],
+  retiens:
+    "<p>LI = longueur d'un intervalle ; LT = longueur totale ; NO = nombre d'objets.</p>" +
+    "<p><b>Sur une ligne fermée</b> (il y a autant d'intervalles que d'objets) :</p>" +
+    "<ul><li><b>LI = LT : NO</b></li><li><b>LT = LI × NO</b></li></ul>" +
+    "<p>Exemple : une parcelle rectangulaire de 140 m de périmètre est entourée d'un grillage soutenu par 35 piquets. Longueur d'un intervalle : 140 m : 35 = 4 m.</p>" +
+    "<p><b>Sur une ligne ouverte</b>, on cherche d'abord le <b>nombre d'intervalles</b>, puis on divise :</p>" +
+    "<table><tr><th>Ligne ouverte</th><th>Longueur d'un intervalle</th></tr>" +
+    "<tr><td>un objet à chaque extrémité</td><td>LI = LT : (NO − 1)</td></tr>" +
+    "<tr><td>un objet à une seule extrémité</td><td>LI = LT : NO</td></tr>" +
+    "<tr><td>aucun objet aux extrémités</td><td>LI = LT : (NO + 1)</td></tr></table>" +
+    "<p>Exemple : tout au long d'une avenue de 450 m, on a planté 51 arbres, un à chaque extrémité.<br>" +
+    "Nombre d'intervalles : 51 − 1 = 50<br>Longueur d'un intervalle : 450 m : 50 = 9 m</p>" +
+    "<p>Pour trouver la longueur totale, on fait l'inverse : <b>LT = LI × nombre d'intervalles</b>.</p>",
+  astuce: "On ne divise jamais une longueur par un nombre d'<b>objets</b> sans réfléchir : on divise par le nombre d'<b>intervalles</b>. Fais le croquis, compte les intervalles, puis divise.",
+  regle: "Longueur d'un intervalle = longueur totale : nombre d'intervalles ; longueur totale = longueur d'un intervalle × nombre d'intervalles. Le nombre d'intervalles dépend de la ligne (fermée ou ouverte) et des extrémités.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Sur une ligne fermée, comment calcule-t-on la longueur d'un intervalle ?", choix: ["LT : NO", "LT × NO", "LT − NO"], r: "LT : NO", expl: "Sur une ligne fermée, il y a autant d'intervalles que d'objets : on partage la longueur totale par NO." },
+      { t: "qcm", q: "Sur une ligne fermée, comment calcule-t-on la longueur totale ?", choix: ["LI × NO", "LI : NO", "LI + NO"], r: "LI × NO", expl: "On met bout à bout autant d'intervalles que d'objets : LT = LI × NO." },
+      { t: "qcm", q: "Ligne ouverte avec un arbre à chaque extrémité : quelle formule est juste ?", choix: ["LI = LT : (NO − 1)", "LI = (LT : NO) − 1", "LI = LT : NO"], r: "LI = LT : (NO − 1)", expl: "On enlève 1 au nombre d'arbres pour avoir le nombre d'intervalles, puis on divise la longueur par ce nombre." },
+      { t: "relier", q: "Relie chaque sigle à sa signification.", paires: [["LI", "longueur d'un intervalle"], ["LT", "longueur totale"], ["NO", "nombre d'objets"]], expl: "Ce sont les abréviations de la leçon." },
+      { t: "vf", q: "Pour l'avenue de 450 m avec 51 arbres (un à chaque bout), il y a 50 intervalles.", r: true, expl: "51 − 1 = 50 intervalles, puis 450 : 50 = 9 m." },
+      { t: "saisie", q: "Parcelle de 140 m de périmètre, 35 piquets tout autour. Longueur d'un intervalle = … m", r: "4", nombre: true, unite: "m", expl: "Ligne fermée : 140 : 35 = 4 m." }
+    ],
+    [
+      { t: "saisie", q: "Ligne fermée : 120 m, 30 piquets. LI = … m", r: "4", nombre: true, unite: "m", expl: "120 : 30 = 4 m." },
+      { t: "saisie", q: "Ligne fermée : 24 poteaux espacés de 5 m. LT = … m", r: "120", nombre: true, unite: "m", expl: "LT = LI × NO = 5 × 24 = 120 m." },
+      { t: "saisie", q: "Avenue de 450 m, 51 arbres, un à chaque extrémité. LI = … m", r: "9", nombre: true, unite: "m", expl: "51 − 1 = 50 intervalles ; 450 : 50 = 9 m." },
+      { t: "saisie", q: "Rue de 200 m, 21 lampadaires, un à chaque bout. LI = … m", r: "10", nombre: true, unite: "m", expl: "21 − 1 = 20 intervalles ; 200 : 20 = 10 m." },
+      { t: "saisie", q: "Allée de 60 m, 12 pots, un pot à une seule extrémité. LI = … m", r: "5", nombre: true, unite: "m", expl: "NI = NO = 12 ; 60 : 12 = 5 m." },
+      { t: "saisie", q: "Corde de 36 m tendue entre deux poteaux, 8 fanions, aucun contre les poteaux. LI = … m", r: "4", nombre: true, unite: "m", expl: "8 + 1 = 9 intervalles ; 36 : 9 = 4 m." },
+      { t: "saisie", q: "Ligne ouverte, un arbre à chaque bout : 15 arbres espacés de 6 m. LT = … m", r: "84", nombre: true, unite: "m", expl: "15 − 1 = 14 intervalles ; 14 × 6 = 84 m." },
+      { t: "saisie", q: "Rond-point : 18 palmiers espacés de 3 m. Longueur du tour = … m", r: "54", nombre: true, unite: "m", expl: "Ligne fermée : 18 × 3 = 54 m." },
+      { t: "saisie", q: "Ligne ouverte sans objet aux bouts : 9 bornes espacées de 2 m. LT = … m", r: "20", nombre: true, unite: "m", expl: "9 + 1 = 10 intervalles ; 10 × 2 = 20 m." }
+    ],
+    [
+      { t: "qcm", q: "Rue de 300 m, 31 arbres, un à chaque bout. Fatou calcule (300 : 31) − 1. Quel est le bon calcul ?", choix: ["300 : (31 − 1) = 10 m", "300 : 31 + 1", "300 − 31"], r: "300 : (31 − 1) = 10 m", expl: "On corrige d'abord le nombre d'intervalles (31 − 1 = 30), puis on divise : 300 : 30 = 10 m." },
+      { t: "qcm", q: "Une haie de 48 m, 11 piquets, aucun aux extrémités. Combien mesure un intervalle ?", choix: ["4 m", "4,8 m", "4,36 m"], r: "4 m", expl: "11 + 1 = 12 intervalles ; 48 : 12 = 4 m." },
+      { t: "vf", q: "Sur une ligne fermée de 100 m avec 20 piquets, et sur une ligne ouverte de 100 m avec 21 piquets dont un à chaque bout, l'intervalle est le même.", r: true, expl: "Fermée : 100 : 20 = 5 m. Ouverte : 21 − 1 = 20 intervalles, 100 : 20 = 5 m." },
+      { t: "saisie", q: "Piste de 1 km, un poteau à chaque bout, 101 poteaux. LI = … m", r: "10", nombre: true, unite: "m", aide: "Convertis 1 km en mètres.", expl: "1 km = 1 000 m ; 101 − 1 = 100 intervalles ; 1 000 : 100 = 10 m." },
+      { t: "saisie", q: "Clôture d'un champ carré de 40 m de côté, un piquet tous les 2 m. Nombre de piquets = …", r: "80", nombre: true, expl: "Périmètre : 40 × 4 = 160 m. Ligne fermée : NO = NI = 160 : 2 = 80 piquets." },
+      { t: "saisie", q: "Rue de 90 m, un arbre à chaque bout, un arbre tous les 6 m. Nombre d'arbres = …", r: "16", nombre: true, expl: "90 : 6 = 15 intervalles ; un arbre à chaque bout : NO = 15 + 1 = 16 arbres." },
+      { t: "trous", q: "Complète.", nombre: true, texte: "Ligne fermée, 300 m, 60 piquets → LI = [5] m — Ligne ouverte, un objet à chaque bout, 41 objets, 200 m → LI = [5] m — Ligne ouverte, rien aux bouts, 4 objets, LI = 3 m → LT = [15] m", expl: "300 : 60 = 5 ; 200 : (41 − 1) = 5 ; (4 + 1) × 3 = 15." }
+    ],
+    [
+      { t: "probleme", q: "Un cultivateur plante des arbres sur les deux longueurs de son champ, espacés de 5 m. Il y a un arbre à chaque coin et 9 arbres sur chaque longueur. Trouve la longueur du champ.", etapes: [{ q: "Étape 1 : nombre d'intervalles sur une longueur", r: "8" }, { q: "Étape 2 : longueur du champ (en m)", r: "40", unite: "m" }], expl: "Ligne ouverte avec un arbre à chaque bout : 9 − 1 = 8 intervalles ; 8 × 5 = 40 m." },
+      { t: "probleme", q: "Six enfants jouent à la chandelle. Ils sont assis en cercle et chaque intervalle mesure 1,5 m. Trouve la longueur du cercle.", etapes: [{ q: "Étape 1 : nombre d'intervalles", r: "6" }, { q: "Étape 2 : longueur du cercle (en m)", r: "9", unite: "m" }], expl: "Le cercle est une ligne fermée : 6 enfants, 6 intervalles ; 6 × 1,5 = 9 m." },
+      { t: "probleme", q: "Pour protéger une parcelle rectangulaire de 140 m de périmètre, on l'entoure d'un grillage soutenu par 35 piquets. Chaque piquet coûte 750 F.", etapes: [{ q: "Étape 1 : longueur d'un intervalle (en m)", r: "4", unite: "m" }, { q: "Étape 2 : prix des piquets (en F)", r: "26250", unite: "F" }], expl: "Ligne fermée : 140 : 35 = 4 m ; 750 × 35 = 26 250 F." },
+      { t: "probleme", q: "La mairie de Thiès plante des arbres des deux côtés d'une avenue de 450 m, avec un arbre à chaque extrémité et un arbre tous les 9 m.", etapes: [{ q: "Étape 1 : nombre d'intervalles d'un côté", r: "50" }, { q: "Étape 2 : nombre d'arbres d'un côté", r: "51" }, { q: "Étape 3 : nombre d'arbres en tout", r: "102" }], expl: "450 : 9 = 50 intervalles ; un arbre à chaque bout : 50 + 1 = 51 ; deux côtés : 51 × 2 = 102 arbres." },
+      { t: "probleme", q: "Autour d'un terrain carré de 25 m de côté, on plante un poteau tous les 2,5 m.", etapes: [{ q: "Étape 1 : périmètre du terrain (en m)", r: "100", unite: "m" }, { q: "Étape 2 : nombre de poteaux", r: "40" }], expl: "25 × 4 = 100 m ; ligne fermée : NO = NI = 100 : 2,5 = 40 poteaux." }
     ]
   ]
 });
@@ -2516,6 +4821,895 @@ LECONS.push({
       { t: "probleme", q: "Mamadou dépense 73 500 F pour clôturer un champ carré avec 3 rangées de fil à 250 F le mètre. Il laisse une entrée de 2 m.", etapes: [{ q: "Étape 1 : longueur totale du fil (en m)", r: "294", unite: "m" }, { q: "Étape 2 : longueur d'une rangée (en m)", r: "98", unite: "m" }, { q: "Étape 3 : périmètre (en m)", r: "100", unite: "m" }, { q: "Étape 4 : côté du champ (en m)", r: "25", unite: "m" }], expl: "73 500 : 250 = 294 m ; 294 : 3 = 98 m ; 98 + 2 = 100 m ; 100 : 4 = 25 m." },
       { t: "probleme", q: "Pour un jardin rectangulaire de 52 m de long, on achète un seul rang de grillage pour 90 000 F, à 500 F le mètre. On a laissé une porte de 4 m.", etapes: [{ q: "Étape 1 : longueur du grillage (en m)", r: "180", unite: "m" }, { q: "Étape 2 : périmètre (en m)", r: "184", unite: "m" }, { q: "Étape 3 : demi-périmètre (en m)", r: "92", unite: "m" }, { q: "Étape 4 : largeur du jardin (en m)", r: "40", unite: "m" }], expl: "90 000 : 500 = 180 m ; 180 + 4 = 184 m ; 184 : 2 = 92 m ; 92 − 52 = 40 m." },
       { t: "qcm", q: "Une coopérative dépense 120 000 F de fil à 400 F le mètre pour 2 rangées autour d'un verger, avec un portail de 5 m. Quel est le périmètre du verger ?", choix: ["155 m", "150 m", "305 m", "145 m"], r: "155 m", expl: "120 000 : 400 = 300 m ; 300 : 2 = 150 m ; 150 + 5 = 155 m." }
+    ]
+  ]
+});
+
+
+/* ---- ma-num-addition.js ---- */
+// À VÉRIFIER : la règle de l'addition est recopiée sans « les unités sous les unités » (photo 0066 : « on pose les unités sous les dizaines sous les dizaines… »). Le module donne la règle complète : unités sous les unités, dizaines sous les dizaines, centaines sous les centaines.
+LECONS.push({
+  id: "ma-num-addition",
+  cahier: "maths",
+  matiere: "Activités numériques",
+  titre: "L'addition des nombres entiers",
+  date: "2026-09-23",
+  photos: ["DJI_20261118220819_0066_D.jpg"],
+  retiens:
+    "<p>L'<b>addition</b> est la réunion en une seule quantité de plusieurs quantités (masses, contenances, longueurs, prix…).</p>" +
+    "<p>On ne peut additionner que des grandeurs <b>de même espèce</b> (même unité). Ex : 6 800 m + 7 550 m + 7 000 m = 21 350 m.</p>" +
+    "<p>Pour effectuer une addition, on pose <b>les unités sous les unités, les dizaines sous les dizaines, les centaines sous les centaines</b>… On commence par la <b>droite</b> et on reporte les <b>retenues</b>.</p>" +
+    "<table><tr><th></th><th>dm</th><th>um</th><th>c</th><th>d</th><th>u</th></tr>" +
+    "<tr><td></td><td></td><td>6</td><td>8</td><td>0</td><td>0</td></tr>" +
+    "<tr><td></td><td></td><td>7</td><td>5</td><td>5</td><td>0</td></tr>" +
+    "<tr><td>+</td><td></td><td>7</td><td>0</td><td>0</td><td>0</td></tr>" +
+    "<tr><td></td><td><b>2</b></td><td><b>1</b></td><td><b>3</b></td><td><b>5</b></td><td><b>0</b></td></tr>" +
+    "</table>",
+  astuce: "Un chiffre par colonne, bien alignés à droite : les unités de tous les nombres doivent être dans la même colonne.",
+  regle: "On additionne seulement des grandeurs de même unité ; on pose unités sous unités, dizaines sous dizaines…, on commence par la droite et on reporte les retenues.",
+  niveaux: [
+    [
+      { t: "qcm", q: "L'addition sert à…", choix: ["réunir plusieurs quantités en une seule", "partager une quantité", "chercher ce qui reste"], r: "réunir plusieurs quantités en une seule", expl: "L'addition est la réunion de plusieurs quantités en une seule." },
+      { t: "vf", q: "On peut additionner 5 kg et 3 m.", r: false, expl: "On n'additionne que des grandeurs de même espèce : des kg avec des kg, des m avec des m." },
+      { t: "qcm", q: "Pour poser une addition, on place…", choix: ["les unités sous les unités, les dizaines sous les dizaines…", "les nombres alignés à gauche", "le plus grand nombre en bas"], r: "les unités sous les unités, les dizaines sous les dizaines…", expl: "Chaque chiffre va dans sa colonne : unités sous unités, dizaines sous dizaines, etc." },
+      { t: "qcm", q: "Par où commence-t-on une addition posée ?", choix: ["par la droite (les unités)", "par la gauche", "par le milieu"], r: "par la droite (les unités)", expl: "On commence par les unités, à droite, pour pouvoir reporter les retenues." },
+      { t: "classer", q: "Peut-on faire directement cette addition ?", cases: ["oui, même unité", "non, unités différentes"], items: [["6 800 m + 7 550 m", "oui, même unité"], ["25 kg + 10 kg", "oui, même unité"], ["300 F + 2 l", "non, unités différentes"], ["4 m + 6 kg", "non, unités différentes"], ["12 l + 8 l", "oui, même unité"], ["50 F + 3 m", "non, unités différentes"]], expl: "On additionne seulement des grandeurs de même espèce." },
+      { t: "vf", q: "6 800 m + 7 550 m + 7 000 m = 21 350 m", r: true, expl: "C'est l'exemple du cahier : 6 800 + 7 550 = 14 350 ; 14 350 + 7 000 = 21 350." }
+    ],
+    [
+      { t: "saisie", q: "4 325 + 2 674 = ?", r: ["6 999", "6999", "6.999"], expl: "Sans retenue : 6 999." },
+      { t: "saisie", q: "3 658 + 1 476 = ?", r: ["5 134", "5134", "5.134"], expl: "8 + 6 = 14, je pose 4 et retiens 1… Résultat : 5 134." },
+      { t: "saisie", q: "25 806 + 9 397 = ?", r: ["35 203", "35203", "35.203"], expl: "N'oublie pas les retenues : 35 203." },
+      { t: "saisie", q: "6 800 + 7 550 + 7 000 = ?", r: ["21 350", "21350", "21.350"], expl: "C'est l'exemple du cahier : 21 350." },
+      { t: "saisie", q: "12 450 + 8 075 + 650 = ?", r: ["21 175", "21175", "21.175"], expl: "Aligne bien les unités : 650 n'a que 3 chiffres. Résultat : 21 175." },
+      { t: "trous", q: "Calcule 478 + 356 colonne par colonne.", texte: "Unités : 8 + 6 = [14], j'écris [4] et je retiens 1. Dizaines : 1 + 7 + 5 = [13], j'écris [3] et je retiens 1. Centaines : 1 + 4 + 3 = [8]. Résultat : [834].", nombre: true, expl: "On commence par la droite et on reporte chaque retenue dans la colonne suivante." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Au marché, Awa achète un sac de riz à 15 500 F, de l'huile à 4 750 F et du sucre à 1 800 F.", etapes: [{ q: "Prix du riz et de l'huile :", r: "20250", unite: "F" }, { q: "Combien Awa dépense-t-elle en tout ?", r: "22050", unite: "F" }], expl: "15 500 + 4 750 = 20 250 ; 20 250 + 1 800 = 22 050 F." },
+      { t: "saisie", q: "245 kg + 1 380 kg + 75 kg = ? kg", r: ["1 700", "1700", "1.700"], expl: "Même unité, on additionne : 1 700 kg.", unite: "kg" },
+      { t: "vf", q: "Pour calculer 2 345 + 87, je place le 7 de 87 sous le 5 de 2 345.", r: true, expl: "Unités sous unités : le 7 (unités) va sous le 5 (unités)." }
+    ],
+    [
+      { t: "vf", q: "Pour calculer 1 250 m + 3 km, je peux faire 1 250 + 3.", r: false, expl: "Les unités sont différentes. Il faut d'abord convertir : 3 km = 3 000 m." },
+      { t: "saisie", q: "1 250 m + 3 km = ? m", r: ["4 250", "4250", "4.250"], expl: "3 km = 3 000 m ; 1 250 m + 3 000 m = 4 250 m.", unite: "m" },
+      { t: "saisie", q: "99 999 + 1 = ?", r: ["100 000", "100000", "100.000"], expl: "Toutes les retenues s'enchaînent : 100 000." },
+      { t: "saisie", q: "47 + 3 508 + 960 = ?", r: ["4 515", "4515", "4.515"], expl: "Attention à l'alignement des unités : 4 515." },
+      { t: "qcm", q: "Moussa a calculé 5 607 + 2 895 = 7 402. Qu'en penses-tu ?", choix: ["Il a oublié des retenues", "Il a bien calculé", "Il a soustrait au lieu d'additionner"], r: "Il a oublié des retenues", expl: "6 + 8 + 1 = 15 : il fallait écrire 5 et retenir 1. Le bon résultat est 8 502." },
+      { t: "saisie", q: "Écris le bon résultat de 5 607 + 2 895.", r: ["8 502", "8502", "8.502"], expl: "7 + 5 = 12 (je retiens 1) ; 1 + 0 + 9 = 10 (je retiens 1) ; 1 + 6 + 8 = 15 (je retiens 1) ; 1 + 5 + 2 = 8. Résultat : 8 502." },
+      { t: "relier", q: "Relie chaque addition à son résultat.", paires: [["1 999 + 1", "2 000"], ["450 + 550", "1 000"], ["2 500 + 2 500", "5 000"], ["7 990 + 10", "8 000"], ["49 500 + 500", "50 000"]], expl: "Calcule de droite à gauche en pensant aux retenues." },
+      { t: "vf", q: "Quand on additionne trois nombres, on peut avoir une retenue de 2.", r: true, expl: "Par exemple 9 + 9 + 9 = 27 : on écrit 7 et on retient 2." }
+    ],
+    [
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Un car part de Dakar avec 38 passagers. À Rufisque, 12 passagers montent ; à Thiès, 9 autres montent. Personne ne descend.", etapes: [{ q: "Nombre de passagers après Rufisque :", r: "50" }, { q: "Nombre de passagers après Thiès :", r: "59" }], expl: "38 + 12 = 50 ; 50 + 9 = 59 passagers." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Un commerçant de Sandaga vend 1 250 kg de riz lundi, 2 375 kg mardi et 1 890 kg mercredi.", etapes: [{ q: "Riz vendu lundi et mardi :", r: "3625", unite: "kg" }, { q: "Riz vendu en trois jours :", r: "5515", unite: "kg" }], expl: "1 250 + 2 375 = 3 625 ; 3 625 + 1 890 = 5 515 kg." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Khady achète trois rouleaux de grillage : le premier mesure 125 m, le deuxième 248 m et le troisième 87 m.", etapes: [{ q: "Longueur des deux premiers rouleaux :", r: "373", unite: "m" }, { q: "Longueur totale de grillage :", r: "460", unite: "m" }], expl: "125 + 248 = 373 ; 373 + 87 = 460 m." },
+      { t: "trous", q: "Complète la chaîne d'additions.", texte: "1 500 + 2 500 = [4000] ; 4 000 + 6 000 = [10000] ; 10 000 + 25 000 = [35000]", nombre: true, expl: "4 000, puis 10 000, puis 35 000." },
+      { t: "qcm", q: "Fatou a 12 500 F. Sa tante lui donne 7 500 F et son oncle 5 000 F. Combien a-t-elle maintenant ?", choix: ["25 000 F", "20 000 F", "24 000 F", "15 000 F"], r: "25 000 F", expl: "12 500 + 7 500 = 20 000 ; 20 000 + 5 000 = 25 000 F." }
+    ]
+  ]
+});
+
+
+/* ---- ma-num-comparaison-decimaux.js ---- */
+// À VÉRIFIER : le NB du cahier (photo 0097, partielle) cite après les cent-millièmes « les mille-millièmes » : ce rang n'existe pas ; le module écrit « les millionièmes ».
+// À VÉRIFIER : photo 0097 sombre et bougée : seul ce qui est lisible avec certitude a été repris (définition, règle, exemple 12,63 > 12,629).
+LECONS.push({
+  id: "ma-num-comparaison-decimaux",
+  cahier: "maths",
+  matiere: "Activités numériques",
+  titre: "La comparaison des nombres décimaux",
+  date: "2026-11-17",
+  photos: ["DJI_20261118221252_0097_D.jpg"],
+  retiens:
+    "<p><b>Comparer</b> deux nombres différents, c'est dire quel est le plus grand ou le plus petit.</p>" +
+    "<p>Pour comparer des nombres décimaux, on compare d'abord :</p>" +
+    "<ul><li>les <b>parties entières</b>, puis</li><li>les <b>parties décimales</b>.</li></ul>" +
+    "<p><b>NB :</b> si les nombres ont la même partie entière, on compare d'abord les <b>dixièmes</b>, puis les <b>centièmes</b>, les <b>millièmes</b>, les dix-millièmes, les cent-millièmes, les millionièmes.</p>" +
+    "<p>Ex : 12,63 &gt; 12,629 (même partie entière 12, mêmes dixièmes 6, mais 3 centièmes &gt; 2 centièmes)</p>" +
+    "<p>Le signe <b>&gt;</b> se lit « est plus grand que » ; le signe <b>&lt;</b> se lit « est plus petit que ».</p>",
+  astuce: "Attention : le nombre qui a le plus de chiffres après la virgule n'est pas forcément le plus grand ! 12,63 &gt; 12,629. Compare rang par rang, en partant de la virgule.",
+  regle: "On compare d'abord les parties entières ; si elles sont égales, on compare les dixièmes, puis les centièmes, puis les millièmes…",
+  niveaux: [
+    [
+      { t: "qcm", q: "Pour comparer 25,4 et 31,2, je regarde d'abord…", choix: ["les parties entières", "les dixièmes", "le nombre de chiffres"], r: "les parties entières", expl: "On compare d'abord les parties entières : 25 &lt; 31, donc 25,4 &lt; 31,2." },
+      { t: "vf", q: "12,63 &gt; 12,629", r: true, expl: "Même partie entière, mêmes dixièmes (6) ; aux centièmes, 3 &gt; 2." },
+      { t: "qcm", q: "Pour comparer 12,63 et 12,629, quel rang fait la différence ?", choix: ["les centièmes (3 et 2)", "les dixièmes", "les parties entières"], r: "les centièmes (3 et 2)", expl: "Parties entières égales (12), dixièmes égaux (6) : ce sont les centièmes qui décident." },
+      { t: "qcm", q: "Que veut dire le signe &gt; ?", choix: ["est plus grand que", "est plus petit que", "est égal à"], r: "est plus grand que", expl: "La pointe du signe est tournée vers le plus petit nombre." },
+      { t: "relier", q: "Relie : qu'est-ce qu'on compare ensuite ?", paires: [["après les dixièmes", "les centièmes"], ["après les centièmes", "les millièmes"], ["après les millièmes", "les dix-millièmes"], ["après les cent-millièmes", "les millionièmes"]], expl: "Dixièmes, centièmes, millièmes, dix-millièmes, cent-millièmes, millionièmes." },
+      { t: "vf", q: "8,5 &lt; 7,9", r: false, expl: "Les parties entières décident : 8 &gt; 7, donc 8,5 &gt; 7,9." }
+    ],
+    [
+      { t: "trous", q: "Écris &gt; ou &lt;.", texte: "14,2 [>] 13,9 — 5,07 [<] 5,7 — 0,45 [>] 0,405 — 3,6 [<] 3,61", expl: "14 &gt; 13 ; 0 dixième &lt; 7 dixièmes ; 5 centièmes &gt; 0 centième ; 0 centième &lt; 1 centième." },
+      { t: "qcm", q: "Quel est le plus grand nombre ?", choix: ["7,8", "7,08", "7,018", "7,1"], r: "7,8", expl: "Même partie entière 7 ; aux dixièmes, 8 est le plus grand chiffre." },
+      { t: "qcm", q: "Quel est le plus petit nombre ?", choix: ["2,405", "2,5", "2,45", "2,54"], r: "2,405", expl: "Dixièmes : 4 &lt; 5. Entre 2,45 et 2,405, aux centièmes : 0 &lt; 5." },
+      { t: "saisie", q: "Écris le plus grand de ces deux nombres : 45,3 et 45,29.", r: "45.3", nombre: true, expl: "Mêmes parties entières ; aux dixièmes, 3 &gt; 2. Donc 45,3 &gt; 45,29." },
+      { t: "trous", q: "Écris &gt; ou &lt;.", texte: "26,1 [>] 25,99 — 0,9 [>] 0,89 — 104,5 [<] 140,5 — 9,999 [<] 10", expl: "On compare d'abord les parties entières (26 &gt; 25 ; 104 &lt; 140 ; 9 &lt; 10). Pour 0,9 et 0,89 : 9 dixièmes &gt; 8 dixièmes." },
+      { t: "classer", q: "Compare chaque nombre à 5.", cases: ["plus grand que 5", "plus petit que 5"], items: [["5,1", "plus grand que 5"], ["4,99", "plus petit que 5"], ["5,01", "plus grand que 5"], ["4,9", "plus petit que 5"], ["0,5", "plus petit que 5"], ["15,2", "plus grand que 5"]], expl: "Regarde d'abord la partie entière. 5,1 et 5,01 ont 5 unités et des dixièmes ou centièmes en plus : ils sont plus grands que 5." },
+      { t: "vf", q: "3,25 &gt; 3,3", r: false, expl: "Mêmes parties entières ; aux dixièmes, 2 &lt; 3. Donc 3,25 &lt; 3,3." },
+      { t: "qcm", q: "Quel rangement va du plus petit au plus grand ?", choix: ["2,5 &lt; 2,51 &lt; 2,6", "2,6 &lt; 2,51 &lt; 2,5", "2,51 &lt; 2,5 &lt; 2,6"], r: "2,5 &lt; 2,51 &lt; 2,6", expl: "2,5 et 2,51 ont 5 dixièmes ; 2,51 a 1 centième de plus. 2,6 a 6 dixièmes." },
+      { t: "qcm", q: "Quel nombre est compris entre 4,3 et 4,4 ?", choix: ["4,35", "4,5", "4,03", "43,5"], r: "4,35", expl: "4,35 a 3 dixièmes comme 4,3, avec 5 centièmes en plus, et il est plus petit que 4,4." }
+    ],
+    [
+      { t: "vf", q: "12,629 est plus grand que 12,63, parce qu'il a plus de chiffres après la virgule.", r: false, expl: "Ce n'est pas le nombre de chiffres qui compte : aux centièmes, 2 &lt; 3. Donc 12,629 &lt; 12,63." },
+      { t: "qcm", q: "Compare : 0,7 … 0,698", choix: ["&gt;", "&lt;"], r: "&gt;", expl: "Aux dixièmes : 7 &gt; 6. Donc 0,7 &gt; 0,698." },
+      { t: "trous", q: "Écris &gt; ou &lt;.", texte: "1,005 [<] 1,05 — 18,2 [>] 9,87 — 7,0001 [<] 7,001", expl: "1,005 : 0 centième &lt; 5 centièmes. 18 &gt; 9. 7,0001 : 0 millième &lt; 1 millième." },
+      { t: "qcm", q: "Deux nombres ont la même partie entière et les mêmes dixièmes. Que compare-t-on ensuite ?", choix: ["les centièmes", "les parties entières", "les millièmes"], r: "les centièmes", expl: "On avance rang par rang : dixièmes, puis centièmes, puis millièmes." },
+      { t: "saisie", q: "Écris le plus petit de ces deux nombres : 0,099 et 0,1.", r: "0.099", nombre: true, expl: "Aux dixièmes : 0 &lt; 1. Donc 0,099 &lt; 0,1." },
+      { t: "qcm", q: "Quelle comparaison est FAUSSE ?", choix: ["3,45 &gt; 3,5", "3,45 &lt; 3,5", "3,5 &gt; 3,05", "3,05 &lt; 3,45"], r: "3,45 &gt; 3,5", expl: "Aux dixièmes, 4 &lt; 5 : 3,45 est plus petit que 3,5." },
+      { t: "saisie", q: "Quel chiffre des centièmes faut-il écrire pour que 5,2? soit plus grand que 5,28 et plus petit que 5,3 ?", r: "9", expl: "5,29 &gt; 5,28 (9 &gt; 8 centièmes) et 5,29 &lt; 5,3 (2 dixièmes &lt; 3 dixièmes)." }
+    ],
+    [
+      { t: "qcm", q: "Lors d'une course à l'école, Moussa fait 12,45 s, Ibrahima 12,5 s et Mamadou 12,405 s. Le plus rapide a le plus petit temps. Qui gagne ?", choix: ["Mamadou", "Moussa", "Ibrahima"], r: "Mamadou", expl: "12,405 &lt; 12,45 &lt; 12,5 : Mamadou a le plus petit temps." },
+      { t: "qcm", q: "Awa pèse 32,6 kg, Fatou 32,58 kg et Khady 32,65 kg. Qui est la plus lourde ?", choix: ["Khady", "Awa", "Fatou"], r: "Khady", expl: "Mêmes parties entières. Dixièmes : 6, 5, 6. Entre 32,6 et 32,65, Khady a 5 centièmes de plus." },
+      { t: "qcm", q: "Range du plus grand au plus petit : 4,7 ; 4,07 ; 4,77 ; 4,707.", choix: ["4,77 &gt; 4,707 &gt; 4,7 &gt; 4,07", "4,707 &gt; 4,77 &gt; 4,7 &gt; 4,07", "4,07 &gt; 4,7 &gt; 4,707 &gt; 4,77"], r: "4,77 &gt; 4,707 &gt; 4,7 &gt; 4,07", expl: "4,07 a 0 dixième : il est le plus petit. Les autres ont 7 dixièmes ; aux centièmes : 7 &gt; 0 = 0, puis aux millièmes 4,707 &gt; 4,7." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Au marché, trois sacs de riz pèsent 49,8 kg, 50,15 kg et 49,95 kg.", etapes: [{ q: "Masse du sac le plus lourd :", r: "50.15", unite: "kg" }, { q: "Masse du sac le plus léger :", r: "49.8", unite: "kg" }], expl: "50 &gt; 49, donc 50,15 kg est le plus lourd. Entre 49,8 et 49,95 : 8 dixièmes &lt; 9 dixièmes, donc 49,8 kg est le plus léger." },
+      { t: "trous", q: "Écris &gt; ou &lt;.", texte: "0,5 [>] 0,49 — 100,01 [>] 99,99 — 2,349 [<] 2,35", expl: "5 dixièmes &gt; 4 dixièmes ; 100 &gt; 99 ; aux centièmes, 4 &lt; 5." }
+    ]
+  ]
+});
+
+
+/* ---- ma-num-divisibilite.js ---- */
+// À VÉRIFIER : la règle de divisibilité par 3 est recopiée au cahier « si la somme des chiffres est égale à 3 ou 6 ou 9 » et par 9 « égale à 9 » (photo 0064). Le module donne la règle exacte : somme des chiffres MULTIPLE de 3 (resp. de 9) ; la version du cahier est gardée comme astuce (additionner les chiffres jusqu'à n'en avoir qu'un).
+LECONS.push({
+  id: "ma-num-divisibilite",
+  cahier: "maths",
+  matiere: "Activités numériques",
+  titre: "Les caractères de divisibilité par 2, 3, 5 et 9",
+  date: "2026-09-21",
+  photos: ["DJI_20261118220805_0064_D.jpg", "DJI_20261118220814_0065_D.jpg"],
+  retiens:
+    "<p>Un nombre est divisible par :</p>" +
+    "<ul><li><b>2</b> s'il est <b>pair</b>, c'est-à-dire terminé par <b>0, 2, 4, 6 ou 8</b>. Ex : 1 800 ; 142 ; 44.</li><li><b>5</b> s'il est terminé par <b>0 ou 5</b>. Ex : 15 ; 40.</li><li><b>3</b> si la <b>somme de ses chiffres est un multiple de 3</b> (3, 6, 9, 12, 15, 18…). Ex : 7 005 → 7 + 0 + 0 + 5 = 12, et 12 est un multiple de 3 (1 + 2 = 3).</li><li><b>9</b> si la <b>somme de ses chiffres est un multiple de 9</b> (9, 18, 27…). Ex : 405 → 4 + 0 + 5 = 9.</li></ul>" +
+    "<p><b>Remarque</b></p>" +
+    "<ul><li>Un nombre divisible par 3 n'est pas obligatoirement divisible par 9. Ex : 15 est divisible par 3 (1 + 5 = 6), mais pas par 9.</li><li>Un nombre divisible par 9 est aussi divisible par 3. Ex : 18 (1 + 8 = 9) est divisible à la fois par 3 et par 9.</li></ul>",
+  astuce: "Si la somme des chiffres est grande, additionne encore ses chiffres : 7 005 → 12 → 1 + 2 = 3. Pour être divisible par 3, il faut arriver à <b>3, 6 ou 9</b> ; pour être divisible par 9, il faut arriver à <b>9</b>.",
+  regle: "Par 2 : terminé par 0, 2, 4, 6, 8. Par 5 : terminé par 0 ou 5. Par 3 : somme des chiffres multiple de 3. Par 9 : somme des chiffres multiple de 9.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Un nombre est divisible par 2 quand il est…", choix: ["pair", "impair", "terminé par 5", "plus grand que 2"], r: "pair", expl: "Divisible par 2 = pair, terminé par 0, 2, 4, 6 ou 8." },
+      { t: "qcm", q: "Par quel chiffre se termine un nombre divisible par 5 ?", choix: ["0 ou 5", "2 ou 5", "5 seulement", "0, 2, 4, 6 ou 8"], r: "0 ou 5", expl: "Un nombre divisible par 5 se termine par 0 ou par 5." },
+      { t: "vf", q: "142 est divisible par 2.", r: true, expl: "142 se termine par 2 : il est pair." },
+      { t: "vf", q: "40 est divisible par 5.", r: true, expl: "40 se termine par 0." },
+      { t: "qcm", q: "Pour savoir si 405 est divisible par 9, je…", choix: ["fais la somme de ses chiffres", "regarde son dernier chiffre", "regarde son premier chiffre"], r: "fais la somme de ses chiffres", expl: "Pour 3 et pour 9, on additionne les chiffres : 4 + 0 + 5 = 9." },
+      { t: "vf", q: "Un nombre divisible par 9 est aussi divisible par 3.", r: true, expl: "C'est la remarque de la leçon : 18 est divisible par 9 et aussi par 3." }
+    ],
+    [
+      { t: "classer", q: "Ce nombre est-il divisible par 2 ?", cases: ["divisible par 2", "pas divisible par 2"], items: [["1 800", "divisible par 2"], ["37", "pas divisible par 2"], ["44", "divisible par 2"], ["925", "pas divisible par 2"], ["1 006", "divisible par 2"], ["71", "pas divisible par 2"]], expl: "Regarde le dernier chiffre : 0, 2, 4, 6 ou 8 → divisible par 2." },
+      { t: "classer", q: "Ce nombre est-il divisible par 5 ?", cases: ["divisible par 5", "pas divisible par 5"], items: [["15", "divisible par 5"], ["40", "divisible par 5"], ["52", "pas divisible par 5"], ["105", "divisible par 5"], ["3 000", "divisible par 5"], ["504", "pas divisible par 5"]], expl: "Seul le dernier chiffre compte : 0 ou 5 → divisible par 5." },
+      { t: "saisie", q: "Calcule la somme des chiffres de 7 005.", r: "12", expl: "7 + 0 + 0 + 5 = 12." },
+      { t: "qcm", q: "7 005 est-il divisible par 3 ?", choix: ["Oui, car 7 + 0 + 0 + 5 = 12 et 12 est un multiple de 3", "Non, car il se termine par 5", "Non, car 12 n'est pas égal à 3"], r: "Oui, car 7 + 0 + 0 + 5 = 12 et 12 est un multiple de 3", expl: "La somme n'a pas besoin d'être égale à 3 : il suffit qu'elle soit un multiple de 3 (12 → 1 + 2 = 3)." },
+      { t: "saisie", q: "Calcule la somme des chiffres de 405.", r: "9", expl: "4 + 0 + 5 = 9 : 405 est divisible par 9 (et par 3)." },
+      { t: "vf", q: "18 est divisible par 3 et par 9.", r: true, expl: "1 + 8 = 9 : 18 est divisible par 9, donc aussi par 3." },
+      { t: "vf", q: "15 est divisible par 9.", r: false, expl: "1 + 5 = 6 : 6 n'est pas un multiple de 9. 15 est divisible par 3, pas par 9." },
+      { t: "classer", q: "Ce nombre est-il divisible par 3 ? Additionne ses chiffres.", cases: ["divisible par 3", "pas divisible par 3"], items: [["51", "divisible par 3"], ["74", "pas divisible par 3"], ["123", "divisible par 3"], ["250", "pas divisible par 3"], ["9 315", "divisible par 3"], ["1 001", "pas divisible par 3"]], expl: "51 → 6 ; 123 → 6 ; 9 315 → 18 : multiples de 3. 74 → 11 ; 250 → 7 ; 1 001 → 2 : non." },
+      { t: "classer", q: "Ce nombre est-il divisible par 9 ? Additionne ses chiffres.", cases: ["divisible par 9", "pas divisible par 9"], items: [["81", "divisible par 9"], ["99", "divisible par 9"], ["108", "divisible par 9"], ["2 016", "divisible par 9"], ["105", "pas divisible par 9"], ["300", "pas divisible par 9"], ["1 234", "pas divisible par 9"], ["57", "pas divisible par 9"]], expl: "81 → 9 ; 99 → 18 ; 108 → 9 ; 2 016 → 9. Mais 105 → 6 ; 300 → 3 ; 1 234 → 10 ; 57 → 12." },
+      { t: "trous", q: "Complète.", texte: "270 se termine par 0 : il est divisible par [2] et par [5]. La somme de ses chiffres est [9] : il est aussi divisible par 3 et par 9.", nombre: true, expl: "Terminé par 0 → divisible par 2 et par 5. 2 + 7 + 0 = 9 → divisible par 9 et par 3." }
+    ],
+    [
+      { t: "qcm", q: "Quel nombre est divisible par 3 mais PAS par 9 ?", choix: ["15", "18", "27", "81"], r: "15", expl: "1 + 5 = 6 : multiple de 3, pas de 9. Pour 18, 27 et 81, la somme est 9." },
+      { t: "qcm", q: "Quel nombre est divisible à la fois par 2 et par 5 ?", choix: ["130", "135", "132", "155"], r: "130", expl: "Pour être divisible par 2 et par 5, il faut finir par 0." },
+      { t: "vf", q: "7 005 est divisible par 9.", r: false, expl: "7 + 0 + 0 + 5 = 12 : 12 est un multiple de 3, mais pas de 9." },
+      { t: "vf", q: "Un nombre dont la somme des chiffres vaut 12 est divisible par 3.", r: true, expl: "12 est un multiple de 3 (3 × 4 = 12). La somme n'a pas besoin d'être exactement 3, 6 ou 9." },
+      { t: "qcm", q: "5 994 est divisible…", choix: ["par 3 et par 9", "par 3 seulement", "par 9 seulement", "ni par 3, ni par 9"], r: "par 3 et par 9", expl: "5 + 9 + 9 + 4 = 27 : 27 est un multiple de 9 (2 + 7 = 9), donc aussi de 3." },
+      { t: "saisie", q: "Quel chiffre faut-il écrire à la place du ? pour que 5?3 soit divisible par 9 ?", r: "1", expl: "5 + 1 + 3 = 9. Avec un autre chiffre, la somme ne serait pas un multiple de 9." },
+      { t: "classer", q: "Range chaque nombre.", cases: ["par 2 et par 5", "par 5 seulement", "par 2 seulement"], items: [["60", "par 2 et par 5"], ["75", "par 5 seulement"], ["84", "par 2 seulement"], ["1 000", "par 2 et par 5"], ["205", "par 5 seulement"], ["316", "par 2 seulement"]], expl: "Fini par 0 → par 2 et par 5 ; fini par 5 → par 5 seulement ; fini par 2, 4, 6, 8 → par 2 seulement." }
+    ],
+    [
+      { t: "qcm", q: "Le directeur veut ranger les 135 élèves de l'école en rangs de 5, sans qu'il reste personne. Est-ce possible ?", choix: ["Oui, car 135 se termine par 5", "Non, car 135 est impair", "Non, car 135 ne se termine pas par 0"], r: "Oui, car 135 se termine par 5", expl: "Un nombre terminé par 0 ou 5 est divisible par 5 : 135 élèves font 27 rangs de 5." },
+      { t: "qcm", q: "Au marché, Khady veut partager 1 254 F entre ses 2 enfants, sans reste. Est-ce possible ?", choix: ["Oui, car 1 254 est pair", "Non, car 1 254 est impair", "Non, car 1 254 ne se termine pas par 0"], r: "Oui, car 1 254 est pair", expl: "1 254 se termine par 4 : il est pair, donc divisible par 2." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Cherche les plus petits nombres de 3 chiffres qui conviennent.", etapes: [{ q: "Le plus petit nombre de 3 chiffres divisible par 2 et par 5 :", r: "100" }, { q: "Le plus petit nombre de 3 chiffres divisible par 3 :", r: "102" }, { q: "Le plus petit nombre de 3 chiffres divisible par 9 :", r: "108" }], expl: "100 finit par 0. 1 + 0 + 2 = 3. 1 + 0 + 8 = 9 (de 100 à 107, la somme va seulement de 1 à 8)." },
+      { t: "classer", q: "Range chaque nombre.", cases: ["par 9 (donc aussi par 3)", "par 3, mais pas par 9", "ni par 3, ni par 9"], items: [["711", "par 9 (donc aussi par 3)"], ["1 008", "par 9 (donc aussi par 3)"], ["222", "par 3, mais pas par 9"], ["4 002", "par 3, mais pas par 9"], ["1 000", "ni par 3, ni par 9"], ["3 104", "ni par 3, ni par 9"]], expl: "711 → 9 ; 1 008 → 9 ; 222 → 6 ; 4 002 → 6 ; 1 000 → 1 ; 3 104 → 8." },
+      { t: "vf", q: "3 330 est divisible par 2, par 3, par 5 et par 9.", r: true, expl: "Il finit par 0 (par 2 et par 5) et 3 + 3 + 3 + 0 = 9 (par 9 et par 3)." },
+      { t: "saisie", q: "Quel chiffre des unités faut-il écrire pour que 47? soit divisible par 2 ET par 5 ?", r: "0", expl: "Pour être divisible à la fois par 2 et par 5, un nombre doit se terminer par 0 : 470." }
+    ]
+  ]
+});
+
+
+/* ---- ma-num-division-technique.js ---- */
+// À VÉRIFIER : le NB du cahier (photo 0088) est confus : « Pour diviser un nombre entier par un nombre entier égal ou supérieur au diviseur ». Le module l'interprète comme : on prend au dividende assez de chiffres pour obtenir un nombre égal ou supérieur au diviseur (ce que montrent les arcs rouges sur 108 et 62 dans les exemples).
+LECONS.push({
+  id: "ma-num-division-technique",
+  cahier: "maths",
+  matiere: "Activités numériques",
+  titre: "La technique opératoire de la division à un ou deux chiffres au quotient",
+  date: "2026-11-03",
+  photos: ["DJI_20261118221147_0087_D.jpg", "DJI_20261118221156_0088_D.jpg"],
+  retiens:
+    "<p>Division d'un nombre entier par un nombre entier.</p>" +
+    "<p><b>Ex 1 : 108 : 12.</b> 10 est plus petit que 12, alors je prends <b>108</b>. En 108, combien de fois 12 ? <b>9</b> fois (9 × 12 = 108). 108 − 108 = 0. Le quotient est 9, le reste 0.</p>" +
+    "<table><tr><td>108</td><td>12</td></tr>" +
+    "<tr><td>− 108</td><td><b>9</b></td></tr>" +
+    "<tr><td>000</td><td></td></tr>" +
+    "</table>" +
+    "<p><b>Ex 2 : 625 : 25.</b> Je prends <b>62</b>. En 62, combien de fois 25 ? <b>2</b> fois (2 × 25 = 50). 62 − 50 = 12. J'<b>abaisse</b> le 5 : 125. En 125, combien de fois 25 ? <b>5</b> fois (5 × 25 = 125). 125 − 125 = 0. Le quotient est 25.</p>" +
+    "<table><tr><td>625</td><td>25</td></tr>" +
+    "<tr><td>− 50↓</td><td><b>25</b></td></tr>" +
+    "<tr><td>125</td><td></td></tr>" +
+    "<tr><td>− 125</td><td></td></tr>" +
+    "<tr><td>000</td><td></td></tr>" +
+    "</table>" +
+    "<p><b>NB :</b></p>" +
+    "<ul><li>on prend au dividende assez de chiffres pour avoir un nombre <b>égal ou supérieur au diviseur</b> ;</li><li>on effectue l'opération (combien de fois ? on multiplie, on soustrait) ;</li><li>on <b>abaisse le chiffre suivant</b> du dividende avant de poursuivre l'opération ;</li><li>et ainsi de suite jusqu'à la fin.</li></ul>",
+  astuce: "À chaque tour : <b>combien de fois ? → je multiplie → je soustrais → j'abaisse</b>. Le reste doit toujours être plus petit que le diviseur.",
+  regle: "On prend assez de chiffres pour dépasser (ou égaler) le diviseur, on cherche combien de fois, on multiplie, on soustrait, puis on abaisse le chiffre suivant.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Pour calculer 625 : 25, par quoi commence-t-on ?", choix: ["on prend 62", "on prend 6", "on prend 625"], r: "on prend 62", expl: "6 est plus petit que 25 ; 62 est plus grand : on commence par 62." },
+      { t: "qcm", q: "En 62, combien de fois 25 ?", choix: ["2", "3", "1"], r: "2", expl: "2 × 25 = 50 et 3 × 25 = 75, c'est trop : 2 fois." },
+      { t: "vf", q: "Après avoir soustrait, on abaisse le chiffre suivant du dividende.", r: true, expl: "62 − 50 = 12, puis on abaisse le 5 : 125." },
+      { t: "qcm", q: "108 : 12 = ?", choix: ["9", "8", "10", "90"], r: "9", expl: "9 × 12 = 108." },
+      { t: "vf", q: "Pour calculer 108 : 12, on prend d'abord 10.", r: false, expl: "10 est plus petit que 12 : on doit prendre 108." },
+      { t: "relier", q: "Relie chaque division à son quotient.", paires: [["108 : 12", "9"], ["625 : 25", "25"], ["75 : 5", "15"], ["72 : 6", "12"]], expl: "Vérifie avec une multiplication : 9 × 12 = 108 ; 25 × 25 = 625 ; 15 × 5 = 75 ; 12 × 6 = 72." }
+    ],
+    [
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Pose et calcule 625 : 25.", etapes: [{ q: "En 62, combien de fois 25 ?", r: "2" }, { q: "62 − 50 = ?", r: "12" }, { q: "Après avoir abaissé le 5, quel nombre obtient-on ?", r: "125" }, { q: "Quel est le quotient de 625 : 25 ?", r: "25" }], expl: "2 fois 25 = 50 ; 62 − 50 = 12 ; on abaisse 5 → 125 ; 5 fois 25 = 125. Quotient 25." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Pose et calcule 384 : 6.", etapes: [{ q: "En 38, combien de fois 6 ?", r: "6" }, { q: "Quel est le premier reste (38 − 36) ?", r: "2" }, { q: "Quel est le quotient de 384 : 6 ?", r: "64" }], expl: "6 × 6 = 36 ; 38 − 36 = 2 ; on abaisse 4 → 24 ; 4 × 6 = 24. Quotient 64." },
+      { t: "saisie", q: "96 : 4 = ?", r: "24", expl: "En 9, 2 fois 4 (reste 1) ; on abaisse 6 → 16 ; 4 fois 4. Quotient 24." },
+      { t: "saisie", q: "455 : 5 = ?", r: "91", expl: "En 45, 9 fois 5 (reste 0) ; on abaisse 5 → 5 ; 1 fois 5. Quotient 91." },
+      { t: "saisie", q: "432 : 12 = ?", r: "36", expl: "En 43, 3 fois 12 (reste 7) ; on abaisse 2 → 72 ; 6 fois 12. Quotient 36." },
+      { t: "saisie", q: "918 : 27 = ?", r: "34", expl: "En 91, 3 fois 27 (reste 10) ; on abaisse 8 → 108 ; 4 fois 27. Quotient 34." },
+      { t: "saisie", q: "1 344 : 32 = ?", r: "42", expl: "En 134, 4 fois 32 (reste 6) ; on abaisse 4 → 64 ; 2 fois 32. Quotient 42." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Pose et calcule 587 : 9.", etapes: [{ q: "Quotient :", r: "65" }, { q: "Reste :", r: "2" }], expl: "En 58, 6 fois 9 (reste 4) ; on abaisse 7 → 47 ; 5 fois 9 = 45, reste 2. Vérification : (65 × 9) + 2 = 587." },
+      { t: "saisie", q: "2 052 : 54 = ?", r: "38", expl: "En 205, 3 fois 54 (reste 43) ; on abaisse 2 → 432 ; 8 fois 54. Quotient 38." }
+    ],
+    [
+      { t: "qcm", q: "Combien de chiffres aura le quotient de 384 : 6 ?", choix: ["2", "1", "3"], r: "2", expl: "3 est plus petit que 6, on commence par 38 : il reste ensuite un seul chiffre à abaisser. Le quotient a 2 chiffres (64)." },
+      { t: "saisie", q: "420 : 6 = ?", r: "70", expl: "En 42, 7 fois 6 (reste 0) ; on abaisse 0 → 0 ; 0 fois 6 : on écrit 0 au quotient ! Quotient 70." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Pose et calcule 963 : 32.", etapes: [{ q: "Quotient :", r: "30" }, { q: "Reste :", r: "3" }], expl: "En 96, 3 fois 32 (reste 0) ; on abaisse 3 → 3 ; en 3, 0 fois 32 : on écrit 0. Quotient 30, reste 3." },
+      { t: "vf", q: "Le quotient de 963 : 32 est 3.", r: false, expl: "Après avoir abaissé le 3, on doit écrire 0 au quotient : 30 (reste 3)." },
+      { t: "qcm", q: "Aïssatou a trouvé 875 : 25 = 35. Comment vérifier ?", choix: ["35 × 25 = 875", "35 + 25 = 875", "875 × 25"], r: "35 × 25 = 875", expl: "Dividende = quotient × diviseur + reste : 35 × 25 = 875, le reste est 0." },
+      { t: "saisie", q: "1 000 : 40 = ?", r: "25", expl: "En 100, 2 fois 40 (reste 20) ; on abaisse 0 → 200 ; 5 fois 40. Quotient 25." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Pose et calcule 500 : 12.", etapes: [{ q: "Quotient :", r: "41" }, { q: "Reste :", r: "8" }], expl: "En 50, 4 fois 12 (reste 2) ; on abaisse 0 → 20 ; 1 fois 12, reste 8. Vérification : (41 × 12) + 8 = 500." }
+    ],
+    [
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Une école reçoit 624 cahiers à partager également entre ses 24 classes. Un cahier coûte 300 F.", etapes: [{ q: "Nombre de cahiers par classe :", r: "26" }, { q: "Prix des cahiers d'une classe :", r: "7800", unite: "F" }], expl: "624 : 24 = 26 cahiers ; 300 × 26 = 7 800 F." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Un marchand met 875 kg de riz en sacs de 25 kg. Il vend chaque sac 12 500 F.", etapes: [{ q: "Nombre de sacs :", r: "35" }, { q: "Somme reçue pour tous les sacs :", r: "437500", unite: "F" }], expl: "875 : 25 = 35 sacs ; 12 500 × 35 = 437 500 F." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Un champ de 828 m de long est partagé en 36 parcelles de même longueur.", etapes: [{ q: "Longueur d'une parcelle :", r: "23", unite: "m" }, { q: "Longueur de 5 parcelles :", r: "115", unite: "m" }], expl: "828 : 36 = 23 m ; 23 × 5 = 115 m." },
+      { t: "qcm", q: "Quel est le quotient de 1 512 : 28 ?", choix: ["54", "45", "504", "64"], r: "54", expl: "En 151, 5 fois 28 (reste 11) ; on abaisse 2 → 112 ; 4 fois 28. Quotient 54." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "On range 1 000 mangues dans des caisses de 48 mangues.", etapes: [{ q: "Nombre de caisses pleines :", r: "20" }, { q: "Nombre de mangues qui restent :", r: "40" }], expl: "En 100, 2 fois 48 (reste 4) ; on abaisse 0 → 40 ; 0 fois 48 : quotient 20, reste 40." }
+    ]
+  ]
+});
+
+
+/* ---- ma-num-grands-nombres.js ---- */
+LECONS.push({
+  id: "ma-num-grands-nombres",
+  cahier: "maths",
+  matiere: "Activités numériques",
+  titre: "Les grands nombres",
+  date: "2026-09-16",
+  photos: ["DJI_20261118220744_0061_D.jpg"],
+  retiens:
+    "<p>Pour lire un grand nombre, on commence par la <b>plus grande classe</b> (celle de gauche).</p>" +
+    "<p>Les classes sont, de droite à gauche : les <b>unités simples</b>, les <b>mille</b>, les <b>millions</b>, les <b>milliards</b>. Chaque classe est subdivisée en <b>unités</b>, <b>dizaines</b> et <b>centaines</b> : elle a 3 chiffres.</p>" +
+    "<p>Il faut <b>séparer les classes</b> : par un point dans le cahier (5.000.250.008) ou par un petit espace (5 000 250 008).</p>" +
+    "<p>Ex : 999 000 000 + 1 million = 1 000 000 000 = <b>1 milliard</b>.<br>5 milliards 250 mille 8 = <b>5 000 250 008</b></p>" +
+    "<table><tr><th colspan='3'>milliards</th><th colspan='3'>millions</th><th colspan='3'>mille</th><th colspan='3'>unités simples</th></tr>" +
+    "<tr><td>c</td><td>d</td><td>u</td><td>c</td><td>d</td><td>u</td><td>c</td><td>d</td><td>u</td><td>c</td><td>d</td><td>u</td></tr>" +
+    "<tr><td></td><td></td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>" +
+    "<tr><td></td><td></td><td>5</td><td>0</td><td>0</td><td>0</td><td>2</td><td>5</td><td>0</td><td>0</td><td>0</td><td>8</td></tr>" +
+    "</table>",
+  astuce: "Mille = 1 suivi de 3 zéros (1 000). Un million = 6 zéros (1 000 000). Un milliard = 9 zéros (1 000 000 000). Quand une classe est vide, on écrit <b>000</b>.",
+  regle: "On lit un grand nombre classe par classe, en commençant par la plus grande ; chaque classe a 3 chiffres : centaines, dizaines, unités.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Pour lire un grand nombre, par quelle classe commence-t-on ?", choix: ["par la plus grande classe", "par la classe des unités simples", "par la classe des mille"], r: "par la plus grande classe", expl: "On lit de gauche à droite, en commençant par la plus grande classe." },
+      { t: "qcm", q: "Combien de chiffres compte une classe complète ?", choix: ["3", "2", "4", "10"], r: "3", expl: "Chaque classe a des centaines, des dizaines et des unités : 3 chiffres." },
+      { t: "relier", q: "Relie chaque nombre à son nom.", paires: [["100", "cent"], ["1 000", "mille"], ["1 000 000", "un million"], ["1 000 000 000", "un milliard"]], expl: "Mille : 3 zéros ; un million : 6 zéros ; un milliard : 9 zéros." },
+      { t: "vf", q: "999 000 000 + 1 000 000 = 1 000 000 000", r: true, expl: "999 millions + 1 million = 1 000 millions, c'est-à-dire 1 milliard." },
+      { t: "qcm", q: "Dans 5 000 250 008, quel est le chiffre des unités de milliards ?", choix: ["5", "2", "8", "0"], r: "5", expl: "La classe des milliards est la première à gauche : ici, elle contient seulement 5." },
+      { t: "vf", q: "Un milliard s'écrit avec 6 zéros.", r: false, expl: "Un milliard s'écrit avec 9 zéros : 1 000 000 000. C'est un million qui a 6 zéros." }
+    ],
+    [
+      { t: "saisie", q: "Écris en chiffres : 5 milliards 250 mille 8.", r: ["5 000 250 008", "5000250008", "5.000.250.008"], expl: "Milliards : 5 ; millions : 000 ; mille : 250 ; unités : 008. On obtient 5 000 250 008." },
+      { t: "saisie", q: "Écris en chiffres : 3 millions 400 mille.", r: ["3 400 000", "3400000", "3.400.000"], expl: "Millions : 3 ; mille : 400 ; unités : 000. On obtient 3 400 000." },
+      { t: "saisie", q: "Écris en chiffres : 12 milliards 7 millions 15.", r: ["12 007 000 015", "12007000015", "12.007.000.015"], expl: "Milliards : 12 ; millions : 007 ; mille : 000 ; unités : 015. On obtient 12 007 000 015." },
+      { t: "saisie", q: "Écris en chiffres : deux cent quarante-six millions cinq cent mille.", r: ["246 500 000", "246500000", "246.500.000"], expl: "Millions : 246 ; mille : 500 ; unités : 000. On obtient 246 500 000." },
+      { t: "qcm", q: "Comment lit-on 4 008 300 ?", choix: ["quatre millions huit mille trois cents", "quatre millions huit cent mille trois cents", "quarante millions huit mille trois cents", "quatre milliards huit mille trois cents"], r: "quatre millions huit mille trois cents", expl: "Classes : 4 | 008 | 300 → quatre millions, huit mille, trois cents." },
+      { t: "qcm", q: "Comment lit-on 2 015 000 060 ?", choix: ["deux milliards quinze millions soixante", "deux milliards cent cinquante millions soixante", "deux millions quinze mille soixante", "vingt milliards quinze millions soixante"], r: "deux milliards quinze millions soixante", expl: "Classes : 2 | 015 | 000 | 060 → deux milliards, quinze millions, soixante." },
+      { t: "trous", q: "Dans le nombre 7 352 418 096, écris le chiffre demandé.", texte: "centaines de millions : [3] — dizaines de mille : [1] — unités de milliards : [7] — centaines (unités simples) : [0]", nombre: true, expl: "Découpe en classes : 7 | 352 | 418 | 096." },
+      { t: "saisie", q: "999 000 000 + 1 000 000 = ?", r: ["1 000 000 000", "1000000000", "1.000.000.000"], expl: "999 millions + 1 million = 1 000 millions = 1 milliard." },
+      { t: "saisie", q: "Combien y a-t-il de millions dans un milliard ?", r: ["1 000", "1000", "1.000"], expl: "1 milliard = 1 000 millions, car 999 millions + 1 million = 1 milliard." }
+    ],
+    [
+      { t: "qcm", q: "Écris en chiffres : « six millions quarante ».", choix: ["6 000 040", "6 040 000", "6 000 400", "640"], r: "6 000 040", expl: "Millions : 6 ; mille : 000 (classe vide) ; unités : 040." },
+      { t: "qcm", q: "Où faut-il séparer les classes dans 45000300 ?", choix: ["45 000 300", "450 003 00", "4 500 0300", "45 0003 00"], r: "45 000 300", expl: "On fait des paquets de 3 chiffres en partant de la droite : 300, puis 000, puis 45." },
+      { t: "vf", q: "« 30 250 400 » se lit « trente millions deux cent cinquante mille quatre cents ».", r: true, expl: "30 | 250 | 400 : trente millions, deux cent cinquante mille, quatre cents." },
+      { t: "saisie", q: "Écris en chiffres : huit milliards huit.", r: ["8 000 000 008", "8000000008", "8.000.000.008"], expl: "Les classes des millions et des mille sont vides : 8 000 000 008." },
+      { t: "saisie", q: "Quel nombre vient juste après 4 999 999 ?", r: ["5 000 000", "5000000", "5.000.000"], expl: "4 999 999 + 1 = 5 000 000 (5 millions)." },
+      { t: "saisie", q: "Quel nombre vient juste avant 1 000 000 000 ?", r: ["999 999 999", "999999999", "999.999.999"], expl: "1 000 000 000 − 1 = 999 999 999." },
+      { t: "classer", q: "Range chaque nombre selon sa plus grande classe.", cases: ["classe des mille", "classe des millions", "classe des milliards"], items: [["45 000", "classe des mille"], ["3 200 000", "classe des millions"], ["1 000 000 000", "classe des milliards"], ["999 999", "classe des mille"], ["12 000 000", "classe des millions"], ["7 000 000 003", "classe des milliards"]], expl: "Compte les classes de 3 chiffres en partant de la droite : 2 classes = mille, 3 = millions, 4 = milliards." }
+    ],
+    [
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Une entreprise de Dakar a gagné 2 milliards 500 millions de francs CFA en 2025 et 1 milliard 750 millions en 2026.", etapes: [{ q: "Écris en chiffres le gain de 2025.", r: "2500000000", unite: "F" }, { q: "Écris en chiffres le gain de 2026.", r: "1750000000", unite: "F" }, { q: "Combien a-t-elle gagné en tout ?", r: "4250000000", unite: "F" }], expl: "2 500 000 000 F + 1 750 000 000 F = 4 250 000 000 F." },
+      { t: "qcm", q: "Le budget d'une commune est de « trois milliards quarante millions » de francs. Quelle écriture est juste ?", choix: ["3 040 000 000 F", "3 400 000 000 F", "3 000 040 000 F", "340 000 000 F"], r: "3 040 000 000 F", expl: "Milliards : 3 ; millions : 040 ; mille : 000 ; unités : 000." },
+      { t: "trous", q: "Complète la lecture du nombre 6 105 020 300.", texte: "six [milliards] cent cinq [millions] vingt [mille] trois cents", expl: "6 | 105 | 020 | 300 : on nomme chaque classe après son nombre." },
+      { t: "saisie", q: "Écris le plus grand nombre de 10 chiffres.", r: ["9 999 999 999", "9999999999", "9.999.999.999"], expl: "On met des 9 partout : 9 999 999 999." },
+      { t: "saisie", q: "Ajoute 1 million à 7 999 000 000.", r: ["8 000 000 000", "8000000000", "8.000.000.000"], expl: "7 999 millions + 1 million = 8 000 millions = 8 milliards : 8 000 000 000." }
+    ]
+  ]
+});
+
+
+/* ---- ma-num-multiplication-zeros.js ---- */
+// À VÉRIFIER : résultat de 1347 × 120 : le cahier semble porter 161 660 (photo 0078, chiffre surchargé) ; le bon résultat 161 640 est utilisé.
+// À VÉRIFIER : la règle du cahier dit « quand le multiplicande ET le multiplicateur se terminent par… » ; l'exemple 1347 × 120 montre qu'il suffit que l'un des deux finisse par des zéros. Le module écrit « le multiplicande ou le multiplicateur (ou les deux) ».
+LECONS.push({
+  id: "ma-num-multiplication-zeros",
+  cahier: "maths",
+  matiere: "Activités numériques",
+  titre: "La multiplication des nombres entiers : les cas particuliers",
+  date: "2026-10-12",
+  photos: ["DJI_20261118221051_0078_D.jpg", "DJI_20261118221101_0079_D.jpg"],
+  retiens:
+    "<p>Quand le multiplicande ou le multiplicateur (ou les deux) se terminent par un, deux, trois zéros ou plus, on effectue la multiplication <b>sans tenir compte des zéros</b>, puis on <b>les ajoute à la droite du produit</b> (le résultat).</p>" +
+    "<p>Ex : 1 347 × 120 → je calcule 1 347 × 12 = 16 164, puis j'ajoute le zéro : <b>161 640</b>.</p>" +
+    "<table><tr><td>×</td><td></td><td></td><td>1</td><td>3</td><td>4</td><td>7</td></tr>" +
+    "<tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>0</td></tr>" +
+    "<tr><td></td><td></td><td></td><td>2</td><td>6</td><td>9</td><td>4</td></tr>" +
+    "<tr><td>+</td><td></td><td>1</td><td>3</td><td>4</td><td>7</td><td>·</td></tr>" +
+    "<tr><td></td><td><b>1</b></td><td><b>6</b></td><td><b>1</b></td><td><b>6</b></td><td><b>4</b></td><td><b>0</b></td></tr>" +
+    "</table>" +
+    "<p>Ex : 96 240 × 400 → je calcule 9 624 × 4 = 38 496, puis j'ajoute les 3 zéros : <b>38 496 000</b>.</p>" +
+    "<p>Si des zéros sont <b>intercalés</b> (au milieu) dans le multiplicateur, on peut les remplacer par des points.<br>Ex : 347 × 1 002</p>" +
+    "<table><tr><td>×</td><td></td><td></td><td></td><td>3</td><td>4</td><td>7</td></tr>" +
+    "<tr><td></td><td></td><td></td><td>1</td><td>0</td><td>0</td><td>2</td></tr>" +
+    "<tr><td></td><td></td><td></td><td></td><td>6</td><td>9</td><td>4</td></tr>" +
+    "<tr><td>+</td><td>3</td><td>4</td><td>7</td><td>·</td><td>·</td><td>·</td></tr>" +
+    "<tr><td></td><td><b>3</b></td><td><b>4</b></td><td><b>7</b></td><td><b>6</b></td><td><b>9</b></td><td><b>4</b></td></tr>" +
+    "</table>",
+  astuce: "Cache les zéros de la fin avec ton doigt, calcule, puis rends-les tous au produit. Les zéros du milieu, eux, ne s'enlèvent pas !",
+  regle: "On multiplie sans les zéros de la fin, puis on écrit tous ces zéros à la droite du produit ; les zéros intercalés du multiplicateur se remplacent par des points.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Pour calculer 1 347 × 120, je calcule d'abord…", choix: ["1 347 × 12", "1 347 × 120 en entier", "134 × 12"], r: "1 347 × 12", expl: "On ne tient pas compte du zéro de 120, puis on l'ajoute au produit." },
+      { t: "vf", q: "96 240 × 400 = 38 496 000", r: true, expl: "9 624 × 4 = 38 496, puis on ajoute les 3 zéros (1 de 96 240 et 2 de 400)." },
+      { t: "qcm", q: "Pour 96 240 × 400, combien de zéros faut-il ajouter au produit ?", choix: ["3", "2", "1", "4"], r: "3", expl: "Un zéro à la fin de 96 240 et deux à la fin de 400 : 3 zéros." },
+      { t: "vf", q: "Pour 347 × 1 002, on peut remplacer les zéros du milieu par des points.", r: true, expl: "Les zéros intercalés du multiplicateur se remplacent par des points : 347 · · ·" },
+      { t: "qcm", q: "1 347 × 120 = ?", choix: ["161 640", "16 164", "161 660", "1 616 400"], r: "161 640", expl: "1 347 × 12 = 16 164, puis on ajoute un zéro : 161 640." },
+      { t: "relier", q: "Relie chaque multiplication à son produit.", paires: [["30 × 20", "600"], ["400 × 5", "2 000"], ["250 × 40", "10 000"], ["12 × 300", "3 600"]], expl: "3 × 2 = 6 → 600 ; 4 × 5 = 20 → 2 000 ; 25 × 4 = 100 → 10 000 ; 12 × 3 = 36 → 3 600." }
+    ],
+    [
+      { t: "saisie", q: "23 × 40 = ?", r: "920", expl: "23 × 4 = 92, puis un zéro : 920." },
+      { t: "saisie", q: "150 × 30 = ?", r: ["4 500", "4500", "4.500"], expl: "15 × 3 = 45, puis deux zéros : 4 500." },
+      { t: "saisie", q: "1 200 × 60 = ?", r: ["72 000", "72000", "72.000"], expl: "12 × 6 = 72, puis trois zéros : 72 000." },
+      { t: "saisie", q: "4 500 × 300 = ?", r: ["1 350 000", "1350000", "1.350.000"], expl: "45 × 3 = 135, puis quatre zéros : 1 350 000." },
+      { t: "saisie", q: "2 340 × 50 = ?", r: ["117 000", "117000", "117.000"], expl: "234 × 5 = 1 170, puis deux zéros : 117 000." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Calcule 1 347 × 120 comme dans le cahier.", etapes: [{ q: "1 347 × 12 = ?", r: "16164" }, { q: "1 347 × 120 = ?", r: "161640" }], expl: "On calcule sans le zéro, puis on l'ajoute : 161 640." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Calcule 96 240 × 400.", etapes: [{ q: "9 624 × 4 = ?", r: "38496" }, { q: "Combien de zéros faut-il ajouter ?", r: "3" }, { q: "96 240 × 400 = ?", r: "38496000" }], expl: "38 496 suivi de 3 zéros : 38 496 000." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Calcule 347 × 1 002 en remplaçant les zéros du milieu par des points.", etapes: [{ q: "347 × 2 = ?", r: "694" }, { q: "347 × 1 002 = ?", r: "347694" }], expl: "694 + 347 000 = 347 694." },
+      { t: "saisie", q: "625 × 1 003 = ?", r: ["626 875", "626875", "626.875"], expl: "625 × 3 = 1 875 ; 625 décalé de 3 rangs = 625 000 ; 1 875 + 625 000 = 626 875." }
+    ],
+    [
+      { t: "qcm", q: "205 × 30 = ?", choix: ["6 150", "615", "61 500", "6 015"], r: "6 150", expl: "Le zéro de 205 est au milieu : on le garde ! 205 × 3 = 615, puis le zéro de 30 : 6 150." },
+      { t: "vf", q: "Pour calculer 506 × 20, j'enlève tous les zéros et je calcule 56 × 2.", r: false, expl: "Seuls les zéros de la fin s'enlèvent. On calcule 506 × 2 = 1 012, puis on ajoute un zéro." },
+      { t: "saisie", q: "506 × 20 = ?", r: ["10 120", "10120", "10.120"], expl: "506 × 2 = 1 012, puis un zéro : 10 120." },
+      { t: "saisie", q: "7 000 × 800 = ?", r: ["5 600 000", "5600000", "5.600.000"], expl: "7 × 8 = 56, puis 5 zéros : 5 600 000." },
+      { t: "saisie", q: "412 × 2 005 = ?", r: ["826 060", "826060", "826.060"], expl: "412 × 5 = 2 060 ; 412 × 2 (décalé de 3 rangs) = 824 000 ; 2 060 + 824 000 = 826 060." },
+      { t: "qcm", q: "Fatou a trouvé 3 600 × 50 = 18 000. Qu'en penses-tu ?", choix: ["Faux : il manque un zéro, c'est 180 000", "Vrai", "Faux : c'est 1 800 000"], r: "Faux : il manque un zéro, c'est 180 000", expl: "36 × 5 = 180, puis 3 zéros (deux de 3 600 et un de 50) : 180 000." },
+      { t: "trous", q: "Complète.", texte: "800 × 50 : je calcule 8 × 5 = [40], puis j'ajoute [3] zéros : [40000].", nombre: true, expl: "Deux zéros dans 800, un dans 50 : 3 zéros. 40 suivi de 000 = 40 000." }
+    ],
+    [
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Une coopérative de Kaolack vend 250 sacs d'arachide de 100 kg, à 30 000 F le sac.", etapes: [{ q: "Masse totale :", r: "25000", unite: "kg" }, { q: "Prix total :", r: "7500000", unite: "F" }], expl: "100 kg × 250 = 25 000 kg ; 30 000 F × 250 = 7 500 000 F (25 × 3 = 75, puis 5 zéros)." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Pour la fête de l'école, 120 élèves paient chacun 1 500 F et 40 parents paient chacun 2 000 F.", etapes: [{ q: "Somme payée par les élèves :", r: "180000", unite: "F" }, { q: "Somme payée par les parents :", r: "80000", unite: "F" }, { q: "Somme totale :", r: "260000", unite: "F" }], expl: "1 500 × 120 = 180 000 ; 2 000 × 40 = 80 000 ; 180 000 + 80 000 = 260 000 F." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "À chaque voyage, un camion transporte 40 sacs de ciment de 50 kg. Il fait 300 voyages.", etapes: [{ q: "Masse transportée à chaque voyage :", r: "2000", unite: "kg" }, { q: "Masse totale transportée :", r: "600000", unite: "kg" }], expl: "50 × 40 = 2 000 kg ; 2 000 × 300 = 600 000 kg." },
+      { t: "saisie", q: "1 005 × 300 = ?", r: ["301 500", "301500", "301.500"], expl: "Le zéro du milieu de 1 005 reste. 1 005 × 3 = 3 015, puis deux zéros : 301 500." },
+      { t: "qcm", q: "Quelle multiplication donne 4 800 000 ?", choix: ["1 200 × 4 000", "120 × 4 000", "1 200 × 400", "12 × 4 000"], r: "1 200 × 4 000", expl: "12 × 4 = 48, et il faut 5 zéros : 1 200 (2 zéros) × 4 000 (3 zéros)." }
+    ]
+  ]
+});
+
+
+/* ---- ma-num-multiplication.js ---- */
+// À VÉRIFIER : photo 0073 floue : texte reconstitué. Les mots « unités identiques » sont devinés (rendus par « objets identiques ») ; le « NB : Il faut toujours décaler les zéros intercalaires » n'est pas sûr et n'est pas repris. Le décalage d'un rang vient de l'exemple net de la photo 0074 (1 351 × 52 = 70 252, juste).
+LECONS.push({
+  id: "ma-num-multiplication",
+  cahier: "maths",
+  matiere: "Activités numériques",
+  titre: "La multiplication des nombres entiers",
+  date: "2026-10-05",
+  photos: ["DJI_20261118220925_0073_D.jpg", "DJI_20261118220934_0074_D.jpg"],
+  retiens:
+    "<p>La <b>multiplication</b> est une opération qui permet, à partir de 2 nombres (le <b>multiplicande</b> et le <b>multiplicateur</b>), de trouver un troisième nombre (le <b>produit</b>).</p>" +
+    "<p>Pour trouver la masse totale, le prix total, la quantité totale, la longueur totale de plusieurs objets identiques, on pose une multiplication.<br>Ex : 5 m + 5 m + 5 m + 5 m = 5 m × 4 = 20 m</p>" +
+    "<p><b>Valeur totale = Valeur unitaire × Nombre d'unités</b></p>" +
+    "<p>Exemple posé : 1 351 × 52 = 70 252. On multiplie d'abord par 2 (les unités), puis par 5 (les dizaines) : cette 2<sup>e</sup> ligne est <b>décalée d'un rang</b> vers la gauche (le point marque la place des unités).</p>" +
+    "<table><tr><td>×</td><td></td><td>1</td><td>3</td><td>5</td><td>1</td><td>multiplicande</td></tr>" +
+    "<tr><td></td><td></td><td></td><td></td><td>5</td><td>2</td><td>multiplicateur</td></tr>" +
+    "<tr><td></td><td></td><td>2</td><td>7</td><td>0</td><td>2</td><td>1 351 × 2</td></tr>" +
+    "<tr><td>+</td><td>6</td><td>7</td><td>5</td><td>5</td><td>·</td><td>1 351 × 5 dizaines</td></tr>" +
+    "<tr><td></td><td><b>7</b></td><td><b>0</b></td><td><b>2</b></td><td><b>5</b></td><td><b>2</b></td><td>produit</td></tr>" +
+    "</table>",
+  astuce: "Valeur totale = Valeur unitaire × Nombre d'unités : le prix d'<b>un</b> objet multiplié par le <b>nombre</b> d'objets.",
+  regle: "Multiplicande × multiplicateur = produit ; chaque nouvelle ligne de la multiplication posée est décalée d'un rang vers la gauche.",
+  niveaux: [
+    [
+      { t: "relier", q: "Relie chaque mot à sa définition.", paires: [["multiplicande", "le nombre qu'on multiplie"], ["multiplicateur", "le nombre par lequel on multiplie"], ["produit", "le résultat"]], expl: "Dans 1 351 × 52 = 70 252 : 1 351 est le multiplicande, 52 le multiplicateur, 70 252 le produit." },
+      { t: "qcm", q: "5 m + 5 m + 5 m + 5 m = ?", choix: ["5 m × 4", "5 m + 4", "5 m × 5", "4 m × 4"], r: "5 m × 4", expl: "On additionne 4 fois la même longueur : c'est 5 m × 4 = 20 m." },
+      { t: "qcm", q: "Dans 1 351 × 52 = 70 252, quel est le produit ?", choix: ["70 252", "1 351", "52"], r: "70 252", expl: "Le produit est le résultat de la multiplication." },
+      { t: "vf", q: "Valeur totale = Valeur unitaire × Nombre d'unités", r: true, expl: "C'est la formule encadrée de la leçon." },
+      { t: "qcm", q: "Pour trouver le prix de 6 cahiers à 250 F l'un, je calcule…", choix: ["250 F × 6", "250 F + 6", "250 F − 6", "6 − 250 F"], r: "250 F × 6", expl: "Valeur unitaire (250 F) × nombre d'unités (6) = 1 500 F." },
+      { t: "vf", q: "Dans 1 351 × 52, la 2e ligne (1 351 × 5) est décalée d'un rang vers la gauche.", r: true, expl: "Le 5 de 52 est un chiffre des dizaines : on décale d'un rang." }
+    ],
+    [
+      { t: "saisie", q: "243 × 3 = ?", r: "729", expl: "3 × 3 = 9 ; 4 × 3 = 12 (je pose 2, je retiens 1) ; 2 × 3 + 1 = 7. Résultat : 729." },
+      { t: "saisie", q: "1 205 × 4 = ?", r: ["4 820", "4820", "4.820"], expl: "Résultat : 4 820." },
+      { t: "saisie", q: "326 × 25 = ?", r: ["8 150", "8150", "8.150"], expl: "326 × 5 = 1 630 ; 326 × 2 dizaines = 6 520 ; 1 630 + 6 520 = 8 150." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Pose et calcule 1 351 × 52.", etapes: [{ q: "1 351 × 2 = ?", r: "2702" }, { q: "1 351 × 5 = ? (cette ligne sera décalée d'un rang)", r: "6755" }, { q: "Produit 1 351 × 52 = ?", r: "70252" }], expl: "2 702 + 67 550 = 70 252. C'est l'exemple du cahier." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Pose et calcule 438 × 36.", etapes: [{ q: "438 × 6 = ?", r: "2628" }, { q: "438 × 3 = ? (ligne décalée d'un rang)", r: "1314" }, { q: "Produit 438 × 36 = ?", r: "15768" }], expl: "2 628 + 13 140 = 15 768." },
+      { t: "saisie", q: "5 m × 4 = ? m", r: "20", expl: "5 m + 5 m + 5 m + 5 m = 20 m.", unite: "m" },
+      { t: "saisie", q: "2 507 × 8 = ?", r: ["20 056", "20056", "20.056"], expl: "Résultat : 20 056." },
+      { t: "saisie", q: "714 × 43 = ?", r: ["30 702", "30702", "30.702"], expl: "714 × 3 = 2 142 ; 714 × 4 dizaines = 28 560 ; total 30 702." },
+      { t: "trous", q: "Complète la formule de la leçon.", texte: "Valeur [totale] = Valeur [unitaire] × Nombre d'[unités]", expl: "VT = VU × NU." }
+    ],
+    [
+      { t: "vf", q: "Dans 438 × 36, on peut écrire la 2e ligne (438 × 3) sans la décaler.", r: false, expl: "Le 3 de 36 vaut 3 dizaines : il faut décaler la ligne d'un rang vers la gauche." },
+      { t: "qcm", q: "Moussa a posé 245 × 13 et trouvé 980. Qu'a-t-il oublié ?", choix: ["de décaler la 2e ligne", "rien, c'est juste", "une retenue"], r: "de décaler la 2e ligne", expl: "Il a fait 735 + 245 = 980. Avec le décalage : 735 + 2 450 = 3 185." },
+      { t: "saisie", q: "Écris le bon résultat de 245 × 13.", r: ["3 185", "3185", "3.185"], expl: "245 × 3 = 735 ; 245 × 1 dizaine = 2 450 ; 735 + 2 450 = 3 185." },
+      { t: "saisie", q: "1 009 × 7 = ?", r: ["7 063", "7063", "7.063"], expl: "Attention aux zéros : 7 063." },
+      { t: "saisie", q: "625 × 48 = ?", r: ["30 000", "30000", "30.000"], expl: "625 × 8 = 5 000 ; 625 × 4 dizaines = 25 000 ; total 30 000." },
+      { t: "relier", q: "Relie chaque multiplication à son produit.", paires: [["25 × 4", "100"], ["12 × 12", "144"], ["15 × 6", "90"], ["250 × 4", "1 000"], ["11 × 11", "121"]], expl: "Calcule de tête ou pose l'opération." },
+      { t: "saisie", q: "Un carton contient 24 bouteilles. Combien de bouteilles y a-t-il dans 15 cartons ?", r: "360", expl: "Valeur totale = 24 × 15 = 360 bouteilles." }
+    ],
+    [
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Au marché Tilène, une vendeuse achète 12 sacs de riz de 50 kg, à 16 500 F le sac.", etapes: [{ q: "Masse totale de riz :", r: "600", unite: "kg" }, { q: "Prix total :", r: "198000", unite: "F" }], expl: "50 kg × 12 = 600 kg ; 16 500 F × 12 = 198 000 F." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Une école commande 35 tables-bancs à 27 500 F l'une et 48 cahiers à 350 F l'un.", etapes: [{ q: "Prix des tables-bancs :", r: "962500", unite: "F" }, { q: "Prix des cahiers :", r: "16800", unite: "F" }, { q: "Dépense totale :", r: "979300", unite: "F" }], expl: "27 500 × 35 = 962 500 ; 350 × 48 = 16 800 ; 962 500 + 16 800 = 979 300 F." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Un car fait 3 allers-retours entre deux villes chaque jour. Un aller fait 72 km.", etapes: [{ q: "Distance d'un aller-retour :", r: "144", unite: "km" }, { q: "Distance parcourue en un jour :", r: "432", unite: "km" }, { q: "Distance parcourue en 6 jours :", r: "2592", unite: "km" }], expl: "72 × 2 = 144 ; 144 × 3 = 432 ; 432 × 6 = 2 592 km." },
+      { t: "qcm", q: "La valeur unitaire est 750 F et le nombre d'unités est 24. Quelle est la valeur totale ?", choix: ["18 000 F", "17 000 F", "1 800 F", "774 F"], r: "18 000 F", expl: "VT = VU × NU = 750 × 24 = 18 000 F." },
+      { t: "saisie", q: "3 048 × 26 = ?", r: ["79 248", "79248", "79.248"], expl: "3 048 × 6 = 18 288 ; 3 048 × 2 dizaines = 60 960 ; 18 288 + 60 960 = 79 248." }
+    ]
+  ]
+});
+
+
+/* ---- ma-num-multiplier-par-10-100-1000.js ---- */
+// À VÉRIFIER : la règle 1 du cahier cite « 10 000 » mais dit « on écrit 1 – 2 ou 3 zéros » (photo 0072). Le module dit « autant de zéros qu'il y en a dans 10, 100, 1 000… (1, 2, 3 ou 4 zéros) ».
+// À VÉRIFIER : les exemples décimaux 1,25 × 10 = 12,5 et 3,6 × 100 = 360 viennent de la photo floue 0073 (lecture probable ; les deux calculs sont justes).
+LECONS.push({
+  id: "ma-num-multiplier-par-10-100-1000",
+  cahier: "maths",
+  matiere: "Calcul mental",
+  titre: "Multiplier un nombre par 10, 100, 1 000",
+  date: "2026-10-05",
+  photos: ["DJI_20261118220918_0072_D.jpg", "DJI_20261118220925_0073_D.jpg"],
+  retiens:
+    "<p><b>1.</b> Pour multiplier un <b>nombre entier</b> par 10, 100, 1 000 ou 10 000…, on écrit à sa droite <b>autant de zéros</b> qu'il y en a dans 10, 100, 1 000… (1, 2, 3 ou 4 zéros).<br>Ex : 76 × 100 = 7 600</p>" +
+    "<p><b>2.</b> Pour multiplier un <b>nombre décimal</b> par 10, 100, 1 000…, on <b>déplace la virgule</b> de 1, 2 ou 3 rangs <b>vers la droite</b>.<br>Ex : 1,25 × 10 = 12,5 ; 3,6 × 100 = 360 (quand il n'y a plus de chiffre, on complète par un zéro).</p>",
+  astuce: "× 10 : 1 zéro ou 1 rang. × 100 : 2 zéros ou 2 rangs. × 1 000 : 3 zéros ou 3 rangs. Compte les zéros du 10, du 100 ou du 1 000 !",
+  regle: "Nombre entier × 10, 100, 1 000 : on écrit 1, 2 ou 3 zéros à droite. Nombre décimal : on déplace la virgule de 1, 2 ou 3 rangs vers la droite.",
+  niveaux: [
+    [
+      { t: "qcm", q: "76 × 100 = ?", choix: ["7 600", "760", "76 000", "7 060"], r: "7 600", expl: "100 a deux zéros : on écrit deux zéros à droite de 76." },
+      { t: "qcm", q: "Pour multiplier un nombre entier par 1 000, j'écris à sa droite…", choix: ["3 zéros", "1 zéro", "2 zéros", "4 zéros"], r: "3 zéros", expl: "1 000 a trois zéros." },
+      { t: "vf", q: "Pour multiplier 1,25 par 10, je déplace la virgule d'un rang vers la droite.", r: true, expl: "× 10 : la virgule avance d'un rang vers la droite : 12,5." },
+      { t: "qcm", q: "1,25 × 10 = ?", choix: ["12,5", "0,125", "125", "1,250"], r: "12,5", expl: "La virgule se déplace d'un rang vers la droite : 1,25 devient 12,5." },
+      { t: "vf", q: "3,6 × 100 = 360", r: true, expl: "La virgule avance de 2 rangs ; il manque un chiffre, on complète par un zéro : 360." },
+      { t: "relier", q: "Relie chaque multiplication au nombre de zéros à écrire (nombre entier).", paires: [["× 10", "1 zéro"], ["× 100", "2 zéros"], ["× 1 000", "3 zéros"], ["× 10 000", "4 zéros"]], expl: "On écrit autant de zéros qu'il y en a dans le multiplicateur." }
+    ],
+    [
+      { t: "saisie", q: "45 × 10 = ?", r: "450", expl: "Un zéro à droite : 450." },
+      { t: "saisie", q: "38 × 100 = ?", r: ["3 800", "3800", "3.800"], expl: "Deux zéros à droite : 3 800." },
+      { t: "saisie", q: "7 × 1 000 = ?", r: ["7 000", "7000", "7.000"], expl: "Trois zéros à droite : 7 000." },
+      { t: "saisie", q: "250 × 100 = ?", r: ["25 000", "25000", "25.000"], expl: "On garde le zéro de 250 et on en ajoute deux : 25 000." },
+      { t: "saisie", q: "63 × 10 000 = ?", r: ["630 000", "630000", "630.000"], expl: "Quatre zéros à droite : 630 000." },
+      { t: "saisie", q: "4,7 × 10 = ?", r: "47", nombre: true, expl: "La virgule avance d'un rang : 47." },
+      { t: "saisie", q: "2,35 × 100 = ?", r: "235", nombre: true, expl: "La virgule avance de deux rangs : 235." },
+      { t: "saisie", q: "0,8 × 10 = ?", r: "8", nombre: true, expl: "La virgule avance d'un rang : 8." },
+      { t: "saisie", q: "1,456 × 1 000 = ?", r: ["1 456", "1456", "1.456"], expl: "La virgule avance de trois rangs : 1 456." },
+      { t: "trous", q: "Complète.", texte: "12 × 10 = [120] ; 12 × 100 = [1200] ; 12 × 1 000 = [12000]", nombre: true, expl: "1, 2 puis 3 zéros : 120 ; 1 200 ; 12 000." }
+    ],
+    [
+      { t: "saisie", q: "3,6 × 1 000 = ?", r: ["3 600", "3600", "3.600"], expl: "La virgule avance de 3 rangs ; on complète par deux zéros : 3 600." },
+      { t: "saisie", q: "0,05 × 100 = ?", r: "5", nombre: true, expl: "La virgule avance de 2 rangs : 0,05 devient 5." },
+      { t: "saisie", q: "5,2 × 100 = ?", r: "520", expl: "2 rangs : 5,2 → 52, puis on complète par un zéro : 520." },
+      { t: "saisie", q: "120 × 1 000 = ?", r: ["120 000", "120000", "120.000"], expl: "Trois zéros de plus : 120 000." },
+      { t: "qcm", q: "4,5 × 100 = ?", choix: ["450", "4,500", "45", "4 500"], r: "450", expl: "Avec un nombre décimal, on n'ajoute pas les zéros après la virgule : on déplace la virgule de 2 rangs → 450." },
+      { t: "vf", q: "2,5 × 10 = 2,50", r: false, expl: "On déplace la virgule d'un rang vers la droite : 2,5 × 10 = 25. Écrire 2,50 ne change pas le nombre." },
+      { t: "saisie", q: "Par combien faut-il multiplier 0,72 pour obtenir 72 ?", r: "100", expl: "La virgule a avancé de 2 rangs : c'est × 100." }
+    ],
+    [
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "À Dakar, un sac de riz coûte 18 500 F. Une boutique en achète 10, puis une autre en achète 100.", etapes: [{ q: "Prix de 10 sacs :", r: "185000", unite: "F" }, { q: "Prix de 100 sacs :", r: "1850000", unite: "F" }], expl: "18 500 × 10 = 185 000 F (un zéro) ; 18 500 × 100 = 1 850 000 F (deux zéros)." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Une bouteille contient 1,5 l d'eau.", etapes: [{ q: "Combien de litres dans 10 bouteilles ?", r: "15", unite: "l" }, { q: "Combien de litres dans 100 bouteilles ?", r: "150", unite: "l" }], expl: "1,5 × 10 = 15 l ; 1,5 × 100 = 150 l (on complète par un zéro)." },
+      { t: "qcm", q: "Un ticket de bus coûte 150 F. Combien coûtent 1 000 tickets ?", choix: ["150 000 F", "15 000 F", "1 500 000 F", "1 500 F"], r: "150 000 F", expl: "150 × 1 000 : on écrit trois zéros à droite de 150 → 150 000 F." },
+      { t: "saisie", q: "Un pas de Mamadou mesure 0,65 m. Quelle distance fait-il en 100 pas ?", r: "65", nombre: true, expl: "0,65 × 100 : la virgule avance de 2 rangs → 65 m.", unite: "m" },
+      { t: "trous", q: "Complète.", texte: "0,125 × 10 = [1,25] ; 0,125 × 100 = [12,5] ; 0,125 × 1 000 = [125]", nombre: true, expl: "La virgule avance de 1, puis 2, puis 3 rangs." },
+      { t: "saisie", q: "Quel nombre multiplié par 100 donne 4 700 ?", r: "47", expl: "47 × 100 = 4 700 (on écrit deux zéros)." }
+    ]
+  ]
+});
+
+
+/* ---- ma-num-nombres-decimaux.js ---- */
+LECONS.push({
+  id: "ma-num-nombres-decimaux",
+  cahier: "maths",
+  matiere: "Activités numériques",
+  titre: "Les nombres décimaux",
+  date: "2026-11-10",
+  photos: ["DJI_20261118221235_0094_D.jpg", "DJI_20261118221240_0095_D.jpg"],
+  retiens:
+    "<p>Un <b>nombre décimal</b> s'écrit avec une <b>virgule</b> qui sépare la <b>partie entière</b> (à gauche) de la <b>partie décimale</b> (à droite).</p>" +
+    "<p>3,9 se lit « trois virgule neuf ».</p>" +
+    "<p>On peut aussi lire un nombre décimal de deux manières :<br>36,6 = 3 dizaines 6 unités et 6 dixièmes ;<br>36,6 = 36 unités et 6 dixièmes.</p>" +
+    "<table><tr><th colspan='3'>partie entière</th><th colspan='3'>partie décimale</th></tr>" +
+    "<tr><td>centaines</td><td>dizaines</td><td>unités</td><td>dixièmes</td><td>centièmes</td><td>millièmes</td></tr>" +
+    "<tr><td>5</td><td>4</td><td>9,</td><td>1</td><td>3</td><td>7</td></tr>" +
+    "</table>" +
+    "<p>(549,137)</p>" +
+    "<p><b>NB :</b> entre deux nombres entiers qui se suivent, on peut intercaler des nombres décimaux.<br>Ex : entre 3 et 4 : 3 – 3,1 – 3,2 – 3,3 – 3,4 – 3,5 – 3,6 – 3,7 – 3,8 – 3,9 – 4</p>",
+  astuce: "La virgule se place juste après le chiffre des <b>unités</b>. Juste après la virgule viennent les <b>dixièmes</b>, puis les <b>centièmes</b>, puis les <b>millièmes</b>.",
+  regle: "La virgule sépare la partie entière (à gauche) de la partie décimale (à droite) ; après la virgule : dixièmes, centièmes, millièmes.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Dans 36,6, quelle est la partie entière ?", choix: ["36", "6", "366", "3"], r: "36", expl: "La partie entière est à gauche de la virgule : 36." },
+      { t: "qcm", q: "Dans 549,137, quelle est la partie décimale ?", choix: ["137", "549", "7", "1"], r: "137", expl: "La partie décimale est à droite de la virgule : 137." },
+      { t: "qcm", q: "Comment lit-on 3,9 ?", choix: ["trois virgule neuf", "trente-neuf", "trois cent neuf"], r: "trois virgule neuf", expl: "On lit la partie entière, puis « virgule », puis la partie décimale." },
+      { t: "vf", q: "La virgule sépare la partie entière de la partie décimale.", r: true, expl: "Partie entière à gauche, partie décimale à droite." },
+      { t: "relier", q: "Dans 549,137, relie chaque chiffre à son rang.", paires: [["5", "centaines"], ["4", "dizaines"], ["9", "unités"], ["1", "dixièmes"], ["3", "centièmes"], ["7", "millièmes"]], expl: "Les unités sont juste avant la virgule, les dixièmes juste après." },
+      { t: "vf", q: "36,6 = 36 unités et 6 dixièmes", r: true, expl: "C'est la deuxième manière de lire 36,6 donnée dans la leçon." }
+    ],
+    [
+      { t: "saisie", q: "Écris en chiffres : 3 dizaines 6 unités et 6 dixièmes.", r: "36.6", nombre: true, expl: "3 dizaines 6 unités = 36 ; 6 dixièmes après la virgule : 36,6." },
+      { t: "saisie", q: "Écris en chiffres : 7 unités 4 dixièmes 5 centièmes.", r: "7.45", nombre: true, expl: "7 unités, puis 4 dixièmes et 5 centièmes : 7,45." },
+      { t: "saisie", q: "Écris en chiffres : 2 centaines 8 unités 3 dixièmes.", r: "208.3", nombre: true, expl: "2 centaines, 0 dizaine, 8 unités : 208 ; puis 3 dixièmes : 208,3." },
+      { t: "saisie", q: "Écris en chiffres : 12 unités et 5 centièmes.", r: "12.05", nombre: true, expl: "Il n'y a pas de dixièmes : on écrit 0 au rang des dixièmes. 12,05." },
+      { t: "qcm", q: "Dans 84,26, quel est le chiffre des centièmes ?", choix: ["6", "2", "4", "8"], r: "6", expl: "Après la virgule : 2 dixièmes, 6 centièmes." },
+      { t: "qcm", q: "Dans 731,508, quel est le chiffre des dixièmes ?", choix: ["5", "0", "8", "1"], r: "5", expl: "Le chiffre des dixièmes est juste après la virgule : 5." },
+      { t: "trous", q: "Complète la suite entre 3 et 4.", texte: "3 – 3,1 – 3,2 – [3,3] – 3,4 – [3,5] – 3,6 – 3,7 – [3,8] – 3,9 – 4", nombre: true, expl: "On avance d'un dixième à chaque fois." },
+      { t: "qcm", q: "Comment lit-on 5,7 ?", choix: ["cinq virgule sept", "cinquante-sept", "cinq cent sept"], r: "cinq virgule sept", expl: "Partie entière 5, virgule, partie décimale 7." },
+      { t: "classer", q: "Range ces nombres.", cases: ["s'écrit avec une virgule", "s'écrit sans virgule"], items: [["45", "s'écrit sans virgule"], ["4,5", "s'écrit avec une virgule"], ["120", "s'écrit sans virgule"], ["0,8", "s'écrit avec une virgule"], ["3,25", "s'écrit avec une virgule"], ["1 000", "s'écrit sans virgule"]], expl: "Les nombres avec une partie décimale s'écrivent avec une virgule." }
+    ],
+    [
+      { t: "qcm", q: "Quel nombre est compris entre 7 et 8 ?", choix: ["7,4", "8,1", "6,9", "74"], r: "7,4", expl: "7,4 a pour partie entière 7 : il est entre 7 et 8." },
+      { t: "vf", q: "Dans 0,7, la partie entière est 0.", r: true, expl: "À gauche de la virgule, il y a 0 : 0 unité et 7 dixièmes." },
+      { t: "saisie", q: "Écris en chiffres : 5 centaines 4 dizaines 9 unités 1 dixième 3 centièmes 7 millièmes.", r: "549.137", nombre: true, expl: "C'est le nombre du tableau de la leçon : 549,137." },
+      { t: "saisie", q: "Écris en chiffres : 6 unités et 7 millièmes.", r: "6.007", nombre: true, expl: "Ni dixièmes ni centièmes : on écrit deux zéros. 6,007." },
+      { t: "qcm", q: "20,03 = ?", choix: ["20 unités et 3 centièmes", "20 unités et 3 dixièmes", "2 dizaines et 3 dixièmes"], r: "20 unités et 3 centièmes", expl: "Après la virgule : 0 dixième, 3 centièmes." },
+      { t: "qcm", q: "Dans 63,9, quel est le chiffre des unités ?", choix: ["3", "6", "9"], r: "3", expl: "Le chiffre des unités est juste avant la virgule : 3. Le 6 est celui des dizaines." },
+      { t: "relier", q: "Relie chaque écriture au bon nombre.", paires: [["2 dizaines 5 dixièmes", "20,5"], ["2 unités 5 dixièmes", "2,5"], ["25 unités 5 centièmes", "25,05"], ["2 dizaines 5 unités", "25"]], expl: "Place chaque chiffre à son rang, et mets des zéros aux rangs vides." }
+    ],
+    [
+      { t: "trous", q: "Entre 9 et 10, on peut intercaler des nombres décimaux. Complète.", texte: "9 – 9,1 – 9,2 – [9,3] – 9,4 – 9,5 – [9,6] – 9,7 – 9,8 – [9,9] – 10", nombre: true, expl: "On avance d'un dixième à chaque fois." },
+      { t: "qcm", q: "Awa mesure 1 m et 4 dixièmes de mètre. Elle mesure…", choix: ["1,4 m", "14 m", "1,04 m", "4,1 m"], r: "1,4 m", expl: "1 unité et 4 dixièmes : 1,4 m." },
+      { t: "saisie", q: "Une bouteille contient 1 litre et 5 dixièmes de litre. Écris sa contenance en litres.", r: "1.5", nombre: true, expl: "1 unité, 5 dixièmes : 1,5 l.", unite: "l" },
+      { t: "saisie", q: "Quel nombre a pour partie entière 8 et pour partie décimale 25 ?", r: "8.25", nombre: true, expl: "8 à gauche de la virgule, 25 à droite : 8,25." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Regarde bien le nombre 507,264.", etapes: [{ q: "Chiffre des dizaines :", r: "0" }, { q: "Chiffre des dixièmes :", r: "2" }, { q: "Chiffre des millièmes :", r: "4" }], expl: "5 centaines, 0 dizaine, 7 unités ; 2 dixièmes, 6 centièmes, 4 millièmes." }
+    ]
+  ]
+});
+
+
+/* ---- ma-num-sens-division.js ---- */
+LECONS.push({
+  id: "ma-num-sens-division",
+  cahier: "maths",
+  matiere: "Activités numériques",
+  titre: "Le sens de la division",
+  date: "2026-10-20",
+  photos: ["DJI_20261118221130_0084_D.jpg", "DJI_20261118221134_0085_D.jpg"],
+  retiens:
+    "<p>La <b>division</b> est une opération qui permet de trouver :</p>" +
+    "<ul><li>le <b>nombre d'unités</b> (le nombre de parts) ;</li><li>le prix, la masse, la longueur, la capacité <b>de l'unité</b>, ou la <b>valeur d'une part</b>, à partir de la valeur totale.</li></ul>" +
+    "<p><b>VU = VT : NU</b> et <b>NU = VT : VU</b><br>(VU = valeur unitaire ; VT = valeur totale ; NU = nombre d'unités)</p>" +
+    "<table><tr><td>dividende → <b>375</b></td><td><b>15</b> ← diviseur</td></tr>" +
+    "<tr><td>− 375</td><td><b>25</b> ← quotient</td></tr>" +
+    "<tr><td>reste → <b>0</b></td><td></td></tr>" +
+    "</table>" +
+    "<p><b>Dividende = (quotient × diviseur) + reste</b><br>Ex : 375 = (25 × 15) + 0</p>",
+  astuce: "On divise la <b>valeur totale</b> : par le nombre d'unités pour trouver la valeur d'une unité, ou par la valeur d'une unité pour trouver le nombre d'unités.",
+  regle: "VU = VT : NU et NU = VT : VU. Dividende = (quotient × diviseur) + reste.",
+  niveaux: [
+    [
+      { t: "relier", q: "Dans la division 375 : 15 = 25 (reste 0), relie chaque nombre à son nom.", paires: [["375", "dividende"], ["15", "diviseur"], ["25", "quotient"], ["0", "reste"]], expl: "On divise le dividende par le diviseur ; on obtient le quotient et le reste." },
+      { t: "relier", q: "Relie chaque abréviation à sa signification.", paires: [["VU", "valeur unitaire"], ["VT", "valeur totale"], ["NU", "nombre d'unités"]], expl: "VU = valeur d'une unité ; VT = valeur de toutes les unités ; NU = combien il y a d'unités." },
+      { t: "qcm", q: "On connaît le prix de 6 cahiers. Pour trouver le prix d'un cahier, on fait…", choix: ["une division", "une addition", "une multiplication"], r: "une division", expl: "VU = VT : NU." },
+      { t: "vf", q: "VU = VT : NU", r: true, expl: "La valeur d'une unité = valeur totale divisée par le nombre d'unités." },
+      { t: "qcm", q: "NU = ?", choix: ["VT : VU", "VT × VU", "VU : VT"], r: "VT : VU", expl: "Le nombre d'unités = valeur totale divisée par la valeur d'une unité." },
+      { t: "vf", q: "Dividende = (quotient × diviseur) + reste", r: true, expl: "Ex : 375 = (25 × 15) + 0." }
+    ],
+    [
+      { t: "saisie", q: "6 cahiers coûtent 1 800 F. Combien coûte un cahier ?", r: "300", expl: "VU = VT : NU = 1 800 : 6 = 300 F.", unite: "F" },
+      { t: "saisie", q: "Awa partage 48 mangues entre 8 enfants. Combien de mangues reçoit chaque enfant ?", r: "6", expl: "Valeur d'une part : 48 : 8 = 6 mangues." },
+      { t: "saisie", q: "On coupe un rouleau de 120 m en morceaux de 10 m. Combien de morceaux obtient-on ?", r: "12", expl: "NU = VT : VU = 120 : 10 = 12 morceaux." },
+      { t: "saisie", q: "5 sacs pèsent 250 kg en tout. Combien pèse un sac ?", r: "50", expl: "VU = VT : NU = 250 : 5 = 50 kg.", unite: "kg" },
+      { t: "saisie", q: "VT = 2 400 F et VU = 400 F. Combien vaut NU ?", r: "6", expl: "NU = VT : VU = 2 400 : 400 = 6." },
+      { t: "saisie", q: "Dans une division, le quotient est 7, le diviseur 9 et le reste 4. Quel est le dividende ?", r: "67", expl: "Dividende = (7 × 9) + 4 = 63 + 4 = 67." },
+      { t: "trous", q: "Complète l'égalité de la division 375 : 15.", texte: "375 = ([25] × 15) + [0]", nombre: true, expl: "Dividende = (quotient × diviseur) + reste." },
+      { t: "classer", q: "Que cherche-t-on ?", cases: ["la valeur d'une unité (VU)", "le nombre d'unités (NU)"], items: [["le prix d'un pain, si 5 pains coûtent 750 F", "la valeur d'une unité (VU)"], ["le nombre de sacs de 50 kg dans 1 000 kg", "le nombre d'unités (NU)"], ["la masse d'un carton, si 4 cartons pèsent 36 kg", "la valeur d'une unité (VU)"], ["le nombre de bidons de 2 l pour 30 l", "le nombre d'unités (NU)"], ["la longueur d'un morceau, si on coupe 60 m en 4", "la valeur d'une unité (VU)"], ["le nombre de tickets à 150 F avec 900 F", "le nombre d'unités (NU)"]], expl: "On cherche la valeur d'une seule chose → VU. On cherche combien de choses → NU." },
+      { t: "saisie", q: "Avec 1 200 F, combien d'oranges à 100 F l'une Awa peut-elle acheter ?", r: "12", expl: "NU = VT : VU = 1 200 : 100 = 12 oranges." }
+    ],
+    [
+      { t: "qcm", q: "47 : 5 = 9, reste 2. Quelle égalité le vérifie ?", choix: ["(9 × 5) + 2 = 47", "(9 + 5) × 2 = 47", "9 × 5 × 2 = 47"], r: "(9 × 5) + 2 = 47", expl: "Dividende = (quotient × diviseur) + reste : 45 + 2 = 47." },
+      { t: "vf", q: "Si 7 savons coûtent 1 400 F, un savon coûte 1 400 F × 7.", r: false, expl: "Pour la valeur d'une unité, on divise : 1 400 : 7 = 200 F." },
+      { t: "saisie", q: "Le quotient est 12, le diviseur 15 et le reste 3. Quel est le dividende ?", r: "183", expl: "(12 × 15) + 3 = 180 + 3 = 183." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Divise 63 par 8.", etapes: [{ q: "Quel est le quotient ?", r: "7" }, { q: "Quel est le reste ?", r: "7" }], expl: "8 × 7 = 56 ; 63 − 56 = 7. Vérification : (7 × 8) + 7 = 63." },
+      { t: "qcm", q: "Moussa dit : « 50 : 6 = 8, reste 2 ». A-t-il raison ?", choix: ["Oui, car (8 × 6) + 2 = 50", "Non, car (8 × 6) + 2 = 52", "Non, le reste est 3"], r: "Oui, car (8 × 6) + 2 = 50", expl: "48 + 2 = 50 : on retrouve bien le dividende." },
+      { t: "saisie", q: "Un car transporte 360 passagers en 9 voyages, avec le même nombre à chaque fois. Combien de passagers par voyage ?", r: "40", expl: "VU = VT : NU = 360 : 9 = 40 passagers." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Khady a 2 300 F. Le kilo de sucre coûte 500 F. Elle achète le plus de kilos possible.", etapes: [{ q: "Combien de kilos achète-t-elle ?", r: "4", unite: "kg" }, { q: "Combien d'argent lui reste-t-il ?", r: "300", unite: "F" }], expl: "2 300 : 500 = 4, reste 300. Vérification : (4 × 500) + 300 = 2 300." }
+    ],
+    [
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Un commerçant achète 8 sacs de riz pour 140 000 F. Il revend chaque sac 19 000 F.", etapes: [{ q: "Prix d'achat d'un sac :", r: "17500", unite: "F" }, { q: "Bénéfice sur un sac :", r: "1500", unite: "F" }], expl: "VU = 140 000 : 8 = 17 500 F ; 19 000 − 17 500 = 1 500 F." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Une couturière a 36 m de tissu. Il faut 4 m pour une robe. Elle vend chaque robe 7 500 F.", etapes: [{ q: "Combien de robes peut-elle coudre ?", r: "9" }, { q: "Combien gagne-t-elle en vendant toutes les robes ?", r: "67500", unite: "F" }], expl: "NU = 36 : 4 = 9 robes ; 7 500 × 9 = 67 500 F." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Une école de 375 élèves a 15 classes qui ont toutes le même nombre d'élèves. 3 classes partent en excursion.", etapes: [{ q: "Nombre d'élèves par classe :", r: "25" }, { q: "Nombre d'élèves qui partent :", r: "75" }], expl: "375 : 15 = 25 élèves ; 25 × 3 = 75 élèves." },
+      { t: "qcm", q: "VT = 9 000 F et NU = 12. Combien vaut VU ?", choix: ["750 F", "108 000 F", "8 988 F", "900 F"], r: "750 F", expl: "VU = VT : NU = 9 000 : 12 = 750 F." },
+      { t: "trous", q: "Complète.", texte: "Dans 375 : 15 = 25, 375 est le [dividende], 15 est le [diviseur] et 25 est le [quotient].", expl: "Dividende : diviseur = quotient." }
+    ]
+  ]
+});
+
+
+/* ---- ma-num-soustraction.js ---- */
+// À VÉRIFIER : l'exemple du cahier écrit 15000 − 8246 = 6754, mais l'opération posée en dessous calcule 15000 − 6754 = 8246 (photo 0069). Le module pose 15 000 − 8 246 = 6 754.
+LECONS.push({
+  id: "ma-num-soustraction",
+  cahier: "maths",
+  matiere: "Activités numériques",
+  titre: "La soustraction des nombres entiers",
+  date: "2026-09-28",
+  photos: ["DJI_20261118220845_0068_D.jpg", "DJI_20261118220859_0069_D.jpg"],
+  retiens:
+    "<p>Je pose une <b>soustraction</b> pour calculer <b>un reste, un manque, une différence</b>.</p>" +
+    "<p>Dans une soustraction, le <b>plus grand nombre</b> se place toujours <b>en premier</b> (en haut).</p>" +
+    "<p>Ensuite, je mets <b>les unités sous les unités, les dizaines sous les dizaines</b>… On n'oublie pas les <b>retenues</b> s'il y en a.</p>" +
+    "<p>Ex : 15 000 − 8 246 = 6 754</p>" +
+    "<table><tr><th></th><th>dm</th><th>um</th><th>c</th><th>d</th><th>u</th></tr>" +
+    "<tr><td></td><td>1</td><td>5</td><td>0</td><td>0</td><td>0</td></tr>" +
+    "<tr><td>−</td><td></td><td>8</td><td>2</td><td>4</td><td>6</td></tr>" +
+    "<tr><td></td><td></td><td><b>6</b></td><td><b>7</b></td><td><b>5</b></td><td><b>4</b></td></tr>" +
+    "</table>",
+  astuce: "Pour vérifier une soustraction, additionne le résultat et le petit nombre : 6 754 + 8 246 = 15 000. Tu dois retrouver le grand nombre.",
+  regle: "Le plus grand nombre en premier ; unités sous unités, dizaines sous dizaines ; on commence par la droite et on n'oublie pas les retenues.",
+  niveaux: [
+    [
+      { t: "qcm", q: "On pose une soustraction pour calculer…", choix: ["un reste, un manque ou une différence", "un total", "le prix de plusieurs objets"], r: "un reste, un manque ou une différence", expl: "Reste, manque, différence : ce sont les trois sens de la soustraction." },
+      { t: "qcm", q: "Dans une soustraction, le plus grand nombre se place…", choix: ["en premier (en haut)", "en second (en bas)", "où l'on veut"], r: "en premier (en haut)", expl: "Le plus grand nombre se trouve toujours au début." },
+      { t: "vf", q: "Pour poser 15 000 − 8 246, je place le 6 de 8 246 sous le dernier 0 de 15 000.", r: true, expl: "Unités sous unités : le 6 (unités) va sous le 0 des unités." },
+      { t: "vf", q: "15 000 − 8 246 = 6 754", r: true, expl: "C'est l'exemple du cahier. Vérification : 6 754 + 8 246 = 15 000." },
+      { t: "classer", q: "Quelle opération faut-il faire ? « Je cherche… »", cases: ["addition", "soustraction"], items: [["le total de deux achats", "addition"], ["ce qui reste après une dépense", "soustraction"], ["combien il manque pour acheter un vélo", "soustraction"], ["l'écart d'âge entre deux frères", "soustraction"], ["la longueur de deux routes mises bout à bout", "addition"], ["le nombre d'élèves de deux classes réunies", "addition"]], expl: "Reste, manque, écart (différence) → soustraction. Réunion, total → addition." },
+      { t: "qcm", q: "Quelle soustraction peut-on faire avec les nombres entiers ?", choix: ["850 − 320", "320 − 850"], r: "850 − 320", expl: "Le plus grand nombre doit être en premier : 850 − 320 = 530." }
+    ],
+    [
+      { t: "saisie", q: "9 875 − 3 452 = ?", r: ["6 423", "6423", "6.423"], expl: "Pas de retenue : 6 423." },
+      { t: "saisie", q: "7 304 − 2 568 = ?", r: ["4 736", "4736", "4.736"], expl: "Attention aux retenues : 4 736. Vérifie : 4 736 + 2 568 = 7 304." },
+      { t: "saisie", q: "15 000 − 8 246 = ?", r: ["6 754", "6754", "6.754"], expl: "C'est l'exemple du cahier : 6 754." },
+      { t: "saisie", q: "50 000 − 12 345 = ?", r: ["37 655", "37655", "37.655"], expl: "37 655. Vérifie : 37 655 + 12 345 = 50 000." },
+      { t: "saisie", q: "4 070 − 1 985 = ?", r: ["2 085", "2085", "2.085"], expl: "2 085. Vérifie : 2 085 + 1 985 = 4 070." },
+      { t: "saisie", q: "63 418 − 9 579 = ?", r: ["53 839", "53839", "53.839"], expl: "53 839. Vérifie : 53 839 + 9 579 = 63 418." },
+      { t: "trous", q: "Calcule 842 − 367 colonne par colonne.", texte: "Unités : 2 − 7, c'est impossible ; je fais 12 − 7 = [5] et je retiens 1. Dizaines : 6 + 1 = 7 ; 4 − 7 est impossible, je fais 14 − 7 = [7] et je retiens 1. Centaines : 3 + 1 = 4 ; 8 − 4 = [4]. Résultat : [475].", nombre: true, expl: "La retenue s'ajoute au chiffre du bas de la colonne suivante. Vérifie : 475 + 367 = 842." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Moussa avait 25 000 F. Il achète un pantalon à 8 750 F.", etapes: [{ q: "Combien lui reste-t-il ?", r: "16250", unite: "F" }], expl: "Je cherche un reste : 25 000 − 8 750 = 16 250 F." },
+      { t: "saisie", q: "Quelle est la différence entre 1 000 et 368 ?", r: "632", expl: "La différence se calcule par une soustraction : 1 000 − 368 = 632." }
+    ],
+    [
+      { t: "vf", q: "Pour calculer 8 246 − 15 000, je place 8 246 en haut.", r: false, expl: "Le plus grand nombre doit toujours être en premier. On calcule 15 000 − 8 246." },
+      { t: "qcm", q: "Aïssatou a trouvé 8 000 − 2 376 = 5 624. Son résultat est-il juste ?", choix: ["Oui, car 5 624 + 2 376 = 8 000", "Non, car 5 624 + 2 376 = 7 000", "Non, il faut trouver 6 624"], r: "Oui, car 5 624 + 2 376 = 8 000", expl: "On vérifie avec une addition : on retrouve bien 8 000." },
+      { t: "saisie", q: "100 000 − 1 = ?", r: ["99 999", "99999", "99.999"], expl: "100 000 − 1 = 99 999." },
+      { t: "saisie", q: "10 000 − 4 507 = ?", r: ["5 493", "5493", "5.493"], expl: "Beaucoup de retenues : 5 493. Vérifie : 5 493 + 4 507 = 10 000." },
+      { t: "saisie", q: "Combien manque-t-il pour aller de 2 750 à 5 000 ?", r: ["2 250", "2250", "2.250"], expl: "Un manque se calcule par une soustraction : 5 000 − 2 750 = 2 250." },
+      { t: "relier", q: "Relie chaque soustraction à son résultat.", paires: [["1 000 − 1", "999"], ["5 000 − 2 500", "2 500"], ["3 000 − 1 200", "1 800"], ["10 000 − 9 990", "10"], ["700 − 350", "350"]], expl: "Tu peux vérifier chaque résultat par une addition." },
+      { t: "qcm", q: "Quelle addition permet de vérifier 15 000 − 8 246 = 6 754 ?", choix: ["6 754 + 8 246", "15 000 + 8 246", "15 000 + 6 754"], r: "6 754 + 8 246", expl: "Résultat + petit nombre = grand nombre : 6 754 + 8 246 = 15 000." }
+    ],
+    [
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Un vendeur de Thiaroye a 1 500 mangues. Il en vend 875 le matin et 438 l'après-midi.", etapes: [{ q: "Nombre de mangues vendues :", r: "1313" }, { q: "Nombre de mangues qui restent :", r: "187" }], expl: "875 + 438 = 1 313 ; 1 500 − 1 313 = 187 mangues." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Fatou veut acheter un téléphone à 45 000 F. Elle a économisé 28 750 F et son père lui donne 10 000 F.", etapes: [{ q: "Combien Fatou a-t-elle maintenant ?", r: "38750", unite: "F" }, { q: "Combien lui manque-t-il ?", r: "6250", unite: "F" }], expl: "28 750 + 10 000 = 38 750 ; 45 000 − 38 750 = 6 250 F." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Un car doit faire un trajet de 264 km. Il s'arrête une première fois après 98 km, puis roule encore 115 km.", etapes: [{ q: "Distance déjà parcourue :", r: "213", unite: "km" }, { q: "Distance qui reste à parcourir :", r: "51", unite: "km" }], expl: "98 + 115 = 213 ; 264 − 213 = 51 km." },
+      { t: "qcm", q: "Moustapha dit : « 4 000 − 1 999 = 2 999 ». Qu'en penses-tu ?", choix: ["Faux, c'est 2 001", "Vrai", "Faux, c'est 3 001"], r: "Faux, c'est 2 001", expl: "4 000 − 1 999 = 2 001. Vérification : 2 001 + 1 999 = 4 000." },
+      { t: "trous", q: "Trouve le nombre qui manque.", texte: "9 000 − [3500] = 5 500", nombre: true, expl: "On cherche ce qu'on enlève : 9 000 − 5 500 = 3 500." }
+    ]
+  ]
+});
+
+
+/* ---- ma-pb-donnees-enonce.js ---- */
+LECONS.push({
+  id: "ma-pb-donnees-enonce",
+  cahier: "maths",
+  matiere: "Résolution de problèmes",
+  titre: "Les types de données d'un énoncé",
+  date: "2026-09-18",
+  photos: ["DJI_20261118220759_0063_D.jpg"],
+  retiens:
+    "<ul><li>On appelle <b>donnée utile</b> toute donnée qui participe à la résolution d'un problème.</li><li>On appelle <b>donnée inutile</b> toute donnée qui ne participe ni au raisonnement, ni à la résolution d'un problème.</li><li>Une <b>donnée manquante</b> est une donnée inconnue qui rend impossible la résolution d'un problème.</li></ul>" +
+    "<p>Exemple : « Awa, 11 ans, achète 3 cahiers à 250 F l'un. Combien dépense-t-elle ? »<br>Données utiles : 3 cahiers, 250 F. Donnée inutile : 11 ans.</p>",
+  astuce: "Lis d'abord la <b>question</b>, puis demande-toi pour chaque nombre : « Est-ce que j'en ai besoin pour répondre ? »",
+  regle: "Une donnée utile sert à résoudre le problème ; une donnée inutile ne sert pas ; une donnée manquante empêche de le résoudre.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Une donnée utile est une donnée qui…", choix: ["participe à la résolution du problème", "ne sert à rien", "manque dans l'énoncé"], r: "participe à la résolution du problème", expl: "Une donnée utile participe à la résolution du problème." },
+      { t: "qcm", q: "Une donnée inutile est une donnée qui…", choix: ["ne participe ni au raisonnement ni à la résolution", "permet de trouver la réponse", "rend le problème impossible"], r: "ne participe ni au raisonnement ni à la résolution", expl: "On peut l'enlever : on trouve quand même la réponse." },
+      { t: "qcm", q: "Une donnée manquante…", choix: ["rend impossible la résolution du problème", "est écrite deux fois", "est toujours un prix"], r: "rend impossible la résolution du problème", expl: "Sans elle, on ne peut pas résoudre le problème." },
+      { t: "relier", q: "Relie chaque type de donnée à sa définition.", paires: [["donnée utile", "elle sert à résoudre"], ["donnée inutile", "elle ne sert pas"], ["donnée manquante", "elle est absente : on ne peut pas résoudre"]], expl: "Utile, inutile, manquante : ce sont les trois types de données." },
+      { t: "vf", q: "« Awa, 11 ans, achète 3 cahiers à 250 F l'un. Combien dépense-t-elle ? » L'âge d'Awa est une donnée inutile.", r: true, expl: "L'âge ne sert pas à calculer la dépense." },
+      { t: "vf", q: "Dans ce même problème, « 250 F » est une donnée utile.", r: true, expl: "Il faut le prix d'un cahier pour calculer la dépense : 250 F × 3 = 750 F." }
+    ],
+    [
+      { t: "classer", q: "« Moussa a 10 ans. Il habite à Pikine. Il a 35 billes rouges et 20 billes bleues. Combien de billes a-t-il ? » Range chaque donnée.", cases: ["donnée utile", "donnée inutile"], items: [["35 billes rouges", "donnée utile"], ["20 billes bleues", "donnée utile"], ["il habite à Pikine", "donnée inutile"], ["il a 10 ans", "donnée inutile"]], expl: "Pour trouver le nombre de billes, il faut seulement 35 et 20 : 35 + 20 = 55." },
+      { t: "qcm", q: "« Fatou achète 4 kg de sucre. Combien paie-t-elle ? » Quelle donnée manque ?", choix: ["le prix d'un kilo de sucre", "la masse du sucre", "le nom de la vendeuse"], r: "le prix d'un kilo de sucre", expl: "Sans le prix d'un kilo, on ne peut pas calculer : c'est une donnée manquante." },
+      { t: "qcm", q: "« Un car de 60 places part de Dakar à 7 h avec 45 passagers. Combien de places restent libres ? » Quelle donnée est inutile ?", choix: ["7 h", "60 places", "45 passagers"], r: "7 h", expl: "L'heure de départ ne sert pas au calcul : 60 − 45." },
+      { t: "saisie", q: "Résous le problème du car : combien de places restent libres ?", r: "15", expl: "60 − 45 = 15 places libres." },
+      { t: "qcm", q: "« Khady a 2 000 F. Elle achète du pain et du lait. Combien lui reste-t-il ? » Que remarques-tu ?", choix: ["Il manque des données : le prix du pain et celui du lait", "Toutes les données sont là", "2 000 F est une donnée inutile"], r: "Il manque des données : le prix du pain et celui du lait", expl: "Sans ces prix, on ne peut pas calculer ce qui reste." },
+      { t: "classer", q: "« Un lundi, Ibrahima, élève de CM2, achète un sac de riz de 50 kg à 17 500 F et une bouteille d'huile de 5 l à 6 000 F. Combien a-t-il dépensé ? » Range chaque donnée.", cases: ["donnée utile", "donnée inutile"], items: [["17 500 F", "donnée utile"], ["6 000 F", "donnée utile"], ["50 kg", "donnée inutile"], ["5 l", "donnée inutile"], ["un lundi", "donnée inutile"], ["élève de CM2", "donnée inutile"]], expl: "Pour la dépense, seuls les prix comptent : 17 500 + 6 000." },
+      { t: "saisie", q: "Résous le problème d'Ibrahima : combien a-t-il dépensé ?", r: ["23 500", "23500", "23.500"], expl: "17 500 + 6 000 = 23 500 F.", unite: "F" },
+      { t: "vf", q: "Une donnée inutile peut être un nombre.", r: true, expl: "Oui : dans le problème d'Ibrahima, 50 kg et 5 l sont des nombres, mais ils ne servent pas." },
+      { t: "classer", q: "Peut-on résoudre ce problème ?", cases: ["on peut le résoudre", "il manque une donnée"], items: [["Awa a 500 F. Elle dépense 200 F. Combien lui reste-t-il ?", "on peut le résoudre"], ["Moussa achète 6 mangues. Combien paie-t-il ?", "il manque une donnée"], ["Une classe a 25 filles et 22 garçons. Combien d'élèves a-t-elle ?", "on peut le résoudre"], ["Un bus transporte des passagers. Combien descendent à Thiès ?", "il manque une donnée"]], expl: "Pour Moussa, il manque le prix d'une mangue ; pour le bus, il manque le nombre de passagers qui descendent." }
+    ],
+    [
+      { t: "qcm", q: "« Le père de Mamadou a 42 ans. Il achète 3 sacs de ciment à 4 500 F le sac. Combien paie-t-il ? » Combien y a-t-il de données utiles ?", choix: ["2", "3", "1"], r: "2", expl: "3 sacs et 4 500 F sont utiles ; 42 ans est inutile." },
+      { t: "saisie", q: "Résous ce problème : combien paie le père de Mamadou ?", r: ["13 500", "13500", "13.500"], expl: "4 500 F × 3 = 13 500 F.", unite: "F" },
+      { t: "vf", q: "Si une donnée manque, on peut quand même trouver la réponse en devinant.", r: false, expl: "Une donnée manquante rend la résolution impossible : on ne devine pas en maths." },
+      { t: "qcm", q: "« Un marchand a 120 œufs. Il en casse 8, puis vend les autres à 100 F l'œuf. Combien gagne-t-il ? » Quelles données sont utiles ?", choix: ["120 œufs, 8 œufs cassés et 100 F", "seulement 120 œufs et 100 F", "seulement 8 et 100 F"], r: "120 œufs, 8 œufs cassés et 100 F", expl: "Il faut enlever les œufs cassés : les trois données sont utiles." },
+      { t: "saisie", q: "Résous le problème du marchand d'œufs : combien gagne-t-il ?", r: ["11 200", "11200", "11.200"], expl: "120 − 8 = 112 œufs ; 112 × 100 = 11 200 F.", unite: "F" },
+      { t: "classer", q: "« Aïssatou a 10 ans. Pour sa fête, elle invite 12 amies. Au marché de Colobane, elle achète 3 bouteilles de jus à 1 000 F et un gâteau à 5 500 F. Combien dépense-t-elle ? » Range chaque donnée.", cases: ["donnée utile", "donnée inutile"], items: [["3 bouteilles", "donnée utile"], ["1 000 F", "donnée utile"], ["5 500 F", "donnée utile"], ["10 ans", "donnée inutile"], ["12 amies", "donnée inutile"], ["Colobane", "donnée inutile"]], expl: "Pour la dépense, il faut le nombre de bouteilles, leur prix et le prix du gâteau." },
+      { t: "qcm", q: "Dans le problème d'Aïssatou, quelle question rendrait la donnée « 12 amies » utile ?", choix: ["Combien de personnes seront à la fête avec Aïssatou ?", "Combien coûte le gâteau ?", "Où se trouve le marché ?"], r: "Combien de personnes seront à la fête avec Aïssatou ?", expl: "Une donnée est utile ou inutile selon la question posée : ici, 12 + 1 = 13 personnes." }
+    ],
+    [
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "« Aïssatou a 10 ans. Pour sa fête, elle invite 12 amies. Elle achète 3 bouteilles de jus à 1 000 F et un gâteau à 5 500 F. Combien dépense-t-elle ? »", etapes: [{ q: "Prix des bouteilles de jus :", r: "3000", unite: "F" }, { q: "Dépense totale :", r: "8500", unite: "F" }], expl: "1 000 × 3 = 3 000 F ; 3 000 + 5 500 = 8 500 F. L'âge et le nombre d'amies sont inutiles." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "« Un car de 70 places conduit par Modou part de Thiès à 8 h avec 52 passagers. À Rufisque, 13 passagers descendent et 6 montent. Combien de passagers arrivent à Dakar ? »", etapes: [{ q: "Passagers après la descente de Rufisque :", r: "39" }, { q: "Passagers à l'arrivée à Dakar :", r: "45" }], expl: "52 − 13 = 39 ; 39 + 6 = 45. Inutiles : 70 places, Modou, 8 h." },
+      { t: "qcm", q: "« Moussa range ses livres sur 4 étagères. Combien de livres a-t-il ? » Quelle donnée manque ?", choix: ["le nombre de livres sur chaque étagère", "la couleur des étagères", "l'âge de Moussa"], r: "le nombre de livres sur chaque étagère", expl: "Sans savoir combien il y a de livres par étagère, on ne peut pas répondre." },
+      { t: "qcm", q: "« Awa achète 5 pagnes. Combien paie-t-elle ? » Que faut-il ajouter pour pouvoir résoudre ?", choix: ["le prix d'un pagne", "l'âge d'Awa", "la couleur des pagnes"], r: "le prix d'un pagne", expl: "Le prix d'un pagne est la donnée manquante." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "On complète le problème : « Awa achète 5 pagnes à 3 500 F l'un. Elle paie avec 20 000 F. Combien lui rend-on ? »", etapes: [{ q: "Prix des 5 pagnes :", r: "17500", unite: "F" }, { q: "Somme rendue à Awa :", r: "2500", unite: "F" }], expl: "3 500 × 5 = 17 500 F ; 20 000 − 17 500 = 2 500 F." }
+    ]
+  ]
+});
+
+
+/* ---- ma-pb-formuler-questions.js ---- */
+LECONS.push({
+  id: "ma-pb-formuler-questions",
+  cahier: "maths",
+  matiere: "Résolution de problèmes",
+  titre: "Formuler des questions pour compléter un énoncé",
+  date: "2026-10-09",
+  photos: ["DJI_20261118221038_0077_D.jpg", "DJI_20261118221051_0078_D.jpg"],
+  retiens:
+    "<p>Pour qu'un énoncé soit <b>complet</b>, il faut des <b>questions intermédiaires</b> et la <b>question finale</b>. Ce sont des questions qui facilitent le raisonnement et la résolution du problème.</p>" +
+    "<p>Exemple : « Un marchand achète 10 sacs de riz à 16 000 F l'un. Il les revend à 18 000 F l'un. » On peut formuler :</p>" +
+    "<ul><li>question intermédiaire : Quel est le prix d'achat des 10 sacs ? (160 000 F)</li><li>question intermédiaire : Quel est le prix de vente des 10 sacs ? (180 000 F)</li><li>question finale : Quel est le bénéfice du marchand ? (20 000 F)</li></ul>",
+  astuce: "Une bonne question se commence souvent par « Combien… ? » ou « Quel est… ? » et se termine par un <b>point d'interrogation</b>. Sa réponse ne doit pas être déjà écrite dans l'énoncé.",
+  regle: "Un énoncé complet a des questions intermédiaires, qui facilitent le raisonnement, et une question finale, qui termine la résolution.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Pour qu'un énoncé soit complet, il faut…", choix: ["des questions intermédiaires et la question finale", "seulement la question finale", "seulement des nombres"], r: "des questions intermédiaires et la question finale", expl: "C'est la définition de la leçon." },
+      { t: "vf", q: "Les questions intermédiaires facilitent le raisonnement et la résolution du problème.", r: true, expl: "Elles découpent le problème en petites étapes." },
+      { t: "qcm", q: "« Un marchand achète 10 sacs de riz à 16 000 F l'un. Il les revend à 18 000 F l'un. » Quelle question peut être la question finale ?", choix: ["Quel est le bénéfice du marchand ?", "Combien de sacs achète-t-il ?", "Combien coûte un sac ?"], r: "Quel est le bénéfice du marchand ?", expl: "Les deux autres réponses sont déjà écrites dans l'énoncé." },
+      { t: "qcm", q: "Dans ce problème, quelle question intermédiaire aide à trouver le bénéfice ?", choix: ["Quel est le prix d'achat des 10 sacs ?", "Quel âge a le marchand ?", "Où habite le marchand ?"], r: "Quel est le prix d'achat des 10 sacs ?", expl: "Bénéfice = prix de vente − prix d'achat : il faut d'abord le prix d'achat." },
+      { t: "vf", q: "« Quel est le prix de vente des 10 sacs ? » est une question intermédiaire.", r: true, expl: "Sa réponse (180 000 F) sert à trouver le bénéfice." },
+      { t: "relier", q: "Relie chaque question à sa réponse.", paires: [["prix d'achat des 10 sacs", "160 000 F"], ["prix de vente des 10 sacs", "180 000 F"], ["bénéfice du marchand", "20 000 F"]], expl: "16 000 × 10 = 160 000 ; 18 000 × 10 = 180 000 ; 180 000 − 160 000 = 20 000." }
+    ],
+    [
+      { t: "ordre", q: "Remets la question dans l'ordre.", r: "Quel est le prix d'achat des 10 sacs ?", expl: "Une question commence par une majuscule et se termine par un point d'interrogation." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "« Un marchand achète 10 sacs de riz à 16 000 F l'un. Il les revend à 18 000 F l'un. »", etapes: [{ q: "Quel est le prix d'achat des 10 sacs ?", r: "160000", unite: "F" }, { q: "Quel est le prix de vente des 10 sacs ?", r: "180000", unite: "F" }, { q: "Quel est le bénéfice du marchand ?", r: "20000", unite: "F" }], expl: "16 000 × 10 = 160 000 ; 18 000 × 10 = 180 000 ; 180 000 − 160 000 = 20 000 F." },
+      { t: "qcm", q: "« Awa achète 6 mètres de tissu à 1 500 F le mètre. Elle paie la couture 4 000 F. » Quelle question finale convient ?", choix: ["Combien dépense-t-elle en tout ?", "Combien de mètres achète-t-elle ?", "Combien coûte la couture ?"], r: "Combien dépense-t-elle en tout ?", expl: "Les deux autres réponses sont déjà dans l'énoncé." },
+      { t: "qcm", q: "Pour ce problème, quelle question intermédiaire faut-il poser d'abord ?", choix: ["Combien coûte le tissu ?", "Combien dépense-t-elle en tout ?", "Combien coûte la couture ?"], r: "Combien coûte le tissu ?", expl: "On calcule d'abord le prix du tissu (1 500 × 6), puis la dépense totale." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Résous le problème d'Awa (6 m de tissu à 1 500 F le mètre, couture 4 000 F).", etapes: [{ q: "Combien coûte le tissu ?", r: "9000", unite: "F" }, { q: "Combien dépense-t-elle en tout ?", r: "13000", unite: "F" }], expl: "1 500 × 6 = 9 000 ; 9 000 + 4 000 = 13 000 F." },
+      { t: "classer", q: "« Un car transporte 48 passagers par voyage. Il fait 3 voyages par jour. Le ticket coûte 1 250 F. » Range chaque question.", cases: ["question intermédiaire", "question finale", "question qui ne convient pas"], items: [["Combien de passagers transporte-t-il par jour ?", "question intermédiaire"], ["Quelle est la recette du jour ?", "question finale"], ["Quelle est la couleur du car ?", "question qui ne convient pas"], ["Comment s'appelle le chauffeur ?", "question qui ne convient pas"]], expl: "On ne peut pas répondre aux questions sur la couleur ou le chauffeur avec les données : elles ne conviennent pas." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Résous le problème du car (48 passagers par voyage, 3 voyages, ticket à 1 250 F).", etapes: [{ q: "Combien de passagers par jour ?", r: "144" }, { q: "Quelle est la recette du jour ?", r: "180000", unite: "F" }], expl: "48 × 3 = 144 ; 1 250 × 144 = 180 000 F." },
+      { t: "ordre", q: "Remets la question dans l'ordre.", r: "Combien d'argent lui reste-t-il ?", expl: "« Combien… ? » : une question qui demande un nombre." }
+    ],
+    [
+      { t: "qcm", q: "« Moussa a 2 500 F. Il achète 3 beignets à 100 F l'un et un jus à 250 F. » Il manque la question finale. Laquelle ?", choix: ["Combien lui reste-t-il ?", "Combien coûte un beignet ?", "Combien de beignets achète-t-il ?"], r: "Combien lui reste-t-il ?", expl: "Les autres réponses sont déjà écrites dans l'énoncé." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Résous le problème de Moussa (2 500 F, 3 beignets à 100 F, un jus à 250 F).", etapes: [{ q: "Combien coûtent les beignets ?", r: "300", unite: "F" }, { q: "Combien dépense-t-il en tout ?", r: "550", unite: "F" }, { q: "Combien lui reste-t-il ?", r: "1950", unite: "F" }], expl: "100 × 3 = 300 ; 300 + 250 = 550 ; 2 500 − 550 = 1 950 F." },
+      { t: "vf", q: "Une question dont la réponse est déjà écrite dans l'énoncé est une bonne question intermédiaire.", r: false, expl: "Elle ne fait pas avancer le raisonnement : la réponse est déjà connue." },
+      { t: "qcm", q: "« Un jardinier plante 8 rangées de 25 salades. Il vend chaque salade 150 F. Combien gagne-t-il ? » Quelle question intermédiaire faut-il poser ?", choix: ["Combien de salades plante-t-il ?", "Combien coûte une salade ?", "Combien de rangées y a-t-il ?"], r: "Combien de salades plante-t-il ?", expl: "On calcule d'abord le nombre de salades (25 × 8), puis le gain." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Résous le problème du jardinier.", etapes: [{ q: "Combien de salades plante-t-il ?", r: "200" }, { q: "Combien gagne-t-il ?", r: "30000", unite: "F" }], expl: "25 × 8 = 200 salades ; 150 × 200 = 30 000 F." },
+      { t: "trous", q: "Complète.", texte: "Une question [intermédiaire] facilite le raisonnement ; la question [finale] termine la résolution du problème.", expl: "Ce sont les deux sortes de questions d'un énoncé complet." }
+    ],
+    [
+      { t: "qcm", q: "« Au marché, Khady achète 3 kg de poisson à 2 000 F le kilo et 2 kg de riz à 450 F le kilo. Elle donne un billet de 10 000 F à la marchande. » Quelle question finale convient ?", choix: ["Combien la marchande lui rend-elle ?", "Combien coûte un kilo de poisson ?", "Quel billet donne-t-elle ?"], r: "Combien la marchande lui rend-elle ?", expl: "Les autres réponses sont déjà dans l'énoncé." },
+      { t: "ordre", q: "Remets la question finale dans l'ordre.", r: "Combien la marchande lui rend-elle ?", expl: "Le sujet inversé « rend-elle » s'écrit avec un trait d'union." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Résous le problème de Khady en répondant aux questions intermédiaires.", etapes: [{ q: "Combien coûte le poisson ?", r: "6000", unite: "F" }, { q: "Combien coûte le riz ?", r: "900", unite: "F" }, { q: "Combien dépense-t-elle en tout ?", r: "6900", unite: "F" }, { q: "Combien la marchande lui rend-elle ?", r: "3100", unite: "F" }], expl: "2 000 × 3 = 6 000 ; 450 × 2 = 900 ; 6 000 + 900 = 6 900 ; 10 000 − 6 900 = 3 100 F." },
+      { t: "qcm", q: "« Une coopérative de femmes de Kaolack récolte 1 200 kg d'arachide. Elle garde 200 kg pour les semences et vend le reste à 350 F le kilo. Quelle somme reçoit-elle ? » Quelle question intermédiaire faut-il poser ?", choix: ["Quelle masse d'arachide est vendue ?", "Combien de femmes y a-t-il ?", "Quel est le prix d'un kilo ?"], r: "Quelle masse d'arachide est vendue ?", expl: "On calcule d'abord la masse vendue (1 200 − 200), puis la somme reçue." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Résous le problème de la coopérative.", etapes: [{ q: "Quelle masse d'arachide est vendue ?", r: "1000", unite: "kg" }, { q: "Quelle somme reçoit-elle ?", r: "350000", unite: "F" }], expl: "1 200 − 200 = 1 000 kg ; 350 × 1 000 = 350 000 F." }
+    ]
+  ]
+});
+
+
+/* ---- ma-pb-lire-donnees.js ---- */
+LECONS.push({
+  id: "ma-pb-lire-donnees",
+  cahier: "maths",
+  matiere: "Résolution de problèmes",
+  titre: "Lire des données sur un tableau, un schéma ou un graphique",
+  date: "2026-11-06",
+  photos: ["DJI_20261118221215_0091_D.jpg", "DJI_20261118221221_0092_D.jpg"],
+  retiens:
+    "<p>À partir des données d'un <b>tableau</b>, d'un <b>schéma</b> ou d'un <b>graphique</b>, on peut créer un <b>énoncé-problème</b>.</p>" +
+    "<p>Ex : voici le schéma du cahier.</p>" +
+    "<ul><li>un segment court, noté <b>l</b> (la largeur) ;</li><li>en dessous, un segment plus long, noté <b>L</b> (la longueur) : il est aussi long que l, plus un morceau de <b>40 m</b> ;</li><li>une accolade réunit les deux segments : <b>600 m</b>.</li></ul>" +
+    "<p><b>Contexte possible :</b> Un jardin rectangulaire mesure 600 m de demi-périmètre. La longueur dépasse la largeur de 40 m.<br><b>Consigne :</b> Trouve les dimensions du jardin.</p>",
+  astuce: "Avant de calculer, lis bien le <b>titre</b> du tableau ou du graphique, le nom des lignes et des colonnes, et ce que représente chaque symbole.",
+  regle: "On lit les données d'un tableau, d'un schéma ou d'un graphique pour créer un énoncé-problème, puis on les utilise pour le résoudre.",
+  niveaux: [
+    [
+      { t: "qcm", q: "À partir des données d'un tableau, d'un schéma ou d'un graphique, on peut…", choix: ["créer un énoncé-problème", "seulement colorier", "ne rien faire"], r: "créer un énoncé-problème", expl: "C'est la phrase de la leçon." },
+      { t: "qcm", q: "Awa vend des mangues au marché de Thiaroye. Voici ses ventes de la semaine :<table class='tableau'><tr><th>jour</th><th>lundi</th><th>mardi</th><th>mercredi</th><th>jeudi</th><th>vendredi</th></tr><tr><td>mangues vendues</td><td>45</td><td>60</td><td>38</td><td>72</td><td>85</td></tr></table>Combien de mangues Awa a-t-elle vendues mardi ?", choix: ["60", "45", "38", "72"], r: "60", expl: "Dans la colonne « mardi », on lit 60." },
+      { t: "qcm", q: "Awa vend des mangues au marché de Thiaroye. Voici ses ventes de la semaine :<table class='tableau'><tr><th>jour</th><th>lundi</th><th>mardi</th><th>mercredi</th><th>jeudi</th><th>vendredi</th></tr><tr><td>mangues vendues</td><td>45</td><td>60</td><td>38</td><td>72</td><td>85</td></tr></table>Quel jour a-t-elle vendu le plus de mangues ?", choix: ["vendredi", "jeudi", "lundi", "mardi"], r: "vendredi", expl: "85 est le plus grand nombre du tableau." },
+      { t: "vf", q: "Awa vend des mangues au marché de Thiaroye. Voici ses ventes de la semaine :<table class='tableau'><tr><th>jour</th><th>lundi</th><th>mardi</th><th>mercredi</th><th>jeudi</th><th>vendredi</th></tr><tr><td>mangues vendues</td><td>45</td><td>60</td><td>38</td><td>72</td><td>85</td></tr></table>Mercredi, Awa a vendu moins de mangues que lundi.", r: true, expl: "Mercredi : 38 ; lundi : 45. 38 < 45." },
+      { t: "vf", q: "Voici le schéma du cahier :<br>l : ━━━━━━━━━━<br>L : ━━━━━━━━━━━━━ (le morceau en plus mesure 40 m)<br>Les deux segments ensemble : 600 m<br>Le segment L est plus long que le segment l.", r: true, expl: "L a un morceau de 40 m en plus." },
+      { t: "qcm", q: "Voici le schéma du cahier :<br>l : ━━━━━━━━━━<br>L : ━━━━━━━━━━━━━ (le morceau en plus mesure 40 m)<br>Les deux segments ensemble : 600 m<br>Que représentent les 600 m ?", choix: ["la longueur et la largeur réunies (le demi-périmètre)", "la longueur seule", "la largeur seule"], r: "la longueur et la largeur réunies (le demi-périmètre)", expl: "L'accolade réunit les deux segments : L + l = 600 m." }
+    ],
+    [
+      { t: "saisie", q: "Awa vend des mangues au marché de Thiaroye. Voici ses ventes de la semaine :<table class='tableau'><tr><th>jour</th><th>lundi</th><th>mardi</th><th>mercredi</th><th>jeudi</th><th>vendredi</th></tr><tr><td>mangues vendues</td><td>45</td><td>60</td><td>38</td><td>72</td><td>85</td></tr></table>Combien de mangues Awa a-t-elle vendues lundi et mardi ensemble ?", r: "105", expl: "Lundi 45, mardi 60 : 45 + 60 = 105 mangues." },
+      { t: "saisie", q: "Awa vend des mangues au marché de Thiaroye. Voici ses ventes de la semaine :<table class='tableau'><tr><th>jour</th><th>lundi</th><th>mardi</th><th>mercredi</th><th>jeudi</th><th>vendredi</th></tr><tr><td>mangues vendues</td><td>45</td><td>60</td><td>38</td><td>72</td><td>85</td></tr></table>Combien de mangues a-t-elle vendues dans la semaine ?", r: "300", expl: "45 + 60 + 38 + 72 + 85 = 300 mangues." },
+      { t: "saisie", q: "Awa vend des mangues au marché de Thiaroye. Voici ses ventes de la semaine :<table class='tableau'><tr><th>jour</th><th>lundi</th><th>mardi</th><th>mercredi</th><th>jeudi</th><th>vendredi</th></tr><tr><td>mangues vendues</td><td>45</td><td>60</td><td>38</td><td>72</td><td>85</td></tr></table>Combien de mangues de plus a-t-elle vendues jeudi que mercredi ?", r: "34", expl: "Jeudi 72, mercredi 38 : 72 − 38 = 34 mangues." },
+      { t: "qcm", q: "Voici le nombre d'élèves de chaque classe d'une école de Thiès :<table class='tableau'><tr><th>classe</th><th>CI</th><th>CP</th><th>CE1</th><th>CE2</th><th>CM1</th><th>CM2</th></tr><tr><td>élèves</td><td>48</td><td>52</td><td>45</td><td>50</td><td>47</td><td>56</td></tr></table>Quelle classe a le plus d'élèves ?", choix: ["CM2", "CP", "CE2", "CI"], r: "CM2", expl: "56 est le plus grand nombre du tableau." },
+      { t: "saisie", q: "Voici le nombre d'élèves de chaque classe d'une école de Thiès :<table class='tableau'><tr><th>classe</th><th>CI</th><th>CP</th><th>CE1</th><th>CE2</th><th>CM1</th><th>CM2</th></tr><tr><td>élèves</td><td>48</td><td>52</td><td>45</td><td>50</td><td>47</td><td>56</td></tr></table>Combien d'élèves y a-t-il dans toute l'école ?", r: "298", expl: "48 + 52 + 45 + 50 + 47 + 56 = 298 élèves." },
+      { t: "saisie", q: "Ce graphique montre les sacs de riz vendus par une boutique de Pikine.<br>Chaque ■ représente 10 sacs.<br>lundi : ■■■<br>mardi : ■■■■■<br>mercredi : ■■<br>jeudi : ■■■■<br>Combien de sacs la boutique a-t-elle vendus mardi ?", r: "50", expl: "Mardi : 5 carrés de 10 sacs → 50 sacs." },
+      { t: "saisie", q: "Ce graphique montre les sacs de riz vendus par une boutique de Pikine.<br>Chaque ■ représente 10 sacs.<br>lundi : ■■■<br>mardi : ■■■■■<br>mercredi : ■■<br>jeudi : ■■■■<br>Combien de sacs a-t-elle vendus en tout pendant ces quatre jours ?", r: "140", expl: "3 + 5 + 2 + 4 = 14 carrés, soit 140 sacs (30 + 50 + 20 + 40)." },
+      { t: "trous", q: "Voici le schéma du cahier :<br>l : ━━━━━━━━━━<br>L : ━━━━━━━━━━━━━ (le morceau en plus mesure 40 m)<br>Les deux segments ensemble : 600 m<br>Complète ce qu'on lit sur le schéma.", texte: "L + l = [600] m ; L = l + [40] m", nombre: true, expl: "L'accolade donne la somme (600 m) ; le morceau en plus donne la différence (40 m)." }
+    ],
+    [
+      { t: "qcm", q: "Awa vend des mangues au marché de Thiaroye. Voici ses ventes de la semaine :<table class='tableau'><tr><th>jour</th><th>lundi</th><th>mardi</th><th>mercredi</th><th>jeudi</th><th>vendredi</th></tr><tr><td>mangues vendues</td><td>45</td><td>60</td><td>38</td><td>72</td><td>85</td></tr></table>Quel énoncé est fidèle au tableau ?", choix: ["Awa a vendu 45 mangues lundi et 60 mardi. Combien en a-t-elle vendu ces deux jours ?", "Awa a vendu 60 mangues lundi et 45 mardi. Combien en a-t-elle vendu ces deux jours ?", "Awa a vendu 38 mangues jeudi. Combien en a-t-elle vendu vendredi ?"], r: "Awa a vendu 45 mangues lundi et 60 mardi. Combien en a-t-elle vendu ces deux jours ?", expl: "Le tableau donne 45 pour lundi et 60 pour mardi. Jeudi, c'est 72, pas 38." },
+      { t: "qcm", q: "Ce graphique montre les sacs de riz vendus par une boutique de Pikine.<br>Chaque ■ représente 10 sacs.<br>lundi : ■■■<br>mardi : ■■■■■<br>mercredi : ■■<br>jeudi : ■■■■<br>Combien de sacs de plus la boutique a-t-elle vendus mardi que mercredi ?", choix: ["30", "3", "70", "20"], r: "30", expl: "Mardi 50 sacs, mercredi 20 sacs : 50 − 20 = 30. Attention, chaque carré vaut 10 sacs !" },
+      { t: "saisie", q: "Ce graphique montre les sacs de riz vendus par une boutique de Pikine.<br>Chaque ■ représente 10 sacs.<br>lundi : ■■■<br>mardi : ■■■■■<br>mercredi : ■■<br>jeudi : ■■■■<br>Un sac coûte 17 000 F. Quelle somme la boutique a-t-elle reçue jeudi ?", r: ["680 000", "680000", "680.000"], expl: "Jeudi : 4 carrés = 40 sacs ; 17 000 × 40 = 680 000 F.", unite: "F" },
+      { t: "saisie", q: "Voici les prix affichés par une boutique de Dakar :<table class='tableau'><tr><th>article</th><th>prix</th></tr><tr><td>riz (1 kg)</td><td>450 F</td></tr><tr><td>sucre (1 kg)</td><td>700 F</td></tr><tr><td>huile (1 l)</td><td>1 300 F</td></tr><tr><td>oignons (1 kg)</td><td>500 F</td></tr></table>Fatou achète 2 kg de sucre et 1 l d'huile. Combien paie-t-elle ?", r: ["2 700", "2700", "2.700"], expl: "Sucre : 700 × 2 = 1 400 F ; huile : 1 300 F ; total 2 700 F.", unite: "F" },
+      { t: "vf", q: "Voici les prix affichés par une boutique de Dakar :<table class='tableau'><tr><th>article</th><th>prix</th></tr><tr><td>riz (1 kg)</td><td>450 F</td></tr><tr><td>sucre (1 kg)</td><td>700 F</td></tr><tr><td>huile (1 l)</td><td>1 300 F</td></tr><tr><td>oignons (1 kg)</td><td>500 F</td></tr></table>Le kilo d'oignons coûte plus cher que le kilo de riz.", r: true, expl: "Oignons : 500 F ; riz : 450 F." },
+      { t: "qcm", q: "Voici les prix affichés par une boutique de Dakar :<table class='tableau'><tr><th>article</th><th>prix</th></tr><tr><td>riz (1 kg)</td><td>450 F</td></tr><tr><td>sucre (1 kg)</td><td>700 F</td></tr><tr><td>huile (1 l)</td><td>1 300 F</td></tr><tr><td>oignons (1 kg)</td><td>500 F</td></tr></table>Quelle question peut-on résoudre avec ce tableau ?", choix: ["Combien coûtent 3 kg de riz ?", "Combien coûte un poulet ?", "À quelle heure ouvre la boutique ?"], r: "Combien coûtent 3 kg de riz ?", expl: "Le tableau donne le prix du riz, mais pas celui du poulet ni l'heure d'ouverture." },
+      { t: "saisie", q: "Voici les prix affichés par une boutique de Dakar :<table class='tableau'><tr><th>article</th><th>prix</th></tr><tr><td>riz (1 kg)</td><td>450 F</td></tr><tr><td>sucre (1 kg)</td><td>700 F</td></tr><tr><td>huile (1 l)</td><td>1 300 F</td></tr><tr><td>oignons (1 kg)</td><td>500 F</td></tr></table>Combien coûtent 5 kg de riz ?", r: ["2 250", "2250", "2.250"], expl: "450 × 5 = 2 250 F.", unite: "F" }
+    ],
+    [
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Voici le schéma du cahier :<br>l : ━━━━━━━━━━<br>L : ━━━━━━━━━━━━━ (le morceau en plus mesure 40 m)<br>Les deux segments ensemble : 600 m<br>Un jardin rectangulaire mesure 600 m de demi-périmètre. La longueur dépasse la largeur de 40 m. Trouve ses dimensions.", etapes: [{ q: "Si on enlève le morceau de 40 m, il reste deux segments égaux : 600 − 40 = ?", r: "560", unite: "m" }, { q: "La largeur est la moitié : 560 : 2 = ?", r: "280", unite: "m" }, { q: "La longueur : 280 + 40 = ?", r: "320", unite: "m" }], expl: "Largeur 280 m, longueur 320 m. Vérification : 280 + 320 = 600 et 320 − 280 = 40." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Voici les prix affichés par une boutique de Dakar :<table class='tableau'><tr><th>article</th><th>prix</th></tr><tr><td>riz (1 kg)</td><td>450 F</td></tr><tr><td>sucre (1 kg)</td><td>700 F</td></tr><tr><td>huile (1 l)</td><td>1 300 F</td></tr><tr><td>oignons (1 kg)</td><td>500 F</td></tr></table>Moussa achète 3 kg de riz, 2 kg d'oignons et 1 l d'huile. Il paie avec un billet de 5 000 F.", etapes: [{ q: "Prix du riz :", r: "1350", unite: "F" }, { q: "Prix des oignons :", r: "1000", unite: "F" }, { q: "Dépense totale :", r: "3650", unite: "F" }, { q: "Monnaie rendue :", r: "1350", unite: "F" }], expl: "450 × 3 = 1 350 ; 500 × 2 = 1 000 ; 1 350 + 1 000 + 1 300 = 3 650 ; 5 000 − 3 650 = 1 350 F." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Ce graphique montre les sacs de riz vendus par une boutique de Pikine.<br>Chaque ■ représente 10 sacs.<br>lundi : ■■■<br>mardi : ■■■■■<br>mercredi : ■■<br>jeudi : ■■■■<br>Chaque sac pèse 50 kg.", etapes: [{ q: "Nombre de sacs vendus pendant les quatre jours :", r: "140" }, { q: "Masse totale de riz vendue :", r: "7000", unite: "kg" }], expl: "30 + 50 + 20 + 40 = 140 sacs ; 50 × 140 = 7 000 kg." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Voici le nombre d'élèves de chaque classe d'une école de Thiès :<table class='tableau'><tr><th>classe</th><th>CI</th><th>CP</th><th>CE1</th><th>CE2</th><th>CM1</th><th>CM2</th></tr><tr><td>élèves</td><td>48</td><td>52</td><td>45</td><td>50</td><td>47</td><td>56</td></tr></table>L'école reçoit 350 tables-bancs neufs, une place par élève.", etapes: [{ q: "Nombre d'élèves de l'école :", r: "298" }, { q: "Nombre de places en trop :", r: "52" }], expl: "48 + 52 + 45 + 50 + 47 + 56 = 298 ; 350 − 298 = 52 places." },
+      { t: "qcm", q: "Un schéma montre deux segments : celui de Moussa (M) et celui de Fatou (F), qui est plus long de 500 F. Une accolade réunit les deux : 3 500 F. Quel énoncé correspond à ce schéma ?", choix: ["Moussa et Fatou ont ensemble 3 500 F. Fatou a 500 F de plus que Moussa.", "Moussa a 3 500 F et Fatou a 500 F.", "Fatou a 500 F de moins que Moussa."], r: "Moussa et Fatou ont ensemble 3 500 F. Fatou a 500 F de plus que Moussa.", expl: "L'accolade donne le total des deux (3 500 F) ; le morceau en plus donne l'écart (500 F) en faveur de Fatou." }
+    ]
+  ]
+});
+
+
+/* ---- ma-pb-types-questions.js ---- */
+LECONS.push({
+  id: "ma-pb-types-questions",
+  cahier: "maths",
+  matiere: "Résolution de problèmes",
+  titre: "Les types de questions d'un énoncé",
+  date: "2026-09-25",
+  photos: ["DJI_20261118220845_0068_D.jpg"],
+  retiens:
+    "<ul><li>On appelle <b>questions intermédiaires</b> les questions cachées ou posées dans un énoncé et qui mènent à une question finale.</li><li>La <b>question finale</b> termine la résolution d'un problème.</li></ul>" +
+    "<p>Exemple : « Moussa achète 3 cahiers à 250 F l'un et un stylo à 150 F. Il paie avec un billet de 1 000 F. Combien lui rend-on ? »</p>" +
+    "<table><tr><th>question</th><th>type</th><th>réponse</th></tr>" +
+    "<tr><td>Combien coûtent les 3 cahiers ?</td><td>intermédiaire (cachée)</td><td>250 F × 3 = 750 F</td></tr>" +
+    "<tr><td>Combien Moussa dépense-t-il en tout ?</td><td>intermédiaire (cachée)</td><td>750 F + 150 F = 900 F</td></tr>" +
+    "<tr><td>Combien lui rend-on ?</td><td>finale</td><td>1 000 F − 900 F = 100 F</td></tr>" +
+    "</table>",
+  astuce: "Avant de calculer, demande-toi : « Qu'est-ce que je dois savoir d'abord pour répondre à la dernière question ? » Ce sont les questions intermédiaires.",
+  regle: "Les questions intermédiaires (posées ou cachées) mènent à la question finale ; la question finale termine la résolution du problème.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Une question intermédiaire…", choix: ["mène à la question finale", "termine le problème", "ne sert à rien"], r: "mène à la question finale", expl: "Les questions intermédiaires sont des étapes vers la question finale." },
+      { t: "qcm", q: "La question finale…", choix: ["termine la résolution du problème", "est toujours la première", "est toujours cachée"], r: "termine la résolution du problème", expl: "C'est la dernière question : sa réponse termine le problème." },
+      { t: "vf", q: "Une question intermédiaire peut être cachée, c'est-à-dire pas écrite dans l'énoncé.", r: true, expl: "Les questions intermédiaires sont cachées ou posées." },
+      { t: "vf", q: "Dans l'exemple de Moussa, « Combien lui rend-on ? » est la question finale.", r: true, expl: "C'est la dernière réponse à trouver : 100 F." },
+      { t: "relier", q: "Relie.", paires: [["question intermédiaire", "elle mène à la question finale"], ["question finale", "elle termine la résolution"], ["question cachée", "pas écrite, mais à trouver"]], expl: "Une question cachée est une question intermédiaire qui n'est pas écrite dans l'énoncé." },
+      { t: "qcm", q: "Dans l'exemple de Moussa, que faut-il calculer en premier ?", choix: ["le prix des 3 cahiers", "la monnaie rendue", "le prix du stylo seul"], r: "le prix des 3 cahiers", expl: "250 F × 3 = 750 F : c'est la première question intermédiaire (cachée)." }
+    ],
+    [
+      { t: "classer", q: "« Fatou achète 2 kg de viande à 4 000 F le kilo et 3 kg d'oignons à 500 F le kilo. Elle paie avec un billet de 10 000 F. Combien lui rend-on ? » Range chaque question.", cases: ["question intermédiaire", "question finale"], items: [["Combien coûte la viande ?", "question intermédiaire"], ["Combien coûtent les oignons ?", "question intermédiaire"], ["Combien dépense-t-elle en tout ?", "question intermédiaire"], ["Combien lui rend-on ?", "question finale"]], expl: "Les trois premières questions mènent à la dernière, qui termine le problème." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "« Fatou achète 2 kg de viande à 4 000 F le kilo et 3 kg d'oignons à 500 F le kilo. Elle paie avec un billet de 10 000 F. Combien lui rend-on ? »", etapes: [{ q: "Prix de la viande :", r: "8000", unite: "F" }, { q: "Prix des oignons :", r: "1500", unite: "F" }, { q: "Dépense totale :", r: "9500", unite: "F" }, { q: "Somme rendue :", r: "500", unite: "F" }], expl: "4 000 × 2 = 8 000 ; 500 × 3 = 1 500 ; 8 000 + 1 500 = 9 500 ; 10 000 − 9 500 = 500 F." },
+      { t: "qcm", q: "« Un car transporte 45 passagers à l'aller et 38 au retour. Le ticket coûte 1 500 F. Quelle est la recette totale ? » Quelle est la question intermédiaire cachée ?", choix: ["Combien de passagers en tout ?", "Quelle est la recette totale ?", "Combien coûte le ticket ?"], r: "Combien de passagers en tout ?", expl: "Il faut d'abord le nombre total de passagers, puis on multiplie par le prix du ticket." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Résous le problème du car (aller 45 passagers, retour 38, ticket 1 500 F).", etapes: [{ q: "Nombre total de passagers :", r: "83" }, { q: "Recette totale :", r: "124500", unite: "F" }], expl: "45 + 38 = 83 ; 1 500 × 83 = 124 500 F." },
+      { t: "vf", q: "Un problème peut avoir plusieurs questions intermédiaires, mais une seule question finale.", r: true, expl: "La question finale termine la résolution : c'est la dernière." },
+      { t: "qcm", q: "Dans quel ordre répond-on aux questions ?", choix: ["d'abord les questions intermédiaires, puis la question finale", "d'abord la question finale", "dans n'importe quel ordre"], r: "d'abord les questions intermédiaires, puis la question finale", expl: "Les questions intermédiaires mènent à la question finale." },
+      { t: "qcm", q: "« Ibrahima a 50 poules. Chaque poule pond 2 œufs par jour. Il vend les œufs 100 F l'un. Combien gagne-t-il par jour ? » Quelle est la question intermédiaire ?", choix: ["Combien d'œufs ramasse-t-il par jour ?", "Combien gagne-t-il par jour ?", "Combien a-t-il de poules ?"], r: "Combien d'œufs ramasse-t-il par jour ?", expl: "On calcule d'abord les œufs (50 × 2 = 100), puis le gain." },
+      { t: "saisie", q: "Résous le problème d'Ibrahima : combien gagne-t-il par jour ?", r: ["10 000", "10000", "10.000"], expl: "50 × 2 = 100 œufs ; 100 × 100 F = 10 000 F.", unite: "F" }
+    ],
+    [
+      { t: "qcm", q: "« Awa a 5 000 F. Elle achète 3 savons à 400 F l'un. Combien lui reste-t-il ? » Quelle est la question intermédiaire cachée ?", choix: ["Combien coûtent les 3 savons ?", "Combien lui reste-t-il ?", "Combien Awa a-t-elle ?"], r: "Combien coûtent les 3 savons ?", expl: "Il faut d'abord le prix des savons : 400 × 3 = 1 200 F." },
+      { t: "saisie", q: "Résous le problème d'Awa : combien lui reste-t-il ?", r: ["3 800", "3800", "3.800"], expl: "400 × 3 = 1 200 F ; 5 000 − 1 200 = 3 800 F.", unite: "F" },
+      { t: "vf", q: "Une question intermédiaire n'est jamais écrite dans l'énoncé.", r: false, expl: "Elle peut être cachée OU posée dans l'énoncé." },
+      { t: "qcm", q: "« Un vendeur achète 20 pastèques à 600 F l'une. Il les revend 900 F l'une. » Quelle question peut être la question finale ?", choix: ["Quel est son bénéfice ?", "Combien a-t-il payé les pastèques ?", "Combien a-t-il reçu en les vendant ?"], r: "Quel est son bénéfice ?", expl: "Pour le bénéfice, il faut d'abord le prix d'achat et le prix de vente : ce sont les questions intermédiaires." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Résous le problème du vendeur de pastèques.", etapes: [{ q: "Prix d'achat des 20 pastèques :", r: "12000", unite: "F" }, { q: "Prix de vente des 20 pastèques :", r: "18000", unite: "F" }, { q: "Bénéfice :", r: "6000", unite: "F" }], expl: "600 × 20 = 12 000 ; 900 × 20 = 18 000 ; 18 000 − 12 000 = 6 000 F." },
+      { t: "trous", q: "Complète avec « intermédiaire » ou « finale ».", texte: "Dans l'exemple de Moussa, « Combien coûtent les 3 cahiers ? » est une question [intermédiaire] ; « Combien lui rend-on ? » est la question [finale].", expl: "La première mène à la dernière ; la dernière termine le problème." }
+    ],
+    [
+      { t: "qcm", q: "« Pour la Tabaski, le père de Mamadou a 200 000 F. Il achète un mouton à 125 000 F, 3 sacs d'oignons à 7 500 F l'un et 10 kg de pommes de terre à 600 F le kilo. » Quelle question finale convient ?", choix: ["Combien d'argent lui reste-t-il ?", "Combien coûte le mouton ?", "Combien de sacs d'oignons achète-t-il ?"], r: "Combien d'argent lui reste-t-il ?", expl: "Le prix du mouton et le nombre de sacs sont déjà donnés : ce ne sont pas des questions à poser." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Résous le problème de la Tabaski : combien d'argent reste-t-il au père de Mamadou ?", etapes: [{ q: "Prix des oignons :", r: "22500", unite: "F" }, { q: "Prix des pommes de terre :", r: "6000", unite: "F" }, { q: "Dépense totale :", r: "153500", unite: "F" }, { q: "Argent qui reste :", r: "46500", unite: "F" }], expl: "7 500 × 3 = 22 500 ; 600 × 10 = 6 000 ; 125 000 + 22 500 + 6 000 = 153 500 ; 200 000 − 153 500 = 46 500 F." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "« Une école de Ziguinchor a 6 classes de 42 élèves. Chaque élève reçoit 4 cahiers. Combien de cahiers faut-il ? »", etapes: [{ q: "Question intermédiaire : combien d'élèves y a-t-il ?", r: "252" }, { q: "Question finale : combien de cahiers faut-il ?", r: "1008" }], expl: "42 × 6 = 252 élèves ; 4 × 252 = 1 008 cahiers." },
+      { t: "qcm", q: "« Un car fait 2 voyages par jour avec 35 passagers à chaque fois. Le ticket coûte 2 000 F. Quelle est la recette du jour ? » Quelle question intermédiaire faut-il se poser ?", choix: ["Combien de passagers par jour ?", "Combien coûte le car ?", "À quelle heure part le car ?"], r: "Combien de passagers par jour ?", expl: "35 × 2 = 70 passagers, puis on multiplie par le prix du ticket." },
+      { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Résous le problème du car (2 voyages de 35 passagers, ticket à 2 000 F).", etapes: [{ q: "Passagers par jour :", r: "70" }, { q: "Recette du jour :", r: "140000", unite: "F" }], expl: "35 × 2 = 70 ; 2 000 × 70 = 140 000 F." }
     ]
   ]
 });
@@ -2971,6 +6165,144 @@ LECONS.push({
 });
 
 
+/* ---- ve-fonctionnement-sous-regionales.js ---- */
+// À VÉRIFIER :
+//  - Photo 0114 bougée : la liste des pays membres du CILSS est en grande partie devinée ; elle n'est pas reprise et aucun exercice n'y touche.
+//  - CEDEAO « 14 pays dont le Sénégal » (0116) : nombre douteux (15 membres jusqu'en 2024, 12 depuis le retrait du Mali, du Burkina Faso et du Niger en janvier 2025). Le module écrit « plusieurs pays d'Afrique de l'Ouest, dont le Sénégal », sans nombre.
+//  - BOAD « 7 pays dont le Sénégal » (0116) : la BOAD est la banque de développement des 8 pays de l'UEMOA. Aucun exercice sur ce nombre.
+//  - Manantali (0117) : « situé à 90 km de Fouladou » non repris (probablement Bafoulabé, au Mali) ; « barrage régulier » corrigé en « barrage régulateur » ; « Il est conduit » corrigé en « Il est construit ».
+LECONS.push({
+  id: "ve-fonctionnement-sous-regionales",
+  cahier: "vivre",
+  matiere: "Vivre ensemble",
+  titre: "Le fonctionnement des organisations sous-régionales",
+  date: "2026-11-02",
+  photos: ["DJI_20261118221528_0114_D.jpg", "DJI_20261118221544_0116_D.jpg", "DJI_20261118221607_0117_D.jpg"],
+  retiens:
+    "<table><tr><th>Sigle</th><th>Missions ou buts</th><th>Pays membres</th></tr>" +
+    "<tr><td><b>OMVG</b></td><td>exploiter de façon rationnelle et harmonieuse les ressources du fleuve Gambie ; réaliser des barrages de retenue</td><td>Sénégal, Gambie, Guinée-Bissau, Guinée</td></tr>" +
+    "<tr><td><b>OMVS</b></td><td>développer l'agriculture irriguée ; produire de l'énergie hydroélectrique ; la pêche ; la navigation sur le fleuve</td><td>Sénégal, Mali, Mauritanie, Guinée</td></tr>" +
+    "<tr><td><b>CILSS</b></td><td>rechercher la sécurité alimentaire et lutter contre les effets de la sécheresse</td><td>des pays du Sahel et d'Afrique de l'Ouest, dont le Sénégal</td></tr>" +
+    "<tr><td><b>CEDEAO</b></td><td>promouvoir la coopération et l'intégration entre les États membres ; maintenir la paix et la sécurité dans la sous-région</td><td>des pays d'Afrique de l'Ouest, dont le Sénégal</td></tr>" +
+    "<tr><td><b>UEMOA</b></td><td>promouvoir le développement et l'intégration économique des États membres (un tarif extérieur commun)</td><td>8 pays, dont le Sénégal</td></tr>" +
+    "<tr><td><b>BCEAO</b></td><td>définir et mettre en œuvre la politique monétaire ; veiller à la stabilité du système bancaire et financier</td><td>8 pays, dont le Sénégal</td></tr>" +
+    "<tr><td><b>BOAD</b></td><td>promouvoir le développement équilibré des États membres et contribuer à l'intégration économique de l'Afrique de l'Ouest</td><td>les pays de l'UEMOA, dont le Sénégal</td></tr></table>" +
+    "<p><b>NB</b> : grâce à l'OMVS, deux barrages ont été réalisés :</p>" +
+    "<ul><li>le barrage de <b>Manantali</b>, au <b>Mali</b> : c'est un barrage <b>régulateur</b> et <b>hydroélectrique</b>. Il fournit une énergie propre (l'électricité) ;</li>" +
+    "<li>le barrage de <b>Diama</b>, à environ 25 km de <b>Saint-Louis</b> (Sénégal) : c'est un barrage <b>anti-sel</b>. Il est construit pour empêcher l'eau salée de la mer de remonter le fleuve.</li></ul>",
+  astuce: "<b>Diama</b> arrête le <b>sel</b> (près de Saint-Louis, au bord de la mer) ; <b>Manantali</b> donne la <b>lumière</b> (l'électricité, au Mali).",
+  regle: "Chaque organisation a sa mission : les fleuves pour l'OMVS et l'OMVG, la sécheresse pour le CILSS, la paix et l'intégration pour la CEDEAO, l'économie pour l'UEMOA, la monnaie pour la BCEAO, le développement pour la BOAD.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Quelle organisation lutte contre les effets de la sécheresse ?", choix: ["le CILSS", "la BCEAO", "l'OMVG"], r: "le CILSS", expl: "CILSS : Lutte contre la Sécheresse dans le Sahel." },
+      { t: "qcm", q: "Quelle organisation s'occupe de la politique monétaire (la monnaie) ?", choix: ["la BCEAO", "le CILSS", "l'OMVS"], r: "la BCEAO", expl: "La Banque Centrale définit la politique monétaire." },
+      { t: "vf", q: "La CEDEAO veut maintenir la paix et la sécurité dans la sous-région.", r: true, expl: "C'est une de ses deux missions au cahier." },
+      { t: "qcm", q: "Le barrage de Diama est un barrage…", choix: ["anti-sel", "de pêche", "de football"], r: "anti-sel", expl: "Il empêche l'eau salée de la mer de remonter le fleuve." },
+      { t: "qcm", q: "Dans quel pays se trouve le barrage de Manantali ?", choix: ["au Mali", "au Sénégal", "en Gambie"], r: "au Mali", expl: "Manantali est au Mali ; Diama est près de Saint-Louis, au Sénégal." },
+      { t: "vf", q: "Les barrages de Manantali et de Diama ont été réalisés grâce à l'OMVS.", r: true, expl: "C'est le NB de la leçon." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque organisation à sa mission.", paires: [["OMVS", "agriculture irriguée et énergie hydroélectrique"], ["CILSS", "sécurité alimentaire et lutte contre la sécheresse"], ["CEDEAO", "coopération, intégration, paix et sécurité"], ["BCEAO", "politique monétaire"], ["OMVG", "ressources du fleuve Gambie"]], expl: "La mission se lit souvent dans la signification du sigle." },
+      { t: "classer", q: "Pays membre de l'OMVS ou de l'OMVG ? (le Sénégal et la Guinée sont dans les deux : ils ne sont pas dans la liste)", cases: ["OMVS seulement", "OMVG seulement"], items: [["Mali", "OMVS seulement"], ["Mauritanie", "OMVS seulement"], ["Gambie", "OMVG seulement"], ["Guinée-Bissau", "OMVG seulement"]], expl: "OMVS : Sénégal, Mali, Mauritanie, Guinée. OMVG : Sénégal, Gambie, Guinée-Bissau, Guinée." },
+      { t: "qcm", q: "Combien de pays sont membres de l'UEMOA ?", choix: ["8", "4", "20"], r: "8", expl: "L'UEMOA compte 8 pays, dont le Sénégal." },
+      { t: "qcm", q: "Quels pays sont membres de l'OMVS ?", choix: ["Sénégal, Mali, Mauritanie, Guinée", "Sénégal, Gambie, Guinée-Bissau, Guinée", "Sénégal, Nigeria, Togo, Bénin"], r: "Sénégal, Mali, Mauritanie, Guinée", expl: "Ce sont les pays traversés par le fleuve Sénégal et ses sources." },
+      { t: "qcm", q: "Quels pays sont membres de l'OMVG ?", choix: ["Sénégal, Gambie, Guinée-Bissau, Guinée", "Sénégal, Mali, Mauritanie, Guinée", "Gambie, Ghana, Togo, Niger"], r: "Sénégal, Gambie, Guinée-Bissau, Guinée", expl: "Les pays liés au fleuve Gambie." },
+      { t: "vf", q: "Le barrage de Manantali produit de l'électricité.", r: true, expl: "C'est un barrage hydroélectrique : il fournit une énergie propre." },
+      { t: "vf", q: "Le barrage de Diama sert surtout à produire de l'électricité.", r: false, expl: "Diama est un barrage anti-sel : il retient l'eau salée." },
+      { t: "saisie", q: "Comment s'appelle le barrage anti-sel construit près de Saint-Louis ?", r: ["Diama", "le barrage de Diama", "barrage de Diama"], expl: "Diama, à environ 25 km de Saint-Louis." },
+      { t: "trous", q: "Complète.", texte: "L'UEMOA promeut le développement et l'intégration [économique] des États membres. La BCEAO veille à la stabilité du système [bancaire] et financier.", expl: "Économie pour l'UEMOA, banques pour la BCEAO." }
+    ],
+    [
+      { t: "qcm", q: "Que veut dire « barrage <b>régulateur</b> » ?", choix: ["il contrôle la quantité d'eau du fleuve toute l'année", "il arrête les bateaux", "il fabrique du sel"], r: "il contrôle la quantité d'eau du fleuve toute l'année", expl: "Réguler, c'est rendre régulier : le barrage garde l'eau et la relâche selon les besoins." },
+      { t: "qcm", q: "Pourquoi l'OMVS développe-t-elle l'agriculture irriguée ?", choix: ["pour cultiver même en saison sèche grâce à l'eau du fleuve", "pour arrêter la pêche", "pour faire avancer la mer"], r: "pour cultiver même en saison sèche grâce à l'eau du fleuve", expl: "Irriguer, c'est apporter de l'eau aux champs." },
+      { t: "classer", q: "Range chaque mission sous la bonne organisation.", cases: ["CEDEAO", "UEMOA", "BCEAO"], items: [["maintenir la paix et la sécurité", "CEDEAO"], ["promouvoir la coopération entre États", "CEDEAO"], ["un tarif extérieur commun", "UEMOA"], ["l'intégration économique", "UEMOA"], ["la politique monétaire", "BCEAO"], ["la stabilité du système bancaire", "BCEAO"]], expl: "Paix pour la CEDEAO, économie pour l'UEMOA, monnaie pour la BCEAO." },
+      { t: "vf", q: "La BOAD est une banque qui aide au développement des pays de l'Afrique de l'Ouest.", r: true, expl: "BOAD : Banque Ouest-Africaine de Développement." },
+      { t: "relier", q: "Relie chaque barrage à ce qui le caractérise.", paires: [["Manantali", "régulateur et hydroélectrique, au Mali"], ["Diama", "anti-sel, près de Saint-Louis"]], expl: "Manantali = électricité ; Diama = contre le sel." },
+      { t: "saisie", q: "Quelle organisation a fait construire les barrages de Manantali et de Diama ? (sigle)", r: "OMVS", expl: "Organisation pour la Mise en Valeur du fleuve Sénégal." },
+      { t: "vf", q: "La BCEAO compte 8 pays membres, dont le Sénégal.", r: true, expl: "Ce sont les mêmes 8 pays que l'UEMOA." }
+    ],
+    [
+      { t: "trous", q: "Complète le texte.", texte: "Grâce à l'[OMVS], deux barrages ont été construits. Le barrage de [Manantali], au Mali, produit de l'énergie [hydroélectrique]. Le barrage de [Diama], près de Saint-Louis, est un barrage [anti-sel].", expl: "Les deux barrages de l'OMVS." },
+      { t: "qcm", q: "Les paysans de Podor arrosent leurs rizières toute l'année avec l'eau du fleuve Sénégal. Quelle mission de l'OMVS cela montre-t-il ?", choix: ["le développement de l'agriculture irriguée", "la politique monétaire", "le maintien de la paix"], r: "le développement de l'agriculture irriguée", expl: "Irriguer les rizières grâce au fleuve : agriculture irriguée." },
+      { t: "qcm", q: "Deux pays voisins se disputent. Quelle organisation sous-régionale a pour mission de maintenir la paix ?", choix: ["la CEDEAO", "l'OMVG", "la BOAD"], r: "la CEDEAO", expl: "La CEDEAO veut maintenir la paix et la sécurité dans la sous-région." },
+      { t: "classer", q: "Range chaque organisation selon son domaine.", cases: ["l'eau des fleuves", "l'argent", "la sécheresse"], items: [["OMVS", "l'eau des fleuves"], ["OMVG", "l'eau des fleuves"], ["BCEAO", "l'argent"], ["BOAD", "l'argent"], ["CILSS", "la sécheresse"]], expl: "Fleuves, banques, sécheresse." },
+      { t: "qcm", q: "Pourquoi construire un barrage anti-sel à Diama ?", choix: ["pour que l'eau salée de la mer ne gâte pas les terres et l'eau douce du fleuve", "pour produire du sel", "pour faire venir la mer à Podor"], r: "pour que l'eau salée de la mer ne gâte pas les terres et l'eau douce du fleuve", expl: "Le barrage retient les eaux salées près de l'embouchure." }
+    ]
+  ]
+});
+
+
+/* ---- ve-organisations-africaines.js ---- */
+// À VÉRIFIER :
+//  - NEPAD : un « 3 » a été ajouté à la main devant « juillet 2001 » ; le NEPAD a été adopté à Lusaka le 11 juillet 2001. Le module écrit « juillet 2001 à Lusaka », sans jour.
+//  - AFABA : le cahier donne Le Caire comme siège ; c'est bien la ville de création (11 juin 1961), mais le siège actuel de FIBA Afrique n'a pas pu être confirmé : aucun exercice sur le siège de l'AFABA.
+//  - Corrections de recopie : « Encourager la coopérative internationale » → « la coopération internationale » ; « à l'échelle africain » → « africaine ».
+LECONS.push({
+  id: "ve-organisations-africaines",
+  cahier: "vivre",
+  matiere: "Vivre ensemble",
+  titre: "Les organisations régionales ou africaines et leur fonctionnement",
+  date: "2026-11-09",
+  photos: ["DJI_20261118221607_0117_D.jpg", "DJI_20261118221629_0119_D.jpg", "DJI_20261118221643_0120_D.jpg"],
+  retiens:
+    "<p>Les pays africains ont créé des organisations pour prendre en charge leurs problèmes politiques, économiques, socioculturels, environnementaux… Le domaine d'action de chaque organisation se lit souvent dans la signification de son sigle.</p>" +
+    "<table><tr><th>Sigle</th><th>Signification</th><th>Création</th><th>Siège</th></tr>" +
+    "<tr><td><b>UA</b></td><td>Union africaine</td><td>9 juillet 2002 à Durban (Afrique du Sud)</td><td>Addis-Abeba (Éthiopie)</td></tr>" +
+    "<tr><td><b>NEPAD</b></td><td>Nouveau partenariat pour le développement de l'Afrique</td><td>juillet 2001 à Lusaka (Zambie)</td><td>Midrand (Afrique du Sud)</td></tr>" +
+    "<tr><td><b>BAD</b></td><td>Banque africaine de développement</td><td>10 septembre 1964</td><td>Abidjan (Côte d'Ivoire)</td></tr>" +
+    "<tr><td><b>CAF</b></td><td>Confédération africaine de football</td><td>8 février 1957 à Khartoum (Soudan)</td><td>Ville du 6-Octobre (Égypte)</td></tr>" +
+    "<tr><td><b>AFABA</b></td><td>Association des fédérations africaines de basket-ball (aujourd'hui FIBA Afrique)</td><td>11 juin 1961 au Caire (Égypte)</td><td>—</td></tr></table>" +
+    "<p><b>Leur fonctionnement</b></p>" +
+    "<table><tr><th>Sigle</th><th>Missions ou buts</th><th>Pays membres</th></tr>" +
+    "<tr><td><b>UA</b></td><td>renforcer l'unité et la solidarité entre les pays ; encourager la coopération internationale</td><td rowspan='2'>les pays d'Afrique</td></tr>" +
+    "<tr><td><b>NEPAD</b></td><td>combler le retard entre l'Afrique et les pays développés</td></tr>" +
+    "<tr><td><b>CAF</b></td><td>organiser des compétitions de football entre les clubs et entre les sélections nationales à l'échelle africaine, comme la CAN</td><td></td></tr>" +
+    "<tr><td><b>AFABA</b></td><td>organiser des compétitions de basket-ball</td><td></td></tr>" +
+    "<tr><td><b>BAD</b></td><td>contribuer au développement et au progrès social des États africains ; combattre la pauvreté sur le continent</td><td>81 pays (54 africains et 27 non africains)</td></tr></table>",
+  astuce: "Le sport : <b>CAF</b> = football (la CAN), <b>AFABA</b> = basket. L'argent : <b>BAD</b> = banque. L'unité : <b>UA</b>. Le retard à rattraper : <b>NEPAD</b>.",
+  regle: "Chaque organisation africaine a un sigle, une date et un lieu de création, un siège et une mission. La signification du sigle aide à retrouver la mission.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Que veut dire <b>UA</b> ?", choix: ["Union africaine", "Union des athlètes", "Université africaine"], r: "Union africaine", expl: "U = Union, A = africaine." },
+      { t: "qcm", q: "Que veut dire <b>CAF</b> ?", choix: ["Confédération africaine de football", "Comité africain des finances", "Club africain de foot"], r: "Confédération africaine de football", expl: "La CAF organise notamment la CAN." },
+      { t: "qcm", q: "Que veut dire <b>BAD</b> ?", choix: ["Banque africaine de développement", "Bureau africain des douanes", "Banque des agriculteurs de Dakar"], r: "Banque africaine de développement", expl: "B = Banque, A = africaine, D = développement." },
+      { t: "vf", q: "Le siège de l'Union africaine est à Addis-Abeba, en Éthiopie.", r: true, expl: "L'UA a été créée à Durban mais son siège est à Addis-Abeba." },
+      { t: "vf", q: "L'AFABA s'occupe du football.", r: false, expl: "L'AFABA s'occupe du basket-ball ; le football, c'est la CAF." },
+      { t: "qcm", q: "Quelle organisation organise la CAN (Coupe d'Afrique des Nations de football) ?", choix: ["la CAF", "la BAD", "le NEPAD"], r: "la CAF", expl: "La CAF organise les compétitions de football entre sélections nationales." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque sigle à sa signification.", paires: [["UA", "Union africaine"], ["NEPAD", "Nouveau partenariat pour le développement de l'Afrique"], ["BAD", "Banque africaine de développement"], ["CAF", "Confédération africaine de football"], ["AFABA", "Association des fédérations africaines de basket-ball"]], expl: "Lis le sigle lettre par lettre." },
+      { t: "relier", q: "Relie chaque organisation à son siège.", paires: [["UA", "Addis-Abeba"], ["NEPAD", "Midrand"], ["BAD", "Abidjan"], ["CAF", "Ville du 6-Octobre"]], expl: "Révise le tableau des sièges." },
+      { t: "relier", q: "Relie chaque organisation à sa mission.", paires: [["UA", "renforcer l'unité et la solidarité"], ["NEPAD", "combler le retard avec les pays développés"], ["BAD", "combattre la pauvreté"], ["CAF", "organiser la CAN"], ["AFABA", "organiser des compétitions de basket"]], expl: "La mission se devine souvent dans le sigle." },
+      { t: "qcm", q: "Où l'Union africaine a-t-elle été créée ?", choix: ["à Durban (Afrique du Sud)", "à Addis-Abeba (Éthiopie)", "à Dakar (Sénégal)"], r: "à Durban (Afrique du Sud)", expl: "Créée à Durban le 9 juillet 2002 ; siège à Addis-Abeba." },
+      { t: "qcm", q: "Où se trouve le siège de la BAD ?", choix: ["Abidjan (Côte d'Ivoire)", "Lomé (Togo)", "Le Caire (Égypte)"], r: "Abidjan (Côte d'Ivoire)", expl: "La BAD est à Abidjan." },
+      { t: "saisie", q: "En quelle année l'Union africaine a-t-elle été créée ?", r: "2002", nombre: true, expl: "Le 9 juillet 2002, à Durban." },
+      { t: "vf", q: "La CAF a été créée à Khartoum en 1957.", r: true, expl: "Le 8 février 1957, à Khartoum (Soudan)." },
+      { t: "vf", q: "La BAD compte aussi des pays non africains parmi ses membres.", r: true, expl: "81 pays : 54 africains et 27 non africains." },
+      { t: "trous", q: "Complète.", texte: "L'UA veut renforcer l'[unité] et la [solidarité] entre les pays et encourager la [coopération] internationale.", expl: "Les missions de l'UA." }
+    ],
+    [
+      { t: "qcm", q: "Laquelle de ces organisations a été créée la première ?", choix: ["la CAF (1957)", "l'AFABA (1961)", "la BAD (1964)", "l'UA (2002)"], r: "la CAF (1957)", expl: "1957 est la date la plus ancienne." },
+      { t: "qcm", q: "Laquelle a été créée la plus récemment ?", choix: ["l'UA", "le NEPAD", "la BAD", "la CAF"], r: "l'UA", expl: "L'UA date de 2002, le NEPAD de 2001." },
+      { t: "vf", q: "L'UA a son siège dans la ville où elle a été créée.", r: false, expl: "Créée à Durban (Afrique du Sud), siège à Addis-Abeba (Éthiopie)." },
+      { t: "classer", q: "Range chaque organisation selon son domaine.", cases: ["le sport", "l'économie et le développement", "l'unité politique"], items: [["la CAF", "le sport"], ["l'AFABA", "le sport"], ["la BAD", "l'économie et le développement"], ["le NEPAD", "l'économie et le développement"], ["l'UA", "l'unité politique"]], expl: "Sport, développement ou unité ?" },
+      { t: "saisie", q: "Quel est le sigle du Nouveau partenariat pour le développement de l'Afrique ?", r: "NEPAD", expl: "N-E-P-A-D." },
+      { t: "qcm", q: "Quelles organisations sont liées à l'Afrique du Sud ?", choix: ["l'UA (créée à Durban) et le NEPAD (siège à Midrand)", "la CAF et la BAD", "l'AFABA et la CAF"], r: "l'UA (créée à Durban) et le NEPAD (siège à Midrand)", expl: "Durban et Midrand sont en Afrique du Sud." },
+      { t: "saisie", q: "En quelle année la BAD a-t-elle été créée ?", r: "1964", nombre: true, expl: "Le 10 septembre 1964." },
+      { t: "relier", q: "Relie chaque organisation à son année de création.", paires: [["CAF", "1957"], ["AFABA", "1961"], ["BAD", "1964"], ["NEPAD", "2001"], ["UA", "2002"]], expl: "Range-les dans l'ordre : 1957, 1961, 1964, 2001, 2002." }
+    ],
+    [
+      { t: "trous", q: "Complète le texte.", texte: "L'Union africaine a été créée en [2002] à Durban ; son siège est à [Addis-Abeba]. La BAD a son siège à [Abidjan] ; elle combat la [pauvreté]. La [CAF] organise la CAN.", expl: "Date, sièges et missions." },
+      { t: "probleme", q: "Calcule avec les dates du tableau.", etapes: [{ q: "Étape 1 : la CAF a été créée en 1957. Quel âge a-t-elle en 2026 ?", r: "69", unite: "ans" }, { q: "Étape 2 : l'UA a été créée en 2002. Quel âge a-t-elle en 2026 ?", r: "24", unite: "ans" }, { q: "Étape 3 : combien d'années séparent la création de la CAF et celle de l'UA ?", r: "45", unite: "ans" }], expl: "2026 − 1957 = 69 ; 2026 − 2002 = 24 ; 2002 − 1957 = 45 (ou 69 − 24 = 45)." },
+      { t: "qcm", q: "Les Lions du Sénégal jouent la Coupe d'Afrique des Nations. Quelle organisation l'organise ?", choix: ["la CAF", "l'AFABA", "l'UA"], r: "la CAF", expl: "La CAF organise les compétitions de football entre sélections nationales." },
+      { t: "qcm", q: "Un pays africain veut construire des routes et des écoles pour lutter contre la pauvreté. À quelle banque africaine peut-il demander de l'aide ?", choix: ["la BAD", "la CAF", "l'AFABA"], r: "la BAD", expl: "La BAD contribue au développement des États africains et combat la pauvreté." },
+      { t: "saisie", q: "Combien de pays non africains sont membres de la BAD ?", r: "27", nombre: true, expl: "81 pays au total : 54 africains et 27 non africains." },
+      { t: "vf", q: "Le NEPAD veut combler le retard entre l'Afrique et les pays développés.", r: true, expl: "C'est sa mission au cahier." }
+    ]
+  ]
+});
+
+
 /* ---- ve-organisations-communautaires-de-base.js ---- */
 // Notes : date de la partie (1) non visible sur la photo 0106 (placée au 5 octobre 2026, entre le 1er et le 9 octobre).
 // Les noms d'associations ethniques du cahier (Ndefleng, Soninkara, Dental, Ujamoral) sont de lecture incertaine : ils ne sont pas repris.
@@ -3151,6 +6483,75 @@ LECONS.push({
       { t: "relier", q: "Relie chaque sigle à son domaine.", paires: [["HCR", "les réfugiés"], ["CNLS", "le sida"], ["ONDH", "les droits de l'homme"]], expl: "Le domaine se lit dans le sigle." },
       { t: "vf", q: "Amnesty International Sénégal fait partie des organisations citées au cahier.", r: true, expl: "Avec la Croix-Rouge sénégalaise." },
       { t: "qcm", q: "Quel mot complète : « Une organisation caritative porte secours et … » ?", choix: ["assistance", "concurrence", "publicité"], r: "assistance", expl: "Secours et assistance : aider." }
+    ]
+  ]
+});
+
+
+/* ---- ve-organisations-sous-regionales.js ---- */
+// À VÉRIFIER (contradictions entre le cahier, photo 0113, et les sources officielles) :
+//  - OMVG : le cahier dit « créée à Banjul » ; la convention a été signée à Kaolack (Sénégal) le 30 juin 1978.
+//  - CILSS : le cahier donne Bamako comme siège ; le secrétariat exécutif du CILSS est à Ouagadougou (Burkina Faso).
+//  - BOAD : le cahier dit « 11 novembre 1973 » ; l'accord créant la BOAD date du 14 novembre 1973.
+//  Aucun exercice ne porte sur ces trois points ; le « Je retiens » donne la version juste et signale l'écart.
+//  CILSS : le cahier écrit « Comité Inter-états de Lutte contre la Sécheresse au Sahel » ; nom officiel : Comité permanent Inter-États de Lutte contre la Sécheresse dans le Sahel.
+LECONS.push({
+  id: "ve-organisations-sous-regionales",
+  cahier: "vivre",
+  matiere: "Vivre ensemble",
+  titre: "Les organisations sous-régionales ou ouest-africaines : sigles, créations et sièges",
+  date: "2026-10-19",
+  photos: ["DJI_20261118221514_0112_D.jpg", "DJI_20261118221519_0113_D.jpg"],
+  retiens:
+    "<p>Une <b>organisation sous-régionale</b> regroupe des pays d'une zone déterminée de l'Afrique, ici l'Afrique de l'Ouest.</p>" +
+    "<table><tr><th>Sigle</th><th>Signification</th><th>Création</th><th>Siège</th></tr>" +
+    "<tr><td><b>OMVS</b></td><td>Organisation pour la Mise en Valeur du fleuve Sénégal</td><td>11 mars 1972 à Nouakchott</td><td>Dakar (Sénégal)</td></tr>" +
+    "<tr><td><b>OMVG</b></td><td>Organisation pour la Mise en Valeur du fleuve Gambie</td><td>30 juin 1978</td><td>Dakar (Sénégal)</td></tr>" +
+    "<tr><td><b>CEDEAO</b></td><td>Communauté Économique des États de l'Afrique de l'Ouest</td><td>28 mai 1975 à Lagos</td><td>Abuja (Nigeria)</td></tr>" +
+    "<tr><td><b>CILSS</b></td><td>Comité permanent Inter-États de Lutte contre la Sécheresse dans le Sahel</td><td>12 septembre 1973</td><td>Ouagadougou (Burkina Faso)</td></tr>" +
+    "<tr><td><b>UEMOA</b></td><td>Union Économique et Monétaire Ouest-Africaine</td><td>10 janvier 1994 à Dakar</td><td>Ouagadougou (Burkina Faso)</td></tr>" +
+    "<tr><td><b>BCEAO</b></td><td>Banque Centrale des États de l'Afrique de l'Ouest</td><td>12 mai 1962</td><td>Dakar (Sénégal)</td></tr>" +
+    "<tr><td><b>BOAD</b></td><td>Banque Ouest-Africaine de Développement</td><td>14 novembre 1973</td><td>Lomé (Togo)</td></tr></table>" +
+    "<p><b>NB</b> : le domaine d'intervention de chaque organisation se lit souvent dans la signification de son sigle.</p>" +
+    "<p><i>Attention : ton cahier indique que l'OMVG a été créée à Banjul, que le siège du CILSS est à Bamako et que la BOAD date du 11 novembre 1973. Les documents officiels donnent Kaolack, Ouagadougou et le 14 novembre 1973. Demande à ton maître.</i></p>",
+  astuce: "Trois sièges à <b>Dakar</b> : OMVS, OMVG et BCEAO. Deux à <b>Ouagadougou</b> : UEMOA et CILSS. La CEDEAO est à <b>Abuja</b>, la BOAD à <b>Lomé</b>.",
+  regle: "Chaque sigle se lit lettre par lettre : la signification dit ce que fait l'organisation. Retiens pour chacune sa date de création et son siège.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Une organisation sous-régionale regroupe…", choix: ["des pays d'une zone déterminée de l'Afrique", "tous les pays du monde", "les villages d'une même région du Sénégal"], r: "des pays d'une zone déterminée de l'Afrique", expl: "Ici, la zone est l'Afrique de l'Ouest." },
+      { t: "qcm", q: "Que veut dire <b>OMVS</b> ?", choix: ["Organisation pour la Mise en Valeur du fleuve Sénégal", "Organisation Mondiale des Villes du Sahel", "Office Malien de la Vallée du Sénégal"], r: "Organisation pour la Mise en Valeur du fleuve Sénégal", expl: "Le S final = fleuve Sénégal." },
+      { t: "qcm", q: "Que veut dire <b>OMVG</b> ?", choix: ["Organisation pour la Mise en Valeur du fleuve Gambie", "Organisation pour la Mise en Valeur de la Guinée", "Office Mondial des Voyages en Gambie"], r: "Organisation pour la Mise en Valeur du fleuve Gambie", expl: "Le G final = fleuve Gambie." },
+      { t: "vf", q: "La BCEAO est une banque.", r: true, expl: "BCEAO : Banque Centrale des États de l'Afrique de l'Ouest." },
+      { t: "qcm", q: "Où se trouve le siège de la CEDEAO ?", choix: ["Abuja (Nigeria)", "Dakar (Sénégal)", "Lomé (Togo)"], r: "Abuja (Nigeria)", expl: "La CEDEAO a été créée à Lagos mais son siège est à Abuja." },
+      { t: "vf", q: "Le siège de l'OMVS est à Dakar.", r: true, expl: "L'OMVS a été créée à Nouakchott, mais son siège est à Dakar." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque sigle à sa signification.", paires: [["CEDEAO", "Communauté Économique des États de l'Afrique de l'Ouest"], ["UEMOA", "Union Économique et Monétaire Ouest-Africaine"], ["BCEAO", "Banque Centrale des États de l'Afrique de l'Ouest"], ["BOAD", "Banque Ouest-Africaine de Développement"], ["CILSS", "Lutte contre la Sécheresse dans le Sahel"]], expl: "Lis les lettres du sigle une par une." },
+      { t: "relier", q: "Relie chaque organisation à son siège.", paires: [["CEDEAO", "Abuja"], ["UEMOA", "Ouagadougou"], ["BOAD", "Lomé"], ["BCEAO", "Dakar"]], expl: "Révise le tableau des sièges." },
+      { t: "classer", q: "Le siège est-il à Dakar ?", cases: ["siège à Dakar", "siège ailleurs"], items: [["OMVS", "siège à Dakar"], ["OMVG", "siège à Dakar"], ["BCEAO", "siège à Dakar"], ["CEDEAO", "siège ailleurs"], ["UEMOA", "siège ailleurs"], ["BOAD", "siège ailleurs"]], expl: "Trois sièges à Dakar : OMVS, OMVG, BCEAO." },
+      { t: "relier", q: "Relie chaque organisation à sa date de création.", paires: [["OMVS", "11 mars 1972"], ["CEDEAO", "28 mai 1975"], ["UEMOA", "10 janvier 1994"], ["BCEAO", "12 mai 1962"]], expl: "Révise les dates du tableau." },
+      { t: "qcm", q: "Dans quelle ville l'UEMOA a-t-elle été créée ?", choix: ["Dakar", "Lagos", "Nouakchott"], r: "Dakar", expl: "L'UEMOA a été créée le 10 janvier 1994 à Dakar ; son siège est à Ouagadougou." },
+      { t: "qcm", q: "Dans quelle ville la CEDEAO a-t-elle été créée ?", choix: ["Lagos", "Abuja", "Dakar"], r: "Lagos", expl: "Créée à Lagos le 28 mai 1975 ; siège à Abuja." },
+      { t: "saisie", q: "Quel est le sigle de la Banque Ouest-Africaine de Développement ?", r: "BOAD", expl: "B-O-A-D." },
+      { t: "saisie", q: "Dans quelle ville se trouve le siège de la BOAD ?", r: ["Lomé", "Lomé (Togo)"], expl: "La BOAD est à Lomé, au Togo." },
+      { t: "vf", q: "L'OMVS a été créée à Nouakchott.", r: true, expl: "Le 11 mars 1972, à Nouakchott (Mauritanie)." }
+    ],
+    [
+      { t: "qcm", q: "Laquelle de ces organisations a son siège à Ouagadougou ?", choix: ["l'UEMOA", "la BCEAO", "l'OMVG", "la BOAD"], r: "l'UEMOA", expl: "L'UEMOA a été créée à Dakar, mais son siège est à Ouagadougou." },
+      { t: "vf", q: "La CEDEAO a son siège dans la ville où elle a été créée.", r: false, expl: "Créée à Lagos, siège à Abuja : deux villes différentes du Nigeria." },
+      { t: "qcm", q: "Quelle organisation est la plus ancienne ?", choix: ["la BCEAO (1962)", "l'OMVS (1972)", "la CEDEAO (1975)", "l'UEMOA (1994)"], r: "la BCEAO (1962)", expl: "1962 est l'année la plus ancienne de la liste." },
+      { t: "qcm", q: "Quelle organisation est la plus récente ?", choix: ["l'UEMOA", "l'OMVG", "la CEDEAO", "l'OMVS"], r: "l'UEMOA", expl: "L'UEMOA date de 1994." },
+      { t: "classer", q: "Range chaque organisation selon son domaine (lis la signification).", cases: ["un fleuve", "l'argent et la banque", "l'économie et l'intégration", "la sécheresse"], items: [["OMVS", "un fleuve"], ["OMVG", "un fleuve"], ["BCEAO", "l'argent et la banque"], ["BOAD", "l'argent et la banque"], ["CEDEAO", "l'économie et l'intégration"], ["UEMOA", "l'économie et l'intégration"], ["CILSS", "la sécheresse"]], expl: "Le domaine se lit dans la signification du sigle." },
+      { t: "saisie", q: "En quelle année la CEDEAO a-t-elle été créée ?", r: "1975", nombre: true, expl: "Le 28 mai 1975, à Lagos." },
+      { t: "saisie", q: "En quelle année l'UEMOA a-t-elle été créée ?", r: "1994", nombre: true, expl: "Le 10 janvier 1994, à Dakar." },
+      { t: "vf", q: "L'OMVS et l'OMVG ont toutes les deux leur siège à Dakar.", r: true, expl: "Comme la BCEAO." }
+    ],
+    [
+      { t: "trous", q: "Complète le tableau en phrases.", texte: "La CEDEAO a été créée le 28 mai 1975 à [Lagos] ; son siège est à [Abuja]. L'UEMOA a été créée le 10 janvier 1994 à [Dakar] ; son siège est à [Ouagadougou]. Le siège de la BOAD est à [Lomé].", expl: "Création et siège : ne les confonds pas." },
+      { t: "probleme", q: "Calcule avec les dates du tableau.", etapes: [{ q: "Étape 1 : l'OMVS a été créée en 1972. Quel âge a-t-elle en 2026 ?", r: "54", unite: "ans" }, { q: "Étape 2 : la CEDEAO a été créée en 1975. Quel âge a-t-elle en 2026 ?", r: "51", unite: "ans" }, { q: "Étape 3 : combien d'années séparent la création de la BCEAO (1962) et celle de l'UEMOA (1994) ?", r: "32", unite: "ans" }], expl: "2026 − 1972 = 54 ; 2026 − 1975 = 51 ; 1994 − 1962 = 32." },
+      { t: "qcm", q: "Moussa dit : « La BCEAO a son siège à Lomé. » A-t-il raison ?", choix: ["Non, la BCEAO est à Dakar ; c'est la BOAD qui est à Lomé.", "Oui, il a raison.", "Non, la BCEAO est à Abuja."], r: "Non, la BCEAO est à Dakar ; c'est la BOAD qui est à Lomé.", expl: "Ne confonds pas les deux banques : BCEAO à Dakar, BOAD à Lomé." },
+      { t: "saisie", q: "Que veut dire le sigle UEMOA ?", r: ["Union Économique et Monétaire Ouest-Africaine", "Union Économique et Monétaire Ouest Africaine"], large: true, expl: "U (Union) E (Économique) M (Monétaire) O-A (Ouest-Africaine)." },
+      { t: "relier", q: "Relie chaque organisation à son pays-siège.", paires: [["CEDEAO", "Nigeria"], ["BOAD", "Togo"], ["UEMOA", "Burkina Faso"], ["OMVS", "Sénégal"]], expl: "Abuja (Nigeria), Lomé (Togo), Ouagadougou (Burkina Faso), Dakar (Sénégal)." }
     ]
   ]
 });

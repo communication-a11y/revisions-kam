@@ -38,7 +38,7 @@ LECONS.push({
       { t: "qcm", q: "Analyse « ses élèves » dans « Le professeur enseigne la géographie à ses élèves ».", choix: ["groupe nominal, COS ou CA du verbe enseigner", "groupe nominal, COD du verbe enseigner", "nom commun, sujet du verbe enseigner"], r: "groupe nominal, COS ou CA du verbe enseigner", expl: "C'est l'analyse du cahier." },
       { t: "qcm", q: "Dans quelle phrase y a-t-il un COD <b>et</b> un COS ?", choix: ["Ibrahima vend des arachides aux passants.", "Ibrahima vend des arachides.", "Ibrahima marche vers le marché.", "Ibrahima parle à son ami."], r: "Ibrahima vend des arachides aux passants.", expl: "vend quoi ? des arachides (COD) ; à qui ? aux passants (COS)." },
       { t: "vf", q: "Dans « Le maître écrit au tableau », « au tableau » est un COS.", r: false, expl: "« au tableau » répond à la question où ? : c'est un lieu, pas un COS." },
-      { t: "saisie", q: "Ajoute le COS « à sa sœur » à la phrase : « Aïssatou raconte une histoire. »", r: "Aïssatou raconte une histoire à sa sœur.", large: true, expl: "Le COS se place en général après le COD." },
+      { t: "saisie", q: "Ajoute le COS « à sa cousine » à la phrase : « Aïssatou raconte une histoire. »", r: "Aïssatou raconte une histoire à sa cousine.", large: true, expl: "Le COS se place en général après le COD." },
       { t: "ordre", q: "Remets les mots dans l'ordre.", r: "Le vendeur rend la monnaie au client.", expl: "rend quoi ? la monnaie (COD) ; à qui ? au client (COS)." },
       { t: "trous", q: "Écris COD ou COS sous chaque groupe en gras.", texte: "Grand-mère offre <b>un pagne</b> ([COD]) <b>à Khady</b> ([COS]).", expl: "offre quoi ? (COD) ; à qui ? (COS)." }
     ],

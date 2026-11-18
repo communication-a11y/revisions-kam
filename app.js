@@ -69,7 +69,9 @@ function norm(s, casse) {
   return casse ? s : s.toLowerCase();
 }
 function nombre(s) {
-  s = String(s).replace(/[  \s]/g, "").replace(",", ".").replace(/[a-zA-Zàéèêç²³°%]+\.?$/, "");
+  s = String(s).replace(/[  \s]/g, "");
+  if (/^\d{1,3}(\.\d{3})+(,\d+)?$/.test(s)) s = s.replace(/\./g, ""); // 5.000.250 : points de séparation des classes
+  s = s.replace(",", ".").replace(/[a-zA-Zàéèêç²³°%]+\.?$/, "");
   return s === "" || isNaN(s) ? NaN : parseFloat(s);
 }
 function egal(reponse, attendues, ex) {

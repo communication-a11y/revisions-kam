@@ -1,3 +1,4 @@
+// À VÉRIFIER : le tableau du cahier (photo 0140) place la « découverte du feu » au Néolithique. En réalité, l'homme maîtrise le feu bien avant, dès le Paléolithique. Le module garde « aliments cuits » au Néolithique comme au cahier, sans affirmer que le feu y a été découvert.
 LECONS.push({
   id: "hi-prehistoire",
   cahier: "histgeo",
@@ -14,7 +15,7 @@ LECONS.push({
     "<tr><td><b>Outils et armes</b></td><td>pierre taillée, bifaces, outils en os (harpons…)</td><td>pierre polie (meule, hameçon, couteau…)</td></tr>" +
     "<tr><td><b>Activités</b></td><td>chasse, pêche, cueillette</td><td>élevage, agriculture, pêche, poterie, tissage…</td></tr>" +
     "<tr><td><b>Habitat</b></td><td>grottes, cavernes, huttes</td><td>villages, cases…</td></tr>" +
-    "<tr><td><b>Alimentation</b></td><td>aliments crus, fruits</td><td>aliments cuits (découverte du feu)</td></tr>" +
+    "<tr><td><b>Alimentation</b></td><td>aliments crus, fruits</td><td>aliments cuits</td></tr>" +
     "<tr><td><b>Organisation sociale</b></td><td>nomadisme, vie en communauté</td><td>sédentarisme (division du travail…), enterrement des morts</td></tr></table>",
   astuce: "<b>Paléo</b>lithique = pierre taillée, on se <b>promène</b> (nomade). <b>Néo</b>lithique = pierre polie, on reste au village (sédentaire) : <b>n</b>éo comme <b>n</b>ouveau.",
   regle: "Au Paléolithique (pierre taillée), l'homme est un prédateur nomade : chasse, pêche, cueillette. Au Néolithique (pierre polie), il devient un producteur sédentaire : agriculture, élevage, villages.",
@@ -31,10 +32,10 @@ LECONS.push({
       { t: "classer", q: "Range chaque habitat dans la bonne période.", cases: ["Paléolithique", "Néolithique"], items: [["les grottes", "Paléolithique"], ["les cavernes", "Paléolithique"], ["les villages", "Néolithique"], ["les cases", "Néolithique"], ["les huttes", "Paléolithique"]], expl: "Le nomade s'abrite dans des grottes, des cavernes, des huttes ; le sédentaire construit des villages et des cases." },
       { t: "classer", q: "Range chaque outil dans la bonne période.", cases: ["Paléolithique", "Néolithique"], items: [["le biface", "Paléolithique"], ["le harpon en os", "Paléolithique"], ["la meule en pierre polie", "Néolithique"], ["l'hameçon en pierre polie", "Néolithique"], ["la pierre taillée", "Paléolithique"]], expl: "Pierre taillée et os au Paléolithique ; pierre polie au Néolithique." },
       { t: "qcm", q: "Que mangeait surtout l'homme du Paléolithique ?", choix: ["des aliments crus et des fruits", "du riz cuit", "du pain"], r: "des aliments crus et des fruits", expl: "Au Paléolithique, les aliments sont crus ; la cuisson vient au Néolithique dans le tableau du cahier." },
-      { t: "qcm", q: "Au Néolithique, les aliments sont…", choix: ["cuits, grâce au feu", "toujours crus", "achetés au marché"], r: "cuits, grâce au feu", expl: "Le tableau du cahier indique la cuisson des aliments avec la découverte du feu." },
+      { t: "qcm", q: "Au Néolithique, les aliments sont…", choix: ["cuits", "toujours crus", "achetés au marché"], r: "cuits", expl: "Le tableau du cahier indique la cuisson des aliments au Néolithique." },
       { t: "saisie", q: "Comment appelle-t-on un homme qui se déplace sans cesse et n'a pas de demeure fixe ?", r: "nomade", aide: "C'est le contraire de sédentaire.", expl: "Le nomade se déplace ; le sédentaire reste sur place." },
       { t: "saisie", q: "Comment appelle-t-on un homme qui reste vivre au même endroit ?", r: "sédentaire", expl: "Au Néolithique, l'homme devient sédentaire." },
-      { t: "relier", q: "Relie chaque période à son autre nom.", paires: [["Paléolithique", "âge de la pierre taillée"], ["Néolithique", "âge de la pierre polie"]], expl: "Ce sont les deux grandes périodes de la préhistoire." },
+      { t: "relier", q: "Relie chaque mot à ce qui lui correspond.", paires: [["Paléolithique", "âge de la pierre taillée"], ["Néolithique", "âge de la pierre polie"], ["prédateur nomade", "homme du Paléolithique"], ["producteur sédentaire", "homme du Néolithique"]], expl: "Ce sont les deux grandes périodes de la préhistoire." },
       { t: "vf", q: "L'enterrement des morts apparaît au Néolithique, d'après ton tableau.", r: true, expl: "Le tableau le place dans l'organisation sociale du Néolithique." },
       { t: "trous", q: "Complète.", texte: "Au Paléolithique, l'homme est un [prédateur] nomade. Au Néolithique, il devient un [producteur] sédentaire.", expl: "Le prédateur prend dans la nature ; le producteur fait pousser et élève." }
     ],

@@ -42,7 +42,7 @@ LECONS.push({
     ],
     [
       { t: "trous", q: "Complète le résumé.", texte: "Avant l'arrivée des Blancs, le Sénégal était formé de plusieurs [royaumes]. Les sociétés étaient divisées en [castes]. En 1549, au [16]e siècle, Amary Ngoné Sobel Fall battit le Grand Djolof à [Danki]. Le Cayor, le Baol, le Walo, le Sine et le [Saloum] se libérèrent peu à peu.", expl: "Toute la leçon en un texte." },
-      { t: "relier", q: "Ne confonds pas les batailles : relie chaque bataille à sa date.", paires: [["Kirina", "1235"], ["Danki", "1549"]], expl: "Kirina : Soundiata (Mali). Danki : Amary Ngoné Sobel Fall (Sénégal)." },
+      { t: "relier", q: "Ne confonds pas les dates : relie chaque événement à son année.", paires: [["Kirina", "1235"], ["Danki", "1549"], ["conquête du Songhaï par les Marocains", "1591"]], expl: "Kirina : Soundiata (Mali). Danki : Amary Ngoné Sobel Fall (Sénégal). 1591 : fin de la puissance songhaï." },
       { t: "probleme", q: "La bataille de Kirina a eu lieu en 1235 et celle de Danki en 1549.", etapes: [{ q: "Combien d'années séparent ces deux batailles ?", r: "314", unite: "ans" }], expl: "1549 − 1235 = 314." },
       { t: "qcm", q: "Lequel de ces noms n'est PAS un royaume du Sénégal cité dans la leçon ?", choix: ["Niani", "Cayor", "Walo", "Sine"], r: "Niani", expl: "Niani est la capitale de l'empire du Mali." },
       { t: "vf", q: "Après la victoire de Danki, le Djolof est devenu encore plus puissant.", r: false, expl: "Au contraire, ses royaumes vassaux ont commencé à se libérer." }

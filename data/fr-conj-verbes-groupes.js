@@ -53,7 +53,7 @@ LECONS.push({
       { t: "qcm", q: "Dans « Les pêcheurs <b>partent</b> en mer et <b>remplissent</b> la pirogue », les deux verbes sont…", choix: ["du 3e groupe puis du 2e groupe", "tous les deux du 2e groupe", "du 1er groupe puis du 3e groupe", "tous les deux du 3e groupe"], r: "du 3e groupe puis du 2e groupe", expl: "partir → en partant (3e groupe) ; remplir → en remplissant (2e groupe)." },
       { t: "saisie", q: "Trouve l'intrus (le seul verbe qui n'est pas du 1er groupe) : jouer, aller, chanter, sauter.", r: "aller", expl: "aller finit par -er mais n'est pas du 1er groupe." },
       { t: "saisie", q: "Trouve l'intrus (le seul verbe qui n'est pas du 2e groupe) : finir, bondir, sortir, grandir.", r: "sortir", expl: "en sortant (sans -iss-) : sortir est du 3e groupe." },
-      { t: "dictee", texte: "Le verbe est le noyau de la phrase et il se compose d'un radical et d'une terminaison.", expl: "Retiens bien : radical + terminaison." }
+      { t: "dictee", texte: "Le verbe à l'infinitif se compose d'un radical et d'une terminaison.", expl: "Retiens bien : radical + terminaison." }
     ]
   ]
 });

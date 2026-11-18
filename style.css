@@ -91,7 +91,7 @@ p { margin: 0 0 calc(var(--pas) / 2); }
 }
 .lecon .titre { font-size: 21px; }
 .lecon .titre small { display: block; color: var(--crayon); font-size: 15px; line-height: 1.2; }
-.lecons .dans-marge { top: 14px; }
+.lecons .dans-marge { top: 14px; left: calc(-1 * var(--marge-x) - 16px); }
 .niv-mini { white-space: nowrap; letter-spacing: 2px; color: #cfcbe0; font-size: 20px; }
 .niv-mini .ok { color: var(--etoile); }
 

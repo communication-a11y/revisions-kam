@@ -6,6 +6,8 @@ const version = new Date().toISOString().slice(0, 16).replace(/[-:T]/g, "");
 let out = `var LECONS = window.LECONS = [];\nwindow.VERSION_CONTENU = "${version}";\n`;
 for (const f of fichiers) out += `\n/* ---- ${f} ---- */\n` + fs.readFileSync(dir + "data/" + f, "utf8") + "\n";
 fs.writeFileSync(dir + "lecons.js", out);
+let idx = fs.readFileSync(dir + "index.html", "utf8").replace(/(href|src)="(style\.css|app\.js|lecons\.js)(\?v=\d+)?"/g, `$1="$2?v=${version}"`);
+fs.writeFileSync(dir + "index.html", idx);
 fs.writeFileSync(dir + "sw.js", fs.readFileSync(dir + "sw.template.js", "utf8").replace("__VERSION__", version));
 // Vérification : chaque leçon et chaque exercice doivent être bien formés.
 globalThis.window = {}; (0, eval)(out);
