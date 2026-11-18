@@ -1,0 +1,200 @@
+@font-face { font-family: "Andika"; src: url(fonts/andika-400.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Andika"; src: url(fonts/andika-700.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Cursive"; src: url(fonts/cursive.woff2) format("woff2"); font-display: swap; }
+
+:root {
+  --papier: #fdfcf7;
+  --ligne: #d9d4ef;
+  --ligne-fine: #eeebf8;
+  --marge: #e5484d;
+  --encre: #1c3f94;
+  --rouge: #c21f32;
+  --vert: #17803d;
+  --crayon: #5d6170;
+  --etoile: #f0b400;
+  --pas: 32px;           /* hauteur d'un carreau Seyès */
+  --marge-x: 112px;      /* position de la marge rouge */
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; }
+body {
+  font-family: "Andika", system-ui, sans-serif;
+  font-size: 21px;
+  line-height: var(--pas);
+  color: var(--encre);
+  background-color: var(--papier);
+  background-image:
+    linear-gradient(to right, transparent calc(var(--marge-x) - 1px), var(--marge) calc(var(--marge-x) - 1px), var(--marge) calc(var(--marge-x) + 1px), transparent calc(var(--marge-x) + 1px)),
+    linear-gradient(to bottom, var(--ligne) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--ligne-fine) 1px, transparent 1px),
+    linear-gradient(to right, var(--ligne-fine) 1px, transparent 1px);
+  background-size: 100% 100%, 100% var(--pas), 100% calc(var(--pas) / 4), var(--pas) 100%;
+  background-attachment: local;
+  overflow-x: hidden;
+}
+
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--etoile); outline-offset: 2px; }
+
+#app { min-height: 100%; padding: var(--pas) 24px calc(var(--pas) * 3) calc(var(--marge-x) + 24px); max-width: 1100px; }
+
+/* ---------- Titres façon cahier ---------- */
+.cursive { font-family: "Cursive", "Andika", cursive; font-weight: 400; }
+h1, h2 { margin: 0; font-weight: 400; }
+h1 { font-family: "Cursive", cursive; color: var(--rouge); font-size: 34px; line-height: calc(var(--pas) * 2); }
+h2 { font-family: "Cursive", cursive; color: var(--rouge); font-size: 25px; line-height: calc(var(--pas) * 1.5); margin-top: var(--pas); }
+p { margin: 0 0 calc(var(--pas) / 2); }
+.date { color: var(--encre); text-align: center; font-family: "Cursive", cursive; font-size: 19px; }
+.trait { width: 30%; margin: 4px auto var(--pas); border-top: 2px solid var(--crayon); position: relative; }
+.trait::before, .trait::after { content: ""; position: absolute; top: -6px; height: 10px; border-left: 2px solid var(--crayon); }
+.trait::before { left: 0; } .trait::after { right: 0; }
+.dans-marge { position: absolute; left: 8px; width: calc(var(--marge-x) - 16px); text-align: right; font-size: 15px; color: var(--crayon); line-height: 1.2; }
+
+/* ---------- Barre du haut ---------- */
+.haut { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: calc(var(--pas) * 2); }
+.retour { border: 0; background: none; color: var(--crayon); font-size: 19px; padding: 8px 0; }
+.retour::before { content: "‹ "; font-size: 26px; }
+.etoiles { color: var(--encre); font-weight: 700; white-space: nowrap; }
+.etoiles b { color: var(--etoile); font-size: 26px; vertical-align: -2px; }
+
+/* ---------- Accueil ---------- */
+.revoir {
+  display: block; width: 100%; text-align: left; margin: var(--pas) 0;
+  background: #fff6d6; border: 2px dashed var(--etoile); border-radius: 6px;
+  padding: 12px 18px; color: var(--encre);
+}
+.revoir strong { color: var(--rouge); }
+.cahiers { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 22px; margin: var(--pas) 0; }
+.cahier {
+  position: relative; border: 0; border-radius: 4px 10px 10px 4px; aspect-ratio: 3 / 4;
+  background: var(--couv); color: #fff; text-align: left; padding: 18px 14px;
+  box-shadow: inset 10px 0 0 rgba(0,0,0,.18), 0 3px 0 rgba(0,0,0,.15);
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.cahier .etiquette { background: #fff; color: var(--encre); border-radius: 4px; padding: 10px 12px; margin-left: 8px; line-height: 1.25; }
+.cahier .etiquette .cursive { color: var(--rouge); font-size: 20px; display: block; line-height: 1.6; }
+.cahier .compte { margin-left: 8px; font-size: 16px; opacity: .95; }
+.cahier:active { transform: translateY(2px); }
+.examen { display: inline-block; margin-top: var(--pas); background: var(--encre); color: #fff; border: 0; border-radius: 6px; padding: 12px 22px; }
+.pied { margin-top: calc(var(--pas) * 2); display: flex; gap: 24px; flex-wrap: wrap; }
+.lien { border: 0; background: none; color: var(--crayon); text-decoration: underline; padding: 6px 0; font-size: 17px; }
+.vide { color: var(--crayon); }
+
+/* ---------- Liste des leçons ---------- */
+.lecons { list-style: none; margin: var(--pas) 0 0; padding: 0; }
+.lecons li { position: relative; }
+.lecon {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; width: 100%;
+  border: 0; background: none; text-align: left; padding: 0; min-height: calc(var(--pas) * 2); color: var(--encre);
+}
+.lecon .titre { font-size: 21px; }
+.lecon .titre small { display: block; color: var(--crayon); font-size: 15px; line-height: 1.2; }
+.lecons .dans-marge { top: 14px; }
+.niv-mini { white-space: nowrap; letter-spacing: 2px; color: #cfcbe0; font-size: 20px; }
+.niv-mini .ok { color: var(--etoile); }
+
+/* ---------- Leçon ---------- */
+.retiens { border-left: 4px solid var(--vert); padding: 0 0 0 16px; margin: calc(var(--pas) / 2) 0 var(--pas); }
+.retiens .etiq { color: var(--vert); font-weight: 700; }
+.retiens ul { margin: 0; padding-left: 22px; }
+.retiens table { border-collapse: collapse; margin: 8px 0 12px; background: rgba(255,255,255,.7); }
+.retiens td, .retiens th { border: 1px solid var(--ligne); padding: 2px 12px; text-align: left; }
+.retiens th { color: var(--rouge); font-weight: 400; }
+.ex { color: var(--vert); }
+.astuce { background: #eef7f0; border-radius: 6px; padding: 8px 14px; margin: 0 0 var(--pas); }
+.astuce b { color: var(--vert); }
+.etapes { list-style: none; padding: 0; margin: var(--pas) 0; display: grid; gap: 14px; }
+.etape {
+  display: grid; grid-template-columns: 48px 1fr auto; align-items: center; gap: 14px; width: 100%;
+  background: #fff; border: 2px solid var(--ligne); border-radius: 8px; padding: 10px 16px; text-align: left; color: var(--encre);
+}
+.etape .num { font-family: "Cursive", cursive; color: var(--rouge); font-size: 30px; text-align: center; }
+.etape small { display: block; color: var(--crayon); font-size: 15px; line-height: 1.3; }
+.etape[disabled] { opacity: .5; cursor: default; }
+.etape .score { font-size: 16px; color: var(--crayon); text-align: right; line-height: 1.3; }
+.etape .score b { color: var(--etoile); font-size: 22px; }
+
+/* ---------- Exercice ---------- */
+.progression { height: 8px; background: var(--ligne-fine); border-radius: 4px; overflow: hidden; margin: 6px 0 var(--pas); }
+.progression div { height: 100%; background: var(--vert); transition: width .3s; }
+.consigne { color: var(--crayon); font-size: 17px; margin-bottom: 4px; }
+.question { font-size: 25px; line-height: 1.5; margin: 0 0 var(--pas); white-space: pre-line; }
+.choix { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: var(--pas); }
+.btn-choix {
+  background: #fff; border: 2px solid var(--ligne); border-radius: 8px; padding: 14px 16px; text-align: left;
+  font-size: 22px; line-height: 1.35; color: var(--encre); min-height: 64px;
+}
+.btn-choix.choisi { border-color: var(--encre); background: #eef1fb; }
+.btn-choix.juste { border-color: var(--vert); background: #e7f5ec; }
+.btn-choix.faux { border-color: var(--rouge); background: #fdecee; }
+.saisie { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: var(--pas); }
+.champ {
+  border: 0; border-bottom: 3px solid var(--encre); background: rgba(255,255,255,.85); padding: 6px 10px;
+  font-size: 24px; min-width: 120px; border-radius: 4px 4px 0 0;
+}
+.champ.large { width: min(100%, 560px); }
+.champ.juste { border-color: var(--vert); color: var(--vert); }
+.champ.faux { border-color: var(--rouge); color: var(--rouge); }
+.unite { font-size: 22px; }
+.trou-texte { font-size: 24px; line-height: 2.2; margin-bottom: var(--pas); }
+.trou-texte .champ { min-width: 90px; width: auto; font-size: 22px; padding: 2px 8px; }
+.jetons { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; min-height: 56px; }
+.jeton { background: #fff; border: 2px solid var(--ligne); border-radius: 6px; padding: 8px 14px; font-size: 22px; color: var(--encre); }
+.jeton.place { visibility: hidden; }
+.phrase-construite { min-height: 64px; border-bottom: 3px solid var(--encre); display: flex; flex-wrap: wrap; gap: 10px; padding: 6px 0; margin-bottom: 18px; }
+.phrase-construite .jeton { background: #eef1fb; }
+.cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: var(--pas); }
+.case { border: 2px dashed var(--ligne); border-radius: 8px; min-height: 120px; padding: 8px; background: rgba(255,255,255,.6); text-align: left; color: var(--encre); }
+.case h3 { margin: 0 0 6px; font-weight: 700; font-size: 19px; color: var(--rouge); }
+.case .jeton { display: inline-block; margin: 4px; font-size: 19px; padding: 4px 10px; }
+.jeton.actif { border-color: var(--encre); background: #dfe6fa; }
+.relier { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 40px; margin-bottom: var(--pas); }
+.relier .btn-choix { font-size: 20px; min-height: 56px; }
+.relier .btn-choix.lie { border-width: 4px; background: #f6f7fc; }
+.accents { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 var(--pas); }
+.accent { min-width: 48px; height: 48px; border: 2px solid var(--ligne); border-radius: 6px; background: #fff; color: var(--encre); font-size: 24px; }
+.accent:active { background: #dfe6fa; }
+.ecouter { background: var(--encre); color: #fff; border: 0; border-radius: 6px; padding: 10px 18px; margin-bottom: 18px; }
+
+.valider {
+  background: var(--encre); color: #fff; border: 0; border-radius: 8px; padding: 14px 34px; font-size: 22px;
+}
+.valider[disabled] { opacity: .35; cursor: default; }
+.indice { background: none; border: 0; color: var(--crayon); text-decoration: underline; margin-left: 18px; font-size: 18px; }
+.aide-texte { color: var(--crayon); font-style: italic; margin-top: 12px; }
+
+.retour-ex { margin-top: var(--pas); border-radius: 8px; padding: 14px 18px; }
+.retour-ex.bien { background: #e7f5ec; }
+.retour-ex.pasbien { background: #fdecee; }
+.retour-ex .tampon { font-family: "Cursive", cursive; font-size: 28px; line-height: 1.6; }
+.bien .tampon { color: var(--vert); }
+.pasbien .tampon { color: var(--rouge); }
+.retour-ex .souviens { margin-top: 10px; border-top: 1px dashed var(--crayon); padding-top: 8px; }
+.retour-ex .souviens b { color: var(--vert); }
+.corrige { color: var(--rouge); }
+
+/* ---------- Résultat ---------- */
+.resultat { text-align: center; padding-top: var(--pas); }
+.grosses-etoiles { font-size: 64px; letter-spacing: 10px; color: #dcd8ea; line-height: 1.4; }
+.grosses-etoiles .ok { color: var(--etoile); }
+.actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: var(--pas); }
+.secondaire { background: #fff; color: var(--encre); border: 2px solid var(--encre); border-radius: 8px; padding: 12px 26px; font-size: 20px; }
+
+/* ---------- Parent ---------- */
+.tableau { width: 100%; border-collapse: collapse; font-size: 17px; margin: 12px 0 var(--pas); background: rgba(255,255,255,.85); }
+.tableau th, .tableau td { border-bottom: 1px solid var(--ligne); padding: 4px 8px; text-align: left; line-height: 1.4; vertical-align: top; }
+.tableau th { color: var(--rouge); font-weight: 400; }
+.code { font-size: 32px; letter-spacing: 12px; width: 200px; text-align: center; }
+
+@media (max-width: 700px) {
+  :root { --marge-x: 40px; }
+  body { font-size: 19px; }
+  #app { padding-left: calc(var(--marge-x) + 14px); padding-right: 14px; }
+  .dans-marge { display: none; }
+  h1 { font-size: 28px; }
+  .question { font-size: 22px; }
+  .relier { gap: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
