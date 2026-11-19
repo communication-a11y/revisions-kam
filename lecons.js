@@ -1,5 +1,5 @@
 var LECONS = window.LECONS = [];
-window.VERSION_CONTENU = "202611182306";
+window.VERSION_CONTENU = "202611191808";
 
 /* ---- fr-conj-futur-simple.js ---- */
 // À VÉRIFIER : (1) au futur, le cahier semble écrire « je chanterais » et « je nettoierais » (avec s, photos 0051-0052) : ce serait du conditionnel ; on a écrit « je chanterai », « je nettoierai ». (2) La règle sur -eter / -eler annonce « sauf les exceptions » sans les écrire (0052) : elles ne sont pas inventées ici ; le module renvoie à la leçon du présent sur -eter / -eler et ne les fait pas travailler. (3) « jeter : jetterai » → « je jetterai » ; « savoi » → « savoir ».
@@ -749,6 +749,63 @@ LECONS.push({
       { t: "saisie", q: "Trouve l'intrus (le seul verbe qui n'est pas du 1er groupe) : jouer, aller, chanter, sauter.", r: "aller", expl: "aller finit par -er mais n'est pas du 1er groupe." },
       { t: "saisie", q: "Trouve l'intrus (le seul verbe qui n'est pas du 2e groupe) : finir, bondir, sortir, grandir.", r: "sortir", expl: "en sortant (sans -iss-) : sortir est du 3e groupe." },
       { t: "dictee", texte: "Le verbe à l'infinitif se compose d'un radical et d'une terminaison.", expl: "Retiens bien : radical + terminaison." }
+    ]
+  ]
+});
+
+
+/* ---- fr-gram-adjectif-fonctions.js ---- */
+// Corrections : « mis en opposition » → « mis en apposition » ; « épithèctes » → « épithètes ».
+LECONS.push({
+  id: "fr-gram-adjectif-fonctions",
+  cahier: "francais",
+  matiere: "Grammaire",
+  titre: "L'adjectif : épithète, attribut, mis en apposition",
+  date: "2026-11-19",
+  photos: ["2026-11-19_01.jpg", "2026-11-19_02.jpg"],
+  retiens:
+    "<p>→ L'adjectif <b>qualifie le nom</b> qu'il accompagne.</p>" +
+    "<p>→ Quand l'adjectif appartient au groupe nominal, on dit qu'il est <b>épithète</b> du nom.<br>Ex : Ce film montre de <b>magnifiques</b> animaux <b>sauvages</b>.<br>Les adjectifs « magnifiques » et « sauvages » appartiennent au groupe nominal dont le nom est « animaux ». Ce sont des épithètes de ce nom.</p>" +
+    "<p>→ L'adjectif relié au nom par un <b>verbe d'état</b> est <b>attribut du sujet</b>.<br>Ex : Ces lions paraissent bien <b>tristes</b> dans leur cage.<br>L'adjectif « tristes » est séparé du nom « lions » par le verbe « paraître ».<br>Les principaux verbes d'état sont : <b>être, sembler, devenir, paraître, avoir l'air</b>.</p>" +
+    "<p>→ L'adjectif relié au nom par une <b>virgule</b> est <b>mis en apposition</b>.<br>Ex : <b>Peureux</b>, le chat se cache sous la table.</p>",
+  astuce: "Regarde ce qu'il y a entre l'adjectif et le nom :<br>• rien → <b>épithète</b> (un chat <b>noir</b>) ;<br>• un verbe d'état → <b>attribut</b> (le chat <b>est</b> noir) ;<br>• une virgule → <b>apposition</b> (<b>Noir</b>, le chat…).",
+  regle: "L'adjectif collé au nom dans le groupe nominal est épithète ; relié au nom par un verbe d'état (être, sembler, devenir, paraître, avoir l'air), il est attribut du sujet ; séparé du nom par une virgule, il est mis en apposition.",
+  niveaux: [
+    [
+      { t: "qcm", q: "L'adjectif qualificatif donne un renseignement sur…", choix: ["le nom", "le verbe", "la ponctuation"], r: "le nom", expl: "L'adjectif qualifie le nom qu'il accompagne." },
+      { t: "qcm", q: "« Ce film montre de <b>magnifiques</b> animaux sauvages. » L'adjectif en gras est…", choix: ["épithète", "attribut du sujet", "mis en apposition"], r: "épithète", expl: "« magnifiques » appartient au groupe nominal « de magnifiques animaux sauvages » : il est épithète du nom « animaux »." },
+      { t: "qcm", q: "« Ces lions paraissent bien <b>tristes</b> dans leur cage. » L'adjectif en gras est…", choix: ["attribut du sujet", "épithète", "mis en apposition"], r: "attribut du sujet", expl: "« tristes » est relié au nom « lions » par le verbe d'état « paraître »." },
+      { t: "qcm", q: "« <b>Peureux</b>, le chat se cache sous la table. » L'adjectif en gras est…", choix: ["mis en apposition", "épithète", "attribut du sujet"], r: "mis en apposition", expl: "« Peureux » est séparé du nom « chat » par une virgule." },
+      { t: "vf", q: "Être, sembler, devenir, paraître et avoir l'air sont des verbes d'état.", r: true, expl: "Ce sont les principaux verbes d'état de la leçon." },
+      { t: "vf", q: "L'adjectif épithète est séparé du nom par une virgule.", r: false, expl: "L'épithète est collé au nom, dans le groupe nominal. Avec une virgule, l'adjectif est mis en apposition." }
+    ],
+    [
+      { t: "classer", q: "Range chaque adjectif en gras selon sa fonction.", cases: ["épithète", "attribut du sujet", "mis en apposition"], items: [["une robe <b>bleue</b>", "épithète"], ["Awa semble <b>fatiguée</b>.", "attribut du sujet"], ["<b>Joyeux</b>, Moussa rentre de l'école.", "mis en apposition"], ["un <b>grand</b> baobab", "épithète"], ["Le ciel devient <b>gris</b>.", "attribut du sujet"], ["<b>Affamés</b>, les enfants courent à table.", "mis en apposition"]], expl: "Collé au nom : épithète. Après un verbe d'état : attribut. Avec une virgule : apposition." },
+      { t: "saisie", q: "Écris l'adjectif attribut du sujet : « Le ciel devient gris. »", r: "gris", expl: "« gris » est relié au nom « ciel » par le verbe d'état « devenir »." },
+      { t: "saisie", q: "Écris le verbe d'état : « Awa semble fatiguée. »", r: "semble", expl: "« sembler » est un verbe d'état : il relie « fatiguée » au sujet « Awa »." },
+      { t: "qcm", q: "Lequel de ces verbes n'est PAS un verbe d'état ?", choix: ["manger", "devenir", "paraître", "sembler"], r: "manger", expl: "Les verbes d'état de la leçon sont : être, sembler, devenir, paraître, avoir l'air." },
+      { t: "trous", q: "Écris les deux adjectifs épithètes, dans l'ordre de la phrase : « Moussa a un beau vélo rouge. »", texte: "[beau] et [rouge]", expl: "« beau » et « rouge » appartiennent au groupe nominal « un beau vélo rouge » : ils sont épithètes du nom « vélo »." },
+      { t: "qcm", q: "« Fatou a l'air <b>contente</b>. » L'adjectif en gras est…", choix: ["attribut du sujet", "épithète", "mis en apposition"], r: "attribut du sujet", expl: "« avoir l'air » est un verbe d'état : « contente » est attribut du sujet « Fatou »." },
+      { t: "relier", q: "Relie chaque fonction à ce qui la reconnaît.", paires: [["épithète", "collé au nom"], ["attribut du sujet", "après un verbe d'état"], ["mis en apposition", "séparé par une virgule"]], expl: "C'est ce qui se trouve entre l'adjectif et le nom qui donne la fonction." },
+      { t: "saisie", q: "Écris le nom qualifié par l'adjectif : « Peureux, le chat se cache sous la table. »", r: "chat", expl: "« Peureux » qualifie le nom « chat »." },
+      { t: "qcm", q: "« Les mangues <b>mûres</b> sont au marché. » L'adjectif en gras est…", choix: ["épithète", "attribut du sujet", "mis en apposition"], r: "épithète", expl: "« mûres » est collé au nom « mangues », dans le groupe nominal « les mangues mûres »." }
+    ],
+    [
+      { t: "qcm", q: "« Le thé est <b>chaud</b>. » L'adjectif en gras est…", choix: ["attribut du sujet", "épithète", "mis en apposition"], r: "attribut du sujet", expl: "Le verbe d'état « être » relie « chaud » au nom « thé »." },
+      { t: "qcm", q: "« Le thé <b>chaud</b> est sur la table. » L'adjectif en gras est…", choix: ["épithète", "attribut du sujet", "mis en apposition"], r: "épithète", aide: "Qu'y a-t-il entre « thé » et « chaud » ?", expl: "« chaud » est collé au nom « thé ». Le verbe « est » vient après : il ne relie pas « chaud » au nom." },
+      { t: "vf", q: "Dans « Il semble malade », l'adjectif « malade » est épithète.", r: false, expl: "« sembler » est un verbe d'état : « malade » est attribut du sujet « Il »." },
+      { t: "classer", q: "Verbe d'état ou non ?", cases: ["verbe d'état", "autre verbe"], items: [["sembler", "verbe d'état"], ["devenir", "verbe d'état"], ["avoir l'air", "verbe d'état"], ["paraître", "verbe d'état"], ["courir", "autre verbe"], ["chanter", "autre verbe"], ["regarder", "autre verbe"], ["porter", "autre verbe"]], expl: "Retiens les cinq verbes d'état de la leçon : être, sembler, devenir, paraître, avoir l'air." },
+      { t: "ordre", q: "Remets les mots dans l'ordre pour mettre l'adjectif « Joyeuse » en apposition.", r: "Joyeuse, Awa danse dans la cour.", expl: "L'adjectif mis en apposition est séparé du nom par une virgule." },
+      { t: "qcm", q: "« Les élèves deviennent <b>sages</b>. » Quel nom l'adjectif « sages » qualifie-t-il ?", choix: ["élèves", "deviennent", "les"], r: "élèves", expl: "Le verbe d'état « devenir » relie « sages » au sujet « élèves »." },
+      { t: "qcm", q: "« <b>Fatiguée</b>, Khady s'assoit sous l'arbre. » L'adjectif en gras est…", choix: ["mis en apposition", "épithète", "attribut du sujet"], r: "mis en apposition", expl: "« Fatiguée » est séparé du nom « Khady » par une virgule." }
+    ],
+    [
+      { t: "dictee", texte: "Ces lions paraissent bien tristes dans leur cage.", expl: "« tristes » est attribut du sujet « lions » : il prend un s, comme lui." },
+      { t: "dictee", texte: "Peureux, le petit chat noir se cache sous la table.", expl: "« Peureux » est mis en apposition ; « petit » et « noir » sont épithètes de « chat »." },
+      { t: "classer", q: "« <b>Heureux</b>, le <b>vieux</b> pêcheur paraît <b>fier</b> de sa <b>grande</b> pirogue. » Range les adjectifs.", cases: ["épithète", "attribut du sujet", "mis en apposition"], items: [["Heureux", "mis en apposition"], ["vieux", "épithète"], ["fier", "attribut du sujet"], ["grande", "épithète"]], expl: "« Heureux » : virgule. « vieux » et « grande » : collés au nom. « fier » : après le verbe d'état « paraître »." },
+      { t: "qcm", q: "Dans quelle phrase l'adjectif « calme » est-il attribut du sujet ?", choix: ["Ce matin, la mer est calme.", "La mer calme brille au soleil.", "Calme, la mer brille au soleil.", "Les pêcheurs aiment la mer calme."], r: "Ce matin, la mer est calme.", expl: "Dans « la mer est calme », le verbe d'état « être » relie « calme » au nom « mer »." },
+      { t: "trous", q: "Écris la fonction de l'adjectif en gras (épithète, attribut ou apposition).", texte: "« Ibrahima est <b>malade</b>. » → [attribut|attribut du sujet] — « <b>Malade</b>, Ibrahima reste au lit. » → [apposition|mis en apposition|mise en apposition] — « un enfant <b>malade</b> » → [épithète]", expl: "Le même adjectif change de fonction selon sa place : après un verbe d'état, avec une virgule, ou collé au nom." },
+      { t: "qcm", q: "« Le marché de Sandaga semble <b>immense</b>. » Analyse l'adjectif en gras.", choix: ["attribut du sujet « marché »", "épithète du nom « Sandaga »", "mis en apposition"], r: "attribut du sujet « marché »", expl: "Qu'est-ce qui semble immense ? le marché. « sembler » est un verbe d'état." }
     ]
   ]
 });
@@ -1584,6 +1641,71 @@ LECONS.push({
       { t: "dictee", texte: "Un texte explicatif répond aux questions pourquoi ou comment pour faire comprendre un phénomène.", expl: "pourquoi, comment, phénomène : mots clés de la leçon." },
       { t: "qcm", q: "Dans quelle partie l'auteur donne-t-il les causes et les raisons ?", choix: ["le développement", "l'introduction", "la conclusion"], r: "le développement", expl: "Le développement fournit les causes, les raisons, les explications." },
       { t: "trous", q: "Complète la définition.", texte: "Un texte explicatif a pour objectif d'[informer] et de faire [comprendre] en répondant aux questions « pourquoi ? » ou « [comment] ? ».", expl: "C'est la définition de la leçon." }
+    ]
+  ]
+});
+
+
+/* ---- fr-orth-accord-adjectif.js ---- */
+// L'exemple du cahier « berger, bergère » est juste pour la terminaison (berger est surtout un nom) ; le module ajoute léger → légère, fier → fière.
+LECONS.push({
+  id: "fr-orth-accord-adjectif",
+  cahier: "francais",
+  matiere: "Orthographe",
+  titre: "L'accord de l'adjectif qualificatif",
+  date: "2026-11-19",
+  photos: ["2026-11-19_02.jpg", "2026-11-19_03.jpg"],
+  retiens:
+    "<p>On forme généralement le <b>féminin</b> d'un adjectif qualificatif en ajoutant un <b>e</b> au masculin.<br>Ex : un homme souriant → une femme souriant<b>e</b></p>" +
+    "<p>→ Il existe des cas particuliers :</p>" +
+    "<table><tr><th>masculin</th><th>féminin</th><th>exemple</th></tr>" +
+    "<tr><td>-if</td><td>-ive</td><td>actif → active</td></tr>" +
+    "<tr><td>-x</td><td>-se</td><td>joyeux → joyeuse<br><i>sauf</i> roux → rousse, faux → fausse, doux → douce, vieux → vieille</td></tr>" +
+    "<tr><td>-er</td><td>-ère</td><td>berger → bergère, léger → légère</td></tr>" +
+    "<tr><td>-eur</td><td>-euse</td><td>moqueur → moqueuse</td></tr>" +
+    "<tr><td>-et</td><td>-ette</td><td>coquet → coquette<br><i>sauf</i> complet → complète, discret → discrète, inquiet → inquiète</td></tr>" +
+    "</table>" +
+    "<p><b>Attention :</b> malin → maligne ; public → publique ; favori → favorite</p>" +
+    "<p>On forme le <b>pluriel</b> d'un adjectif en ajoutant un <b>s</b> au singulier.<br>Ex : un garçon sage → des garçons sage<b>s</b></p>",
+  astuce: "L'adjectif suit toujours son nom comme son ombre : nom féminin → adjectif féminin ; nom au pluriel → adjectif au pluriel.",
+  regle: "L'adjectif s'accorde en genre et en nombre avec le nom qu'il qualifie : on ajoute généralement e au féminin et s au pluriel, avec des cas particuliers (-if → -ive, -x → -se, -er → -ère, -eur → -euse, -et → -ette).",
+  niveaux: [
+    [
+      { t: "qcm", q: "En général, pour former le féminin d'un adjectif, on ajoute…", choix: ["un e", "un s", "un x"], r: "un e", expl: "un homme souriant → une femme souriante." },
+      { t: "qcm", q: "En général, pour former le pluriel d'un adjectif, on ajoute…", choix: ["un s", "un e", "un t"], r: "un s", expl: "un garçon sage → des garçons sages." },
+      { t: "vf", q: "Le féminin de « actif » est « active ».", r: true, expl: "Les adjectifs en -if font leur féminin en -ive." },
+      { t: "qcm", q: "Quel est le féminin de « joyeux » ?", choix: ["joyeuse", "joyeuxe", "joyeusse"], r: "joyeuse", expl: "-x devient -se : joyeux → joyeuse." },
+      { t: "vf", q: "Le féminin de « roux » est « rouse ».", r: false, expl: "« roux » est une exception : on écrit « rousse », avec deux s." },
+      { t: "qcm", q: "Quel est le féminin de « complet » ?", choix: ["complète", "complette", "complet"], r: "complète", expl: "« complet » est une exception à la règle -et → -ette : on écrit « complète »." }
+    ],
+    [
+      { t: "saisie", q: "Écris au féminin : un garçon souriant → une fille …", r: "souriante", expl: "Cas général : on ajoute un e." },
+      { t: "saisie", q: "Écris au féminin : un enfant moqueur → une enfant …", r: "moqueuse", expl: "-eur devient -euse." },
+      { t: "saisie", q: "Écris au féminin : un chat coquet → une chatte …", r: "coquette", expl: "-et devient -ette : on double le t." },
+      { t: "saisie", q: "Écris au féminin : un élève sportif → une élève …", r: "sportive", expl: "-if devient -ive." },
+      { t: "saisie", q: "Écris au féminin : un sac léger → une valise …", r: "légère", expl: "-er devient -ère, avec un accent grave." },
+      { t: "saisie", q: "Écris au féminin : un homme heureux → une femme …", r: "heureuse", expl: "-x devient -se." },
+      { t: "relier", q: "Relie chaque masculin à son féminin.", paires: [["actif", "active"], ["joyeux", "joyeuse"], ["moqueur", "moqueuse"], ["coquet", "coquette"], ["fier", "fière"]], expl: "Chaque terminaison a sa règle : -if/-ive, -x/-se, -eur/-euse, -et/-ette, -er/-ère." },
+      { t: "trous", q: "Mets l'adjectif au pluriel.", texte: "un garçon sage → des garçons [sages] — un mur blanc → des murs [blancs] — une fleur rouge → des fleurs [rouges]", expl: "Au pluriel, on ajoute un s à l'adjectif." },
+      { t: "qcm", q: "Choisis le bon accord : « Les mangues sont … »", choix: ["mûres", "mûr", "mûre"], r: "mûres", expl: "« mangues » est féminin pluriel : l'adjectif prend e et s." }
+    ],
+    [
+      { t: "relier", q: "Ces adjectifs sont des exceptions. Relie chacun à son féminin.", paires: [["doux", "douce"], ["faux", "fausse"], ["vieux", "vieille"], ["roux", "rousse"]], expl: "Ces adjectifs en -x ne suivent pas la règle -x → -se." },
+      { t: "saisie", q: "Écris au féminin : un garçon inquiet → une fille …", r: "inquiète", expl: "Exception : inquiet → inquiète (pas de double t, mais un accent grave)." },
+      { t: "saisie", q: "Écris au féminin : un voisin discret → une voisine …", r: "discrète", expl: "Exception : discret → discrète." },
+      { t: "qcm", q: "Quel est le féminin de « malin » ?", choix: ["maligne", "maline", "malinne"], r: "maligne", expl: "Attention : malin → maligne." },
+      { t: "qcm", q: "Quel est le féminin de « public » ?", choix: ["publique", "publice", "publicque"], r: "publique", expl: "Attention : public → publique (une école publique)." },
+      { t: "qcm", q: "Quel est le féminin de « favori » ?", choix: ["favorite", "favorie", "favorise"], r: "favorite", expl: "Attention : favori → favorite." },
+      { t: "classer", q: "Le féminin suit-il la règle de sa terminaison ou est-ce une exception ?", cases: ["suit la règle", "exception"], items: [["joyeux → joyeuse", "suit la règle"], ["doux → douce", "exception"], ["coquet → coquette", "suit la règle"], ["complet → complète", "exception"], ["peureux → peureuse", "suit la règle"], ["vieux → vieille", "exception"]], expl: "Règles : -x → -se et -et → -ette. Exceptions à retenir : doux, faux, roux, vieux ; complet, discret, inquiet." },
+      { t: "saisie", q: "Mets au féminin pluriel : un gâteau doux → des boissons …", r: "douces", expl: "doux → douce (exception), puis s au pluriel : douces." }
+    ],
+    [
+      { t: "dictee", texte: "Ma grand-mère est une femme douce, discrète et toujours souriante.", expl: "doux → douce, discret → discrète, souriant → souriante : l'adjectif s'accorde avec « femme »." },
+      { t: "dictee", texte: "Les élèves actives et joyeuses ont gagné le match.", expl: "« élèves » est ici féminin pluriel : actif → actives, joyeux → joyeuses." },
+      { t: "trous", q: "Accorde les adjectifs entre parenthèses.", texte: "Awa est une fille [sportive] (sportif). Sa sœur est [inquiète] (inquiet). Les mangues [mûres] (mûr) sont [délicieuses] (délicieux).", expl: "sportif → sportive (-if → -ive) ; inquiet → inquiète (exception) ; mûr → mûres ; délicieux → délicieuses (-x → -se, puis s)." },
+      { t: "qcm", q: "Quelle phrase est bien écrite ?", choix: ["Fatou est une fille malicieuse et coquette.", "Fatou est une fille malicieuxe et coquète.", "Fatou est une fille malicieuse et coquete.", "Fatou est une fille malicieus et coquette."], r: "Fatou est une fille malicieuse et coquette.", expl: "malicieux → malicieuse (-x → -se) ; coquet → coquette (-et → -ette)." },
+      { t: "classer", q: "Quel accord a l'adjectif en gras ?", cases: ["féminin singulier", "masculin pluriel", "féminin pluriel"], items: [["une école <b>publique</b>", "féminin singulier"], ["des garçons <b>sages</b>", "masculin pluriel"], ["des chèvres <b>rousses</b>", "féminin pluriel"], ["une chanson <b>favorite</b>", "féminin singulier"], ["des enfants <b>moqueurs</b>", "masculin pluriel"], ["des voisines <b>discrètes</b>", "féminin pluriel"]], expl: "Regarde le nom : son genre et son nombre décident de l'accord de l'adjectif." },
+      { t: "saisie", q: "Récris au féminin : « Un vieux pêcheur heureux et fier. » → « Une … pêcheuse … et … » Écris les trois adjectifs séparés par des virgules.", r: ["vieille, heureuse, fière", "vieille,heureuse,fière"], expl: "vieux → vieille (exception), heureux → heureuse, fier → fière." }
     ]
   ]
 });
@@ -3218,6 +3340,60 @@ LECONS.push({
       { t: "probleme", q: "La bataille de Kirina a eu lieu en 1235 et celle de Danki en 1549.", etapes: [{ q: "Combien d'années séparent ces deux batailles ?", r: "314", unite: "ans" }], expl: "1549 − 1235 = 314." },
       { t: "qcm", q: "Lequel de ces noms n'est PAS un royaume du Sénégal cité dans la leçon ?", choix: ["Niani", "Cayor", "Walo", "Sine"], r: "Niani", expl: "Niani est la capitale de l'empire du Mali." },
       { t: "vf", q: "Après la victoire de Danki, le Djolof est devenu encore plus puissant.", r: false, expl: "Au contraire, ses royaumes vassaux ont commencé à se libérer." }
+    ]
+  ]
+});
+
+
+/* ---- hi-senegal-apres-arrivee-blancs.js ---- */
+// À VÉRIFIER : la photocopie dit que les Blancs « instaurent la colonisation et l'esclavage ». La traite des esclaves a commencé bien avant la colonisation et la France a aboli l'esclavage dans ses colonies en 1848 : formulation gardée dans le résumé, mais aucune question n'est posée dessus.
+// Correction : « Ils vont lutter promouvoir le christianisme » → « Ils vont promouvoir le christianisme ».
+LECONS.push({
+  id: "hi-senegal-apres-arrivee-blancs",
+  cahier: "histgeo",
+  matiere: "Histoire",
+  titre: "Le Sénégal après l'arrivée des Blancs",
+  date: "2026-11-19",
+  photos: ["2026-11-19_04.jpg"],
+  retiens:
+    "<p>Avec l'arrivée des Blancs, les <b>royaumes</b> sont attaqués et les <b>souverains</b> vaincus, exilés ou parfois tués.</p>" +
+    "<p>Les Blancs imposent leur système politique et instaurent la <b>colonisation</b> et l'esclavage.</p>" +
+    "<p>Le Sénégal était dirigé par un <b>gouverneur français</b>. La colonie était divisée en <b>cercles</b>. Chaque cercle était divisé en <b>subdivisions</b> ; chaque subdivision était divisée en <b>cantons</b> et chaque canton en <b>villages</b>.</p>" +
+    "<p>Les Blancs vont aussi créer des <b>écoles</b>, des <b>routes</b>, des <b>hôpitaux</b>. Ils vont promouvoir le <b>christianisme</b>.</p>",
+  astuce: "Du plus grand au plus petit : <b>colonie → cercle → subdivision → canton → village</b>. Comme des boîtes rangées les unes dans les autres.",
+  regle: "Après l'arrivée des Blancs, les royaumes du Sénégal sont vaincus et le pays devient une colonie dirigée par un gouverneur français, divisée en cercles, subdivisions, cantons et villages.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Que deviennent les royaumes du Sénégal avec l'arrivée des Blancs ?", choix: ["Ils sont attaqués.", "Ils deviennent plus puissants.", "Ils restent en paix."], r: "Ils sont attaqués.", expl: "Les royaumes sont attaqués et les souverains vaincus." },
+      { t: "qcm", q: "Qui dirigeait le Sénégal pendant la colonisation ?", choix: ["un gouverneur français", "un roi du Cayor", "un président sénégalais"], r: "un gouverneur français", expl: "Le Sénégal était dirigé par un gouverneur français." },
+      { t: "vf", q: "Certains souverains vaincus ont été exilés ou parfois tués.", r: true, expl: "Les souverains sont vaincus, exilés ou parfois tués." },
+      { t: "qcm", q: "En quoi la colonie était-elle d'abord divisée ?", choix: ["en cercles", "en régions", "en quartiers"], r: "en cercles", expl: "La colonie était divisée en cercles." },
+      { t: "vf", q: "Les Blancs ont créé des écoles, des routes et des hôpitaux.", r: true, expl: "C'est ce que dit la leçon." }
+    ],
+    [
+      { t: "ordre", q: "Range du plus grand au plus petit.", r: "colonie cercle subdivision canton village", expl: "La colonie est divisée en cercles, les cercles en subdivisions, les subdivisions en cantons, les cantons en villages." },
+      { t: "trous", q: "Complète.", texte: "Chaque cercle était divisé en [subdivisions] ; chaque subdivision en [cantons] et chaque canton en [villages].", expl: "Du plus grand au plus petit : cercle, subdivision, canton, village." },
+      { t: "saisie", q: "Quelle religion les Blancs ont-ils voulu promouvoir ?", r: ["le christianisme", "christianisme"], expl: "Ils vont promouvoir le christianisme." },
+      { t: "classer", q: "Range ces faits.", cases: ["ce qui arrive aux royaumes", "ce que créent les Blancs"], items: [["les royaumes sont attaqués", "ce qui arrive aux royaumes"], ["les souverains sont vaincus", "ce qui arrive aux royaumes"], ["les souverains sont exilés", "ce qui arrive aux royaumes"], ["des écoles", "ce que créent les Blancs"], ["des routes", "ce que créent les Blancs"], ["des hôpitaux", "ce que créent les Blancs"]], expl: "D'un côté la défaite des royaumes, de l'autre ce que les colons construisent." },
+      { t: "qcm", q: "Quel système politique s'installe au Sénégal ?", choix: ["la colonisation", "la démocratie", "le matrilignage"], r: "la colonisation", expl: "Les Blancs imposent leur système politique : la colonisation." },
+      { t: "relier", q: "Relie chaque mot à sa définition.", paires: [["souverain", "roi qui gouverne un royaume"], ["exilé", "obligé de quitter son pays"], ["gouverneur", "chef qui dirige la colonie"], ["colonie", "pays dominé par un autre pays"]], expl: "Les mots-clés de la leçon." },
+      { t: "saisie", q: "Le Sénégal était dirigé par un gouverneur de quel pays ? (adjectif)", r: "français", expl: "Un gouverneur français." },
+      { t: "vf", q: "Un canton est plus grand qu'un cercle.", r: false, expl: "C'est l'inverse : un cercle est divisé en subdivisions, puis en cantons." }
+    ],
+    [
+      { t: "qcm", q: "Qu'est-ce qui est le plus petit ?", choix: ["le village", "le canton", "la subdivision", "le cercle"], r: "le village", expl: "Le canton est divisé en villages : le village est la plus petite division." },
+      { t: "qcm", q: "Une subdivision est une partie…", choix: ["d'un cercle", "d'un canton", "d'un village"], r: "d'un cercle", expl: "Chaque cercle était divisé en subdivisions." },
+      { t: "vf", q: "Avant l'arrivée des Blancs, le Sénégal était formé de plusieurs royaumes.", r: true, expl: "Revois la leçon « Les royaumes du Sénégal » : Cayor, Baol, Walo, Sine, Saloum…" },
+      { t: "qcm", q: "« Les souverains sont exilés. » Cela veut dire qu'ils sont…", choix: ["obligés de partir loin de leur pays", "nommés gouverneurs", "devenus plus riches"], r: "obligés de partir loin de leur pays", expl: "Être exilé, c'est être chassé de son pays." },
+      { t: "relier", q: "Relie chaque division à ce qu'elle contient.", paires: [["la colonie", "des cercles"], ["un cercle", "des subdivisions"], ["une subdivision", "des cantons"], ["un canton", "des villages"]], expl: "Chaque division contient la suivante, plus petite." },
+      { t: "qcm", q: "Pourquoi peut-on dire que les rois ont perdu leur pouvoir ?", choix: ["parce que le pays est dirigé par un gouverneur français", "parce qu'ils ont construit des routes", "parce qu'ils sont devenus chrétiens"], r: "parce que le pays est dirigé par un gouverneur français", expl: "Les Blancs imposent leur système politique : c'est le gouverneur qui dirige." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "Avec l'arrivée des Blancs, les [royaumes] sont attaqués et les souverains [vaincus]. Le Sénégal devient une [colonie] dirigée par un [gouverneur] français. Elle est divisée en [cercles], puis en subdivisions, en cantons et en villages.", expl: "Toute la leçon en un texte." },
+      { t: "classer", q: "Avant ou après l'arrivée des Blancs ?", cases: ["avant", "après"], items: [["le roi est choisi par le matrilignage", "avant"], ["un gouverneur français dirige le pays", "après"], ["la victoire de Danki (1549)", "avant"], ["le pays est divisé en cercles", "après"], ["le Cayor et le Baol sont des royaumes libres", "avant"], ["des souverains sont exilés", "après"]], expl: "Avant : les royaumes et leurs rois. Après : la colonie, le gouverneur et ses divisions." },
+      { t: "qcm", q: "Pendant la colonisation, un village faisait partie…", choix: ["d'un canton", "d'un royaume", "d'une école"], r: "d'un canton", expl: "Chaque canton était divisé en villages." },
+      { t: "qcm", q: "Laquelle de ces phrases résume le mieux la leçon ?", choix: ["Les royaumes sont vaincus et le Sénégal devient une colonie française.", "Le Sénégal devient indépendant.", "Les royaumes du Sénégal s'unissent contre le Djolof."], r: "Les royaumes sont vaincus et le Sénégal devient une colonie française.", expl: "C'est l'idée principale de la leçon." },
+      { t: "vf", q: "Pendant la colonisation, chaque village appartenait à un canton.", r: true, expl: "Chaque canton était divisé en villages." }
     ]
   ]
 });
