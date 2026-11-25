@@ -1,4 +1,4 @@
-// À VÉRIFIER : le début de la leçon manque (photo 2026-11-25_16 commence en milieu de phrase) ; date estimée.
+// Début de la leçon retrouvé sur la photo 2026-11-25_29 (mercredi 25 novembre) ; figure sur 2026-11-25_19.
 // Le cahier dit que la corde « ne passe pas par le centre » : en géométrie, le diamètre est la plus grande des cordes.
 // Le module garde la leçon du cahier et ne pose aucune question piège là-dessus.
 LECONS.push({
@@ -6,10 +6,10 @@ LECONS.push({
   cahier: "maths",
   matiere: "Géométrie",
   titre: "Le cercle",
-  date: "2026-11-24",
-  photos: ["2026-11-25_16.jpg"],
+  date: "2026-11-25",
+  photos: ["2026-11-25_29.jpg", "2026-11-25_16.jpg", "2026-11-25_19.jpg"],
   retiens:
-    "<p>Le <b>cercle</b> est formé de points situés <b>à égale distance</b> d'un point appelé <b>centre du cercle</b>.</p>" +
+    "<p>Le <b>cercle</b> est une <b>ligne fermée</b> dont les points sont situés <b>à égale distance</b> d'un point appelé <b>centre du cercle</b>.</p>" +
     "<ul><li>Le <b>disque</b> est l'aire (la surface) délimitée par le cercle.</li>" +
     "<li>La <b>circonférence</b> ou <b>périmètre</b> est la longueur du cercle.</li>" +
     "<li>Le <b>rayon</b> est un segment qui joint le centre à un point du cercle.</li>" +
@@ -50,7 +50,9 @@ LECONS.push({
       { t: "probleme", q: "Une table ronde a 1,2 m de diamètre. On veut la recouvrir d'une nappe ronde qui dépasse de 10 cm tout autour.", etapes: [{ q: "Étape 1 : rayon de la table en cm", r: "60", unite: "cm" }, { q: "Étape 2 : rayon de la nappe en cm", r: "70", unite: "cm" }, { q: "Étape 3 : diamètre de la nappe en cm", r: "140", unite: "cm" }], expl: "1,2 m = 120 cm ; 120 : 2 = 60 ; 60 + 10 = 70 ; 70 × 2 = 140 cm." },
       { t: "trous", q: "Complète la leçon.", texte: "Le [rayon] joint le centre à un point du cercle. Le [diamètre] passe par le centre. La longueur du cercle est la [circonférence]. La surface du cercle est le [disque].", expl: "Les quatre mots essentiels." },
       { t: "qcm", q: "Pour dessiner un cercle de 16 cm de diamètre sur le tableau, la maîtresse attache une craie à une ficelle. Quelle longueur de ficelle doit-elle laisser ?", choix: ["8 cm", "16 cm", "32 cm"], r: "8 cm", expl: "La ficelle joue le rôle du rayon : 16 : 2 = 8 cm." },
-      { t: "vf", q: "Si deux cercles ont le même diamètre, ils ont aussi le même rayon.", r: true, expl: "Le rayon est toujours la moitié du diamètre." }
+      { t: "vf", q: "Si deux cercles ont le même diamètre, ils ont aussi le même rayon.", r: true, expl: "Le rayon est toujours la moitié du diamètre." },
+      { t: "qcm", q: "Le cercle est une ligne…", choix: ["fermée", "ouverte", "droite"], r: "fermée", expl: "Le cercle est une ligne fermée dont tous les points sont à égale distance du centre." },
+      { t: "vf", q: "Sur la figure, le segment qui va du centre O au point A du cercle est un rayon.", r: true, expl: "Il joint le centre à un point du cercle." }
     ]
   ]
 });

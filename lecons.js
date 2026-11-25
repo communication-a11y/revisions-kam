@@ -1,5 +1,5 @@
 var LECONS = window.LECONS = [];
-window.VERSION_CONTENU = "202611251916";
+window.VERSION_CONTENU = "202611251925";
 
 /* ---- an-subject-object-pronouns.js ---- */
 // Corrections des exemples du cahier : « Argentian » → « Argentinian » ; « too church » → « to church » ;
@@ -254,6 +254,68 @@ LECONS.push({
       { t: "trous", q: "Mets les verbes à l'imparfait.", texte: "Au village, les hommes [partaient] (partir) tôt au champ. Ils [prenaient] (prendre) leurs outils. Les femmes [faisaient] (faire) la cuisine et nous [disions] (dire) des devinettes.", expl: "partaient, prenaient, faisaient, disions." },
       { t: "saisie", q: "Écris la phrase à l'imparfait : « Vous écrivez et vous peignez. »", r: "Vous écriviez et vous peigniez.", large: true, expl: "en écrivant → écriv<b>iez</b> ; en peignant → peign<b>iez</b>." },
       { t: "qcm", q: "Dans quelle phrase y a-t-il une faute ?", choix: ["Il venait souvent.", "Nous mettions la table.", "Tu boivais trop vite.", "Elles craignaient l'orage."], r: "Tu boivais trop vite.", expl: "en buvant → tu <b>buvais</b>." }
+    ]
+  ]
+});
+
+
+/* ---- fr-conj-passe-simple-3e-groupe.js ---- */
+LECONS.push({
+  id: "fr-conj-passe-simple-3e-groupe",
+  cahier: "francais",
+  matiere: "Conjugaison",
+  titre: "Le passé simple des verbes du 3e groupe",
+  date: "2026-11-25",
+  photos: ["2026-11-25_21.jpg", "2026-11-25_20.jpg", "2026-11-25_18.jpg"],
+  retiens:
+    "<p>• Beaucoup de verbes du 3<sup>e</sup> groupe ont des terminaisons en <b>i</b> au passé simple : <b>-is, -is, -it, -îmes, -îtes, -irent</b>.<br>Sentir : je sentis… nous sentîmes…</p>" +
+    "<p>• Pour certains verbes, surtout ceux terminés par <b>-re</b>, le radical est modifié.<br>faire : je fis… nous fîmes — conduire : je conduisis… vous conduisîtes — mettre : je mis… ils mirent — permettre : tu permis… nous permîmes</p>" +
+    "<p>• Certains verbes ont des terminaisons en <b>u</b> : <b>-us, -us, -ut, -ûmes, -ûtes, -urent</b>.<br>connaître : je connus — vouloir : je voulus — paraître : je parus — savoir : je sus — pouvoir : tu pus — devoir : je dus</p>" +
+    "<p>• Les verbes <b>venir</b> et <b>tenir</b> (et leurs dérivés) ont des terminaisons particulières : <b>-ins, -ins, -int, -înmes, -întes, -inrent</b>.<br>je vins, tu vins, il vint, nous vînmes, vous vîntes, ils vinrent</p>" +
+    "<table><tr><th>1<sup>er</sup> groupe</th><th>2<sup>e</sup> groupe</th><th>3<sup>e</sup> en i</th><th>3<sup>e</sup> en u</th><th>venir, tenir</th></tr>" +
+    "<tr><td>-ai</td><td>-is</td><td>-is</td><td>-us</td><td>-ins</td></tr>" +
+    "<tr><td>-as</td><td>-is</td><td>-is</td><td>-us</td><td>-ins</td></tr>" +
+    "<tr><td>-a</td><td>-it</td><td>-it</td><td>-ut</td><td>-int</td></tr>" +
+    "<tr><td>-âmes</td><td>-îmes</td><td>-îmes</td><td>-ûmes</td><td>-înmes</td></tr>" +
+    "<tr><td>-âtes</td><td>-îtes</td><td>-îtes</td><td>-ûtes</td><td>-întes</td></tr>" +
+    "<tr><td>-èrent</td><td>-irent</td><td>-irent</td><td>-urent</td><td>-inrent</td></tr></table>",
+  astuce: "Au passé simple, <b>nous</b> et <b>vous</b> portent toujours un accent circonflexe : nous fîmes, vous sûtes, nous vînmes.",
+  regle: "Au passé simple, les verbes du 3e groupe se terminent en -is, -is, -it, -îmes, -îtes, -irent ou en -us, -us, -ut, -ûmes, -ûtes, -urent ; venir et tenir font -ins, -ins, -int, -înmes, -întes, -inrent.",
+  niveaux: [
+    [
+      { t: "qcm", q: "« je sentis » : quelle est la terminaison ?", choix: ["-is", "-us", "-ai"], r: "-is", expl: "Sentir fait partie des verbes en i : je sentis." },
+      { t: "qcm", q: "Passé simple de « savoir » avec « je » :", choix: ["je sus", "je savis", "je savai"], r: "je sus", expl: "Savoir fait partie des verbes en u : je sus." },
+      { t: "qcm", q: "Passé simple de « venir » avec « il » :", choix: ["il vint", "il venit", "il venut"], r: "il vint", expl: "Venir a des terminaisons particulières : il vint." },
+      { t: "vf", q: "Au passé simple, « faire » donne « je fis ».", r: true, expl: "Le radical change : fai- devient f- : je fis." },
+      { t: "qcm", q: "Avec « nous », les terminaisons en i s'écrivent…", choix: ["-îmes", "-imes", "-ïmes"], r: "-îmes", expl: "Accent circonflexe : nous sentîmes, nous fîmes." },
+      { t: "classer", q: "Terminaisons en i ou en u ?", cases: ["en i", "en u"], items: [["je fis", "en i"], ["je mis", "en i"], ["je sus", "en u"], ["je voulus", "en u"], ["je sentis", "en i"], ["je dus", "en u"]], expl: "Il faut connaître le verbe : faire, mettre, sentir en i ; savoir, vouloir, devoir en u." }
+    ],
+    [
+      { t: "saisie", q: "Mettre, passé simple : ils …", r: "mirent", expl: "Mettre : je mis… ils mirent." },
+      { t: "saisie", q: "Faire, passé simple : nous …", r: "fîmes", expl: "Nous fîmes, avec un accent circonflexe." },
+      { t: "saisie", q: "Conduire, passé simple : vous …", r: "conduisîtes", expl: "Conduire : je conduisis… vous conduisîtes." },
+      { t: "saisie", q: "Pouvoir, passé simple : tu …", r: "pus", expl: "Pouvoir : tu pus." },
+      { t: "saisie", q: "Connaître, passé simple : je …", r: "connus", expl: "Connaître : je connus." },
+      { t: "saisie", q: "Tenir, passé simple : ils …", r: "tinrent", expl: "Comme venir : ils vinrent, ils tinrent." },
+      { t: "trous", q: "Conjugue « vouloir » au passé simple.", texte: "je [voulus], tu [voulus], il [voulut], nous [voulûmes], vous [voulûtes], ils [voulurent]", expl: "Terminaisons en u : -us, -us, -ut, -ûmes, -ûtes, -urent." },
+      { t: "relier", q: "Relie chaque verbe à sa forme du passé simple.", paires: [["paraître", "je parus"], ["devoir", "je dus"], ["permettre", "tu permis"], ["sentir", "nous sentîmes"]], expl: "Les exemples de la leçon." },
+      { t: "trous", q: "Conjugue « venir » au passé simple.", texte: "je [vins], tu [vins], il [vint], nous [vînmes], vous [vîntes], ils [vinrent]", expl: "Venir : -ins, -ins, -int, -înmes, -întes, -inrent." }
+    ],
+    [
+      { t: "qcm", q: "Laquelle de ces formes est juste ?", choix: ["nous dûmes", "nous dumes", "nous dûmmes"], r: "nous dûmes", expl: "Accent circonflexe et un seul m : nous dûmes." },
+      { t: "qcm", q: "« il vit » : de quel verbe s'agit-il au passé simple ?", choix: ["voir", "vivre", "venir"], r: "voir", expl: "Voir : je vis, il vit. (Venir fait il vint.)" },
+      { t: "saisie", q: "Revenir, passé simple : nous …", r: "revînmes", expl: "Les dérivés de venir se conjuguent comme lui : nous revînmes." },
+      { t: "saisie", q: "Mets au passé simple : « Moussa (prendre) son cartable. »", r: "prit", expl: "Prendre : il prit (radical modifié, terminaison en i)." },
+      { t: "classer", q: "Range selon le groupe de terminaisons.", cases: ["-is, -it…", "-us, -ut…", "-ins, -int…"], items: [["dire", "-is, -it…"], ["écrire", "-is, -it…"], ["lire", "-us, -ut…"], ["boire", "-us, -ut…"], ["tenir", "-ins, -int…"], ["devenir", "-ins, -int…"]], expl: "Il dit, il écrivit ; il lut, il but ; il tint, il devint." },
+      { t: "vf", q: "Au passé simple, « ils » se termine toujours par -rent.", r: true, expl: "-èrent, -irent, -urent, -inrent : toujours -rent." },
+      { t: "qcm", q: "Quelle phrase est au passé simple ?", choix: ["Ils vinrent au marché.", "Ils venaient au marché.", "Ils viendront au marché."], r: "Ils vinrent au marché.", expl: "Venaient : imparfait ; viendront : futur." }
+    ],
+    [
+      { t: "trous", q: "Mets les verbes entre parenthèses au passé simple.", texte: "Hier, Fatou [vint] (venir) à la maison. Elle [fit] (faire) ses devoirs et [voulut] (vouloir) jouer. Nous [mîmes] (mettre) la table et nous [sûmes] (savoir) qu'elle resterait dîner.", expl: "venir → vint ; faire → fit ; vouloir → voulut ; mettre → mîmes ; savoir → sûmes." },
+      { t: "dictee", texte: "Les pêcheurs vinrent tôt et mirent leurs pirogues à la mer.", expl: "venir → vinrent ; mettre → mirent." },
+      { t: "dictee", texte: "Nous fîmes nos devoirs, puis nous pûmes enfin jouer dans la cour.", expl: "faire → fîmes ; pouvoir → pûmes, avec l'accent circonflexe." },
+      { t: "saisie", q: "Récris au passé simple : « Ils doivent partir. » → « Ils … partir. »", r: "durent", expl: "Devoir : ils durent." },
+      { t: "qcm", q: "Quelle série est entièrement juste ?", choix: ["je connus, tu sentis, il tint", "je connis, tu sentus, il tenit", "je connus, tu sentus, il tint"], r: "je connus, tu sentis, il tint", expl: "connaître → u ; sentir → i ; tenir → in." }
     ]
   ]
 });
@@ -1474,6 +1536,60 @@ LECONS.push({
 });
 
 
+/* ---- fr-gram-propositions-independantes.js ---- */
+LECONS.push({
+  id: "fr-gram-propositions-independantes",
+  cahier: "francais",
+  matiere: "Grammaire",
+  titre: "Les propositions indépendantes",
+  date: "2026-11-24",
+  photos: ["2026-11-25_22.jpg", "2026-11-25_21.jpg"],
+  retiens:
+    "<p>→ Une <b>phrase simple</b> contient un seul verbe conjugué.<br>Ex : L'athlète <b>aimerait</b> gagner la compétition cette année.</p>" +
+    "<p>→ Une <b>phrase complexe</b> contient plusieurs verbes conjugués.<br>Ex : La sauteuse en hauteur <b>prend</b> son élan, <b>s'élève</b> vers la barre et <b>franchit</b> deux mètres.</p>" +
+    "<p>→ Dans une phrase complexe, il y a <b>autant de propositions que de verbes conjugués</b>.<br>Ex : <u>Les spectateurs applaudissent</u> (1<sup>re</sup> proposition) <u>car c'est un saut magnifique</u> (2<sup>e</sup> proposition).</p>" +
+    "<p><b>NB :</b></p>" +
+    "<p>• Quand les propositions indépendantes sont reliées par une <b>conjonction de coordination</b>, on dit qu'elles sont <b>coordonnées</b>.<br>Ex : La souris danse <b>car</b> le chat est mort.<br>« La souris danse » : proposition indépendante ; « car le chat est mort » : proposition indépendante coordonnée.</p>" +
+    "<p>• À l'intérieur de la phrase, quand des propositions sont reliées par un <b>signe de ponctuation</b> (virgule, point-virgule…), on dit qu'elles sont <b>juxtaposées</b>.</p>",
+  astuce: "Compte les verbes conjugués : 1 verbe = phrase simple ; 2 verbes = 2 propositions. Un petit mot (mais, et, car…) les relie ? Coordonnées. Une virgule ? Juxtaposées.",
+  regle: "Il y a autant de propositions que de verbes conjugués. Des propositions reliées par une conjonction de coordination sont coordonnées ; reliées par un signe de ponctuation, elles sont juxtaposées.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Une phrase simple contient…", choix: ["un seul verbe conjugué", "plusieurs verbes conjugués", "aucun verbe"], r: "un seul verbe conjugué", expl: "Ex : L'athlète aimerait gagner la compétition cette année." },
+      { t: "qcm", q: "Une phrase complexe contient…", choix: ["plusieurs verbes conjugués", "un seul verbe conjugué", "seulement des noms"], r: "plusieurs verbes conjugués", expl: "Ex : La sauteuse prend son élan, s'élève vers la barre et franchit deux mètres." },
+      { t: "vf", q: "Dans une phrase complexe, il y a autant de propositions que de verbes conjugués.", r: true, expl: "Chaque verbe conjugué forme une proposition." },
+      { t: "qcm", q: "Des propositions reliées par une conjonction de coordination sont…", choix: ["coordonnées", "juxtaposées", "simples"], r: "coordonnées", expl: "Ex : La souris danse car le chat est mort." },
+      { t: "qcm", q: "Des propositions reliées par une virgule sont…", choix: ["juxtaposées", "coordonnées", "complexes"], r: "juxtaposées", expl: "Signe de ponctuation → juxtaposées." }
+    ],
+    [
+      { t: "saisie", q: "Combien de verbes conjugués : « La sauteuse prend son élan, s'élève vers la barre et franchit deux mètres. » ?", r: "3", nombre: true, expl: "prend, s'élève, franchit : 3 verbes, donc 3 propositions." },
+      { t: "saisie", q: "Combien de propositions : « Les spectateurs applaudissent car c'est un saut magnifique. » ?", r: "2", nombre: true, expl: "applaudissent, est : 2 verbes conjugués." },
+      { t: "classer", q: "Phrase simple ou phrase complexe ?", cases: ["phrase simple", "phrase complexe"], items: [["Awa lit un livre.", "phrase simple"], ["Moussa veut gagner le match.", "phrase simple"], ["Il pleut, nous restons à la maison.", "phrase complexe"], ["Fatou chante et Khady danse.", "phrase complexe"], ["Le car de Thiès arrive.", "phrase simple"], ["Je mange car j'ai faim.", "phrase complexe"]], expl: "Compte les verbes conjugués (« gagner » est à l'infinitif, il ne compte pas)." },
+      { t: "qcm", q: "« L'athlète aimerait gagner la compétition. » Pourquoi est-ce une phrase simple ?", choix: ["« gagner » est à l'infinitif : un seul verbe conjugué", "il n'y a pas de virgule", "elle est courte"], r: "« gagner » est à l'infinitif : un seul verbe conjugué", expl: "Seul « aimerait » est conjugué." },
+      { t: "classer", q: "Coordonnées ou juxtaposées ?", cases: ["coordonnées", "juxtaposées"], items: [["La souris danse car le chat est mort.", "coordonnées"], ["Il fait chaud, nous allons à la plage.", "juxtaposées"], ["Awa chante et Moussa danse.", "coordonnées"], ["Le soleil se lève ; les oiseaux chantent.", "juxtaposées"], ["Je voulais venir mais j'étais malade.", "coordonnées"], ["Le maître parle, les élèves écoutent.", "juxtaposées"]], expl: "Conjonction (car, et, mais…) → coordonnées. Ponctuation → juxtaposées." },
+      { t: "saisie", q: "Écris la conjonction de coordination : « Les spectateurs applaudissent car c'est un saut magnifique. »", r: "car", expl: "« car » relie les deux propositions : elles sont coordonnées." },
+      { t: "qcm", q: "Dans « La souris danse car le chat est mort », « car le chat est mort » est…", choix: ["une proposition indépendante coordonnée", "une phrase simple", "un complément du nom"], r: "une proposition indépendante coordonnée", expl: "Elle est reliée à la première par la conjonction « car »." },
+      { t: "vf", q: "Une virgule peut relier deux propositions.", r: true, expl: "Elles sont alors juxtaposées." }
+    ],
+    [
+      { t: "saisie", q: "Combien de propositions : « Mamadou se lève, se lave, s'habille et part à l'école. » ?", r: "4", nombre: true, expl: "se lève, se lave, s'habille, part : 4 verbes conjugués." },
+      { t: "qcm", q: "« Le soleil brille, les enfants jouent et les parents se reposent. » Ces propositions sont…", choix: ["juxtaposées puis coordonnées", "toutes coordonnées", "toutes juxtaposées"], r: "juxtaposées puis coordonnées", expl: "Virgule entre les deux premières (juxtaposées), « et » avant la dernière (coordonnée)." },
+      { t: "vf", q: "« Ils vont essayer de réparer la pirogue. » est une phrase complexe.", r: false, expl: "Seul « vont » est conjugué ; essayer et réparer sont à l'infinitif." },
+      { t: "ordre", q: "Forme deux propositions coordonnées par « mais ».", r: "Awa voulait sortir mais il pleuvait.", expl: "« mais » relie deux propositions : elles sont coordonnées." },
+      { t: "saisie", q: "Relie par une virgule : « Le maître entre. Les élèves se lèvent. » → une seule phrase.", r: "Le maître entre, les élèves se lèvent.", large: true, expl: "Avec une virgule, les deux propositions sont juxtaposées." },
+      { t: "qcm", q: "Quelle phrase contient deux propositions juxtaposées ?", choix: ["Il fait nuit, la lune brille.", "Il fait nuit et la lune brille.", "La lune brille dans la nuit."], r: "Il fait nuit, la lune brille.", expl: "Deux verbes conjugués reliés par une virgule." }
+    ],
+    [
+      { t: "dictee", texte: "Les spectateurs applaudissent car c'est un saut magnifique.", expl: "Deux propositions coordonnées par « car »." },
+      { t: "dictee", texte: "La sauteuse prend son élan, s'élève vers la barre et franchit deux mètres.", expl: "Trois verbes conjugués : trois propositions." },
+      { t: "trous", q: "Analyse « Il pleut, nous restons à la maison donc nous jouons aux cartes. »", texte: "nombre de propositions : [3] — les deux premières sont [juxtaposées] — la dernière est [coordonnée]", expl: "pleut, restons, jouons ; virgule → juxtaposées ; « donc » → coordonnée." },
+      { t: "classer", q: "Combien de propositions ?", cases: ["une", "deux", "trois"], items: [["Fatou aime lire.", "une"], ["Fatou lit et Awa écrit.", "deux"], ["Je cours, je saute, je tombe.", "trois"], ["Le chien aboie, le chat s'enfuit.", "deux"]], expl: "Une proposition par verbe conjugué." },
+      { t: "qcm", q: "Laquelle de ces phrases est une phrase simple ?", choix: ["Les élèves doivent apprendre leur leçon.", "Les élèves apprennent et le maître corrige.", "Les élèves écrivent, le maître lit."], r: "Les élèves doivent apprendre leur leçon.", expl: "Un seul verbe conjugué : « doivent »." }
+    ]
+  ]
+});
+
+
 /* ---- fr-gram-types-de-phrases.js ---- */
 // Corrections par rapport au cahier : « exclamatier » → « exclamative » ; « exprime le sentiment » → « exprime un sentiment ».
 LECONS.push({
@@ -1833,6 +1949,57 @@ LECONS.push({
       { t: "dictee", texte: "Le vieux pêcheur répare, nettoie et repeint sa pirogue.", expl: "Un sujet au singulier commande trois verbes au singulier." },
       { t: "trous", q: "Accorde les verbes au présent.", texte: "Au marché de Sandaga, les vendeuses de tissu [crient] (crier) fort. Une cliente [regarde] (regarder), [touche] (toucher) et [choisit] (choisir) un pagne. Son mari et son fils [attendent] (attendre) dehors.", expl: "vendeuses → pluriel ; une cliente → singulier pour les trois verbes ; deux sujets → pluriel." },
       { t: "qcm", q: "Quelle phrase est bien accordée ?", choix: ["Le troupeau de vaches traverse la route.", "Le troupeau de vaches traversent la route.", "Les vaches du troupeau traverse la route.", "Le troupeau et le berger traverse la route."], r: "Le troupeau de vaches traverse la route.", expl: "C'est « le troupeau » (singulier) qui traverse." }
+    ]
+  ]
+});
+
+
+/* ---- fr-orth-conjonctions-coordination.js ---- */
+LECONS.push({
+  id: "fr-orth-conjonctions-coordination",
+  cahier: "francais",
+  matiere: "Orthographe",
+  titre: "Les conjonctions de coordination",
+  date: "2026-11-24",
+  photos: ["2026-11-25_21.jpg"],
+  retiens:
+    "<p>Une <b>conjonction de coordination</b> joint des éléments <b>de même nature</b> (deux noms, deux adjectifs, deux propositions…).</p>" +
+    "<p>Les conjonctions de coordination sont : <b>mais, ou, et, donc, or, ni, car</b>.</p>" +
+    "<p>Ex : du riz <b>et</b> du poisson — petit <b>mais</b> courageux — La souris danse <b>car</b> le chat est mort.</p>",
+  astuce: "Pour les retenir : « <b>Mais où est donc Ornicar ?</b> » → mais, ou, et, donc, or, ni, car.",
+  regle: "Les conjonctions de coordination (mais, ou, et, donc, or, ni, car) relient des éléments de même nature.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Combien y a-t-il de conjonctions de coordination ?", choix: ["7", "5", "10"], r: "7", expl: "mais, ou, et, donc, or, ni, car." },
+      { t: "qcm", q: "Lequel de ces mots est une conjonction de coordination ?", choix: ["car", "avec", "dans"], r: "car", expl: "« avec » et « dans » sont des prépositions." },
+      { t: "vf", q: "Une conjonction de coordination relie des éléments de même nature.", r: true, expl: "Deux noms, deux adjectifs, deux propositions…" },
+      { t: "qcm", q: "Quelle phrase permet de retenir les conjonctions de coordination ?", choix: ["Mais où est donc Ornicar ?", "Le chat est sur le mur.", "Il était une fois."], r: "Mais où est donc Ornicar ?", expl: "mais, ou, et, donc, or, ni, car." },
+      { t: "classer", q: "Conjonction de coordination ou non ?", cases: ["conjonction de coordination", "autre mot"], items: [["mais", "conjonction de coordination"], ["donc", "conjonction de coordination"], ["ni", "conjonction de coordination"], ["or", "conjonction de coordination"], ["sous", "autre mot"], ["pour", "autre mot"], ["très", "autre mot"], ["sur", "autre mot"]], expl: "Seules mais, ou, et, donc, or, ni, car sont des conjonctions de coordination." }
+    ],
+    [
+      { t: "qcm", q: "« Veux-tu du thé ___ du café ? »", choix: ["ou", "car", "donc"], r: "ou", expl: "« ou » propose un choix." },
+      { t: "qcm", q: "« Je reste à la maison ___ je suis malade. »", choix: ["car", "mais", "ni"], r: "car", expl: "« car » donne la cause." },
+      { t: "qcm", q: "« Il est petit ___ très courageux. »", choix: ["mais", "donc", "car"], r: "mais", expl: "« mais » marque une opposition." },
+      { t: "qcm", q: "« Il a beaucoup travaillé, il a ___ réussi. »", choix: ["donc", "or", "ni"], r: "donc", expl: "« donc » donne la conséquence." },
+      { t: "qcm", q: "« Je n'aime ___ le lait ___ le fromage. »", choix: ["ni… ni", "et… et", "ou… ou"], r: "ni… ni", expl: "« ni » s'emploie dans une phrase négative." },
+      { t: "trous", q: "Complète avec et, mais, ou, car.", texte: "Awa [et] Fatou vont au marché. Elles veulent du poisson [ou] de la viande. Elles se dépêchent [car] il est tard, [mais] le marché est encore ouvert.", expl: "et : ajout ; ou : choix ; car : cause ; mais : opposition." },
+      { t: "saisie", q: "Écris la conjonction de coordination : « Moussa court vite donc il gagne. »", r: "donc", expl: "« donc » relie deux propositions." },
+      { t: "relier", q: "Relie chaque conjonction à son sens.", paires: [["et", "ajouter"], ["mais", "opposer"], ["ou", "choisir"], ["car", "donner la cause"], ["donc", "donner la conséquence"]], expl: "Chaque conjonction a un sens précis." }
+    ],
+    [
+      { t: "qcm", q: "Attention : « Où vas-tu ? » « Où » est-il une conjonction de coordination ?", choix: ["non : « où » avec accent indique le lieu", "oui", "oui, mais seulement à l'école"], r: "non : « où » avec accent indique le lieu", expl: "La conjonction s'écrit « ou » sans accent (ou bien)." },
+      { t: "qcm", q: "Quelle phrase contient « ou » conjonction de coordination ?", choix: ["Tu prends le car ou le taxi ?", "Où est le car ?", "La ville où je suis né."], r: "Tu prends le car ou le taxi ?", expl: "On peut dire « ou bien » : c'est la conjonction sans accent." },
+      { t: "classer", q: "« ou » ou « où » ?", cases: ["ou", "où"], items: [["du riz ___ du mil", "ou"], ["___ habites-tu ?", "où"], ["aujourd'hui ___ demain", "ou"], ["la maison ___ j'habite", "où"]], expl: "« ou » = ou bien ; « où » = le lieu." },
+      { t: "qcm", q: "« Or » est une conjonction de coordination. Quel mot s'écrit pareil mais n'en est pas une ?", choix: ["l'or (le métal précieux)", "donc", "car"], r: "l'or (le métal précieux)", expl: "« un collier en or » : ici « or » est un nom." },
+      { t: "vf", q: "Dans « un car rapide », « car » est une conjonction de coordination.", r: false, expl: "Ici « car » est un nom (le véhicule) : un car de Thiès." },
+      { t: "saisie", q: "Complète : « Il n'a ___ frère ni sœur. »", r: "ni", expl: "ni… ni dans une phrase négative." }
+    ],
+    [
+      { t: "trous", q: "Complète avec la bonne conjonction de coordination.", texte: "Il pleuvait, [donc] nous sommes restés à la maison. Je voulais jouer dehors [mais] maman a refusé. Elle avait raison [car] la cour était inondée.", expl: "donc : conséquence ; mais : opposition ; car : cause." },
+      { t: "dictee", texte: "Mon frère est petit mais il court vite, donc il gagne souvent.", expl: "mais : opposition ; donc : conséquence." },
+      { t: "ordre", q: "Remets les mots dans l'ordre.", r: "Veux-tu du jus ou de l'eau ?", expl: "« ou » relie deux groupes nominaux : du jus, de l'eau." },
+      { t: "qcm", q: "Dans « Awa est grande et belle », la conjonction relie…", choix: ["deux adjectifs", "deux noms", "deux verbes"], r: "deux adjectifs", expl: "Éléments de même nature : grande et belle sont deux adjectifs." },
+      { t: "classer", q: "Quelle conjonction convient ?", cases: ["car", "donc"], items: [["Je mange ___ j'ai faim.", "car"], ["J'ai faim, ___ je mange.", "donc"], ["Il dort ___ il est fatigué.", "car"], ["Il est fatigué, ___ il dort.", "donc"]], expl: "car + cause ; donc + conséquence." }
     ]
   ]
 });
@@ -2885,6 +3052,63 @@ LECONS.push({
       { t: "qcm", q: "Un grand thonier pêche des tonnes de thons qui partent en Europe. Quelle pêche est-ce ?", choix: ["la pêche industrielle", "la pêche artisanale", "la pisciculture"], r: "la pêche industrielle", expl: "Grand bateau, gros rendement, exportation : c'est la pêche industrielle." },
       { t: "relier", q: "Relie chaque problème à sa solution.", paires: [["les filets à mailles non conformes", "réglementer les types de filets"], ["le manque de conservation", "construire des quais équipés"], ["la surexploitation", "gérer les ressources de façon rationnelle"]], expl: "Chaque solution répond à un problème." },
       { t: "classer", q: "Défi : range ces mots.", cases: ["pêche artisanale", "pêche industrielle", "aquaculture"], items: [["pirogue", "pêche artisanale"], ["chalutier", "pêche industrielle"], ["élevage d'huîtres", "aquaculture"], ["nasse", "pêche artisanale"], ["exportation de thons", "pêche industrielle"], ["élevage de crevettes", "aquaculture"]], expl: "Trois manières de tirer des produits de l'eau." }
+    ]
+  ]
+});
+
+
+/* ---- ge-tourisme-senegal.js ---- */
+// Orthographe corrigée : « Niokolokoba » → Niokolo-Koba.
+LECONS.push({
+  id: "ge-tourisme-senegal",
+  cahier: "histgeo",
+  matiere: "Géographie",
+  titre: "Le tourisme au Sénégal",
+  date: "2026-11-25",
+  photos: ["2026-11-25_23.jpg"],
+  retiens:
+    "<p>Le tourisme est l'une des plus importantes activités économiques du Sénégal. Les <b>belles plages</b>, le <b>bon climat</b>, les <b>sites historiques</b>, la <b>diversité culturelle</b>… font que le Sénégal attire de nombreux touristes.</p>" +
+    "<p>Les principaux sites touristiques sont :</p>" +
+    "<ul><li><b>Dakar</b> : le parc de Hann, l'île de Gorée, la Maison des esclaves, le village artisanal de Soumbédioune, le lac Rose, le monument de la Renaissance africaine…</li>" +
+    "<li><b>Thiès</b> : la réserve de Bandia, l'île de Joal-Fadiouth, les plages de Saly, de la Somone…</li>" +
+    "<li><b>Saint-Louis</b> : le parc national des oiseaux du Djoudj, la langue de Barbarie, le musée Jean Mermoz, le pont Faidherbe…</li>" +
+    "<li><b>Tambacounda</b> : le parc national du Niokolo-Koba</li>" +
+    "<li><b>Ziguinchor</b> : le parc de la Basse-Casamance, l'île de Karabane, la station balnéaire du Cap Skirring…</li>" +
+    "<li><b>Sine-Saloum</b> : le parc national du delta du Saloum, les îles du Saloum</li></ul>",
+  astuce: "Pour chaque région, retiens un site phare : Dakar → Gorée ; Thiès → Bandia ; Saint-Louis → Djoudj ; Tamba → Niokolo-Koba ; Ziguinchor → Cap Skirring ; Sine-Saloum → delta du Saloum.",
+  regle: "Le tourisme est une activité économique importante au Sénégal grâce aux plages, au climat, aux sites historiques et à la diversité culturelle ; chaque région a ses sites touristiques.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Le tourisme au Sénégal est…", choix: ["une des plus importantes activités économiques", "une activité interdite", "une activité sans importance"], r: "une des plus importantes activités économiques", expl: "C'est la première phrase de la leçon." },
+      { t: "qcm", q: "Dans quelle région se trouve l'île de Gorée ?", choix: ["Dakar", "Ziguinchor", "Tambacounda"], r: "Dakar", expl: "Gorée, avec la Maison des esclaves, est à Dakar." },
+      { t: "qcm", q: "Où se trouve le parc national du Niokolo-Koba ?", choix: ["à Tambacounda", "à Dakar", "à Thiès"], r: "à Tambacounda", expl: "C'est le grand parc de Tamba." },
+      { t: "vf", q: "Les belles plages et le bon climat attirent les touristes au Sénégal.", r: true, expl: "Comme les sites historiques et la diversité culturelle." },
+      { t: "qcm", q: "Le parc des oiseaux du Djoudj se trouve…", choix: ["à Saint-Louis", "à Ziguinchor", "au Sine-Saloum"], r: "à Saint-Louis", expl: "Saint-Louis : Djoudj, langue de Barbarie, pont Faidherbe." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque site à sa région.", paires: [["réserve de Bandia", "Thiès"], ["pont Faidherbe", "Saint-Louis"], ["Cap Skirring", "Ziguinchor"], ["lac Rose", "Dakar"], ["delta du Saloum", "Sine-Saloum"]], expl: "C'est la liste de la leçon." },
+      { t: "classer", q: "Range ces sites.", cases: ["Dakar", "Saint-Louis", "Ziguinchor"], items: [["parc de Hann", "Dakar"], ["village artisanal de Soumbédioune", "Dakar"], ["langue de Barbarie", "Saint-Louis"], ["parc du Djoudj", "Saint-Louis"], ["île de Karabane", "Ziguinchor"], ["parc de la Basse-Casamance", "Ziguinchor"]], expl: "Chaque région a ses sites." },
+      { t: "qcm", q: "Quelle île se trouve dans la région de Thiès ?", choix: ["Joal-Fadiouth", "Gorée", "Karabane"], r: "Joal-Fadiouth", expl: "Gorée : Dakar ; Karabane : Ziguinchor." },
+      { t: "saisie", q: "Quel monument de Dakar porte le nom de la « Renaissance africaine » ? Le monument de la …", r: ["Renaissance africaine", "renaissance africaine"], expl: "Le monument de la Renaissance africaine, à Dakar." },
+      { t: "trous", q: "Complète.", texte: "Les plages de [Saly] et de la Somone sont dans la région de Thiès. La station balnéaire du Cap [Skirring] est en Casamance.", expl: "Les grandes plages touristiques du Sénégal." },
+      { t: "qcm", q: "Lequel n'est PAS une raison citée pour la venue des touristes ?", choix: ["la neige", "les belles plages", "les sites historiques", "la diversité culturelle"], r: "la neige", expl: "Il n'y a pas de neige au Sénégal !" },
+      { t: "vf", q: "La Maison des esclaves se trouve sur l'île de Gorée.", r: true, expl: "C'est un site historique très visité." },
+      { t: "qcm", q: "Les îles du Saloum se trouvent…", choix: ["au Sine-Saloum", "à Saint-Louis", "à Dakar"], r: "au Sine-Saloum", expl: "Avec le parc national du delta du Saloum." }
+    ],
+    [
+      { t: "classer", q: "Parc naturel ou site historique et culturel ?", cases: ["parc ou réserve naturelle", "site historique ou culturel"], items: [["parc du Djoudj", "parc ou réserve naturelle"], ["réserve de Bandia", "parc ou réserve naturelle"], ["Niokolo-Koba", "parc ou réserve naturelle"], ["Maison des esclaves", "site historique ou culturel"], ["pont Faidherbe", "site historique ou culturel"], ["village artisanal de Soumbédioune", "site historique ou culturel"]], expl: "Les parcs protègent les animaux et la nature ; les sites historiques racontent le passé." },
+      { t: "qcm", q: "Un touriste veut voir des oiseaux. Où lui conseilles-tu d'aller ?", choix: ["au parc du Djoudj", "au village de Soumbédioune", "au pont Faidherbe"], r: "au parc du Djoudj", expl: "Le parc national des oiseaux du Djoudj, à Saint-Louis." },
+      { t: "qcm", q: "Une famille veut acheter des objets d'artisanat à Dakar. Où va-t-elle ?", choix: ["au village artisanal de Soumbédioune", "au Niokolo-Koba", "à la langue de Barbarie"], r: "au village artisanal de Soumbédioune", expl: "On y trouve des artisans et leurs objets." },
+      { t: "vf", q: "Le tourisme rapporte de l'argent au pays.", r: true, expl: "C'est une activité économique importante." },
+      { t: "relier", q: "Relie chaque région à son parc.", paires: [["Tambacounda", "Niokolo-Koba"], ["Saint-Louis", "Djoudj"], ["Ziguinchor", "Basse-Casamance"], ["Sine-Saloum", "delta du Saloum"]], expl: "Les grands parcs nationaux de la leçon." },
+      { t: "saisie", q: "Quel lac de la région de Dakar est célèbre pour sa couleur ? Le lac …", r: "Rose", expl: "Le lac Rose." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "Le tourisme est une activité [économique] importante. Les touristes viennent pour les belles [plages], le bon [climat], les sites historiques et la diversité [culturelle].", expl: "Les raisons du succès du tourisme au Sénégal." },
+      { t: "qcm", q: "Un circuit visite Gorée, puis Bandia, puis le Djoudj. Dans quel ordre traverse-t-il les régions ?", choix: ["Dakar, Thiès, Saint-Louis", "Thiès, Dakar, Ziguinchor", "Saint-Louis, Tamba, Dakar"], r: "Dakar, Thiès, Saint-Louis", expl: "Gorée : Dakar ; Bandia : Thiès ; Djoudj : Saint-Louis." },
+      { t: "classer", q: "Range ces sites selon leur région.", cases: ["Thiès", "Ziguinchor", "Sine-Saloum"], items: [["Saly", "Thiès"], ["Somone", "Thiès"], ["Karabane", "Ziguinchor"], ["Cap Skirring", "Ziguinchor"], ["îles du Saloum", "Sine-Saloum"], ["delta du Saloum", "Sine-Saloum"]], expl: "Les sites de la leçon." },
+      { t: "qcm", q: "Lequel de ces sites n'est PAS à Dakar ?", choix: ["la langue de Barbarie", "le parc de Hann", "l'île de Gorée", "le lac Rose"], r: "la langue de Barbarie", expl: "La langue de Barbarie est à Saint-Louis." },
+      { t: "vf", q: "Le pont Faidherbe se trouve à Ziguinchor.", r: false, expl: "Il est à Saint-Louis." }
     ]
   ]
 });
@@ -4081,7 +4305,7 @@ LECONS.push({
 
 
 /* ---- ma-geo-cercle.js ---- */
-// À VÉRIFIER : le début de la leçon manque (photo 2026-11-25_16 commence en milieu de phrase) ; date estimée.
+// Début de la leçon retrouvé sur la photo 2026-11-25_29 (mercredi 25 novembre) ; figure sur 2026-11-25_19.
 // Le cahier dit que la corde « ne passe pas par le centre » : en géométrie, le diamètre est la plus grande des cordes.
 // Le module garde la leçon du cahier et ne pose aucune question piège là-dessus.
 LECONS.push({
@@ -4089,10 +4313,10 @@ LECONS.push({
   cahier: "maths",
   matiere: "Géométrie",
   titre: "Le cercle",
-  date: "2026-11-24",
-  photos: ["2026-11-25_16.jpg"],
+  date: "2026-11-25",
+  photos: ["2026-11-25_29.jpg", "2026-11-25_16.jpg", "2026-11-25_19.jpg"],
   retiens:
-    "<p>Le <b>cercle</b> est formé de points situés <b>à égale distance</b> d'un point appelé <b>centre du cercle</b>.</p>" +
+    "<p>Le <b>cercle</b> est une <b>ligne fermée</b> dont les points sont situés <b>à égale distance</b> d'un point appelé <b>centre du cercle</b>.</p>" +
     "<ul><li>Le <b>disque</b> est l'aire (la surface) délimitée par le cercle.</li>" +
     "<li>La <b>circonférence</b> ou <b>périmètre</b> est la longueur du cercle.</li>" +
     "<li>Le <b>rayon</b> est un segment qui joint le centre à un point du cercle.</li>" +
@@ -4133,7 +4357,9 @@ LECONS.push({
       { t: "probleme", q: "Une table ronde a 1,2 m de diamètre. On veut la recouvrir d'une nappe ronde qui dépasse de 10 cm tout autour.", etapes: [{ q: "Étape 1 : rayon de la table en cm", r: "60", unite: "cm" }, { q: "Étape 2 : rayon de la nappe en cm", r: "70", unite: "cm" }, { q: "Étape 3 : diamètre de la nappe en cm", r: "140", unite: "cm" }], expl: "1,2 m = 120 cm ; 120 : 2 = 60 ; 60 + 10 = 70 ; 70 × 2 = 140 cm." },
       { t: "trous", q: "Complète la leçon.", texte: "Le [rayon] joint le centre à un point du cercle. Le [diamètre] passe par le centre. La longueur du cercle est la [circonférence]. La surface du cercle est le [disque].", expl: "Les quatre mots essentiels." },
       { t: "qcm", q: "Pour dessiner un cercle de 16 cm de diamètre sur le tableau, la maîtresse attache une craie à une ficelle. Quelle longueur de ficelle doit-elle laisser ?", choix: ["8 cm", "16 cm", "32 cm"], r: "8 cm", expl: "La ficelle joue le rôle du rayon : 16 : 2 = 8 cm." },
-      { t: "vf", q: "Si deux cercles ont le même diamètre, ils ont aussi le même rayon.", r: true, expl: "Le rayon est toujours la moitié du diamètre." }
+      { t: "vf", q: "Si deux cercles ont le même diamètre, ils ont aussi le même rayon.", r: true, expl: "Le rayon est toujours la moitié du diamètre." },
+      { t: "qcm", q: "Le cercle est une ligne…", choix: ["fermée", "ouverte", "droite"], r: "fermée", expl: "Le cercle est une ligne fermée dont tous les points sont à égale distance du centre." },
+      { t: "vf", q: "Sur la figure, le segment qui va du centre O au point A du cercle est un rayon.", r: true, expl: "Il joint le centre à un point du cercle." }
     ]
   ]
 });
@@ -4416,6 +4642,69 @@ LECONS.push({
       { t: "saisie", q: "Un triangle isocèle a deux côtés de 7 cm et un côté de 4 cm. Son périmètre = … cm", r: "18", nombre: true, unite: "cm", expl: "7 + 7 + 4 = 18 cm." },
       { t: "classer", q: "Range chaque triangle d'après ses angles.", cases: ["rectangle", "équilatéral", "isocèle non rectangle"], items: [["90°, 30°, 60°", "rectangle"], ["60°, 60°, 60°", "équilatéral"], ["50°, 50°, 80°", "isocèle non rectangle"], ["90°, 45°, 45°", "rectangle"], ["30°, 30°, 120°", "isocèle non rectangle"]], expl: "Un angle de 90° : rectangle. Trois angles de 60° : équilatéral. Deux angles égaux sans angle droit : isocèle." },
       { t: "trous", q: "Complète la leçon.", texte: "Le triangle est une figure qui a 3 [côtés], 3 [sommets] et 3 [angles]. La somme des angles fait [180]°.", expl: "Définition du triangle et somme des angles." }
+    ]
+  ]
+});
+
+
+/* ---- ma-mes-aires.js ---- */
+// À VÉRIFIER : au cahier (photo 2026-11-25_29), « 7 m² = 100 dm² » : il faut lire 1 m² = 100 dm².
+// Exercices tirés du Palier 5 p. 57 (photo 2026-11-25_25). Deux réponses de Kam à revoir : 0,5 km² + 12 dam² = 501 200 m²
+// (et non 5 001 200) ; 38 cm² + 2,5 m² = 2 503 800 mm² (et non 25 003 800). Les formules d'aire du carré et du rectangle
+// viennent des objectifs du Palier 5 (« calculer l'aire du carré, du rectangle »).
+LECONS.push({
+  id: "ma-mes-aires",
+  cahier: "maths",
+  matiere: "Activités de mesure",
+  titre: "Les mesures d'aires (surfaces)",
+  date: "2026-11-24",
+  photos: ["2026-11-25_28.jpg", "2026-11-25_29.jpg", "2026-11-25_25.jpg", "2026-11-25_26.jpg", "2026-11-25_27.jpg"],
+  retiens:
+    "<p>L'<b>aire</b> est la superficie (la surface) d'une figure géométrique. L'aire se mesure. Le <b>mètre carré (m²)</b> est l'unité principale des mesures de surfaces.</p>" +
+    "<ul><li>Les <b>multiples</b> du m² sont : le km², le hm², le dam².</li>" +
+    "<li>Les <b>sous-multiples</b> du m² sont : le dm², le cm², le mm².</li></ul>" +
+    "<table><tr><th>km²</th><th>hm²</th><th>dam²</th><th>m²</th><th>dm²</th><th>cm²</th><th>mm²</th></tr>" +
+    "<tr><td>d | u</td><td>d | u</td><td>d | u</td><td>d | u</td><td>d | u</td><td>d | u</td><td>d | u</td></tr></table>" +
+    "<p>Dans le tableau, chaque unité a <b>deux colonnes</b> : chaque unité vaut <b>100 fois</b> l'unité suivante.<br>1 dam² = 100 m² — 1 m² = 100 dm² — 1 dm² = 100 cm²</p>" +
+    "<p><b>Rappel (Palier 5) :</b> aire du carré = côté × côté ; aire du rectangle = longueur × largeur. Pour additionner des aires, on les convertit d'abord dans la même unité.</p>",
+  astuce: "Pour convertir, on avance de <b>2 chiffres par unité</b> : 17 dam² → 17|00 m² = 1 700 m². Quand tu places un nombre à virgule, mets le chiffre des unités dans la colonne <b>u</b> de son unité.",
+  regle: "Le m² est l'unité principale des aires ; chaque unité d'aire vaut 100 fois l'unité immédiatement inférieure (2 colonnes par unité dans le tableau).",
+  niveaux: [
+    [
+      { t: "qcm", q: "Quelle est l'unité principale des mesures d'aires ?", choix: ["le mètre carré (m²)", "le mètre (m)", "le litre (l)"], r: "le mètre carré (m²)", expl: "L'aire se mesure en m², ses multiples et sous-multiples." },
+      { t: "qcm", q: "1 dam² = …", choix: ["100 m²", "10 m²", "1 000 m²"], r: "100 m²", expl: "Chaque unité d'aire vaut 100 fois la suivante." },
+      { t: "qcm", q: "1 m² = …", choix: ["100 dm²", "10 dm²", "1 000 dm²"], r: "100 dm²", expl: "Deux colonnes par unité : 1 m² = 100 dm²." },
+      { t: "classer", q: "Multiple ou sous-multiple du m² ?", cases: ["multiple", "sous-multiple"], items: [["km²", "multiple"], ["hm²", "multiple"], ["dam²", "multiple"], ["dm²", "sous-multiple"], ["cm²", "sous-multiple"], ["mm²", "sous-multiple"]], expl: "Plus grand que le m² : multiple ; plus petit : sous-multiple." },
+      { t: "vf", q: "Dans le tableau des aires, chaque unité a deux colonnes.", r: true, expl: "Une colonne pour les dizaines (d), une pour les unités (u)." },
+      { t: "ordre", q: "Range du plus grand au plus petit.", r: "km² hm² dam² m² dm² cm² mm²", expl: "C'est l'ordre du tableau." }
+    ],
+    [
+      { t: "saisie", q: "17 dam² = … m²", r: "1700", nombre: true, unite: "m²", expl: "17|00 : 17 dam² = 1 700 m²." },
+      { t: "saisie", q: "5 hm² = … m²", r: "50000", nombre: true, unite: "m²", expl: "1 hm² = 10 000 m² ; 5 hm² = 50 000 m²." },
+      { t: "saisie", q: "1 300 dm² = … m²", r: "13", nombre: true, unite: "m²", expl: "100 dm² = 1 m² ; 1 300 dm² = 13 m²." },
+      { t: "saisie", q: "45 000 cm² = … m²", r: "4,5", nombre: true, unite: "m²", expl: "1 m² = 10 000 cm² ; 45 000 : 10 000 = 4,5 m²." },
+      { t: "saisie", q: "2 400 mm² = … m²", r: "0,0024", nombre: true, unite: "m²", expl: "1 m² = 1 000 000 mm² ; 2 400 mm² = 0,0024 m²." },
+      { t: "saisie", q: "3 m² = … dm²", r: "300", nombre: true, unite: "dm²", expl: "1 m² = 100 dm²." },
+      { t: "trous", q: "Complète.", nombre: true, texte: "1 km² = [100] hm² — 1 hm² = [100] dam² — 1 dm² = [100] cm²", expl: "Chaque unité vaut 100 fois la suivante." },
+      { t: "saisie", q: "6 km² = … m²", r: "6000000", nombre: true, unite: "m²", expl: "1 km² = 1 000 000 m²." },
+      { t: "qcm", q: "Un carré de 1 m de côté a une aire de…", choix: ["1 m²", "4 m²", "100 m²"], r: "1 m²", expl: "1 m × 1 m = 1 m²." }
+    ],
+    [
+      { t: "saisie", q: "0,5 km² et 12 dam² = … m²", r: "501200", nombre: true, unite: "m²", aide: "0,5 km² = 50 hm² = 500 000 m².", expl: "0,5 km² = 500 000 m² ; 12 dam² = 1 200 m² ; 500 000 + 1 200 = 501 200 m²." },
+      { t: "saisie", q: "45 dam² + 5 hm² = … m²", r: "54500", nombre: true, unite: "m²", expl: "4 500 m² + 50 000 m² = 54 500 m²." },
+      { t: "saisie", q: "6 km² + 250 hm² = … m²", r: "8500000", nombre: true, unite: "m²", expl: "6 000 000 + 2 500 000 = 8 500 000 m²." },
+      { t: "saisie", q: "3 400 m² + 66 dam² = … hm²", r: "1", nombre: true, unite: "hm²", expl: "3 400 + 6 600 = 10 000 m² = 1 hm²." },
+      { t: "saisie", q: "38 cm² + 2,5 m² = … mm²", r: "2503800", nombre: true, unite: "mm²", aide: "2,5 m² : le 2 va dans la colonne u des m².", expl: "38 cm² = 3 800 mm² ; 2,5 m² = 2 500 000 mm² ; total 2 503 800 mm²." },
+      { t: "saisie", q: "9 dm² + 1 100 cm² = … m²", r: "0,2", nombre: true, unite: "m²", expl: "900 cm² + 1 100 cm² = 2 000 cm² = 0,2 m²." },
+      { t: "saisie", q: "545 mm² + 1 dm² 5 cm² 55 mm² = … cm²", r: "111", nombre: true, unite: "cm²", expl: "5,45 + 100 + 5 + 0,55 = 111 cm²." },
+      { t: "qcm", q: "Pourquoi 2,5 m² ne s'écrit-il pas « 25 » dans les colonnes des m² ?", choix: ["parce que 2 est le chiffre des unités : il va dans la colonne u", "parce qu'on ne met jamais de virgule", "parce que 25 est trop grand"], r: "parce que 2 est le chiffre des unités : il va dans la colonne u", expl: "2,5 m² = 2 m² et 50 dm² : le 5 va dans les dm²." }
+    ],
+    [
+      { t: "probleme", q: "Un tailleur veut découper, dans un tissu de 40 dm² d'aire, une nappe carrée de 6 dm de côté.", etapes: [{ q: "Étape 1 : aire de la nappe (dm²)", r: "36", unite: "dm²" }, { q: "Étape 2 : tissu restant (dm²)", r: "4", unite: "dm²" }], expl: "6 × 6 = 36 dm² ; 36 est moins que 40 : c'est possible, et il reste 4 dm²." },
+      { t: "saisie", q: "Un champ carré a une aire de 64 m². Quelle est la mesure d'un côté ?", r: "8", nombre: true, unite: "m", aide: "Quel nombre multiplié par lui-même donne 64 ?", expl: "8 × 8 = 64 : le côté mesure 8 m." },
+      { t: "saisie", q: "Rectangle de 12 m de long et 6,5 m de large. Aire = …", r: "78", nombre: true, unite: "m²", expl: "12 × 6,5 = 78 m²." },
+      { t: "saisie", q: "Rectangle d'aire 414 m² et de longueur 23 m. Largeur = …", r: "18", nombre: true, unite: "m", expl: "414 : 23 = 18 m." },
+      { t: "probleme", q: "La cour de l'école est un rectangle de 40 m sur 25 m.", etapes: [{ q: "Étape 1 : aire en m²", r: "1000", unite: "m²" }, { q: "Étape 2 : aire en dam²", r: "10", unite: "dam²" }], expl: "40 × 25 = 1 000 m² = 10 dam²." }
     ]
   ]
 });
@@ -5255,7 +5544,8 @@ LECONS.push({
       { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Khady achète trois rouleaux de grillage : le premier mesure 125 m, le deuxième 248 m et le troisième 87 m.", etapes: [{ q: "Longueur des deux premiers rouleaux :", r: "373", unite: "m" }, { q: "Longueur totale de grillage :", r: "460", unite: "m" }], expl: "125 + 248 = 373 ; 373 + 87 = 460 m." },
       { t: "trous", q: "Complète la chaîne d'additions.", texte: "1 500 + 2 500 = [4000] ; 4 000 + 6 000 = [10000] ; 10 000 + 25 000 = [35000]", nombre: true, expl: "4 000, puis 10 000, puis 35 000." },
       { t: "qcm", q: "Fatou a 12 500 F. Sa tante lui donne 7 500 F et son oncle 5 000 F. Combien a-t-elle maintenant ?", choix: ["25 000 F", "20 000 F", "24 000 F", "15 000 F"], r: "25 000 F", expl: "12 500 + 7 500 = 20 000 ; 20 000 + 5 000 = 25 000 F." },
-      { t: "saisie", q: "Pose et calcule : 259,6 + 1 234 + 2,74 = …", r: "1496,34", nombre: true, aide: "Aligne les virgules les unes sous les autres.", expl: "259,60 + 1 234,00 + 2,74 = 1 496,34." }
+      { t: "saisie", q: "Pose et calcule : 259,6 + 1 234 + 2,74 = …", r: "1496,34", nombre: true, aide: "Aligne les virgules les unes sous les autres.", expl: "259,60 + 1 234,00 + 2,74 = 1 496,34." },
+      { t: "saisie", q: "Pose et calcule : 158,8 + 5,9 + 7 = …", r: "171,7", nombre: true, aide: "Écris 7 = 7,0 et aligne les virgules.", expl: "158,8 + 5,9 + 7,0 = 171,7." }
     ]
   ]
 });
@@ -5870,7 +6160,8 @@ LECONS.push({
       { t: "trous", q: "Trouve le nombre qui manque.", texte: "9 000 − [3500] = 5 500", nombre: true, expl: "On cherche ce qu'on enlève : 9 000 − 5 500 = 3 500." },
       { t: "saisie", q: "Pose et calcule : 8 897,64 − 7 956 = …", r: "941,64", nombre: true, aide: "Aligne les virgules : 7 956 = 7 956,00.", expl: "8 897,64 − 7 956,00 = 941,64." },
       { t: "saisie", q: "Pose et calcule : 951 − 198,671 = …", r: "752,329", nombre: true, aide: "Écris 951 = 951,000 pour avoir autant de chiffres après la virgule.", expl: "951,000 − 198,671 = 752,329." },
-      { t: "probleme", q: "Fatou a 25 000 F. Elle achète 3 paires de chaussures à 2 500 F la paire, une robe à 3 500 F et 5 boîtes de perles à 500 F la boîte.", etapes: [{ q: "Étape 1 : prix des chaussures", r: "7500", unite: "F" }, { q: "Étape 2 : prix des perles", r: "2500", unite: "F" }, { q: "Étape 3 : dépense totale", r: "13500", unite: "F" }, { q: "Étape 4 : somme qui lui reste", r: "11500", unite: "F" }], expl: "2 500 × 3 = 7 500 ; 500 × 5 = 2 500 ; 7 500 + 3 500 + 2 500 = 13 500 ; 25 000 − 13 500 = 11 500 F." }
+      { t: "probleme", q: "Fatou a 25 000 F. Elle achète 3 paires de chaussures à 2 500 F la paire, une robe à 3 500 F et 5 boîtes de perles à 500 F la boîte.", etapes: [{ q: "Étape 1 : prix des chaussures", r: "7500", unite: "F" }, { q: "Étape 2 : prix des perles", r: "2500", unite: "F" }, { q: "Étape 3 : dépense totale", r: "13500", unite: "F" }, { q: "Étape 4 : somme qui lui reste", r: "11500", unite: "F" }], expl: "2 500 × 3 = 7 500 ; 500 × 5 = 2 500 ; 7 500 + 3 500 + 2 500 = 13 500 ; 25 000 − 13 500 = 11 500 F." },
+      { t: "saisie", q: "Pose et calcule : 540 − 50,7 = …", r: "489,3", nombre: true, aide: "Écris 540 = 540,0 : on complète par un zéro.", expl: "540,0 − 50,7 = 489,3." }
     ]
   ]
 });
@@ -6536,6 +6827,61 @@ LECONS.push({
       { t: "classer", q: "Classe chaque élément.", cases: ["cause", "conséquence", "solution"], items: [["les produits chimiques toxiques", "cause"], ["les poissons meurent", "conséquence"], ["éviter les marées noires", "solution"], ["les déchets jetés sur les sols", "cause"], ["arrêter de jeter des eaux usées en mer", "solution"]], expl: "Trois parties de la leçon." },
       { t: "vf", q: "Une marée noire est une solution contre la pollution marine.", r: false, expl: "C'est une cause : le pétrole pollue la mer." },
       { t: "relier", q: "Relie chaque pollution à ce qu'elle salit.", paires: [["pollution marine", "la mer"], ["pollution atmosphérique", "l'air"], ["pollution du sol", "la terre"]], expl: "Marine = mer ; atmosphérique = air." }
+    ]
+  ]
+});
+
+
+/* ---- vdsm-role-aliments.js ---- */
+// Un mot illisible dans la case « protection » (photo 2026-11-25_17) n'est pas repris.
+LECONS.push({
+  id: "vdsm-role-aliments",
+  cahier: "vivre",
+  matiere: "Vivre dans son milieu",
+  titre: "Le rôle des aliments",
+  date: "2026-11-24",
+  photos: ["2026-11-25_17.jpg"],
+  retiens:
+    "<table><tr><th>Groupe</th><th>Rôle</th><th>Catégories et exemples</th></tr>" +
+    "<tr><td><b>Aliments de construction</b></td><td>assurent la croissance et l'entretien du corps humain</td><td><b>Protides</b>, riches en matières azotées : viande, poisson, lait, œuf, haricot</td></tr>" +
+    "<tr><td><b>Aliments énergétiques</b></td><td>donnent la force et la chaleur au corps</td><td><b>Glucides</b> (sucres) : céréales, tubercules, légumes, fruits, pain, riz, farine, miel<br><b>Lipides</b> (matières grasses) : beurre, arachide, lait, huile de palme, œuf</td></tr>" +
+    "<tr><td><b>Aliments de protection</b> (catalyseurs)</td><td>assurent le maintien de la santé et le bon fonctionnement du corps</td><td><b>Sels minéraux et vitamines</b> : fruits crus, légumes frais, lait</td></tr></table>" +
+    "<p><b>NB :</b> le lait est un <b>aliment complet</b> : il contient des matières azotées, des matières grasses, des matières minérales, de l'eau, du sucre et des vitamines.</p>" +
+    "<p>Pour vivre en bonne santé, il faut avoir une alimentation <b>suffisante, variée et équilibrée</b>.</p>",
+  astuce: "Trois mots, trois rôles : <b>construire</b> (protides), <b>donner de l'énergie</b> (glucides, lipides), <b>protéger</b> (vitamines, sels minéraux).",
+  regle: "Les aliments de construction (protides) font grandir et entretiennent le corps ; les aliments énergétiques (glucides et lipides) donnent force et chaleur ; les aliments de protection (vitamines et sels minéraux) maintiennent la santé.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Quel est le rôle des aliments de construction ?", choix: ["assurer la croissance et l'entretien du corps", "donner la chaleur au corps", "rendre les aliments sucrés"], r: "assurer la croissance et l'entretien du corps", expl: "Ce sont les protides : viande, poisson, œuf, haricot…" },
+      { t: "qcm", q: "Les aliments énergétiques donnent au corps…", choix: ["la force et la chaleur", "la croissance", "les vitamines"], r: "la force et la chaleur", expl: "Ce sont les glucides et les lipides." },
+      { t: "qcm", q: "Les vitamines et les sels minéraux sont des aliments…", choix: ["de protection", "de construction", "énergétiques"], r: "de protection", expl: "Ils maintiennent la santé : on les appelle aussi catalyseurs." },
+      { t: "vf", q: "Le lait est un aliment complet.", r: true, expl: "Il contient des matières azotées, grasses, minérales, de l'eau, du sucre et des vitamines." },
+      { t: "qcm", q: "Les lipides sont…", choix: ["des matières grasses", "des sucres", "des vitamines"], r: "des matières grasses", expl: "Beurre, arachide, huile de palme…" }
+    ],
+    [
+      { t: "classer", q: "Range ces aliments.", cases: ["protides", "glucides", "lipides"], items: [["viande", "protides"], ["poisson", "protides"], ["haricot", "protides"], ["riz", "glucides"], ["miel", "glucides"], ["pain", "glucides"], ["beurre", "lipides"], ["huile de palme", "lipides"]], expl: "Protides : construction. Glucides : sucres. Lipides : matières grasses." },
+      { t: "relier", q: "Relie chaque groupe à son rôle.", paires: [["construction", "croissance et entretien du corps"], ["énergétiques", "force et chaleur"], ["protection", "maintien de la santé"]], expl: "C'est la colonne « Rôles » du tableau." },
+      { t: "relier", q: "Relie chaque catégorie à son groupe.", paires: [["protides", "aliments de construction"], ["glucides", "aliments énergétiques"], ["lipides", "aliments énergétiques"], ["vitamines", "aliments de protection"]], expl: "Glucides et lipides sont tous les deux énergétiques." },
+      { t: "qcm", q: "Les fruits crus et les légumes frais apportent surtout…", choix: ["des vitamines et des sels minéraux", "des matières grasses", "des protides"], r: "des vitamines et des sels minéraux", expl: "Ce sont des aliments de protection." },
+      { t: "saisie", q: "Les protides sont riches en matières…", r: "azotées", expl: "Les protides sont riches en matières azotées." },
+      { t: "trous", q: "Complète.", texte: "Pour vivre en bonne santé, il faut avoir une alimentation suffisante, [variée] et [équilibrée].", expl: "Suffisante, variée et équilibrée." },
+      { t: "qcm", q: "Quel autre nom donne-t-on aux aliments de protection ?", choix: ["catalyseurs", "protides", "tubercules"], r: "catalyseurs", expl: "Aliments de protection = catalyseurs." },
+      { t: "vf", q: "Le riz et la farine sont des glucides.", r: true, expl: "Les céréales, le pain, le riz, la farine sont des glucides." }
+    ],
+    [
+      { t: "qcm", q: "L'arachide est rangée parmi…", choix: ["les lipides", "les protides", "les vitamines"], r: "les lipides", expl: "Dans la leçon, l'arachide fait partie des matières grasses." },
+      { t: "qcm", q: "Pourquoi l'œuf apparaît-il deux fois dans le tableau ?", choix: ["parce qu'il contient des protides et des lipides", "parce que c'est un fruit", "par erreur"], r: "parce qu'il contient des protides et des lipides", expl: "Un même aliment peut appartenir à plusieurs catégories, comme le lait." },
+      { t: "classer", q: "Quel rôle joue chaque aliment ?", cases: ["construction", "énergie", "protection"], items: [["poisson", "construction"], ["œuf", "construction"], ["mil", "énergie"], ["patate douce", "énergie"], ["mangue crue", "protection"], ["carotte fraîche", "protection"]], expl: "Le mil est une céréale et la patate douce un tubercule : ils donnent de l'énergie." },
+      { t: "vf", q: "Manger seulement du riz tous les jours, c'est une alimentation équilibrée.", r: false, expl: "Il faut une alimentation variée : des aliments des trois groupes." },
+      { t: "qcm", q: "Quelle matière le lait ne contient-il PAS selon la leçon ?", choix: ["Il les contient toutes : azotées, grasses, minérales, eau, sucre, vitamines.", "les matières grasses", "le sucre"], r: "Il les contient toutes : azotées, grasses, minérales, eau, sucre, vitamines.", expl: "C'est pour cela qu'on dit que le lait est un aliment complet." },
+      { t: "saisie", q: "Les sucres s'appellent aussi les…", r: "glucides", expl: "Glucides = sucres." }
+    ],
+    [
+      { t: "qcm", q: "Au déjeuner, Awa mange du riz au poisson avec des légumes frais. Que lui manque-t-il pour un repas complet ?", choix: ["rien : il y a des trois groupes", "des protides", "des glucides"], r: "rien : il y a des trois groupes", expl: "Riz : énergie. Poisson : construction. Légumes frais : protection." },
+      { t: "qcm", q: "Moussa grandit vite. Quels aliments l'aident surtout à grandir ?", choix: ["la viande, le poisson, l'œuf, le haricot", "le miel et le sucre", "l'huile de palme"], r: "la viande, le poisson, l'œuf, le haricot", expl: "Les protides sont des aliments de construction." },
+      { t: "trous", q: "Complète le résumé.", texte: "Les [protides] construisent le corps. Les glucides et les [lipides] donnent la force et la chaleur. Les vitamines et les sels minéraux [protègent] le corps.", expl: "Construire, donner de l'énergie, protéger." },
+      { t: "relier", q: "Relie chaque aliment à sa catégorie.", paires: [["haricot", "protides"], ["farine", "glucides"], ["beurre", "lipides"], ["fruits crus", "vitamines"]], expl: "Chaque aliment a sa place dans le tableau." },
+      { t: "vf", q: "Une alimentation variée contient des aliments de construction, énergétiques et de protection.", r: true, expl: "C'est ce qu'il faut pour vivre en bonne santé." }
     ]
   ]
 });

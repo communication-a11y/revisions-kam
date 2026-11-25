@@ -55,7 +55,8 @@ LECONS.push({
       { t: "trous", q: "Trouve le nombre qui manque.", texte: "9 000 − [3500] = 5 500", nombre: true, expl: "On cherche ce qu'on enlève : 9 000 − 5 500 = 3 500." },
       { t: "saisie", q: "Pose et calcule : 8 897,64 − 7 956 = …", r: "941,64", nombre: true, aide: "Aligne les virgules : 7 956 = 7 956,00.", expl: "8 897,64 − 7 956,00 = 941,64." },
       { t: "saisie", q: "Pose et calcule : 951 − 198,671 = …", r: "752,329", nombre: true, aide: "Écris 951 = 951,000 pour avoir autant de chiffres après la virgule.", expl: "951,000 − 198,671 = 752,329." },
-      { t: "probleme", q: "Fatou a 25 000 F. Elle achète 3 paires de chaussures à 2 500 F la paire, une robe à 3 500 F et 5 boîtes de perles à 500 F la boîte.", etapes: [{ q: "Étape 1 : prix des chaussures", r: "7500", unite: "F" }, { q: "Étape 2 : prix des perles", r: "2500", unite: "F" }, { q: "Étape 3 : dépense totale", r: "13500", unite: "F" }, { q: "Étape 4 : somme qui lui reste", r: "11500", unite: "F" }], expl: "2 500 × 3 = 7 500 ; 500 × 5 = 2 500 ; 7 500 + 3 500 + 2 500 = 13 500 ; 25 000 − 13 500 = 11 500 F." }
+      { t: "probleme", q: "Fatou a 25 000 F. Elle achète 3 paires de chaussures à 2 500 F la paire, une robe à 3 500 F et 5 boîtes de perles à 500 F la boîte.", etapes: [{ q: "Étape 1 : prix des chaussures", r: "7500", unite: "F" }, { q: "Étape 2 : prix des perles", r: "2500", unite: "F" }, { q: "Étape 3 : dépense totale", r: "13500", unite: "F" }, { q: "Étape 4 : somme qui lui reste", r: "11500", unite: "F" }], expl: "2 500 × 3 = 7 500 ; 500 × 5 = 2 500 ; 7 500 + 3 500 + 2 500 = 13 500 ; 25 000 − 13 500 = 11 500 F." },
+      { t: "saisie", q: "Pose et calcule : 540 − 50,7 = …", r: "489,3", nombre: true, aide: "Écris 540 = 540,0 : on complète par un zéro.", expl: "540,0 − 50,7 = 489,3." }
     ]
   ]
 });

@@ -54,7 +54,8 @@ LECONS.push({
       { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Khady achète trois rouleaux de grillage : le premier mesure 125 m, le deuxième 248 m et le troisième 87 m.", etapes: [{ q: "Longueur des deux premiers rouleaux :", r: "373", unite: "m" }, { q: "Longueur totale de grillage :", r: "460", unite: "m" }], expl: "125 + 248 = 373 ; 373 + 87 = 460 m." },
       { t: "trous", q: "Complète la chaîne d'additions.", texte: "1 500 + 2 500 = [4000] ; 4 000 + 6 000 = [10000] ; 10 000 + 25 000 = [35000]", nombre: true, expl: "4 000, puis 10 000, puis 35 000." },
       { t: "qcm", q: "Fatou a 12 500 F. Sa tante lui donne 7 500 F et son oncle 5 000 F. Combien a-t-elle maintenant ?", choix: ["25 000 F", "20 000 F", "24 000 F", "15 000 F"], r: "25 000 F", expl: "12 500 + 7 500 = 20 000 ; 20 000 + 5 000 = 25 000 F." },
-      { t: "saisie", q: "Pose et calcule : 259,6 + 1 234 + 2,74 = …", r: "1496,34", nombre: true, aide: "Aligne les virgules les unes sous les autres.", expl: "259,60 + 1 234,00 + 2,74 = 1 496,34." }
+      { t: "saisie", q: "Pose et calcule : 259,6 + 1 234 + 2,74 = …", r: "1496,34", nombre: true, aide: "Aligne les virgules les unes sous les autres.", expl: "259,60 + 1 234,00 + 2,74 = 1 496,34." },
+      { t: "saisie", q: "Pose et calcule : 158,8 + 5,9 + 7 = …", r: "171,7", nombre: true, aide: "Écris 7 = 7,0 et aligne les virgules.", expl: "158,8 + 5,9 + 7,0 = 171,7." }
     ]
   ]
 });
