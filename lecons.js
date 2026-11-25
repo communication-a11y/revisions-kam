@@ -1,5 +1,75 @@
 var LECONS = window.LECONS = [];
-window.VERSION_CONTENU = "202611191808";
+window.VERSION_CONTENU = "202611251916";
+
+/* ---- an-subject-object-pronouns.js ---- */
+// Corrections des exemples du cahier : « Argentian » → « Argentinian » ; « too church » → « to church » ;
+// « Youre are awesome girl » → « You are an awesome girl » ; « It is hungry lion » → « It is a hungry lion ».
+// L'exemple « She is doin King wate » (illisible ou mal recopié) n'est pas repris.
+LECONS.push({
+  id: "an-subject-object-pronouns",
+  cahier: "anglais",
+  matiere: "Grammar",
+  titre: "Subject and object pronouns (les pronoms sujets et compléments)",
+  date: "2026-11-03",
+  photos: ["2026-11-25_07.jpg", "2026-11-25_06.jpg", "2026-11-25_05.jpg"],
+  retiens:
+    "<p><b>A) Subject pronouns</b> (pronoms sujets) : ils font l'action, ils se placent <b>avant le verbe</b>.</p>" +
+    "<table><tr><th>singular</th><th>plural</th></tr>" +
+    "<tr><td>I = je</td><td>we = nous</td></tr>" +
+    "<tr><td>you = tu</td><td>you = vous</td></tr>" +
+    "<tr><td>he = il (a man, a boy)<br>she = elle (a woman, a girl)<br>it = il, elle (one animal, one object)</td><td>they = ils, elles</td></tr></table>" +
+    "<p>Ex : <b>They</b> are going to the restaurant. <b>We</b> have exercises. <b>It</b> is a hungry lion.</p>" +
+    "<p><b>B) Object pronouns</b> (pronoms compléments) : ils se placent <b>après le verbe</b> ou après un petit mot comme <i>with</i>.</p>" +
+    "<table><tr><th>subject</th><th>object</th><th>en français</th></tr>" +
+    "<tr><td>I</td><td><b>me</b></td><td>me, moi</td></tr>" +
+    "<tr><td>you</td><td><b>you</b></td><td>te, toi</td></tr>" +
+    "<tr><td>he</td><td><b>him</b></td><td>lui, le, l'</td></tr>" +
+    "<tr><td>she</td><td><b>her</b></td><td>lui, la, l'</td></tr>" +
+    "<tr><td>it</td><td><b>it</b></td><td>le, la, l', lui</td></tr>" +
+    "<tr><td>we</td><td><b>us</b></td><td>nous</td></tr>" +
+    "<tr><td>you</td><td><b>you</b></td><td>vous</td></tr>" +
+    "<tr><td>they</td><td><b>them</b></td><td>les, eux, elles, leur</td></tr></table>" +
+    "<p><b>A smart little girl</b> (page 52) : She likes the Argentinian player → She likes <b>him</b>. She goes to church with her mum → with <b>her</b> ; her dad → <b>him</b> ; her brothers → <b>them</b>.</p>",
+  astuce: "Avant le verbe : <b>I, he, she, we, they</b>. Après le verbe : <b>me, him, her, us, them</b>. <b>you</b> et <b>it</b> ne changent pas.",
+  regle: "Le pronom sujet se place avant le verbe (I, you, he, she, it, we, you, they) ; le pronom complément se place après le verbe ou après with, to… (me, you, him, her, it, us, you, them).",
+  niveaux: [
+    [
+      { t: "qcm", q: "« Je » se dit en anglais…", choix: ["I", "me", "we"], r: "I", expl: "I = je. Il s'écrit toujours avec une majuscule." },
+      { t: "qcm", q: "Pour parler d'une fille, on utilise…", choix: ["she", "he", "it"], r: "she", expl: "she = elle (a woman, a girl)." },
+      { t: "qcm", q: "Pour parler d'un animal ou d'un objet, on utilise…", choix: ["it", "he", "she"], r: "it", expl: "it = one animal or one object." },
+      { t: "relier", q: "Relie chaque pronom sujet à sa traduction.", paires: [["I", "je"], ["he", "il"], ["she", "elle"], ["we", "nous"], ["they", "ils, elles"]], expl: "Ce sont les pronoms sujets de la leçon." },
+      { t: "vf", q: "« They » veut dire « ils » ou « elles ».", r: true, expl: "they = ils / elles, au pluriel." },
+      { t: "qcm", q: "Le pronom complément de « he » est…", choix: ["him", "her", "his"], r: "him", expl: "he → him : She likes him." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque pronom sujet à son pronom complément.", paires: [["I", "me"], ["he", "him"], ["she", "her"], ["we", "us"], ["they", "them"]], expl: "you et it ne changent pas." },
+      { t: "qcm", q: "Remplace « Moussa » : « ___ is my friend. »", choix: ["He", "She", "It"], r: "He", expl: "Moussa est un garçon : he. Il est avant le verbe : pronom sujet." },
+      { t: "qcm", q: "Remplace « the cat » : « ___ is black. »", choix: ["It", "He", "They"], r: "It", expl: "Un animal : it." },
+      { t: "qcm", q: "Remplace « Awa and Fatou » : « ___ are sisters. »", choix: ["They", "We", "She"], r: "They", expl: "Deux personnes : they (ils, elles)." },
+      { t: "qcm", q: "« She likes the Argentinian player. » → « She likes ___. »", choix: ["him", "he", "them"], r: "him", expl: "Un joueur, après le verbe : him." },
+      { t: "qcm", q: "« She goes to church with her mum. » → « She goes to church with ___. »", choix: ["her", "she", "him"], r: "her", expl: "Sa maman, après with : her." },
+      { t: "saisie", q: "Écris le pronom complément : « I see her brothers. » → « I see ___. »", r: "them", expl: "Ses frères, plusieurs personnes, après le verbe : them." },
+      { t: "classer", q: "Pronom sujet ou pronom complément ?", cases: ["subject", "object"], items: [["I", "subject"], ["we", "subject"], ["they", "subject"], ["me", "object"], ["us", "object"], ["them", "object"], ["him", "object"], ["she", "subject"]], expl: "Sujets : I, he, she, we, they. Compléments : me, him, her, us, them." }
+    ],
+    [
+      { t: "qcm", q: "Quelle phrase est juste ?", choix: ["She likes him.", "Her likes he.", "She likes he."], r: "She likes him.", expl: "Sujet avant le verbe : she. Complément après : him." },
+      { t: "qcm", q: "« Come with ___ ! » (avec nous)", choix: ["us", "we", "our"], r: "us", expl: "Après with, on met le pronom complément : us." },
+      { t: "saisie", q: "Écris le pronom complément : « Look at the lion! » → « Look at ___! »", r: "it", expl: "Un animal : it (il ne change pas)." },
+      { t: "qcm", q: "Quel pronom ne change pas entre sujet et complément ?", choix: ["you", "I", "they"], r: "you", expl: "you reste you (et it reste it)." },
+      { t: "relier", q: "Relie chaque pronom complément à sa traduction.", paires: [["me", "me, moi"], ["him", "lui, le"], ["her", "lui, la"], ["us", "nous"], ["them", "les, eux, leur"]], expl: "C'est le tableau des object pronouns." },
+      { t: "qcm", q: "« ___ is a hungry lion. »", choix: ["It", "Him", "Them"], r: "It", expl: "Avant le verbe, pour un animal : it." },
+      { t: "saisie", q: "Écris le pronom sujet : « Fatou and I have exercises. » → « ___ have exercises. »", r: "we", expl: "Fatou et moi = nous : we." }
+    ],
+    [
+      { t: "trous", q: "Complète avec le bon pronom (he, she, him, her, them).", texte: "Fara has two brothers. [She] loves [them]. Her dad is kind ; she goes to the market with [him]. Her mum is a teacher ; [she] works at school.", expl: "Sujet avant le verbe (she), complément après (them, him)." },
+      { t: "ordre", q: "Remets les mots dans l'ordre.", r: "She always goes to church with her mum.", expl: "Sujet + verbe + complément : She goes to church with her mum." },
+      { t: "qcm", q: "« You are an awesome girl, Fara! » Qui est « you » ?", choix: ["Fara", "her mum", "her brothers"], r: "Fara", expl: "On parle à Fara : you = Fara." },
+      { t: "classer", q: "Remplace le mot en gras : quel pronom ?", cases: ["him", "her", "them"], items: [["I help <b>my father</b>.", "him"], ["I help <b>my sister</b>.", "her"], ["I help <b>my friends</b>.", "them"], ["She calls <b>Moussa</b>.", "him"], ["She calls <b>Khady</b>.", "her"], ["She calls <b>the children</b>.", "them"]], expl: "Un garçon/homme : him. Une fille/femme : her. Plusieurs : them." },
+      { t: "qcm", q: "Traduis : « Je les vois. »", choix: ["I see them.", "Me see they.", "I see they."], r: "I see them.", expl: "je = I (sujet) ; les = them (complément)." }
+    ]
+  ]
+});
+
 
 /* ---- fr-conj-futur-simple.js ---- */
 // À VÉRIFIER : (1) au futur, le cahier semble écrire « je chanterais » et « je nettoierais » (avec s, photos 0051-0052) : ce serait du conditionnel ; on a écrit « je chanterai », « je nettoierai ». (2) La règle sur -eter / -eler annonce « sauf les exceptions » sans les écrire (0052) : elles ne sont pas inventées ici ; le module renvoie à la leçon du présent sur -eter / -eler et ne les fait pas travailler. (3) « jeter : jetterai » → « je jetterai » ; « savoi » → « savoir ».
@@ -1705,7 +1775,9 @@ LECONS.push({
       { t: "trous", q: "Accorde les adjectifs entre parenthèses.", texte: "Awa est une fille [sportive] (sportif). Sa sœur est [inquiète] (inquiet). Les mangues [mûres] (mûr) sont [délicieuses] (délicieux).", expl: "sportif → sportive (-if → -ive) ; inquiet → inquiète (exception) ; mûr → mûres ; délicieux → délicieuses (-x → -se, puis s)." },
       { t: "qcm", q: "Quelle phrase est bien écrite ?", choix: ["Fatou est une fille malicieuse et coquette.", "Fatou est une fille malicieuxe et coquète.", "Fatou est une fille malicieuse et coquete.", "Fatou est une fille malicieus et coquette."], r: "Fatou est une fille malicieuse et coquette.", expl: "malicieux → malicieuse (-x → -se) ; coquet → coquette (-et → -ette)." },
       { t: "classer", q: "Quel accord a l'adjectif en gras ?", cases: ["féminin singulier", "masculin pluriel", "féminin pluriel"], items: [["une école <b>publique</b>", "féminin singulier"], ["des garçons <b>sages</b>", "masculin pluriel"], ["des chèvres <b>rousses</b>", "féminin pluriel"], ["une chanson <b>favorite</b>", "féminin singulier"], ["des enfants <b>moqueurs</b>", "masculin pluriel"], ["des voisines <b>discrètes</b>", "féminin pluriel"]], expl: "Regarde le nom : son genre et son nombre décident de l'accord de l'adjectif." },
-      { t: "saisie", q: "Récris au féminin : « Un vieux pêcheur heureux et fier. » → « Une … pêcheuse … et … » Écris les trois adjectifs séparés par des virgules.", r: ["vieille, heureuse, fière", "vieille,heureuse,fière"], expl: "vieux → vieille (exception), heureux → heureuse, fier → fière." }
+      { t: "saisie", q: "Récris au féminin : « Un vieux pêcheur heureux et fier. » → « Une … pêcheuse … et … » Écris les trois adjectifs séparés par des virgules.", r: ["vieille, heureuse, fière", "vieille,heureuse,fière"], expl: "vieux → vieille (exception), heureux → heureuse, fier → fière." },
+      { t: "dictee", texte: "Parfois, je regarde les anciennes photographies de ma grand-mère.", expl: "« photographies » est féminin pluriel : ancien → anciennes." },
+      { t: "dictee", texte: "Ma mère est fière de sa nouvelle voiture.", expl: "fier → fière ; nouveau → nouvelle : les adjectifs s'accordent avec « mère » et « voiture »." }
     ]
   ]
 });
@@ -3291,6 +3363,67 @@ LECONS.push({
 });
 
 
+/* ---- hi-royaumes-senegal-tableau.js ---- */
+// À VÉRIFIER : le tableau (photo 2026-11-25_02) dit « bataille de Dékheulé contre Faidherbe (fin 19e siècle) ».
+// Dékheulé a eu lieu en 1886 contre les troupes françaises ; Faidherbe avait quitté le Sénégal en 1865. Le module écrit « contre les Français ».
+// Orthographe : « Koli Tengala » → Koli Tenguella.
+LECONS.push({
+  id: "hi-royaumes-senegal-tableau",
+  cahier: "histgeo",
+  matiere: "Histoire",
+  titre: "Les royaumes du Sénégal : capitales, souverains, faits marquants",
+  date: "2026-11-19",
+  photos: ["2026-11-25_02.jpg", "2026-11-25_09.jpg"],
+  retiens:
+    "<table><tr><th>Royaume</th><th>Capitale</th><th>Souverain</th><th>Faits marquants</th></tr>" +
+    "<tr><td><b>Tékrour</b> (Fouta Toro)</td><td>Mboumba</td><td>Almamy</td><td>création vers le 9<sup>e</sup> siècle ; conquête par Koli Tenguella et création du Fouta Toro (15<sup>e</sup> siècle) ; révolte des marabouts musulmans</td></tr>" +
+    "<tr><td><b>Djolof</b></td><td>Yang-Yang</td><td>Bourba</td><td>fondation par Ndiadiane Ndiaye (13<sup>e</sup> ou 14<sup>e</sup> siècle) ; domination des autres royaumes ; bataille de Danki (1549) : défaite devant l'armée du Cayor</td></tr>" +
+    "<tr><td><b>Cayor</b></td><td>Mboul</td><td>Damel</td><td>victoire sur le Djolof et indépendance après Danki ; Lat Dior devient Damel (1862) ; bataille de Dékheulé contre les Français (fin du 19<sup>e</sup> siècle)</td></tr>" +
+    "<tr><td><b>Baol</b></td><td>Lambaye</td><td>Tègne</td><td>indépendance après Danki ; unification avec le Cayor : Amary Ngoné Sobel devient Damel-Tègne</td></tr>" +
+    "<tr><td><b>Walo</b></td><td>Nder</td><td>Brack</td><td>fondation par Barka Mbodj ; guerre contre les Maures du Trarza (1769) ; mariage de Ndjeumbeut Mbodj (1833) ; suicide collectif des femmes de Nder</td></tr>" +
+    "<tr><td><b>Sine</b></td><td>Mbissel, Diakhao</td><td>Bour</td><td>fondation par Meïssa Waly Dione (14<sup>e</sup> siècle) ; résistance à l'islamisation jusqu'au 19<sup>e</sup> siècle</td></tr>" +
+    "<tr><td><b>Saloum</b></td><td>Kahone</td><td>Bour</td><td>fondation par Mbégane Ndour</td></tr>" +
+    "<tr><td><b>Rip</b></td><td>Nioro</td><td>Almamy</td><td>bataille de Pathé Badiane ; guerre sainte de Maba Diakhou Ba (1860) et défaite contre Coumba Ndoffène (1867)</td></tr>" +
+    "</table>",
+  astuce: "Retiens les titres par paires : <b>Damel</b> (Cayor) et <b>Tègne</b> (Baol) — Amary Ngoné Sobel fut les deux, Damel-Tègne ; <b>Bour</b> pour les deux royaumes sereer, Sine et Saloum ; <b>Almamy</b> pour le Tékrour et le Rip.",
+  regle: "Chaque royaume a sa capitale et le titre de son souverain : Tékrour (Mboumba, Almamy), Djolof (Yang-Yang, Bourba), Cayor (Mboul, Damel), Baol (Lambaye, Tègne), Walo (Nder, Brack), Sine (Diakhao, Bour), Saloum (Kahone, Bour), Rip (Nioro, Almamy).",
+  niveaux: [
+    [
+      { t: "qcm", q: "Quel est le titre du souverain du Cayor ?", choix: ["Damel", "Brack", "Bourba"], r: "Damel", expl: "Le souverain du Cayor s'appelle le Damel." },
+      { t: "qcm", q: "Quelle est la capitale du Walo ?", choix: ["Nder", "Kahone", "Mboul"], r: "Nder", expl: "Le Walo avait pour capitale Nder, et son souverain était le Brack." },
+      { t: "qcm", q: "Qui a fondé le Djolof ?", choix: ["Ndiadiane Ndiaye", "Lat Dior", "Maba Diakhou Ba"], r: "Ndiadiane Ndiaye", expl: "Le Djolof a été fondé par Ndiadiane Ndiaye au 13e ou au 14e siècle." },
+      { t: "vf", q: "Le souverain du Sine et celui du Saloum portaient tous les deux le titre de Bour.", r: true, expl: "On disait le Bour Sine et le Bour Saloum." },
+      { t: "qcm", q: "Quel royaume a été battu à Danki en 1549 ?", choix: ["le Djolof", "le Cayor", "le Rip"], r: "le Djolof", expl: "À Danki, le Djolof a été battu par l'armée du Cayor." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque royaume à sa capitale.", paires: [["Djolof", "Yang-Yang"], ["Cayor", "Mboul"], ["Baol", "Lambaye"], ["Saloum", "Kahone"], ["Rip", "Nioro"]], expl: "C'est la colonne « Capitale » du tableau." },
+      { t: "relier", q: "Relie chaque royaume au titre de son souverain.", paires: [["Djolof", "Bourba"], ["Walo", "Brack"], ["Baol", "Tègne"], ["Cayor", "Damel"], ["Tékrour", "Almamy"]], expl: "C'est la colonne « Titre du souverain »." },
+      { t: "saisie", q: "Qui a fondé le Saloum ?", r: "Mbégane Ndour", expl: "Le Saloum a été fondé par Mbégane Ndour." },
+      { t: "qcm", q: "Qui a fondé le Sine ?", choix: ["Meïssa Waly Dione", "Barka Mbodj", "Koli Tenguella"], r: "Meïssa Waly Dione", expl: "Meïssa Waly Dione a fondé le Sine au 14e siècle." },
+      { t: "saisie", q: "En quelle année Lat Dior est-il devenu Damel du Cayor ?", r: "1862", nombre: true, expl: "Lat Dior devient Damel en 1862." },
+      { t: "qcm", q: "Quel autre nom donne-t-on au Tékrour ?", choix: ["le Fouta Toro", "le Djolof", "le Baol"], r: "le Fouta Toro", expl: "Koli Tenguella conquiert le Tékrour et crée le Fouta Toro au 15e siècle." },
+      { t: "trous", q: "Complète.", texte: "Le Walo a été fondé par Barka [Mbodj]. Sa capitale était [Nder] et son souverain s'appelait le [Brack].", expl: "La ligne du Walo dans le tableau." },
+      { t: "vf", q: "Le Sine a résisté à l'islamisation jusqu'au 19e siècle.", r: true, expl: "C'est un fait marquant du Sine." }
+    ],
+    [
+      { t: "qcm", q: "Pourquoi Amary Ngoné Sobel porte-t-il le titre de Damel-Tègne ?", choix: ["parce qu'il a réuni le Cayor et le Baol", "parce qu'il a fondé le Walo", "parce qu'il a battu les Maures"], r: "parce qu'il a réuni le Cayor et le Baol", expl: "Damel = roi du Cayor ; Tègne = roi du Baol. Il régnait sur les deux." },
+      { t: "relier", q: "Relie chaque date à son événement.", paires: [["1549", "bataille de Danki"], ["1862", "Lat Dior devient Damel"], ["1833", "mariage de Ndjeumbeut Mbodj"], ["1867", "défaite de Maba Diakhou Ba"]], expl: "Les dates du tableau." },
+      { t: "qcm", q: "Contre qui Maba Diakhou Ba a-t-il été battu en 1867 ?", choix: ["Coumba Ndoffène", "Lat Dior", "Ndiadiane Ndiaye"], r: "Coumba Ndoffène", expl: "Le chef du Rip, Maba Diakhou Ba, a été battu par Coumba Ndoffène, Bour du Sine." },
+      { t: "classer", q: "Range ces faits selon le royaume.", cases: ["Walo", "Cayor", "Rip"], items: [["suicide collectif des femmes de Nder", "Walo"], ["guerre contre les Maures du Trarza", "Walo"], ["Lat Dior devient Damel", "Cayor"], ["bataille de Dékheulé", "Cayor"], ["guerre sainte de Maba Diakhou Ba", "Rip"], ["bataille de Pathé Badiane", "Rip"]], expl: "Chaque fait appartient à la ligne d'un royaume du tableau." },
+      { t: "vf", q: "Le Baol a gagné son indépendance après la bataille de Danki.", r: true, expl: "Comme le Cayor, le Baol se libère du Djolof après Danki." },
+      { t: "qcm", q: "Lequel de ces souverains n'est PAS un Bour ?", choix: ["le souverain du Walo", "le souverain du Sine", "le souverain du Saloum"], r: "le souverain du Walo", expl: "Le souverain du Walo est le Brack." }
+    ],
+    [
+      { t: "trous", q: "Complète.", texte: "Le Djolof avait pour capitale [Yang-Yang] et son souverain était le [Bourba]. En [1549], il fut battu à Danki par l'armée du [Cayor].", expl: "Le Djolof dominait les autres royaumes jusqu'à Danki." },
+      { t: "probleme", q: "Le Djolof a été battu à Danki en 1549. Lat Dior est devenu Damel en 1862.", etapes: [{ q: "Combien d'années séparent ces deux événements ?", r: "313", unite: "ans" }], expl: "1862 − 1549 = 313 ans." },
+      { t: "classer", q: "Range ces royaumes selon le titre de leur souverain.", cases: ["Bour", "Almamy", "autre titre"], items: [["Sine", "Bour"], ["Saloum", "Bour"], ["Tékrour", "Almamy"], ["Rip", "Almamy"], ["Walo", "autre titre"], ["Cayor", "autre titre"]], expl: "Bour : Sine et Saloum. Almamy : Tékrour et Rip. Walo : Brack ; Cayor : Damel." },
+      { t: "qcm", q: "Quelle capitale va avec le souverain appelé Tègne ?", choix: ["Lambaye", "Mboul", "Diakhao", "Nioro"], r: "Lambaye", expl: "Le Tègne régnait sur le Baol, capitale Lambaye." },
+      { t: "relier", q: "Relie chaque fondateur à son royaume.", paires: [["Ndiadiane Ndiaye", "Djolof"], ["Barka Mbodj", "Walo"], ["Meïssa Waly Dione", "Sine"], ["Mbégane Ndour", "Saloum"]], expl: "Les fondateurs cités dans le tableau." }
+    ]
+  ]
+});
+
+
 /* ---- hi-royaumes-senegal.js ---- */
 // À VÉRIFIER : le cahier (photo 0153) écrit « En 1549 (17e siècle) ». L'année 1549 appartient au 16e siècle ; le module écrit 16e siècle.
 LECONS.push({
@@ -3947,6 +4080,65 @@ LECONS.push({
 });
 
 
+/* ---- ma-geo-cercle.js ---- */
+// À VÉRIFIER : le début de la leçon manque (photo 2026-11-25_16 commence en milieu de phrase) ; date estimée.
+// Le cahier dit que la corde « ne passe pas par le centre » : en géométrie, le diamètre est la plus grande des cordes.
+// Le module garde la leçon du cahier et ne pose aucune question piège là-dessus.
+LECONS.push({
+  id: "ma-geo-cercle",
+  cahier: "maths",
+  matiere: "Géométrie",
+  titre: "Le cercle",
+  date: "2026-11-24",
+  photos: ["2026-11-25_16.jpg"],
+  retiens:
+    "<p>Le <b>cercle</b> est formé de points situés <b>à égale distance</b> d'un point appelé <b>centre du cercle</b>.</p>" +
+    "<ul><li>Le <b>disque</b> est l'aire (la surface) délimitée par le cercle.</li>" +
+    "<li>La <b>circonférence</b> ou <b>périmètre</b> est la longueur du cercle.</li>" +
+    "<li>Le <b>rayon</b> est un segment qui joint le centre à un point du cercle.</li>" +
+    "<li>Le <b>diamètre</b> est un segment qui passe par le centre et partage le cercle en 2 demi-cercles. Il mesure <b>2 fois le rayon</b>.</li>" +
+    "<li>La <b>corde</b> joint deux points du cercle sans passer par le centre.</li>" +
+    "<li>L'<b>arc</b> est la partie du cercle comprise entre deux points.</li></ul>" +
+    "<p>Ex : pour construire un cercle de 8 cm de diamètre, on ouvre le compas de la moitié de 8 cm : le rayon mesure <b>4 cm</b>.</p>",
+  astuce: "<b>Diamètre = rayon × 2</b> et <b>rayon = diamètre : 2</b>. Le compas s'ouvre toujours de la longueur du rayon.",
+  regle: "Tous les points du cercle sont à la même distance du centre : c'est le rayon. Le diamètre passe par le centre et mesure deux rayons.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Comment s'appelle le point situé à égale distance de tous les points du cercle ?", choix: ["le centre", "le rayon", "l'arc"], r: "le centre", expl: "Tous les points du cercle sont à la même distance du centre." },
+      { t: "qcm", q: "Le segment qui joint le centre à un point du cercle s'appelle…", choix: ["le rayon", "le diamètre", "la corde"], r: "le rayon", expl: "Le rayon va du centre jusqu'au cercle." },
+      { t: "qcm", q: "La longueur du cercle s'appelle…", choix: ["la circonférence", "le disque", "le rayon"], r: "la circonférence", expl: "La circonférence, ou périmètre, est la longueur du cercle." },
+      { t: "vf", q: "Le diamètre passe par le centre du cercle.", r: true, expl: "Il partage le cercle en 2 demi-cercles." },
+      { t: "vf", q: "Le disque est la longueur du cercle.", r: false, expl: "Le disque est la surface ; la longueur, c'est la circonférence." }
+    ],
+    [
+      { t: "relier", q: "Relie chaque mot à sa définition.", paires: [["rayon", "du centre à un point du cercle"], ["diamètre", "passe par le centre"], ["corde", "joint deux points du cercle"], ["arc", "partie du cercle entre deux points"], ["disque", "surface du cercle"]], expl: "Les mots de la leçon." },
+      { t: "saisie", q: "Un cercle a 8 cm de diamètre. Son rayon mesure…", r: "4", nombre: true, unite: "cm", expl: "Rayon = diamètre : 2 = 8 : 2 = 4 cm." },
+      { t: "saisie", q: "Un cercle a 5 cm de rayon. Son diamètre mesure…", r: "10", nombre: true, unite: "cm", expl: "Diamètre = rayon × 2 = 5 × 2 = 10 cm." },
+      { t: "saisie", q: "Diamètre : 12 cm. Rayon = …", r: "6", nombre: true, unite: "cm", expl: "12 : 2 = 6 cm." },
+      { t: "qcm", q: "Pour tracer un cercle de 6 cm de diamètre, j'ouvre mon compas de…", choix: ["3 cm", "6 cm", "12 cm"], r: "3 cm", expl: "Le compas s'ouvre de la longueur du rayon : 6 : 2 = 3 cm." },
+      { t: "qcm", q: "En combien de parties le diamètre partage-t-il le cercle ?", choix: ["2 demi-cercles", "3 parties", "4 quarts"], r: "2 demi-cercles", expl: "Le diamètre partage le cercle en 2 demi-cercles." },
+      { t: "trous", q: "Complète.", nombre: true, texte: "rayon 7 cm → diamètre [14] cm — diamètre 20 cm → rayon [10] cm — rayon 2,5 cm → diamètre [5] cm", expl: "Diamètre = rayon × 2 ; rayon = diamètre : 2." },
+      { t: "vf", q: "Tous les rayons d'un même cercle ont la même longueur.", r: true, expl: "Tous les points du cercle sont à égale distance du centre." }
+    ],
+    [
+      { t: "saisie", q: "Diamètre : 9 cm. Rayon = …", r: "4,5", nombre: true, unite: "cm", expl: "9 : 2 = 4,5 cm." },
+      { t: "qcm", q: "Combien de rayons mesure un diamètre ?", choix: ["2", "1", "4"], r: "2", expl: "Le diamètre va d'un bord à l'autre en passant par le centre : 2 rayons." },
+      { t: "classer", q: "Longueur ou surface ?", cases: ["une longueur", "une surface"], items: [["le rayon", "une longueur"], ["le diamètre", "une longueur"], ["la circonférence", "une longueur"], ["le disque", "une surface"]], expl: "Seul le disque est une surface ; les autres se mesurent en cm, m…" },
+      { t: "saisie", q: "Un rond-point a un rayon de 15 m. Quel est son diamètre ?", r: "30", nombre: true, unite: "m", expl: "15 × 2 = 30 m." },
+      { t: "qcm", q: "Deux cercles : le premier a un rayon de 4 cm, le second un diamètre de 7 cm. Lequel est le plus grand ?", choix: ["le premier", "le second", "ils sont égaux"], r: "le premier", expl: "Premier : diamètre 4 × 2 = 8 cm, plus grand que 7 cm." },
+      { t: "qcm", q: "La partie du cercle comprise entre deux points s'appelle…", choix: ["un arc", "une corde", "un rayon"], r: "un arc", expl: "L'arc est un morceau du cercle lui-même ; la corde est le segment droit qui joint les deux points." }
+    ],
+    [
+      { t: "probleme", q: "Moussa trace un cercle de 10 cm de diamètre, puis un autre cercle de même centre dont le rayon est 2 cm plus long.", etapes: [{ q: "Étape 1 : rayon du premier cercle", r: "5", unite: "cm" }, { q: "Étape 2 : rayon du second cercle", r: "7", unite: "cm" }, { q: "Étape 3 : diamètre du second cercle", r: "14", unite: "cm" }], expl: "10 : 2 = 5 ; 5 + 2 = 7 ; 7 × 2 = 14 cm." },
+      { t: "probleme", q: "Une table ronde a 1,2 m de diamètre. On veut la recouvrir d'une nappe ronde qui dépasse de 10 cm tout autour.", etapes: [{ q: "Étape 1 : rayon de la table en cm", r: "60", unite: "cm" }, { q: "Étape 2 : rayon de la nappe en cm", r: "70", unite: "cm" }, { q: "Étape 3 : diamètre de la nappe en cm", r: "140", unite: "cm" }], expl: "1,2 m = 120 cm ; 120 : 2 = 60 ; 60 + 10 = 70 ; 70 × 2 = 140 cm." },
+      { t: "trous", q: "Complète la leçon.", texte: "Le [rayon] joint le centre à un point du cercle. Le [diamètre] passe par le centre. La longueur du cercle est la [circonférence]. La surface du cercle est le [disque].", expl: "Les quatre mots essentiels." },
+      { t: "qcm", q: "Pour dessiner un cercle de 16 cm de diamètre sur le tableau, la maîtresse attache une craie à une ficelle. Quelle longueur de ficelle doit-elle laisser ?", choix: ["8 cm", "16 cm", "32 cm"], r: "8 cm", expl: "La ficelle joue le rôle du rayon : 16 : 2 = 8 cm." },
+      { t: "vf", q: "Si deux cercles ont le même diamètre, ils ont aussi le même rayon.", r: true, expl: "Le rayon est toujours la moitié du diamètre." }
+    ]
+  ]
+});
+
+
 /* ---- ma-geo-droite-demi-droite-segment.js ---- */
 LECONS.push({
   id: "ma-geo-droite-demi-droite-segment",
@@ -4281,7 +4473,9 @@ LECONS.push({
       { t: "probleme", q: "Sur un plan, la cour de l'école mesure 9 cm. En réalité, elle mesure 45 m. Sur le même plan, le préau mesure 2 cm.", etapes: [{ q: "Étape 1 : dénominateur de l'échelle (1/…)", r: "500" }, { q: "Étape 2 : longueur réelle du préau (en m)", r: "10", unite: "m" }], expl: "45 m = 4 500 cm ; 4 500 : 9 = 500, échelle 1/500 ; préau : 2 × 500 = 1 000 cm = 10 m." },
       { t: "probleme", q: "Sur une carte, Dakar et Thiès (70 km) sont à 7 cm l'une de l'autre. Sur la même carte, Dakar et Mbour sont à 8 cm.", etapes: [{ q: "Étape 1 : dénominateur de l'échelle (1/…)", r: "1000000" }, { q: "Étape 2 : distance réelle Dakar–Mbour (en km)", r: "80", unite: "km" }], expl: "70 km = 7 000 000 cm ; 7 000 000 : 7 = 1 000 000 ; 8 × 1 000 000 = 8 000 000 cm = 80 km." },
       { t: "probleme", q: "Sur le plan d'une maison, la chambre de Mamadou mesure 8 cm de long. En réalité, elle mesure 4 m. Le salon mesure 14 cm sur ce plan.", etapes: [{ q: "Étape 1 : dénominateur de l'échelle (1/…)", r: "50" }, { q: "Étape 2 : longueur réelle du salon (en m)", r: "7", unite: "m" }], expl: "4 m = 400 cm ; 400 : 8 = 50 ; salon : 14 × 50 = 700 cm = 7 m." },
-      { t: "qcm", q: "Un terrain de football de 100 m est dessiné par un trait de 5 cm. Quelle est l'échelle ?", choix: ["1/2 000", "1/20", "1/200", "1/20 000"], r: "1/2 000", expl: "100 m = 10 000 cm ; 10 000 : 5 = 2 000 : l'échelle est 1/2 000." }
+      { t: "qcm", q: "Un terrain de football de 100 m est dessiné par un trait de 5 cm. Quelle est l'échelle ?", choix: ["1/2 000", "1/20", "1/200", "1/20 000"], r: "1/2 000", expl: "100 m = 10 000 cm ; 10 000 : 5 = 2 000 : l'échelle est 1/2 000." },
+      { t: "probleme", q: "Sur un plan au 1/10 000, le champ rectangulaire de ton oncle mesure 36 mm sur 28 mm. Il veut l'entourer de 2 rangs de fil de fer.", etapes: [{ q: "Étape 1 : longueur réelle en m", r: "360", unite: "m" }, { q: "Étape 2 : largeur réelle en m", r: "280", unite: "m" }, { q: "Étape 3 : périmètre réel en m", r: "1280", unite: "m" }, { q: "Étape 4 : longueur de fil de fer en m", r: "2560", unite: "m" }], expl: "36 × 10 000 = 360 000 mm = 360 m ; 28 × 10 000 = 280 000 mm = 280 m ; (360 + 280) × 2 = 1 280 m ; 2 rangs : 1 280 × 2 = 2 560 m." },
+      { t: "qcm", q: "Deux villes sont à 400 km l'une de l'autre. Sur la carte, elles sont à 80 mm. Quelle est l'échelle de la carte ?", choix: ["1/5 000 000", "1/500 000", "1/50"], r: "1/5 000 000", aide: "Convertis 400 km en mm, puis divise par 80.", expl: "400 km = 400 000 000 mm ; 400 000 000 : 80 = 5 000 000 : l'échelle est 1/5 000 000." }
     ]
   ]
 });
@@ -4582,7 +4776,9 @@ LECONS.push({
       { t: "probleme", q: "Six enfants jouent à la chandelle. Ils sont assis en cercle et chaque intervalle mesure 1,5 m. Trouve la longueur du cercle.", etapes: [{ q: "Étape 1 : nombre d'intervalles", r: "6" }, { q: "Étape 2 : longueur du cercle (en m)", r: "9", unite: "m" }], expl: "Le cercle est une ligne fermée : 6 enfants, 6 intervalles ; 6 × 1,5 = 9 m." },
       { t: "probleme", q: "Pour protéger une parcelle rectangulaire de 140 m de périmètre, on l'entoure d'un grillage soutenu par 35 piquets. Chaque piquet coûte 750 F.", etapes: [{ q: "Étape 1 : longueur d'un intervalle (en m)", r: "4", unite: "m" }, { q: "Étape 2 : prix des piquets (en F)", r: "26250", unite: "F" }], expl: "Ligne fermée : 140 : 35 = 4 m ; 750 × 35 = 26 250 F." },
       { t: "probleme", q: "La mairie de Thiès plante des arbres des deux côtés d'une avenue de 450 m, avec un arbre à chaque extrémité et un arbre tous les 9 m.", etapes: [{ q: "Étape 1 : nombre d'intervalles d'un côté", r: "50" }, { q: "Étape 2 : nombre d'arbres d'un côté", r: "51" }, { q: "Étape 3 : nombre d'arbres en tout", r: "102" }], expl: "450 : 9 = 50 intervalles ; un arbre à chaque bout : 50 + 1 = 51 ; deux côtés : 51 × 2 = 102 arbres." },
-      { t: "probleme", q: "Autour d'un terrain carré de 25 m de côté, on plante un poteau tous les 2,5 m.", etapes: [{ q: "Étape 1 : périmètre du terrain (en m)", r: "100", unite: "m" }, { q: "Étape 2 : nombre de poteaux", r: "40" }], expl: "25 × 4 = 100 m ; ligne fermée : NO = NI = 100 : 2,5 = 40 poteaux." }
+      { t: "probleme", q: "Autour d'un terrain carré de 25 m de côté, on plante un poteau tous les 2,5 m.", etapes: [{ q: "Étape 1 : périmètre du terrain (en m)", r: "100", unite: "m" }, { q: "Étape 2 : nombre de poteaux", r: "40" }], expl: "25 × 4 = 100 m ; ligne fermée : NO = NI = 100 : 2,5 = 40 poteaux." },
+      { t: "probleme", q: "Le champ rectangulaire de ton oncle a 45 m de largeur. Il est entouré de 54 piquets distants de 5 m les uns des autres. Calcule la longueur du champ.", etapes: [{ q: "Étape 1 : périmètre du champ", r: "270", unite: "m" }, { q: "Étape 2 : demi-périmètre", r: "135", unite: "m" }, { q: "Étape 3 : longueur du champ", r: "90", unite: "m" }], expl: "Ligne fermée : 54 × 5 = 270 m ; 270 : 2 = 135 m ; 135 − 45 = 90 m." },
+      { t: "probleme", q: "On installe des lampadaires tous les 20 m des deux côtés d'une route de 10 km, sans lampadaire aux deux extrémités.", etapes: [{ q: "Étape 1 : 10 km en m", r: "10000", unite: "m" }, { q: "Étape 2 : nombre d'intervalles d'un côté", r: "500" }, { q: "Étape 3 : lampadaires d'un côté", r: "499" }, { q: "Étape 4 : lampadaires des deux côtés", r: "998" }], expl: "10 000 : 20 = 500 intervalles ; rien aux extrémités : 500 − 1 = 499 lampadaires ; deux côtés : 499 × 2 = 998." }
     ]
   ]
 });
@@ -5058,7 +5254,8 @@ LECONS.push({
       { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Un commerçant de Sandaga vend 1 250 kg de riz lundi, 2 375 kg mardi et 1 890 kg mercredi.", etapes: [{ q: "Riz vendu lundi et mardi :", r: "3625", unite: "kg" }, { q: "Riz vendu en trois jours :", r: "5515", unite: "kg" }], expl: "1 250 + 2 375 = 3 625 ; 3 625 + 1 890 = 5 515 kg." },
       { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Khady achète trois rouleaux de grillage : le premier mesure 125 m, le deuxième 248 m et le troisième 87 m.", etapes: [{ q: "Longueur des deux premiers rouleaux :", r: "373", unite: "m" }, { q: "Longueur totale de grillage :", r: "460", unite: "m" }], expl: "125 + 248 = 373 ; 373 + 87 = 460 m." },
       { t: "trous", q: "Complète la chaîne d'additions.", texte: "1 500 + 2 500 = [4000] ; 4 000 + 6 000 = [10000] ; 10 000 + 25 000 = [35000]", nombre: true, expl: "4 000, puis 10 000, puis 35 000." },
-      { t: "qcm", q: "Fatou a 12 500 F. Sa tante lui donne 7 500 F et son oncle 5 000 F. Combien a-t-elle maintenant ?", choix: ["25 000 F", "20 000 F", "24 000 F", "15 000 F"], r: "25 000 F", expl: "12 500 + 7 500 = 20 000 ; 20 000 + 5 000 = 25 000 F." }
+      { t: "qcm", q: "Fatou a 12 500 F. Sa tante lui donne 7 500 F et son oncle 5 000 F. Combien a-t-elle maintenant ?", choix: ["25 000 F", "20 000 F", "24 000 F", "15 000 F"], r: "25 000 F", expl: "12 500 + 7 500 = 20 000 ; 20 000 + 5 000 = 25 000 F." },
+      { t: "saisie", q: "Pose et calcule : 259,6 + 1 234 + 2,74 = …", r: "1496,34", nombre: true, aide: "Aligne les virgules les unes sous les autres.", expl: "259,60 + 1 234,00 + 2,74 = 1 496,34." }
     ]
   ]
 });
@@ -5670,7 +5867,10 @@ LECONS.push({
       { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Fatou veut acheter un téléphone à 45 000 F. Elle a économisé 28 750 F et son père lui donne 10 000 F.", etapes: [{ q: "Combien Fatou a-t-elle maintenant ?", r: "38750", unite: "F" }, { q: "Combien lui manque-t-il ?", r: "6250", unite: "F" }], expl: "28 750 + 10 000 = 38 750 ; 45 000 − 38 750 = 6 250 F." },
       { t: "probleme", consigne: "Pose les opérations sur ton cahier, puis écris chaque résultat (sans point entre les classes).", q: "Un car doit faire un trajet de 264 km. Il s'arrête une première fois après 98 km, puis roule encore 115 km.", etapes: [{ q: "Distance déjà parcourue :", r: "213", unite: "km" }, { q: "Distance qui reste à parcourir :", r: "51", unite: "km" }], expl: "98 + 115 = 213 ; 264 − 213 = 51 km." },
       { t: "qcm", q: "Moustapha dit : « 4 000 − 1 999 = 2 999 ». Qu'en penses-tu ?", choix: ["Faux, c'est 2 001", "Vrai", "Faux, c'est 3 001"], r: "Faux, c'est 2 001", expl: "4 000 − 1 999 = 2 001. Vérification : 2 001 + 1 999 = 4 000." },
-      { t: "trous", q: "Trouve le nombre qui manque.", texte: "9 000 − [3500] = 5 500", nombre: true, expl: "On cherche ce qu'on enlève : 9 000 − 5 500 = 3 500." }
+      { t: "trous", q: "Trouve le nombre qui manque.", texte: "9 000 − [3500] = 5 500", nombre: true, expl: "On cherche ce qu'on enlève : 9 000 − 5 500 = 3 500." },
+      { t: "saisie", q: "Pose et calcule : 8 897,64 − 7 956 = …", r: "941,64", nombre: true, aide: "Aligne les virgules : 7 956 = 7 956,00.", expl: "8 897,64 − 7 956,00 = 941,64." },
+      { t: "saisie", q: "Pose et calcule : 951 − 198,671 = …", r: "752,329", nombre: true, aide: "Écris 951 = 951,000 pour avoir autant de chiffres après la virgule.", expl: "951,000 − 198,671 = 752,329." },
+      { t: "probleme", q: "Fatou a 25 000 F. Elle achète 3 paires de chaussures à 2 500 F la paire, une robe à 3 500 F et 5 boîtes de perles à 500 F la boîte.", etapes: [{ q: "Étape 1 : prix des chaussures", r: "7500", unite: "F" }, { q: "Étape 2 : prix des perles", r: "2500", unite: "F" }, { q: "Étape 3 : dépense totale", r: "13500", unite: "F" }, { q: "Étape 4 : somme qui lui reste", r: "11500", unite: "F" }], expl: "2 500 × 3 = 7 500 ; 500 × 5 = 2 500 ; 7 500 + 3 500 + 2 500 = 13 500 ; 25 000 − 13 500 = 11 500 F." }
     ]
   ]
 });
@@ -6403,6 +6603,73 @@ LECONS.push({
       { t: "qcm", q: "Deux pays voisins se disputent. Quelle organisation sous-régionale a pour mission de maintenir la paix ?", choix: ["la CEDEAO", "l'OMVG", "la BOAD"], r: "la CEDEAO", expl: "La CEDEAO veut maintenir la paix et la sécurité dans la sous-région." },
       { t: "classer", q: "Range chaque organisation selon son domaine.", cases: ["l'eau des fleuves", "l'argent", "la sécheresse"], items: [["OMVS", "l'eau des fleuves"], ["OMVG", "l'eau des fleuves"], ["BCEAO", "l'argent"], ["BOAD", "l'argent"], ["CILSS", "la sécheresse"]], expl: "Fleuves, banques, sécheresse." },
       { t: "qcm", q: "Pourquoi construire un barrage anti-sel à Diama ?", choix: ["pour que l'eau salée de la mer ne gâte pas les terres et l'eau douce du fleuve", "pour produire du sel", "pour faire venir la mer à Podor"], r: "pour que l'eau salée de la mer ne gâte pas les terres et l'eau douce du fleuve", expl: "Le barrage retient les eaux salées près de l'embouchure." }
+    ]
+  ]
+});
+
+
+/* ---- ve-institutions-locales.js ---- */
+// À VÉRIFIER : au cahier (photo 2026-11-25_01), la ligne « Département | Préfecture | Préfet | nommé » est rangée dans le tableau
+// des institutions décentralisées. La préfecture est une institution DÉCONCENTRÉE (le cahier le dit lui-même le 23 novembre) :
+// le module la range avec la gouvernance et la sous-préfecture. Depuis 2013, on parle aussi de « collectivités territoriales ».
+LECONS.push({
+  id: "ve-institutions-locales",
+  cahier: "vivre",
+  matiere: "Vivre ensemble",
+  titre: "Les institutions locales",
+  date: "2026-11-20",
+  photos: ["2026-11-25_01.jpg", "2026-11-25_04.jpg", "2026-11-25_08.jpg", "2026-11-25_03.jpg"],
+  retiens:
+    "<p>Au Sénégal, il y a <b>deux types d'institutions locales</b> :</p>" +
+    "<ul><li>les institutions <b>décentralisées</b> : le conseil départemental et le conseil municipal ;</li>" +
+    "<li>les institutions <b>déconcentrées</b> : la gouvernance, la préfecture et la sous-préfecture.</li></ul>" +
+    "<p><b>1. Les institutions décentralisées</b> (leurs chefs sont <b>élus</b>)</p>" +
+    "<table><tr><th>Localité</th><th>Institution</th><th>Autorité</th><th>Désignation</th></tr>" +
+    "<tr><td>département</td><td>conseil départemental</td><td>président du conseil</td><td>élection (élu)</td></tr>" +
+    "<tr><td>commune</td><td>conseil municipal</td><td>maire</td><td>élection (élu)</td></tr></table>" +
+    "<p>Les conseils ont pour mission de : gérer les terres de la commune et du département ; voter le budget ; fixer les taxes communales ou départementales.</p>" +
+    "<p><b>2. Les institutions déconcentrées</b> (leurs chefs sont <b>nommés</b>)</p>" +
+    "<p>Avec la déconcentration, l'État décongestionne le pouvoir central et il est représenté au niveau local par des gouverneurs, des préfets et des sous-préfets.</p>" +
+    "<table><tr><th>Localité</th><th>Institution</th><th>Autorité</th></tr>" +
+    "<tr><td>région</td><td>gouvernance</td><td>gouverneur</td></tr>" +
+    "<tr><td>département</td><td>préfecture</td><td>préfet</td></tr>" +
+    "<tr><td>arrondissement</td><td>sous-préfecture</td><td>sous-préfet</td></tr></table>" +
+    "<p>Ces autorités sont <b>nommées par un décret présidentiel</b>. Elles ont pour missions de : veiller au maintien de l'ordre ; veiller à la protection des personnes et de leurs biens ; mettre en œuvre et coordonner les politiques du gouvernement.</p>" +
+    "<p><b>NB :</b> le département et la commune sont les <b>collectivités locales</b> de la République.</p>",
+  astuce: "Dé<b>centr</b>alisé → les habitants <b>élisent</b> (maire, président du conseil). Dé<b>concentr</b>é → l'État <b>nomme</b> (gouverneur, préfet, sous-préfet).",
+  regle: "Les institutions décentralisées (conseil départemental, conseil municipal) ont des chefs élus ; les institutions déconcentrées (gouvernance, préfecture, sous-préfecture) ont des chefs nommés par décret présidentiel et représentent l'État.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Combien de types d'institutions locales y a-t-il au Sénégal ?", choix: ["deux", "trois", "quatre"], r: "deux", expl: "Les institutions décentralisées et les institutions déconcentrées." },
+      { t: "qcm", q: "Qui dirige le conseil municipal ?", choix: ["le maire", "le préfet", "le gouverneur"], r: "le maire", expl: "Le maire dirige la commune ; il est élu." },
+      { t: "qcm", q: "Qui représente l'État dans la région ?", choix: ["le gouverneur", "le maire", "le président du conseil départemental"], r: "le gouverneur", expl: "Le gouverneur dirige la gouvernance de la région." },
+      { t: "vf", q: "Le maire est élu.", r: true, expl: "Les chefs des institutions décentralisées sont élus." },
+      { t: "vf", q: "Le préfet est élu par les habitants.", r: false, expl: "Le préfet est nommé par un décret présidentiel." }
+    ],
+    [
+      { t: "classer", q: "Range ces institutions.", cases: ["décentralisée", "déconcentrée"], items: [["conseil municipal", "décentralisée"], ["conseil départemental", "décentralisée"], ["gouvernance", "déconcentrée"], ["préfecture", "déconcentrée"], ["sous-préfecture", "déconcentrée"]], expl: "Les conseils sont décentralisés ; gouvernance, préfecture et sous-préfecture sont déconcentrées." },
+      { t: "relier", q: "Relie chaque institution à son autorité.", paires: [["gouvernance", "gouverneur"], ["préfecture", "préfet"], ["sous-préfecture", "sous-préfet"], ["conseil municipal", "maire"], ["conseil départemental", "président du conseil"]], expl: "C'est le tableau de la leçon." },
+      { t: "relier", q: "Relie chaque localité à son institution déconcentrée.", paires: [["région", "gouvernance"], ["département", "préfecture"], ["arrondissement", "sous-préfecture"]], expl: "Région → gouvernance ; département → préfecture ; arrondissement → sous-préfecture." },
+      { t: "classer", q: "Élu ou nommé ?", cases: ["élu", "nommé"], items: [["le maire", "élu"], ["le président du conseil départemental", "élu"], ["le gouverneur", "nommé"], ["le préfet", "nommé"], ["le sous-préfet", "nommé"]], expl: "Décentralisé : élu. Déconcentré : nommé par décret présidentiel." },
+      { t: "qcm", q: "Par quoi le gouverneur, le préfet et le sous-préfet sont-ils nommés ?", choix: ["par un décret présidentiel", "par une élection", "par le maire"], r: "par un décret présidentiel", expl: "C'est le président de la République qui les nomme." },
+      { t: "saisie", q: "Qui dirige la sous-préfecture ?", r: ["le sous-préfet", "sous-préfet"], expl: "La sous-préfecture se trouve dans l'arrondissement ; elle est dirigée par le sous-préfet." },
+      { t: "trous", q: "Complète.", texte: "Le [maire] dirige la commune. Le [préfet] dirige le département. Le [gouverneur] dirige la région.", expl: "Le maire est élu ; le préfet et le gouverneur sont nommés." },
+      { t: "vf", q: "Voter le budget est une mission des conseils (municipal et départemental).", r: true, expl: "Les conseils gèrent les terres, votent le budget et fixent les taxes." }
+    ],
+    [
+      { t: "classer", q: "Qui a cette mission ?", cases: ["les conseils (décentralisés)", "les autorités déconcentrées"], items: [["gérer les terres de la commune", "les conseils (décentralisés)"], ["voter le budget", "les conseils (décentralisés)"], ["fixer les taxes communales", "les conseils (décentralisés)"], ["veiller au maintien de l'ordre", "les autorités déconcentrées"], ["protéger les personnes et leurs biens", "les autorités déconcentrées"], ["coordonner les politiques du gouvernement", "les autorités déconcentrées"]], expl: "Les conseils s'occupent de la gestion locale ; les autorités déconcentrées représentent l'État." },
+      { t: "qcm", q: "Dans un département, on trouve…", choix: ["une préfecture et un conseil départemental", "seulement une gouvernance", "seulement un conseil municipal"], r: "une préfecture et un conseil départemental", expl: "Le département a une institution déconcentrée (la préfecture, avec le préfet nommé) et une institution décentralisée (le conseil départemental, avec un président élu)." },
+      { t: "qcm", q: "Quelles sont les collectivités locales de la République ?", choix: ["le département et la commune", "la région et l'arrondissement", "la préfecture et la gouvernance"], r: "le département et la commune", expl: "C'est le NB de la leçon." },
+      { t: "vf", q: "Avec la déconcentration, l'État est représenté au niveau local.", r: true, expl: "Il est représenté par des gouverneurs, des préfets et des sous-préfets." },
+      { t: "qcm", q: "Le préfet est-il une autorité décentralisée ?", choix: ["Non, il est déconcentré : il est nommé et représente l'État.", "Oui, car il travaille dans le département.", "Oui, car il est élu."], r: "Non, il est déconcentré : il est nommé et représente l'État.", expl: "Ne te fie pas au mot « département » : le préfet est nommé, donc déconcentré." },
+      { t: "ordre", q: "Range du plus grand au plus petit territoire.", r: "région département arrondissement", expl: "La région contient des départements, qui contiennent des arrondissements." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "Les institutions [décentralisées] sont le conseil départemental et le conseil municipal ; leurs chefs sont [élus]. Les institutions [déconcentrées] sont la gouvernance, la préfecture et la sous-préfecture ; leurs chefs sont [nommés] par un décret présidentiel.", expl: "Toute la leçon en deux phrases." },
+      { t: "qcm", q: "Le marché de ta commune a besoin de nouveaux hangars. Quelle institution vote le budget pour les construire ?", choix: ["le conseil municipal", "la gouvernance", "la sous-préfecture"], r: "le conseil municipal", expl: "Le conseil municipal vote le budget de la commune." },
+      { t: "qcm", q: "Une bagarre éclate pendant un match de navétane. Quelle autorité veille au maintien de l'ordre dans le département ?", choix: ["le préfet", "le président du conseil départemental", "le maire"], r: "le préfet", expl: "Les autorités déconcentrées veillent au maintien de l'ordre." },
+      { t: "relier", q: "Relie chaque autorité à sa désignation.", paires: [["maire", "élu"], ["gouverneur", "nommé par décret"], ["président du conseil départemental", "élu"], ["sous-préfet", "nommé par décret"]], expl: "Décentralisé = élu ; déconcentré = nommé." },
+      { t: "vf", q: "Une institution déconcentrée met en œuvre les politiques du gouvernement.", r: true, expl: "Elle représente l'État au niveau local." }
     ]
   ]
 });
