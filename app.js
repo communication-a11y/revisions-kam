@@ -131,7 +131,13 @@ function ecranAccueil() {
   });
   ajouter(app, grille);
   if (LECONS.length > 1) {
-    ajouter(app, h("button", { class: "examen", onclick: function () { lancerSession(seriesExamen(), "Examen blanc", "#/"); } }, "Examen blanc : 20 questions mélangées"));
+    var exs = examenSemaine(), tents = exs.tentatives || [];
+    var meilleur = tents.reduce(function (m, t) { return Math.max(m, t.justes); }, 0);
+    ajouter(app, h("button", { class: "examen", onclick: function () { lancerSession(seriesExamen(), "Examen de la semaine", "#/", null, etat.examen); } },
+      h("strong", null, "Examen de la semaine"), h("br"),
+      h("small", null, "du " + dateFr(exs.semaine) + " · " + exs.cles.length + " questions de toutes les matières" +
+        (tents.length ? " · ton meilleur score : " + meilleur + "/" + exs.cles.length : " · nouveau !"))));
+    if ((etat.examens || []).length) ajouter(app, h("p", null, h("button", { class: "lien", onclick: function () { location.hash = "#/examens"; } }, "Mes examens passés (" + etat.examens.length + ")")));
   }
   ajouter(app, h("div", { class: "pied" },
     h("button", { class: "lien", onclick: function () { location.hash = "#/parent"; } }, "Espace parent")));
@@ -180,21 +186,90 @@ function ecranLecon(lid) {
   ajouter(app, ol);
 }
 
+function ecranExamens() {
+  vider();
+  ajouter(app, [barre("#/", "Accueil"), h("h1", null, "Mes examens passés")]);
+  var liste = (etat.examens || []).slice().reverse();
+  if (!liste.length) { ajouter(app, h("p", null, "Tes examens apparaîtront ici à partir de la semaine prochaine.")); return; }
+  ajouter(app, h("p", null, "Chaque lundi, l'examen de la semaine précédente est rangé ici. Tu peux le refaire pour voir tes progrès."));
+  var ul = h("ul", { class: "lecons" });
+  liste.forEach(function (e) {
+    var t = e.tentatives || [], best = t.reduce(function (m, x) { return Math.max(m, x.justes); }, 0);
+    var matieres = {}; (e.cles || []).forEach(function (k) { var x = trouverEx(k); if (x) matieres[x.lecon.cahier] = 1; });
+    var noms = CAHIERS.filter(function (c) { return matieres[c.id]; }).map(function (c) { return c.nom; }).join(", ");
+    var dispo = (e.cles || []).map(trouverEx).filter(Boolean);
+    ul.appendChild(h("li", null, h("button", { class: "lecon", disabled: !dispo.length, onclick: function () { lancerSession(dispo, "Examen du " + dateFr(e.semaine), "#/examens", null, e); } },
+      h("span", { class: "titre" }, h("small", null, noms), "Semaine du " + dateFr(e.semaine)),
+      h("span", { class: "score" }, "1re fois : " + (t.length ? t[0].justes : "–") + " / " + e.total, h("br"), "meilleur : " + best + " / " + e.total + " · " + t.length + " fois"))));
+  });
+  ajouter(app, ul);
+}
+
 /* ---------------- Séries ---------------- */
 function seriesRevision() {
   return melanger(erreursDues()).slice(0, 15).map(function (e) { var t = trouverEx(e.k); t.revision = true; return t; });
 }
+/* Examen de la semaine : composé le lundi, identique toute la semaine.
+   Répartition fixe par cahier, environ un tiers de leçons récentes, au plus 2 questions par leçon,
+   et aucune question déjà tombée dans un examen tant que sa matière n'a pas été parcourue en entier. */
+var QUOTAS = [["francais", 6], ["maths", 6], ["histgeo", 3], ["sciences", 2], ["vivre", 2], ["anglais", 1]];
+var EXAMEN_TAILLE = 20, RECENT_JOURS = 21;
+function isoLocal(d) { return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
+function lundiDe(d) { d = new Date(d.getFullYear(), d.getMonth(), d.getDate()); d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); return isoLocal(d); }
+function composerExamen(semaine) {
+  var vus = etat.examVus || {}, debutRecent = new Date(semaine + "T00:00:00"); debutRecent.setDate(debutRecent.getDate() - RECENT_JOURS);
+  var limite = isoLocal(debutRecent), parCahier = {};
+  LECONS.forEach(function (l) {
+    (l.niveaux || []).forEach(function (niv, n) { if (n >= 1) (niv || []).forEach(function (ex, i) {
+      (parCahier[l.cahier] = parCahier[l.cahier] || []).push({ k: l.id + ":" + n + ":" + i, lid: l.id, recent: (l.date || "") >= limite });
+    }); });
+  });
+  // Quotas : ce qu'un cahier ne peut pas fournir passe au français puis aux maths.
+  var quotas = {}, reste = 0;
+  QUOTAS.forEach(function (q) { var dispo = (parCahier[q[0]] || []).length; quotas[q[0]] = Math.min(q[1], dispo); reste += q[1] - quotas[q[0]]; });
+  ["francais", "maths", "histgeo", "vivre", "sciences", "anglais"].forEach(function (c) { var dispo = (parCahier[c] || []).length; var plus = Math.min(reste, dispo - (quotas[c] || 0)); if (plus > 0) { quotas[c] = (quotas[c] || 0) + plus; reste -= plus; } });
+  var cles = [];
+  Object.keys(quotas).forEach(function (c) {
+    var q = quotas[c]; if (!q) return;
+    var deja = vus[c] || [], dejaSet = {}; deja.forEach(function (k) { dejaSet[k] = 1; });
+    var neufs = parCahier[c].filter(function (o) { return !dejaSet[o.k]; });
+    if (neufs.length < q) { deja = []; dejaSet = {}; neufs = parCahier[c].slice(); } // matière parcourue : on repart de zéro
+    var parLecon = {}, pris = [];
+    function prendre(liste, combien) {
+      melanger(liste).forEach(function (o) {
+        if (pris.length >= combien || pris.indexOf(o) >= 0 || (parLecon[o.lid] || 0) >= 2) return;
+        pris.push(o); parLecon[o.lid] = (parLecon[o.lid] || 0) + 1;
+      });
+    }
+    prendre(neufs.filter(function (o) { return o.recent; }), Math.round(q / 3));
+    prendre(neufs, q);
+    if (pris.length < q) { parLecon = {}; pris.forEach(function (o) { parLecon[o.lid] = -99; }); prendre(neufs, q); } // trop peu de leçons : on lève la limite
+    pris.forEach(function (o) { cles.push(o.k); deja.push(o.k); });
+    vus[c] = deja;
+  });
+  etat.examVus = vus;
+  return melanger(cles);
+}
+function examenSemaine() {
+  var semaine = lundiDe(new Date()), ex = etat.examen;
+  if (!ex || ex.semaine !== semaine) {
+    if (ex && ex.tentatives && ex.tentatives.length) {
+      etat.examens = (etat.examens || []).concat([{ semaine: ex.semaine, total: ex.cles.length, cles: ex.cles, tentatives: ex.tentatives }]).slice(-60);
+    }
+    ex = etat.examen = { semaine: semaine, cles: composerExamen(semaine), tentatives: [] };
+    sauver();
+  }
+  return ex;
+}
 function seriesExamen() {
-  var tout = [];
-  LECONS.forEach(function (l) { (l.niveaux || []).forEach(function (niv, n) { if (n >= 1) (niv || []).forEach(function (ex, i) { tout.push({ lecon: l, n: n, i: i, ex: ex }); }); }); });
-  return melanger(tout).slice(0, 20);
+  return examenSemaine().cles.map(trouverEx).filter(Boolean);
 }
 
 /* ---------------- Session d'exercices ---------------- */
 var session = null;
-function lancerSession(items, titre, retour, cible) {
+function lancerSession(items, titre, retour, cible, examen) {
   if (!items.length) return;
-  session = { items: items, i: 0, justes: 0, titre: titre, retour: retour, cible: cible || null, debut: Date.now() };
+  session = { items: items, i: 0, justes: 0, titre: titre, retour: retour, cible: cible || null, examen: examen || null, debut: Date.now() };
   if (location.hash !== "#/exercice") location.hash = "#/exercice"; else afficherQuestion();
 }
 
@@ -272,6 +347,7 @@ function afficherResultat() {
   var sec = Math.round((Date.now() - session.debut) / 1000);
   etat.journal.push({ d: new Date().toISOString(), titre: session.cible ? parId[session.cible.lid].titre + " (" + NIVEAUX[session.cible.n].nom + ")" : session.titre, justes: session.justes, total: total, sec: sec });
   if (etat.journal.length > 300) etat.journal = etat.journal.slice(-300);
+  if (session.examen) session.examen.tentatives.push({ d: new Date().toISOString(), justes: session.justes, total: total, sec: sec });
   var suivantOuvert = false;
   if (session.cible) {
     var k = session.cible.lid + ":" + session.cible.n, inf = etat.niveaux[k] || { best: 0, essais: 0 };
@@ -292,6 +368,7 @@ function afficherResultat() {
     h("p", null, message),
     suivantOuvert ? h("p", { style: "color:var(--vert)" }, "Le niveau suivant est débloqué !") : null,
     h("div", { class: "actions" },
+      s.examen ? h("button", { class: "secondaire", onclick: function () { lancerSession(s.examen.cles.map(trouverEx).filter(Boolean), s.titre, s.retour, null, s.examen); } }, "Recommencer l'examen") : null,
       s.cible ? h("button", { class: "secondaire", onclick: function () { var l = parId[s.cible.lid]; lancerSession(l.niveaux[s.cible.n].map(function (ex, i) { return { lecon: l, n: s.cible.n, i: i, ex: ex }; }), s.titre, s.retour, s.cible); } }, "Recommencer") : null,
       h("button", { class: "valider", onclick: function () { session = null; location.hash = s.retour; } }, "Continuer"))));
 }
@@ -503,6 +580,19 @@ function ecranParent() {
     });
     ajouter(app, te);
   }
+  // Examens de la semaine
+  var lesExamens = (etat.examens || []).slice();
+  if (etat.examen && etat.examen.tentatives.length) lesExamens.push({ semaine: etat.examen.semaine, total: etat.examen.cles.length, tentatives: etat.examen.tentatives });
+  ajouter(app, h("h2", null, "Examens de la semaine"));
+  if (!lesExamens.length) ajouter(app, h("p", null, "Aucun examen fait pour l'instant. Un nouvel examen de " + EXAMEN_TAILLE + " questions est composé chaque lundi."));
+  else {
+    var tx = h("table", { class: "tableau" }, h("tr", null, h("th", null, "Semaine du"), h("th", null, "1re tentative"), h("th", null, "Meilleur score"), h("th", null, "Tentatives")));
+    lesExamens.slice().reverse().forEach(function (e) {
+      var best = e.tentatives.reduce(function (m, t) { return Math.max(m, t.justes); }, 0);
+      tx.appendChild(h("tr", null, h("td", null, dateFr(e.semaine)), h("td", null, e.tentatives[0].justes + " / " + e.total), h("td", null, best + " / " + e.total), h("td", null, String(e.tentatives.length))));
+    });
+    ajouter(app, tx);
+  }
   // Historique
   ajouter(app, h("h2", null, "Dernières séries"));
   var th = h("table", { class: "tableau" }, h("tr", null, h("th", null, "Quand"), h("th", null, "Série"), h("th", null, "Score"), h("th", null, "Durée")));
@@ -529,6 +619,7 @@ function router() {
   else if (p[0] === "lecon") ecranLecon(decodeURIComponent(p[1]));
   else if (p[0] === "exercice") afficherQuestion();
   else if (p[0] === "parent") ecranParent();
+  else if (p[0] === "examens") ecranExamens();
   else ecranAccueil();
 }
 window.addEventListener("hashchange", router);
