@@ -1,5 +1,5 @@
 var LECONS = window.LECONS = [];
-window.VERSION_CONTENU = "202611251925";
+window.VERSION_CONTENU = "202611261240";
 
 /* ---- an-subject-object-pronouns.js ---- */
 // Corrections des exemples du cahier : « Argentian » → « Argentinian » ; « too church » → « to church » ;

@@ -26,8 +26,8 @@ LECONS.forEach(function (l) { parId[l.id] = l; });
 /* ---------------- Mémoire ---------------- */
 var etat = charger();
 function charger() {
-  var vide = { prenom: "Kam", etoiles: 0, niveaux: {}, erreurs: [], journal: [], code: "" };
-  try { var s = JSON.parse(localStorage.getItem(CLE)); return s ? Object.assign(vide, s) : vide; }
+  var vide = { prenom: "Kamelia", etoiles: 0, niveaux: {}, erreurs: [], journal: [], code: "" };
+  try { var s = JSON.parse(localStorage.getItem(CLE)); if (s && (!s.prenom || s.prenom === "Kam")) s.prenom = "Kamelia"; return s ? Object.assign(vide, s) : vide; }
   catch (e) { return vide; }
 }
 function sauver() { try { localStorage.setItem(CLE, JSON.stringify(etat)); } catch (e) {} }
@@ -514,7 +514,7 @@ function ecranParent() {
   // Réglages
   ajouter(app, h("h2", null, "Réglages"));
   var prenom = h("input", { class: "champ", value: etat.prenom });
-  ajouter(app, h("div", { class: "saisie" }, h("span", null, "Prénom affiché :"), prenom, h("button", { class: "secondaire", onclick: function () { etat.prenom = prenom.value.trim() || "Kam"; sauver(); alert("Enregistré."); } }, "Enregistrer")));
+  ajouter(app, h("div", { class: "saisie" }, h("span", null, "Prénom affiché :"), prenom, h("button", { class: "secondaire", onclick: function () { etat.prenom = prenom.value.trim() || "Kamelia"; sauver(); alert("Enregistré."); } }, "Enregistrer")));
   ajouter(app, h("p", { class: "vide" }, LECONS.length + " leçons dans l'application. Version du contenu : " + (window.VERSION_CONTENU || "?") + "."));
   ajouter(app, h("div", { class: "pied" },
     h("button", { class: "lien", onclick: function () { sessionStorage.removeItem("parent"); location.hash = "#/"; } }, "Fermer l'espace parent"),

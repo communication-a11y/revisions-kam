@@ -1,5 +1,5 @@
 // Garde l'application disponible hors ligne. La version change à chaque nouvelle leçon.
-var CACHE = "kam-202611251925";
+var CACHE = "kam-202611261240";
 var FICHIERS = ["./", "index.html", "style.css", "app.js", "lecons.js", "manifest.webmanifest",
   "icone-192.png", "icone-512.png", "fonts/andika-400.woff2", "fonts/andika-700.woff2", "fonts/cursive.woff2"];
 self.addEventListener("install", function (e) {
