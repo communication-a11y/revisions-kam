@@ -5,9 +5,9 @@
 var CAHIERS = [
   { id: "francais", nom: "Français", detail: "Grammaire, conjugaison, orthographe, vocabulaire", couv: "#c21f32" },
   { id: "maths", nom: "Mathématiques", detail: "Nombres, mesures, géométrie, problèmes", couv: "#1c3f94" },
-  { id: "histgeo", nom: "Histoire et géographie", detail: "", couv: "#17803d" },
+  { id: "histgeo", nom: "Histoire et géographie", court: "Histoire-géo", detail: "", couv: "#17803d" },
   { id: "sciences", nom: "Sciences", detail: "Initiation scientifique et technologique", couv: "#d9822b" },
-  { id: "vivre", nom: "Vivre ensemble", detail: "Vivre ensemble, vivre dans son milieu", couv: "#7b3fa0" },
+  { id: "vivre", nom: "Vivre ensemble", detail: "Vivre ensemble et vivre dans son milieu", couv: "#7b3fa0" },
   { id: "anglais", nom: "Anglais", detail: "", couv: "#0e8c8c" }
 ];
 var NIVEAUX = [
@@ -103,6 +103,56 @@ function trouverEx(k) {
   var niv = l.niveaux[+p[1]]; return niv && niv[+p[2]] ? { lecon: l, n: +p[1], i: +p[2], ex: niv[+p[2]] } : null;
 }
 
+/* ---------------- Couvertures des cahiers ---------------- */
+function icone(id, trait, rempli) {
+  var s = 'stroke="' + trait + '" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"';
+  var f = 'fill="' + rempli + '"';
+  var d = {
+    francais: '<path d="M46 6c-14 4-24 16-28 34l-3 12 9-9c16-4 26-14 28-30z" ' + f + ' ' + s.replace('fill="none"', '') + '/><path d="M15 52l18-22M30 22l8 2M25 30l8 2" ' + s + '/><path d="M10 58h26" ' + s + '/>',
+    maths: '<g transform="rotate(-20 28 46)"><rect x="6" y="40" width="44" height="12" rx="2" ' + f + ' ' + s.replace('fill="none"', '') + '/><path d="M12 40v4M18 40v6M24 40v4M30 40v6M36 40v4M42 40v6" ' + s + ' stroke-width="2.4"/></g><circle cx="44" cy="9" r="3.5" ' + f + ' ' + s.replace('fill="none"', '') + '/><path d="M44 12L36 34M44 12l8 22M39 26h10" ' + s + '/>',
+    histgeo: '<circle cx="32" cy="32" r="23" ' + f + ' ' + s.replace('fill="none"', '') + '/><ellipse cx="32" cy="32" rx="10" ry="23" ' + s + '/><path d="M9 32h46M13 20h38M13 44h38" ' + s + '/>',
+    sciences: '<circle cx="26" cy="26" r="15" ' + f + ' ' + s.replace('fill="none"', '') + '/><path d="M37 37l15 15" ' + s + ' stroke-width="7"/><path d="M20 30c0-8 6-12 13-12-1 8-5 13-13 12zM20 30l7-6" ' + s + '/>',
+    vivre: '<circle cx="19" cy="15" r="7" ' + f + ' ' + s.replace('fill="none"', '') + '/><circle cx="45" cy="15" r="7" ' + f + ' ' + s.replace('fill="none"', '') + '/><path d="M19 23v16M45 23v16M19 39l-6 16M19 39l6 16M45 39l-6 16M45 39l6 16M19 29l13 7 13-7M10 32l9-3M54 32l-9-3" ' + s + '/><path d="M32 46c-3-3-6-1-6 2 0 3 6 7 6 7s6-4 6-7c0-3-3-5-6-2z" ' + f + '/>',
+    anglais: '<path d="M8 12h48v30H30l-12 11v-11H8z" ' + f + ' ' + s.replace('fill="none"', '') + '/><text x="32" y="34" text-anchor="middle" font-family="Andika, sans-serif" font-weight="700" font-size="17" fill="' + trait + '">Hi!</text>'
+  };
+  return '<svg class="icone" viewBox="0 0 64 64" aria-hidden="true">' + d[id] + '</svg>';
+}
+
+function motifA(id) {
+  var p = {
+    francais: '<pattern id="pc-francais" width="40" height="16" patternUnits="userSpaceOnUse"><path d="M0 15.5h40" stroke="#fff" stroke-opacity=".22"/><path d="M0 7.5h40" stroke="#fff" stroke-opacity=".08"/></pattern>',
+    maths: '<pattern id="pc-maths" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M14 0V14H0" fill="none" stroke="#fff" stroke-opacity=".2"/></pattern>',
+    histgeo: '<pattern id="pc-histgeo" width="90" height="90" patternUnits="userSpaceOnUse"><g fill="none" stroke="#fff" stroke-opacity=".18"><circle cx="20" cy="70" r="12"/><circle cx="20" cy="70" r="24"/><circle cx="20" cy="70" r="36"/><circle cx="80" cy="15" r="10"/><circle cx="80" cy="15" r="22"/></g></pattern>',
+    sciences: '<pattern id="pc-sciences" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="2.2" fill="#fff" fill-opacity=".22"/><circle cx="16" cy="16" r="1.4" fill="#fff" fill-opacity=".18"/></pattern>',
+    vivre: '<pattern id="pc-vivre" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="7" height="18" fill="#fff" fill-opacity=".09"/></pattern>',
+    anglais: '<pattern id="pc-anglais" width="28" height="28" patternUnits="userSpaceOnUse"><rect width="14" height="28" fill="#fff" fill-opacity=".07"/><rect width="28" height="14" fill="#fff" fill-opacity=".07"/><path d="M0 7h28M7 0v28" stroke="#fff" stroke-opacity=".12"/></pattern>'
+  };
+  return '<svg class="motif" aria-hidden="true"><defs>' + p[id] + '</defs><rect width="100%" height="100%" fill="url(#pc-' + id + ')"/></svg>';
+}
+
+var ETOILE = '<svg class="etoile-ac" viewBox="0 0 40 40"><path d="M20 2l5.3 11.4 12.4 1.5-9.2 8.5 2.4 12.3L20 29.6 9.1 35.7l2.4-12.3-9.2-8.5 12.4-1.5z" fill="#f0b400" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>';
+var MEDAILLE = '<svg class="medaille" viewBox="0 0 66 82"><path d="M18 2h12l6 30H24zM36 2h12l-6 30H30z" fill="#c21f32"/><path d="M30 2h6l-3 26z" fill="#fff"/><circle cx="33" cy="52" r="24" fill="#f0b400" stroke="#fff" stroke-width="4"/><circle cx="33" cy="52" r="17" fill="none" stroke="#c98f00" stroke-width="2"/><path d="M33 40l3.6 7.6 8.2 1-6 5.7 1.6 8.2-7.4-4.1-7.4 4.1 1.6-8.2-6-5.7 8.2-1z" fill="#fff"/></svg>';
+
+function ajusterEtiquettes(racine) { // le nom tient toujours sur une ligne, quelle que soit la largeur de l'écran
+  [].forEach.call(racine.querySelectorAll(".etiquette .nom"), function (el) {
+    var t = 24; el.style.fontSize = t + "px";
+    while (el.scrollWidth > el.clientWidth + 1 && t > 14) { t--; el.style.fontSize = t + "px"; }
+  });
+}
+function lecMaitrisee(l) { var n = niveauxDe(l).length; var inf = n ? infoNiveau(l.id, n - 1) : null; return !!(inf && inf.best >= SEUIL); }
+function couverture(c) {
+  var ls = LECONS.filter(function (l) { return l.cahier === c.id; }), total = ls.length;
+  var ok = ls.filter(lecMaitrisee).length, part = total ? ok / total : 0;
+  var ac = "";
+  if (total && ok === total) ac = MEDAILLE;
+  else { var n = part >= 2 / 3 ? 3 : part >= 1 / 3 ? 2 : part > 0 ? 1 : 0, e = ""; for (var i = 0; i < n; i++) e += ETOILE; if (n) ac = '<div class="autocollants">' + e + '</div>'; }
+  var txt = total && ok === total ? "Cahier maîtrisé !" : ok + " / " + total + (total > 1 ? " leçons maîtrisées" : " leçon maîtrisée");
+  return '<div class="page-dessous"></div><div class="couv">' + motifA(c.id) +
+    '<div class="etiquette"><span class="nom">' + (c.court || c.nom) + '</span><span class="eleve">' + etat.prenom + ' · CM2 B</span></div>' +
+    icone(c.id, "#fff", "rgba(255,255,255,.18)") +
+    '<div class="jauge">' + txt + '<div class="barre"><i style="width:' + Math.round(100 * part) + '%"></i></div></div></div>' + ac;
+}
+
 /* ---------------- Écrans ---------------- */
 function barre(retour, titreRetour) {
   return h("div", { class: "haut" },
@@ -125,11 +175,15 @@ function ecranAccueil() {
   CAHIERS.forEach(function (c) {
     var n = LECONS.filter(function (l) { return l.cahier === c.id; }).length;
     if (!n) return;
-    grille.appendChild(h("button", { class: "cahier", style: "--couv:" + c.couv, onclick: function () { location.hash = "#/cahier/" + c.id; } },
-      h("span", { class: "etiquette" }, h("span", { class: "cursive" }, c.nom), c.detail ? h("small", null, c.detail) : null),
-      h("span", { class: "compte" }, n + (n > 1 ? " leçons" : " leçon"))));
+    var b = h("button", { class: "cahier", style: "--c:" + c.couv, "aria-label": c.nom, html: couverture(c), onclick: function () {
+      if (b.classList.contains("ouvre")) return;
+      b.classList.add("ouvre"); setTimeout(function () { location.hash = "#/cahier/" + c.id; }, 420);
+    } });
+    grille.appendChild(b);
   });
   ajouter(app, grille);
+  ajusterEtiquettes(grille);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { ajusterEtiquettes(grille); });
   if (LECONS.length > 1) {
     var exs = examenSemaine(), tents = exs.tentatives || [];
     var meilleur = tents.reduce(function (m, t) { return Math.max(m, t.justes); }, 0);
@@ -148,6 +202,7 @@ function ecranCahier(cid) {
   if (!c) { location.hash = "#/"; return; }
   vider();
   ajouter(app, [barre("#/", "Mes cahiers"), h("h1", null, c.nom)]);
+  if (c.detail) ajouter(app, h("p", { class: "detail-cahier" }, c.detail));
   var ul = h("ul", { class: "lecons" });
   LECONS.filter(function (l) { return l.cahier === cid; }).slice().reverse().forEach(function (l) {
     var mini = h("span", { class: "niv-mini", "aria-label": "niveaux réussis" });
@@ -623,6 +678,7 @@ function router() {
   else ecranAccueil();
 }
 window.addEventListener("hashchange", router);
+window.addEventListener("resize", function () { var g = document.querySelector(".cahiers"); if (g) ajusterEtiquettes(g); });
 router();
 
 if ("serviceWorker" in navigator && location.protocol === "https:") {
