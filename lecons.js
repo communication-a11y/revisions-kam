@@ -1,5 +1,5 @@
 var LECONS = window.LECONS = [];
-window.VERSION_CONTENU = "202611261314";
+window.VERSION_CONTENU = "202611261438";
 
 /* ---- an-subject-object-pronouns.js ---- */
 // Corrections des exemples du cahier : « Argentian » → « Argentinian » ; « too church » → « to church » ;
@@ -1590,6 +1590,61 @@ LECONS.push({
 });
 
 
+/* ---- fr-gram-subordonnee-relative.js ---- */
+// Formulation du cahier ajustée : « le pronom relatif complète un nom… » → c'est la proposition relative qui complète
+// l'antécédent ; le pronom relatif le remplace. Leçon marquée « 1re partie » : à enrichir quand la suite arrivera.
+LECONS.push({
+  id: "fr-gram-subordonnee-relative",
+  cahier: "francais",
+  matiere: "Grammaire",
+  titre: "La proposition principale et la proposition subordonnée relative (1re partie)",
+  date: "2026-11-26",
+  photos: ["2026-11-26_02.jpg", "2026-11-26_03.jpg"],
+  retiens:
+    "<p>Une proposition qui ne se suffit pas à elle-même est une proposition <b>subordonnée</b>.</p>" +
+    "<p>Elle complète une proposition <b>principale</b>, qui peut à elle seule former une phrase qui a un sens. La subordonnée ne le peut pas.</p>" +
+    "<p>La <b>proposition subordonnée relative</b> est toujours introduite par un <b>pronom relatif</b> (qui, que, quoi, dont, où, lequel, laquelle…).</p>" +
+    "<p>Elle complète un <b>nom</b> de la proposition principale, que l'on appelle l'<b>antécédent</b>.</p>" +
+    "<p>Ex : Je vois <b>l'homme</b> <u>qui joue à la corde</u>.<br>principale : Je vois l'homme — antécédent : l'homme — subordonnée relative : qui joue à la corde</p>",
+  astuce: "Cache la subordonnée relative : la principale garde un sens (« Je vois l'homme. »). La relative seule (« qui joue à la corde ») ne veut rien dire.",
+  regle: "La principale a un sens toute seule ; la subordonnée relative, introduite par un pronom relatif, complète un nom de la principale : l'antécédent.",
+  niveaux: [
+    [
+      { t: "vf", q: "Une proposition subordonnée peut former à elle seule une phrase qui a un sens.", r: false, expl: "Elle ne se suffit pas à elle-même : c'est la principale qui a un sens seule." },
+      { t: "qcm", q: "Quelle proposition peut former à elle seule une phrase qui a un sens ?", choix: ["la principale", "la subordonnée", "aucune"], r: "la principale", expl: "La principale se suffit à elle-même." },
+      { t: "qcm", q: "Par quel mot la subordonnée relative est-elle toujours introduite ?", choix: ["un pronom relatif", "une conjonction de coordination", "un article"], r: "un pronom relatif", expl: "qui, que, quoi, dont, où, lequel…" },
+      { t: "qcm", q: "Comment appelle-t-on le nom complété par la subordonnée relative ?", choix: ["l'antécédent", "le sujet", "le complément d'objet"], r: "l'antécédent", expl: "L'antécédent est placé avant le pronom relatif, dans la principale." },
+      { t: "classer", q: "Pronom relatif ou non ?", cases: ["pronom relatif", "autre mot"], items: [["qui", "pronom relatif"], ["dont", "pronom relatif"], ["lequel", "pronom relatif"], ["où", "pronom relatif"], ["et", "autre mot"], ["mais", "autre mot"]], expl: "et, mais sont des conjonctions de coordination." }
+    ],
+    [
+      { t: "qcm", q: "« Je vois l'homme qui joue à la corde. » Quelle est la subordonnée relative ?", choix: ["qui joue à la corde", "Je vois l'homme", "Je vois"], r: "qui joue à la corde", expl: "Elle commence par le pronom relatif « qui »." },
+      { t: "qcm", q: "« Je vois l'homme qui joue à la corde. » Quel est l'antécédent ?", choix: ["l'homme", "la corde", "je"], r: "l'homme", expl: "« qui » remplace l'homme : c'est l'homme qui joue." },
+      { t: "saisie", q: "Écris le pronom relatif : « Le livre que tu lis est à Awa. »", r: "que", expl: "« que » introduit la relative « que tu lis »." },
+      { t: "saisie", q: "Écris l'antécédent : « La maison où j'habite est grande. »", r: ["la maison", "maison"], expl: "« où » remplace la maison." },
+      { t: "qcm", q: "« Moussa mange la mangue qu'il a cueillie. » Quelle est la proposition principale ?", choix: ["Moussa mange la mangue", "qu'il a cueillie", "il a cueillie"], r: "Moussa mange la mangue", expl: "Elle a un sens seule ; « qu'il a cueillie » ne peut pas rester seule." },
+      { t: "relier", q: "Relie chaque phrase à son antécédent.", paires: [["Le car qui part est plein.", "le car"], ["La fille dont je parle chante.", "la fille"], ["Le champ où il travaille est loin.", "le champ"], ["Le poisson que Fatou achète est frais.", "le poisson"]], expl: "L'antécédent est le nom placé juste avant le pronom relatif." },
+      { t: "vf", q: "Dans « Le maître que nous aimons est malade », « que nous aimons » est une subordonnée relative.", r: true, expl: "Introduite par « que », elle complète « le maître »." },
+      { t: "classer", q: "Principale ou subordonnée relative ?", cases: ["principale", "subordonnée relative"], items: [["J'ai un ami", "principale"], ["qui habite à Thiès", "subordonnée relative"], ["La robe est belle", "principale"], ["que maman a cousue", "subordonnée relative"]], expl: "La relative commence par un pronom relatif et ne peut pas rester seule." }
+    ],
+    [
+      { t: "qcm", q: "« Le stylo avec lequel j'écris est bleu. » Quel est le pronom relatif ?", choix: ["lequel", "avec", "le"], r: "lequel", expl: "« avec » est une préposition placée devant le pronom relatif « lequel »." },
+      { t: "qcm", q: "Dans « Le garçon qui court est mon frère », où se trouve la subordonnée relative ?", choix: ["au milieu de la principale", "après la principale", "avant la principale"], r: "au milieu de la principale", expl: "Principale : « Le garçon est mon frère » ; la relative « qui court » se glisse après l'antécédent." },
+      { t: "ordre", q: "Remets les mots dans l'ordre.", r: "Awa regarde l'oiseau qui chante.", expl: "« qui chante » suit son antécédent « l'oiseau »." },
+      { t: "saisie", q: "Relie les deux phrases avec « qui » : « J'ai un chat. Le chat dort beaucoup. »", r: ["J'ai un chat qui dort beaucoup", "J'ai un chat qui dort beaucoup."], large: true, expl: "« qui » remplace « le chat » pour éviter la répétition." },
+      { t: "vf", q: "Dans « Qui a pris mon cahier ? », « qui » introduit une subordonnée relative.", r: false, expl: "Ici « qui » pose une question : il n'y a pas d'antécédent." },
+      { t: "qcm", q: "Quelle phrase contient une subordonnée relative ?", choix: ["La pirogue que je vois rentre au port.", "La pirogue rentre au port et les pêcheurs chantent.", "La pirogue rentre-t-elle au port ?"], r: "La pirogue que je vois rentre au port.", expl: "« que je vois » est introduite par un pronom relatif et complète « la pirogue »." }
+    ],
+    [
+      { t: "trous", q: "Complète la leçon.", texte: "La subordonnée relative est introduite par un [pronom] relatif. Elle complète un nom de la proposition [principale], appelé l'[antécédent].", expl: "Les trois mots clés de la leçon." },
+      { t: "dictee", texte: "Le pêcheur qui rentre au port vend le poisson que nous aimons.", expl: "Deux relatives : « qui rentre au port » (antécédent : le pêcheur) et « que nous aimons » (antécédent : le poisson)." },
+      { t: "saisie", q: "Relie les deux phrases avec « que » : « Fatou lit un livre. Le maître a donné ce livre. » → Fatou lit le livre …", r: ["que le maître a donné", "que le maître a donné."], large: true, expl: "« que » remplace « le livre », complément de « a donné »." },
+      { t: "classer", q: "Antécédent de la relative ou non ?", cases: ["antécédent", "pas l'antécédent"], items: [["l'école (dans « l'école où je vais »)", "antécédent"], ["la femme (dans « la femme qui chante »)", "antécédent"], ["je (dans « l'école où je vais »)", "pas l'antécédent"], ["chante (dans « la femme qui chante »)", "pas l'antécédent"]], expl: "L'antécédent est toujours le nom remplacé par le pronom relatif." },
+      { t: "qcm", q: "« Les enfants dont tu parles jouent dans la cour. » Quelle est la principale ?", choix: ["Les enfants jouent dans la cour", "dont tu parles", "tu parles"], r: "Les enfants jouent dans la cour", expl: "Sans la relative « dont tu parles », la phrase garde tout son sens." }
+    ]
+  ]
+});
+
+
 /* ---- fr-gram-types-de-phrases.js ---- */
 // Corrections par rapport au cahier : « exclamatier » → « exclamative » ; « exprime le sentiment » → « exprime un sentiment ».
 LECONS.push({
@@ -2344,6 +2399,61 @@ LECONS.push({
       { t: "trous", q: "Complète ce texte (aide : à, avec).", texte: "Ce matin, Ibrahima est parti [à] l'école [avec] son cartable. Il marche vite pour ne pas arriv[er] en retard. Il vient de travers[er] la route.", expl: "Prépositions : à, avec ; après pour et de, infinitif en -er." },
       { t: "qcm", q: "Combien de prépositions dans « Le chat de Fatou dort sous le lit avec sa balle » ?", choix: ["deux", "trois", "quatre"], r: "trois", expl: "de, sous, avec." },
       { t: "saisie", q: "Corrige le verbe mal écrit : « Il est sorti pour joué au ballon. »", r: "jouer", expl: "Après « pour », le verbe se met à l'infinitif : jouer." }
+    ]
+  ]
+});
+
+
+/* ---- fr-orth-pronoms-relatifs.js ---- */
+LECONS.push({
+  id: "fr-orth-pronoms-relatifs",
+  cahier: "francais",
+  matiere: "Orthographe",
+  titre: "Les pronoms relatifs",
+  date: "2026-11-26",
+  photos: ["2026-11-26_03.jpg"],
+  retiens:
+    "<p>Le <b>pronom relatif</b> remplace un nom ou un pronom pour éviter une répétition.</p>" +
+    "<p>Ex : Je vois l'homme ; l'homme joue à la corde.<br>→ Je vois l'homme <b>qui</b> joue à la corde.</p>" +
+    "<p>Il introduit la proposition subordonnée relative.</p>" +
+    "<ul><li>Les pronoms relatifs <b>invariables</b> sont : <b>qui, que, dont, quoi, où</b>.</li>" +
+    "<li>Les pronoms relatifs <b>variables</b> sont : <b>lequel, laquelle, lesquels, lesquelles, auquel, auxquels</b>…</li></ul>" +
+    "<p>Ex : L'homme <b>auquel</b> tu parles est mon père.</p>",
+  astuce: "Les pronoms variables changent comme le nom qu'ils remplacent : <b>le</b> stylo → lequel ; <b>la</b> table → laquelle ; <b>les</b> stylos → lesquels ; <b>les</b> tables → lesquelles.",
+  regle: "Le pronom relatif remplace un nom pour éviter de le répéter ; qui, que, dont, quoi, où ne changent jamais ; lequel, laquelle, lesquels, lesquelles s'accordent avec le nom remplacé.",
+  niveaux: [
+    [
+      { t: "qcm", q: "À quoi sert le pronom relatif ?", choix: ["à éviter une répétition", "à relier deux verbes", "à poser une question"], r: "à éviter une répétition", expl: "Il remplace un nom ou un pronom déjà dit." },
+      { t: "classer", q: "Invariable ou variable ?", cases: ["invariable", "variable"], items: [["qui", "invariable"], ["dont", "invariable"], ["où", "invariable"], ["quoi", "invariable"], ["laquelle", "variable"], ["lesquels", "variable"], ["auquel", "variable"], ["lesquelles", "variable"]], expl: "qui, que, dont, quoi, où ne changent jamais de forme." },
+      { t: "vf", q: "« Que » est un pronom relatif variable.", r: false, expl: "« que » est invariable : il ne change jamais." },
+      { t: "qcm", q: "« Je vois l'homme qui joue à la corde. » Quel nom « qui » remplace-t-il ?", choix: ["l'homme", "la corde", "je"], r: "l'homme", expl: "C'est l'homme qui joue : « qui » évite de répéter « l'homme »." },
+      { t: "qcm", q: "Combien y a-t-il de pronoms relatifs invariables dans la leçon ?", choix: ["5", "3", "7"], r: "5", expl: "qui, que, dont, quoi, où." }
+    ],
+    [
+      { t: "qcm", q: "« Le livre ___ je lis est passionnant. »", choix: ["que", "qui", "dont"], r: "que", expl: "« je » est déjà le sujet : on emploie « que »." },
+      { t: "qcm", q: "« La fille ___ chante est ma sœur. »", choix: ["qui", "que", "où"], r: "qui", expl: "« qui » est le sujet de « chante »." },
+      { t: "qcm", q: "« Le village ___ je suis né est près de Kaolack. »", choix: ["où", "que", "qui"], r: "où", expl: "« où » indique le lieu." },
+      { t: "qcm", q: "« Le film ___ tu parles est drôle. »", choix: ["dont", "que", "lequel"], r: "dont", expl: "On parle DE quelque chose : « dont »." },
+      { t: "trous", q: "Complète avec qui, que ou où.", texte: "Voici le marché [où] maman achète le poisson [que] nous mangeons. Le vendeur [qui] le pêche vient de Soumbédioune.", expl: "où : le lieu ; que : complément ; qui : sujet." },
+      { t: "saisie", q: "Évite la répétition : « J'ai une sœur. Ma sœur habite à Thiès. » → J'ai une sœur … habite à Thiès.", r: "qui", expl: "« qui » remplace « ma sœur », sujet de « habite »." },
+      { t: "relier", q: "Relie chaque nom au pronom variable qui lui convient.", paires: [["le stylo", "lequel"], ["la table", "laquelle"], ["les stylos", "lesquels"], ["les tables", "lesquelles"]], expl: "Le pronom variable prend le genre et le nombre du nom remplacé." },
+      { t: "vf", q: "Dans « L'homme auquel tu parles est mon père », « auquel » est un pronom relatif.", r: true, expl: "C'est l'exemple du cahier : « auquel » remplace « l'homme »." }
+    ],
+    [
+      { t: "qcm", q: "« La chaise sur ___ tu es assis est cassée. »", choix: ["laquelle", "lequel", "lesquels"], r: "laquelle", expl: "« la chaise » est féminin singulier : laquelle." },
+      { t: "qcm", q: "« Les amis avec ___ je joue sont gentils. »", choix: ["lesquels", "lesquelles", "lequel"], r: "lesquels", expl: "« les amis » est masculin pluriel : lesquels." },
+      { t: "qcm", q: "« Les questions ___ tu réponds sont faciles. »", choix: ["auxquelles", "auxquels", "auquel"], r: "auxquelles", expl: "On répond À quelque chose ; « les questions » est féminin pluriel : auxquelles." },
+      { t: "qcm", q: "« Les jeux ___ tu penses sont chers. »", choix: ["auxquels", "auquel", "lesquelles"], r: "auxquels", expl: "Penser À ; « les jeux » est masculin pluriel : auxquels." },
+      { t: "qcm", q: "Dans quelle phrase « où » est-il un pronom relatif ?", choix: ["La ville où j'habite est belle.", "Où vas-tu ?", "Tu préfères le thé ou le café ?"], r: "La ville où j'habite est belle.", expl: "Il remplace « la ville » ; dans « Où vas-tu ? », il pose une question." },
+      { t: "vf", q: "Dans « Qui est là ? », « qui » est un pronom relatif.", r: false, expl: "Ici « qui » pose une question : il ne remplace aucun nom." },
+      { t: "saisie", q: "Complète : « Le stylo avec … j'écris est rouge. » (pronom variable)", r: "lequel", expl: "« le stylo » : masculin singulier → lequel." }
+    ],
+    [
+      { t: "trous", q: "Complète avec le bon pronom relatif.", texte: "Le maître [que] nous aimons nous a raconté une histoire [dont] je me souviens. C'est l'histoire d'un roi [qui] vivait dans un village [où] il pleuvait toujours.", expl: "que : complément ; dont : se souvenir DE ; qui : sujet ; où : le lieu." },
+      { t: "dictee", texte: "La pirogue dans laquelle mon père pêche est peinte en bleu.", expl: "« laquelle » : la pirogue est féminin singulier." },
+      { t: "saisie", q: "Évite la répétition : « Voici la maison. Mon oncle habite dans la maison. » → Voici la maison … mon oncle habite.", r: "où", expl: "« où » remplace « dans la maison » (le lieu). Attention à l'accent." },
+      { t: "classer", q: "Quel pronom convient ?", cases: ["lequel", "laquelle", "lesquelles"], items: [["le couteau avec ___ je coupe", "lequel"], ["le bus dans ___ je monte", "lequel"], ["la natte sur ___ je dors", "laquelle"], ["les filles avec ___ je danse", "lesquelles"]], expl: "Le pronom s'accorde avec le nom remplacé." },
+      { t: "qcm", q: "Quelle phrase est correcte ?", choix: ["L'ami auquel j'écris habite à Ziguinchor.", "L'ami auxquelles j'écris habite à Ziguinchor.", "L'ami laquelle j'écris habite à Ziguinchor."], r: "L'ami auquel j'écris habite à Ziguinchor.", expl: "Écrire À un ami (masculin singulier) : auquel." }
     ]
   ]
 });
@@ -3109,6 +3219,63 @@ LECONS.push({
       { t: "classer", q: "Range ces sites selon leur région.", cases: ["Thiès", "Ziguinchor", "Sine-Saloum"], items: [["Saly", "Thiès"], ["Somone", "Thiès"], ["Karabane", "Ziguinchor"], ["Cap Skirring", "Ziguinchor"], ["îles du Saloum", "Sine-Saloum"], ["delta du Saloum", "Sine-Saloum"]], expl: "Les sites de la leçon." },
       { t: "qcm", q: "Lequel de ces sites n'est PAS à Dakar ?", choix: ["la langue de Barbarie", "le parc de Hann", "l'île de Gorée", "le lac Rose"], r: "la langue de Barbarie", expl: "La langue de Barbarie est à Saint-Louis." },
       { t: "vf", q: "Le pont Faidherbe se trouve à Ziguinchor.", r: false, expl: "Il est à Saint-Louis." }
+    ]
+  ]
+});
+
+
+/* ---- hi-bataille-pathe-badiane.js ---- */
+// À VÉRIFIER : le cahier dit que l'armée coloniale avait « sept cent mille hommes dont deux mille cavaliers » : chiffre impossible
+// (peut-être sept mille ?). Le module ne reprend pas l'effectif. Le cahier date la page « jeudi 25 novembre » : le 25 était un mercredi.
+LECONS.push({
+  id: "hi-bataille-pathe-badiane",
+  cahier: "histgeo",
+  matiere: "Histoire",
+  titre: "La bataille de Pathé Badiane",
+  date: "2026-11-25",
+  photos: ["2026-11-26_01.jpg"],
+  retiens:
+    "<p><b>Lat Dior Diop</b>, en exil, s'était converti à l'islam pour rester auprès de <b>Maba Diakhou Ba</b>, qui souhaitait voir naître un État islamique du Saloum (le <b>Rip</b>).</p>" +
+    "<p>Pour contrecarrer les projets colonisateurs de la France, Maba eut l'idée de tendre une <b>embuscade</b> à l'armée coloniale dans un ravin de <b>Pathé Badiane</b>, le <b>30 novembre 1865</b>.</p>" +
+    "<p>Avec Lat Dior, il remporta une éclatante <b>victoire</b> en mettant en déroute les troupes de l'armée coloniale dirigées par <b>Pinet-Laprade</b>.</p>" +
+    "<p><b>Issue de la bataille :</b></p>" +
+    "<ul><li><b>25 morts</b> et <b>80 blessés</b> dans les rangs de l'armée coloniale ;</li>" +
+    "<li><b>2 canons</b> arrachés aux hommes de Pinet-Laprade ;</li>" +
+    "<li>Pinet-Laprade lui-même est <b>blessé à l'épaule</b>.</li></ul>",
+  astuce: "<b>30 novembre 1865</b> : Maba + Lat Dior, une embuscade dans un ravin, et Pinet-Laprade repart blessé à l'épaule.",
+  regle: "Le 30 novembre 1865, Maba Diakhou Ba et Lat Dior battent l'armée coloniale de Pinet-Laprade grâce à une embuscade dans un ravin de Pathé Badiane, dans le Rip.",
+  niveaux: [
+    [
+      { t: "qcm", q: "En quelle année a eu lieu la bataille de Pathé Badiane ?", choix: ["1865", "1886", "1817"], r: "1865", expl: "Le 30 novembre 1865." },
+      { t: "qcm", q: "Qui a eu l'idée de tendre une embuscade à l'armée coloniale ?", choix: ["Maba Diakhou Ba", "Pinet-Laprade", "Coumba Ndoffène"], r: "Maba Diakhou Ba", expl: "C'est Maba qui prépara l'embuscade, avec Lat Dior à ses côtés." },
+      { t: "vf", q: "À Pathé Badiane, Maba et Lat Dior ont remporté la victoire.", r: true, expl: "Ils ont mis en déroute les troupes coloniales." },
+      { t: "qcm", q: "Qui dirigeait les troupes de l'armée coloniale ?", choix: ["Pinet-Laprade", "Lat Dior", "Maba Diakhou Ba"], r: "Pinet-Laprade", expl: "Pinet-Laprade commandait les troupes françaises." },
+      { t: "qcm", q: "Où l'embuscade a-t-elle été tendue ?", choix: ["dans un ravin", "sur une île", "dans une ville fortifiée"], r: "dans un ravin", expl: "Un ravin de Pathé Badiane : l'ennemi ne pouvait pas voir venir l'attaque." }
+    ],
+    [
+      { t: "trous", q: "Complète la date.", nombre: true, texte: "La bataille de Pathé Badiane a eu lieu le [30] novembre [1865].", expl: "30 novembre 1865." },
+      { t: "relier", q: "Relie chaque personnage à ce qu'il a fait.", paires: [["Maba Diakhou Ba", "prépare l'embuscade"], ["Lat Dior Diop", "se convertit et combat avec Maba"], ["Pinet-Laprade", "dirige l'armée coloniale"]], expl: "Maba et Lat Dior d'un côté, Pinet-Laprade de l'autre." },
+      { t: "qcm", q: "Pourquoi Lat Dior s'était-il converti à l'islam ?", choix: ["pour rester auprès de Maba", "pour devenir Damel du Walo", "pour aider l'armée coloniale"], r: "pour rester auprès de Maba", expl: "En exil, il s'était converti pour rester aux côtés de Maba Diakhou Ba." },
+      { t: "qcm", q: "Que souhaitait voir naître Maba Diakhou Ba ?", choix: ["un État islamique du Saloum", "une colonie française", "un empire au Mali"], r: "un État islamique du Saloum", expl: "Un État islamique du Saloum, dans le Rip." },
+      { t: "saisie", q: "Combien de morts l'armée coloniale a-t-elle eus à Pathé Badiane ?", r: "25", nombre: true, expl: "25 morts et 80 blessés." },
+      { t: "saisie", q: "Combien de blessés dans les rangs de l'armée coloniale ?", r: "80", nombre: true, expl: "25 morts et 80 blessés." },
+      { t: "saisie", q: "Combien de canons ont été arrachés aux hommes de Pinet-Laprade ?", r: "2", nombre: true, expl: "2 canons." },
+      { t: "qcm", q: "Où Pinet-Laprade a-t-il été blessé ?", choix: ["à l'épaule", "à la jambe", "à la tête"], r: "à l'épaule", expl: "Le chef de l'armée coloniale est blessé à l'épaule." }
+    ],
+    [
+      { t: "qcm", q: "Quel était le but de Maba en tendant cette embuscade ?", choix: ["contrecarrer les projets colonisateurs de la France", "devenir l'allié de la France", "conquérir l'Égypte"], r: "contrecarrer les projets colonisateurs de la France", expl: "Contrecarrer, c'est faire échouer : Maba voulait arrêter la conquête française." },
+      { t: "vf", q: "Pathé Badiane se trouve dans le Rip, dans la région du Saloum.", r: true, expl: "Maba voulait un État islamique du Saloum (Rip)." },
+      { t: "vf", q: "À Pathé Badiane, Lat Dior combattait contre Maba.", r: false, expl: "Lat Dior était aux côtés de Maba : ils ont gagné ensemble." },
+      { t: "classer", q: "Dans quel camp ?", cases: ["camp de Maba", "armée coloniale"], items: [["Maba Diakhou Ba", "camp de Maba"], ["Lat Dior Diop", "camp de Maba"], ["Pinet-Laprade", "armée coloniale"], ["les 2 canons perdus", "armée coloniale"]], expl: "Maba et Lat Dior contre les troupes de Pinet-Laprade." },
+      { t: "qcm", q: "Qu'est-ce qu'une embuscade ?", choix: ["une attaque surprise d'ennemis qu'on attend cachés", "une bataille en plein champ annoncée à l'avance", "un traité de paix"], r: "une attaque surprise d'ennemis qu'on attend cachés", expl: "Cachés dans le ravin, les guerriers de Maba ont surpris l'armée coloniale." },
+      { t: "saisie", q: "Combien de soldats de l'armée coloniale ont été touchés (morts et blessés ensemble) ?", r: "105", nombre: true, expl: "25 morts + 80 blessés = 105." }
+    ],
+    [
+      { t: "trous", q: "Complète le résumé.", texte: "Le 30 novembre 1865, [Maba] Diakhou Ba et Lat [Dior] tendent une [embuscade] à l'armée coloniale dans un ravin de Pathé [Badiane]. Le chef des troupes coloniales, Pinet-[Laprade], est blessé à l'[épaule].", expl: "Les mots-clés de la leçon." },
+      { t: "qcm", q: "Combien d'années se sont écoulées entre la bataille de Pathé Badiane (1865) et l'an 2000 ?", choix: ["135 ans", "145 ans", "125 ans"], r: "135 ans", expl: "2000 − 1865 = 135." },
+      { t: "relier", q: "Relie chaque nombre à ce qu'il représente.", paires: [["1865", "année de la bataille"], ["30", "jour du mois de novembre"], ["25", "morts coloniaux"], ["80", "blessés coloniaux"], ["2", "canons pris"]], expl: "Les chiffres de la leçon." },
+      { t: "qcm", q: "Lequel de ces faits n'appartient PAS à la bataille de Pathé Badiane ?", choix: ["le suicide collectif des femmes de Nder", "l'embuscade dans un ravin", "la blessure de Pinet-Laprade", "la prise de 2 canons"], r: "le suicide collectif des femmes de Nder", expl: "Nder, c'est l'histoire du Walo (1820)." },
+      { t: "vf", q: "La bataille de Pathé Badiane fut une défaite pour l'armée coloniale.", r: true, expl: "Ses troupes ont été mises en déroute." }
     ]
   ]
 });
@@ -5790,6 +5957,64 @@ LECONS.push({
       { t: "trous", q: "Complète la lecture du nombre 6 105 020 300.", texte: "six [milliards] cent cinq [millions] vingt [mille] trois cents", expl: "6 | 105 | 020 | 300 : on nomme chaque classe après son nombre." },
       { t: "saisie", q: "Écris le plus grand nombre de 10 chiffres.", r: ["9 999 999 999", "9999999999", "9.999.999.999"], expl: "On met des 9 partout : 9 999 999 999." },
       { t: "saisie", q: "Ajoute 1 million à 7 999 000 000.", r: ["8 000 000 000", "8000000000", "8.000.000.000"], expl: "7 999 millions + 1 million = 8 000 millions = 8 milliards : 8 000 000 000." }
+    ]
+  ]
+});
+
+
+/* ---- ma-num-multiplication-decimaux.js ---- */
+// Les trois opérations du cahier (photos 2026-11-26_05 et _06) ont été vérifiées : elles sont justes.
+LECONS.push({
+  id: "ma-num-multiplication-decimaux",
+  cahier: "maths",
+  matiere: "Activités numériques",
+  titre: "La multiplication des nombres décimaux",
+  date: "2026-11-26",
+  photos: ["2026-11-26_04.jpg", "2026-11-26_05.jpg", "2026-11-26_06.jpg"],
+  retiens:
+    "<p><b>Règle :</b> pour multiplier des nombres décimaux :</p>" +
+    "<ul><li>on effectue l'opération <b>sans s'occuper des virgules</b> ;</li>" +
+    "<li>on fait le <b>total</b> du nombre de chiffres décimaux du multiplicande et du multiplicateur ;</li>" +
+    "<li>on sépare, à la <b>droite</b> du produit, autant de chiffres décimaux qu'il y en a dans le total trouvé.</li></ul>" +
+    "<p><b>A) Multiplicande décimal :</b> 9,375 × 35 → 9 375 × 35 = 328 125 → 3 chiffres décimaux → <b>328,125</b></p>" +
+    "<p><b>B) Multiplicateur décimal :</b> 45 × 1,7 → 45 × 17 = 765 → 1 chiffre décimal → <b>76,5</b></p>" +
+    "<p><b>C) Deux facteurs décimaux :</b> 4,76 × 25,4 → 476 × 254 = 120 904 → 2 + 1 = 3 chiffres décimaux → <b>120,904</b></p>",
+  astuce: "Compte les chiffres <b>après la virgule</b> dans les deux nombres, additionne-les, puis place la virgule en partant de la <b>droite</b> du produit.",
+  regle: "On multiplie sans les virgules, puis on sépare à droite du produit autant de chiffres décimaux qu'il y en a en tout dans les deux facteurs.",
+  niveaux: [
+    [
+      { t: "qcm", q: "Pour multiplier des nombres décimaux, on commence par…", choix: ["multiplier sans s'occuper des virgules", "aligner les virgules", "supprimer les zéros"], r: "multiplier sans s'occuper des virgules", expl: "On place la virgule seulement à la fin." },
+      { t: "saisie", q: "Combien de chiffres décimaux y a-t-il dans 9,375 ?", r: "3", nombre: true, expl: "3, 7 et 5 sont après la virgule." },
+      { t: "saisie", q: "4,76 × 25,4 : combien de chiffres décimaux en tout ?", r: "3", nombre: true, expl: "2 (dans 4,76) + 1 (dans 25,4) = 3." },
+      { t: "vf", q: "On sépare les chiffres décimaux en partant de la droite du produit.", r: true, expl: "On compte à partir de la droite." },
+      { t: "qcm", q: "45 × 17 = 765. Combien fait 45 × 1,7 ?", choix: ["76,5", "7,65", "765"], r: "76,5", expl: "1 chiffre décimal en tout : 76,5." }
+    ],
+    [
+      { t: "saisie", q: "9,375 × 35 = …", r: "328,125", nombre: true, aide: "9 375 × 35 = 328 125", expl: "3 chiffres décimaux : 328,125." },
+      { t: "saisie", q: "45 × 1,7 = …", r: "76,5", nombre: true, expl: "45 × 17 = 765 ; 1 chiffre décimal : 76,5." },
+      { t: "saisie", q: "4,76 × 25,4 = …", r: "120,904", nombre: true, expl: "476 × 254 = 120 904 ; 3 chiffres décimaux : 120,904." },
+      { t: "saisie", q: "2,5 × 4 = …", r: "10", nombre: true, expl: "25 × 4 = 100 ; 1 chiffre décimal : 10,0 = 10." },
+      { t: "saisie", q: "3,2 × 6 = …", r: "19,2", nombre: true, expl: "32 × 6 = 192 → 19,2." },
+      { t: "saisie", q: "12 × 0,5 = …", r: "6", nombre: true, expl: "12 × 5 = 60 → 6,0 = 6." },
+      { t: "saisie", q: "1,25 × 8 = …", r: "10", nombre: true, expl: "125 × 8 = 1 000 → 2 chiffres décimaux : 10,00 = 10." },
+      { t: "saisie", q: "2,4 × 1,5 = …", r: "3,6", nombre: true, expl: "24 × 15 = 360 ; 2 chiffres décimaux : 3,60 = 3,6." },
+      { t: "relier", q: "Relie chaque opération à son résultat.", paires: [["0,3 × 7", "2,1"], ["0,3 × 0,7", "0,21"], ["3 × 7", "21"], ["0,03 × 0,7", "0,021"]], expl: "Même calcul 3 × 7 = 21 ; seule la place de la virgule change (0, 1, 2 ou 3 chiffres décimaux)." }
+    ],
+    [
+      { t: "saisie", q: "0,4 × 0,2 = …", r: "0,08", nombre: true, aide: "4 × 2 = 8, et il faut 2 chiffres décimaux.", expl: "2 chiffres décimaux : on ajoute un zéro devant : 0,08." },
+      { t: "saisie", q: "0,05 × 3 = …", r: "0,15", nombre: true, expl: "5 × 3 = 15 ; 2 chiffres décimaux : 0,15." },
+      { t: "qcm", q: "Fatou trouve 6,25 × 4 = 250. Où est son erreur ?", choix: ["elle a oublié la virgule : c'est 25", "elle a mal multiplié : c'est 24", "il n'y a pas d'erreur"], r: "elle a oublié la virgule : c'est 25", expl: "625 × 4 = 2 500 ; 2 chiffres décimaux : 25,00 = 25." },
+      { t: "saisie", q: "3,75 × 2,4 = …", r: "9", nombre: true, expl: "375 × 24 = 9 000 ; 3 chiffres décimaux : 9,000 = 9." },
+      { t: "vf", q: "Quand on multiplie par 0,5, le résultat est plus petit que le nombre de départ.", r: true, expl: "Multiplier par 0,5, c'est prendre la moitié : 12 × 0,5 = 6." },
+      { t: "saisie", q: "15,6 × 0,25 = …", r: "3,9", nombre: true, expl: "156 × 25 = 3 900 ; 3 chiffres décimaux : 3,900 = 3,9." },
+      { t: "qcm", q: "Sans calculer tout, quel est le bon résultat de 4,8 × 2,05 ?", choix: ["9,84", "98,4", "0,984"], r: "9,84", expl: "4,8 × 2 ≈ 10 : le résultat est proche de 10. (48 × 205 = 9 840 → 9,840.)" }
+    ],
+    [
+      { t: "probleme", q: "Awa achète 2,5 kg de poisson à 1 800 F le kg et 1,5 kg de tomates à 600 F le kg.", etapes: [{ q: "Étape 1 : prix du poisson", r: "4500", unite: "F" }, { q: "Étape 2 : prix des tomates", r: "900", unite: "F" }, { q: "Étape 3 : dépense totale", r: "5400", unite: "F" }], expl: "1 800 × 2,5 = 4 500 F ; 600 × 1,5 = 900 F ; 4 500 + 900 = 5 400 F." },
+      { t: "probleme", q: "Un champ rectangulaire mesure 12,5 m de long et 8,4 m de large.", etapes: [{ q: "Étape 1 : aire du champ", r: "105", unite: "m²" }, { q: "Étape 2 : demi-périmètre (longueur + largeur)", r: "20,9", unite: "m" }, { q: "Étape 3 : périmètre", r: "41,8", unite: "m" }], expl: "12,5 × 8,4 = 105 m² ; 12,5 + 8,4 = 20,9 m ; 20,9 × 2 = 41,8 m." },
+      { t: "saisie", q: "Un litre d'huile pèse 0,92 kg. Combien pèsent 5 litres ?", r: "4,6", nombre: true, unite: "kg", expl: "0,92 × 5 = 4,60 = 4,6 kg." },
+      { t: "probleme", q: "Moussa parcourt 3,75 km chaque jour pour aller à l'école et en revenir. Il va à l'école 5 jours par semaine.", etapes: [{ q: "Étape 1 : distance en une semaine", r: "18,75", unite: "km" }, { q: "Étape 2 : distance en 4 semaines", r: "75", unite: "km" }], expl: "3,75 × 5 = 18,75 km ; 18,75 × 4 = 75 km." },
+      { t: "trous", q: "Complète.", nombre: true, texte: "1,2 × 3 = [3,6|3.6] — 0,6 × 0,6 = [0,36|0.36] — 2,05 × 4 = [8,2|8.2]", expl: "12 × 3 = 36 → 3,6 ; 6 × 6 = 36 → 0,36 ; 205 × 4 = 820 → 8,20 = 8,2." }
     ]
   ]
 });
