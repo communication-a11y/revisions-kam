@@ -1,4 +1,4 @@
-/* Révisions de Kam — moteur d'exercices hors ligne.
+/* Révisions de Kamelia — moteur d'exercices hors ligne.
    Les leçons sont dans lecons.js (window.LECONS), une entrée par leçon. */
 "use strict";
 
