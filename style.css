@@ -69,9 +69,10 @@ p { margin: 0 0 calc(var(--pas) / 2); }
 .cahiers { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 30px 24px; margin: var(--pas) 0; }
 .cahiers { perspective: 1400px; }
 .cahier {
-  position: relative; aspect-ratio: 3 / 4; border: 0; padding: 0; text-align: left; color: #fff; background: none;
+  position: relative; display: block; width: 100%; border: 0; padding: 0; text-align: left; color: #fff; background: none;
   transform-origin: left center; transition: transform .2s ease;
 }
+.cahier::before { content: ""; display: block; padding-top: 133.33%; } /* hauteur 4/3 de la largeur, compatible vieux navigateurs */
 .cahier:nth-child(6n+1) { transform: rotate(-1.6deg); }
 .cahier:nth-child(6n+2) { transform: rotate(1.2deg); }
 .cahier:nth-child(6n+3) { transform: rotate(-0.6deg); }
@@ -79,20 +80,20 @@ p { margin: 0 0 calc(var(--pas) / 2); }
 .cahier:nth-child(6n+5) { transform: rotate(-1.1deg); }
 .cahier:nth-child(6n+6) { transform: rotate(0.8deg); }
 .cahier:active { transform: rotate(0) translateY(2px); }
-.cahier .page-dessous { position: absolute; inset: 0; border-radius: 4px 10px 10px 4px; background: #fff;
+.cahier .page-dessous { position: absolute; top: 0; right: 0; bottom: 0; left: 0; border-radius: 4px 10px 10px 4px; background: #fff;
   background-image: linear-gradient(to bottom, var(--ligne) 1px, transparent 1px); background-size: 100% 16px; box-shadow: 0 4px 0 rgba(0,0,0,.12); }
-.cahier .couv { position: absolute; inset: 0; border-radius: 4px 12px 12px 4px; overflow: hidden; transform-origin: left center; background: var(--c);
+.cahier .couv { position: absolute; top: 0; right: 0; bottom: 0; left: 0; border-radius: 4px 12px 12px 4px; overflow: hidden; transform-origin: left center; background: var(--c);
   box-shadow: inset 12px 0 0 rgba(0,0,0,.18), 0 4px 0 rgba(0,0,0,.18), 0 8px 14px rgba(0,0,0,.12); }
 .cahier.ouvre .couv { animation: ouvrir .45s ease-in forwards; }
 @keyframes ouvrir { to { transform: rotateY(-75deg); } }
 .cahier .couv::after { content: ""; position: absolute; top: 10px; bottom: 10px; left: 2px; width: 16px;
   background: radial-gradient(circle at 8px 8px, #e8e8ee 0 4px, #8d8f99 4.5px 5.5px, transparent 6px) 0 0 / 16px 20px repeat-y; }
-.cahier .motif { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cahier .motif { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; }
 .cahier .etiquette { position: absolute; top: 18px; left: 26px; right: 14px; background: #fff; color: var(--encre);
   border-radius: 6px; padding: 6px 12px 8px; box-shadow: 0 2px 0 rgba(0,0,0,.12); line-height: 1.25; }
 .cahier .etiquette .nom { font-family: "Cursive", cursive; color: var(--rouge); font-size: 24px; line-height: 1.3; display: block; white-space: nowrap; overflow: hidden; }
 .cahier .etiquette .eleve { display: block; font-size: 13px; color: var(--crayon); border-top: 1px dotted #b9b6c9; margin-top: 3px; padding-top: 2px; }
-.cahier .icone { position: absolute; left: 50%; top: 52%; transform: translate(-42%, -38%); width: 34%; height: auto; aspect-ratio: 1; }
+.cahier .icone { position: absolute; left: 50%; top: 52%; transform: translate(-42%, -38%); width: 34%; height: auto; }
 .cahier .jauge { position: absolute; left: 22px; right: 14px; bottom: 14px; font-size: 14px; line-height: 1.2; font-weight: 700; }
 .cahier .jauge .barre { height: 9px; border-radius: 9px; background: rgba(255,255,255,.35); margin-top: 5px; overflow: hidden; }
 .cahier .jauge .barre i { display: block; height: 100%; border-radius: 9px; background: #fff; }
